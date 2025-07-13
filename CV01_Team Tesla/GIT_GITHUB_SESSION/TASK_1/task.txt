@@ -1,0 +1,6 @@
+Create a folder on your local system named "LOCAL_REMOTE". Then, 
+follow the procedure to push from local to remote. Inside the remote 
+repository path “ CodeVerse_2025/Your_team_id_your_team_name / GIT 
+_GITHUB_SESSION/TASK_1/Your ”,  create a file with your name, for example 
+your_name.txt. After that, follow the same process to add, commit, and push 
+this file to the remote repository. 
