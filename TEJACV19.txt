@@ -1,6 +1,0 @@
-git and GIT_GITHUB
-Task3
-NAME:RAGHAVAREDDY GARI TEJA
-TEAM:CV19
-"Upload the file on local system to github"
-using "clone , edit , commit and push"
