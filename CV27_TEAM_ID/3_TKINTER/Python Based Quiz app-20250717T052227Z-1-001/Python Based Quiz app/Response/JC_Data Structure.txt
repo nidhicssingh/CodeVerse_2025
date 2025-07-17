@@ -1,0 +1,9 @@
+Q1: What data structure uses FIFO?
+Your Answer: Tree
+Correct Answer: Queue
+
+Q2: Time complexity of binary search?
+Your Answer: O(log n)
+Correct Answer: O(log n)
+
+Final Score: 1/2
