@@ -1,0 +1,74 @@
+import tkinter as tk
+from standard_module import StandardCalculator
+from scientific_module import ScientificCalculator
+from currency_module import CurrencyConverter
+from temperature_module import TemperatureConverter
+
+class CalculatorApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Multi-Function Calculator")
+        self.root.configure(bg="#dfe6e9")  # Soft gray-blue background
+        self.main_menu()
+
+    def clear_window(self):
+        for widget in self.root.winfo_children():
+            widget.destroy()
+
+    def main_menu(self):
+        self.clear_window()
+
+        # ===== Styling =====
+        header_font = ("Arial", 22, "bold")
+        button_font = ("Arial", 13)
+        frame_bg = "#ffffff"
+        btn_bg = "#ecf0f1"
+        btn_fg = "#2c3e50"
+        hover_bg = "#3498db"
+        hover_fg = "#ffffff"
+        border_color = "#bdc3c7"
+
+        # ===== Header =====
+        tk.Label(
+            self.root,
+            text="🔢 Multi-Function Calculator",
+            font=header_font,
+            bg="#dfe6e9",
+            fg="#2c3e50",
+            pady=20
+        ).pack()
+
+        # ===== Main Frame (like a keypad box) =====
+        container = tk.Frame(self.root, bg=frame_bg, bd=2, relief="ridge")
+        container.pack(padx=30, pady=10, fill="both", expand=True)
+
+        # ===== Button Style =====
+        def make_button(text, command):
+            return tk.Button(
+                container,
+                text=text,
+                font=button_font,
+                bg=btn_bg,
+                fg=btn_fg,
+                activebackground=hover_bg,
+                activeforeground=hover_fg,
+                width=25,
+                height=2,
+                bd=1,
+                relief="raised",
+                command=command
+            )
+
+        # ===== Buttons =====
+        make_button("🧮 Standard Calculator", lambda: StandardCalculator(self)).pack(pady=8)
+        make_button("🧠 Scientific Calculator", lambda: ScientificCalculator(self)).pack(pady=8)
+        make_button("💱 Currency Converter", lambda: CurrencyConverter(self)).pack(pady=8)
+        make_button("🌡️ Temperature Converter", lambda: TemperatureConverter(self)).pack(pady=8)
+        make_button("❌ Exit", self.root.quit).pack(pady=20)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = CalculatorApp(root)
+    root.geometry("400x500")
+    root.resizable(False, False)  # Optional: lock window resizing
+    root.mainloop()
