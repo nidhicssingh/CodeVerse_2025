@@ -26,8 +26,8 @@ def generate_random_message(name):
     return message_template.format(name=name)
 
 # Input
-name = "Nishith"
-phone_number = "+917338247696"
+name = "Anandha"
+phone_number = "+91 7022834767"
 random_message = generate_random_message(name)
 
 # Get time 2 minutes from now
