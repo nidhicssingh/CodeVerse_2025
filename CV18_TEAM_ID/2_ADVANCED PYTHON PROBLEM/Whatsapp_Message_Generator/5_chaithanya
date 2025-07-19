@@ -1,0 +1,8 @@
+import pywhatkit
+
+# Send a WhatsApp Message to a Contact at 6:45 PM
+
+pywhatkit.sendwhatmsg("+918861183253", 
+					"Hey!...this is a test message sent using mu python script ", 
+					18, 45)
+ 

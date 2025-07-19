@@ -1,0 +1,12 @@
+<html>
+<head>
+<body>
+<bg color = "blue">
+<p>
+hello my name is Gaurav
+<img src = "C:\Users\LENOVO\Pictures\Camera Rol.jpeg">
+</p>
+</body>
+</head>
+</html>
+
