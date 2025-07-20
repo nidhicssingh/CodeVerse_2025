@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-5">
+    <h2>Projects</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Personal Portfolio</h5>
+                    <p class="card-text">A fully responsive personal portfolio website built using Django and Bootstrap. It includes resume integration, blog links, and project showcase.</p>
+                    <span class="badge bg-primary">Django</span>
+                    <span class="badge bg-success">Bootstrap</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">ToDo List App</h5>
+                    <p class="card-text">A web-based ToDo List using Django and SQLite for managing tasks with CRUD operations.</p>
+                    <span class="badge bg-info">Python</span>
+                    <span class="badge bg-warning">SQLite</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}
