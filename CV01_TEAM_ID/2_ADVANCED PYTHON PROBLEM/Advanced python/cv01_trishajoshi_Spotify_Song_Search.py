@@ -4,8 +4,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 #goto dashboard create app
 #Redirect URIs*(https://localhost:8888/callback)
 # Replace these with your own credentials
-CLIENT_ID = "b2438d81452d42628fe9a5df2d56b663"
-CLIENT_SECRET = "005c1b8afa154e0aa684d9da3596b6ac"
+CLIENT_ID = "9424bb4be0c242c4b48cca0c055a429c"
+CLIENT_SECRET = "c66490d25dd84468ae57cd1ca29162c7"
 
 # Auth Manager
 auth_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
