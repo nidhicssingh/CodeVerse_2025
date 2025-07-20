@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Tarun's Portfolio{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+
+  <!-- Welcome Banner -->
+  <div class="text-center mb-5 reveal">
+    <h1 class="display-4 fw-bold">Welcome to My Portfolio</h1>
+  </div>
+
+  <!-- Main Content Row -->
+  <div class="row align-items-center">
+
+    <!-- Carousel Section -->
+    <div class="col-lg-6 mb-4 mb-lg-0 reveal">
+      <div id="portfolioCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-3">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" class="d-block w-100 carousel-image" alt="A team collaborating on a project board">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=2070&auto=format&fit=crop" class="d-block w-100 carousel-image" alt="A person presenting code in a meeting">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" class="d-block w-100 carousel-image" alt="Developers working together on laptops">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Introduction and Resume Section -->
+    <div class="col-lg-6 reveal">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4 p-md-5 text-center">
+          <h2 class="fw-bold">Hello, I'm Tarun A 👋</h2>
+          <p class="lead text-muted my-4">
+            A third-semester engineering student passionate about building complete solutions to complex problems. I am currently developing my skills in front-end development (HTML, CSS, JS) while strengthening my core programming foundation with Python, Data Structures, and Algorithms. I'm actively seeking opportunities to contribute to challenging projects.
+          </p>
+          <a href="{% static 'files/MY RESUME.docx' %}" class="btn btn-primary btn-lg rounded-pill px-4" download>
+            <i class="fas fa-download me-2"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  /*
+    This CSS is much simpler now.
+    - We ensure the carousel images are uniform.
+    - We add a subtle hover effect to the resume button.
+  */
+  .carousel-image {
+    height: 450px; /* You can adjust this height */
+    object-fit: cover;
+  }
+
+  .btn-primary.rounded-pill {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  .btn-primary.rounded-pill:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0, 167, 225, 0.35);
+  }
+</style>
+{% endblock %}

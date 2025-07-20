@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects - Tarun's Portfolio{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Custom styles for the project links */
+    .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .project-link .icon {
+        color: var(--primary-color);
+        transition: transform 0.2s ease-in-out;
+    }
+    .project-link:hover .icon {
+        transform: translateX(3px);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="col-lg-8 mx-auto p-4 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom reveal">
+        <a href="{% url 'projects' %}" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+            <i class="fas fa-laptop-code fa-2x me-3" style="color: var(--primary-color);"></i>
+            <span class="fs-4">My Projects</span>
+        </a>
+    </header>
+
+    <main>
+        <div class="reveal">
+            <h1 class="text-body-emphasis">A Collection of My Work</h1>
+            <p class="fs-5 col-md-10">
+                Here are some of the projects I've worked on. Each project demonstrates my skills in different areas, from web development with Django to algorithmic problem-solving in Python.
+            </p>
+        </div>
+
+        <hr class="col-3 col-md-2 my-5">
+
+        <div class="row g-5">
+            <!-- Project 1 -->
+            <div class="col-md-6 reveal">
+                <h2 class="text-body-emphasis">Project Title 1</h2>
+                <p>A brief description of your first project. Explain the problem it solves, the technologies used, and what you learned from building it.</p>
+                <ul class="list-unstyled ps-0">
+                    <li>
+                        <a class="project-link" href="https://github.com/Tarun-A-19/Product-Card" target="_blank">
+                            <i class="fab fa-github icon"></i> View on GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-link" href="{% static 'files/Product Card.html' %}" download>
+                            <i class="fas fa-download icon"></i> Download Project Files
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-6 reveal">
+                <h2 class="text-body-emphasis">Project Title 2</h2>
+                <p>A brief description of your second project. Explain the problem it solves, the technologies used, and what you learned from building it.</p>
+                <ul class="list-unstyled ps-0">
+                    <li>
+                        <a class="project-link" href="https://github.com/Tarun-A-19/Nand2Tetris" target="_blank">
+                           <i class="fab fa-github icon"></i> View on GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-link" href="{% static 'files/nand2tetris.zip' %}" download>
+                            <i class="fas fa-download icon"></i> Download Project Files
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+           
+        </div>
+    </main>
+</div>
+{% endblock %}

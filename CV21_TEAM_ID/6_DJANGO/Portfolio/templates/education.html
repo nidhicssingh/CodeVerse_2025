@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center fw-bold mb-5">🎓 My Education</h2>
+
+  <div class="row g-4 justify-content-center">
+
+    <!-- PUC Education Card -->
+    <div class="col-md-6">
+      <div class="card border-start border-4 border-success shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-success">PUC - PCMC Stream</h5>
+          <h6 class="card-subtitle mb-2 text-muted">KSIT Pre-University College, Karnataka</h6>
+          <p class="card-text">Studied Physics, Chemistry, Mathematics, and Computer Science from 2021 to 2023. Built strong fundamentals in problem-solving and analytical thinking with a growing interest in technology.</p>
+          <span class="badge bg-success">2021 – 2023</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BTech Education Card -->
+    <div class="col-md-6">
+      <div class="card border-start border-4 border-primary shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-primary">B.Tech in Software Engineering</h5>
+          <h6 class="card-subtitle mb-2 text-muted">SVYASA Deemed to be University</h6>
+          <p class="card-text">Currently pursuing Software Engineering from 2024 to 2028. Exploring full-stack development, design systems, and real-world tech applications with passion and commitment.</p>
+          <span class="badge bg-primary">2024 – 2028</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

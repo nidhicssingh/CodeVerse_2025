@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me - Tarun's Portfolio{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Hero Section: Full-screen banner with a parallax-like effect */
+    .hero-section {
+        /* A professional background image with a dark overlay for text contrast. */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop");
+        height: 85vh;
+        min-height: 550px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero-content {
+        text-align: center;
+        color: white;
+        animation: fadeIn 1.5s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content .lead {
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 1.5rem auto;
+    }
+
+    .hero-content .btn {
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 50px;
+        margin: 0.5rem;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .hero-content .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    
+    /* NEW: Styles for the redesigned About Me section */
+    .about-me-section {
+        background-color: var(--white);
+        border-radius: 15px;
+    }
+    
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid var(--primary-color);
+    }
+    
+    /* NEW: Styles for the focus/skills section */
+    .focus-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        width: 80px;
+        height: 80px;
+        background-color: #e6f7ff;
+        border-radius: 50%;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- The main hero banner section -->
+<div class="hero-section d-flex align-items-center justify-content-center">
+    <div class="hero-content px-3">
+        <h1>Hello, I'm Tarun A. 👋</h1>
+        <p class="lead">
+            A passionate engineering student dedicated to building elegant solutions for complex problems through code.
+        </p>
+        <a href="{% url 'projects' %}" class="btn btn-primary btn-lg">View My Work</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">Get In Touch</a>
+    </div>
+</div>
+
+<!-- NEW: Redesigned About Me Section -->
+<div class="container my-5">
+    <div class="p-4 p-md-5 about-me-section shadow-sm reveal">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <img src="{% static 'IMG/Tarun.jpg' %}" alt="Tarun A." class="profile-picture shadow">
+            </div>
+            <div class="col-lg-8">
+                <h2 class="fw-bold">About Me</h2>
+                <p class="text-muted">
+                    I'm a third-semester engineering student with a strong foundation in Python, Data Structures, and Algorithms. My passion lies at the intersection of logic and creativity, which has led me to explore front-end development with HTML, CSS, and JavaScript.
+                </p>
+                <p class="text-muted">
+                    I believe in writing clean, efficient code and am always eager to learn new technologies. I'm actively seeking opportunities where I can contribute to challenging projects, grow as a developer, and make a meaningful impact.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- NEW: What I Focus On Section -->
+<div class="container py-5">
+    <div class="text-center mb-5 reveal">
+        <h2 class="fw-bold">What I Focus On</h2>
+        <p class="lead text-muted">My core areas of interest and expertise.</p>
+    </div>
+    <div class="row text-center">
+        <!-- Focus Item 1 -->
+        <div class="col-md-4 mb-4 reveal">
+            <div class="p-4">
+                <div class="focus-icon d-inline-flex align-items-center justify-content-center mb-3 shadow-sm">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h4 class="fw-bold">Web Development</h4>
+                <p class="text-muted">Building responsive and user-friendly websites using HTML, CSS, JavaScript, and modern frameworks.</p>
+            </div>
+        </div>
+        <!-- Focus Item 2 -->
+        <div class="col-md-4 mb-4 reveal">
+            <div class="p-4">
+                <div class="focus-icon d-inline-flex align-items-center justify-content-center mb-3 shadow-sm">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h4 class="fw-bold">Python Programming</h4>
+                <p class="text-muted">Leveraging Python for backend logic, data structures, algorithms, and problem-solving.</p>
+            </div>
+        </div>
+        <!-- Focus Item 3 -->
+        <div class="col-md-4 mb-4 reveal">
+            <div class="p-4">
+                <div class="focus-icon d-inline-flex align-items-center justify-content-center mb-3 shadow-sm">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h4 class="fw-bold">Problem Solving</h4>
+                <p class="text-muted">Applying logical thinking and algorithmic knowledge to create efficient and scalable solutions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

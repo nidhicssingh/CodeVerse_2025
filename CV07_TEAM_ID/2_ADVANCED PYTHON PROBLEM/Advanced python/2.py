@@ -1,32 +1,46 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
-#Spotify developer account: https://developer.spotify.com
-#goto dashboard create app
-#Redirect URIs*(https://localhost:8888/callback)
-# Replace these with your own credentials
-CLIENT_ID = "b2438d81452d42628fe9a5df2d56b663"
-CLIENT_SECRET = "005c1b8afa154e0aa684d9da3596b6ac"
 
-# Auth Manager
-auth_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
-sp = spotipy.Spotify(auth_manager=auth_manager)
+# Replace these with your actual credentials from Spotify Developer Dashboard
+CLIENT_ID = "089f598e388d4aa58fa45850d9dfafc2"
+CLIENT_SECRET = "15ff90fc2eda46c0939b6d103831c828"
 
+# Set up client credentials manager
+client_credentials_manager = SpotifyClientCredentials(
+    client_id=CLIENT_ID,
+    client_secret=CLIENT_SECRET
+)
+
+# Create a Spotipy client
+sp = spotipy.Spotify(auth_manager=client_credentials_manager)
+
+# Function to search for a song
 def search_song(query):
-    results = sp.search(q=query, limit=5, type='track')
-    tracks = results['tracks']['items']
+    try:
+        results = sp.search(q=query, limit=5, type='track')
+        tracks = results['tracks']['items']
 
-    if not tracks:
-        print("❌ No results found.")
-        return
+        if not tracks:
+            print("❌ No results found.")
+            return
 
-    print("\n🎧 Top Results:")
-    for i, track in enumerate(tracks):
-        name = track['name']
-        artist = track['artists'][0]['name']
-        album = track['album']['name']
-        url = track['external_urls']['spotify']
-        print(f"{i+1}. {name} by {artist} | Album: {album}\n   🔗 {url}")
+        print("\n🎧 Top 5 Search Results:\n")
+        for i, track in enumerate(tracks, 1):
+            name = track['name']
+            artist = track['artists'][0]['name']
+            album = track['album']['name']
+            url = track['external_urls']['spotify']
+            print(f"{i}. 🎵 {name}\n   👤 Artist: {artist}\n   💿 Album: {album}\n   🔗 Link: {url}\n")
 
-# Example usage
-query = input("🎵 Enter a song or artist name to search on Spotify: ")
-search_song(query)
+    except spotipy.SpotifyException as e:
+        print("Spotify error:", e)
+    except Exception as e:
+        print("Something went wrong:", e)
+
+# Entry point
+if __name__ == "__main__":
+    query = input("🎵 Enter a song or artist name to search on Spotify: ")
+    if query.strip():
+        search_song(query)
+    else:
+        print("⚠️ Please enter a valid search term.")
