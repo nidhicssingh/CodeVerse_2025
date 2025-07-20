@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'PORTFOLIO.urls'
+ROOT_URLCONF = 'Portfolio.urls'
 
 TEMPLATES = [
     {
@@ -66,7 +66,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'PORTFOLIO.wsgi.application'
+WSGI_APPLICATION = 'Portfolio.wsgi.application'
 
 
 # Database
@@ -123,5 +123,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Added manually
 STATICFILES_DIRS = [
-    BASE_DIR / "Static",
+BASE_DIR / "Static",
 ]

@@ -1,5 +1,5 @@
 """
-URL configuration for PORTFOLIO project.
+URL configuration for Portfolio project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -14,17 +14,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
 
-admin.site.site_header = "chaithanyaa Admin"
-admin.site.site_title = "chaithanyaa Admin Portal"
-admin.site.index_title = "Welcome to chaithanyaa Researcher Portal"
+admin.site.site_header = "Harshith Admin"
+admin.site.site_title = "Harshith Admin Portal"
+admin.site.index_title = "Welcome to Harshith Researcher Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #app urls
-    path('', include('chaithanyaa.urls'))
+    path('', include('Harshith.urls'))
 ]
+
 
 
