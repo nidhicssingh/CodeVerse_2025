@@ -1,102 +1,108 @@
-import pygame
-import sys
-import time
-import random
+import turtle
 
-# Initialize
-pygame.init()
-WIDTH, HEIGHT = 800, 600
-WHITE = (255, 255, 255)
-GRAY = (200, 200, 200)
-BLACK = (0, 0, 0)
-GREEN = (0, 180, 0)
-RED = (200, 0, 0)
-FONT = pygame.font.SysFont("arial", 28)
-BIG_FONT = pygame.font.SysFont("arial", 40)
+# Constants
+square_size = 60
+board_size = 8
+start_x = -240
+start_y = 240
 
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Typing Speed Test")
-clock = pygame.time.Clock()
+# Create the screen
+screen = turtle.Screen()
+screen.title("Advanced Chess Game")
+screen.bgcolor("white")
+screen.setup(width=600, height=600)
 
-# Sentences to type
-sentences = [
-    "The quick brown fox jumps over the lazy dog.",
-    "Typing games improve your keyboard skills.",
-    "Practice makes a person perfect in typing.",
-    "Speed is important but accuracy matters more.",
-    "Python is a versatile programming language."
+# Turtle for drawing
+drawer = turtle.Turtle()
+drawer.speed(0)
+drawer.hideturtle()
+drawer.penup()
+
+# Turtle for pieces
+pieces_drawer = turtle.Turtle()
+pieces_drawer.speed(0)
+pieces_drawer.hideturtle()
+pieces_drawer.penup()
+
+# Board representation (using unicode)
+board = [
+    ["♜","♞","♝","♛","♚","♝","♞","♜"],
+    ["♟"]*8,
+    [""]*8,
+    [""]*8,
+    [""]*8,
+    [""]*8,
+    ["♙"]*8,
+    ["♖","♘","♗","♕","♔","♗","♘","♖"]
 ]
 
-def draw_text(surface, text, pos, font, color=BLACK):
-    text_obj = font.render(text, True, color)
-    surface.blit(text_obj, pos)
+selected_piece = None
+selected_pos = None
 
-def get_wpm(start_time, input_text):
-    elapsed = max(time.time() - start_time, 1)
-    words = len(input_text.split())
-    wpm = (words / elapsed) * 60
-    return round(wpm)
+def draw_square(x, y, color):
+    drawer.goto(x, y)
+    drawer.fillcolor(color)
+    drawer.begin_fill()
+    for _ in range(4):
+        drawer.pendown()
+        drawer.forward(square_size)
+        drawer.right(90)
+    drawer.end_fill()
+    drawer.penup()
 
-def main():
-    input_text = ''
-    target_text = random.choice(sentences)
-    result = ''
-    start_time = 0
-    active = False
-    finished = False
-    wpm = 0
+def draw_board():
+    drawer.clear()
+    for row in range(board_size):
+        for col in range(board_size):
+            x = start_x + col * square_size
+            y = start_y - row * square_size
+            color = "white" if (row + col) % 2 == 0 else "gray"
+            draw_square(x, y, color)
+    draw_pieces()
 
-    while True:
-        screen.fill(WHITE)
+def draw_pieces():
+    pieces_drawer.clear()
+    for row in range(board_size):
+        for col in range(board_size):
+            piece = board[row][col]
+            if piece:
+                x = start_x + col * square_size + square_size / 4
+                y = start_y - row * square_size - square_size * 0.75
+                pieces_drawer.goto(x, y)
+                pieces_drawer.write(piece, font=("Arial", 28, "normal"))
 
-        draw_text(screen, "Typing Speed Test", (WIDTH//2 - 150, 20), BIG_FONT)
-        draw_text(screen, "Type the sentence below:", (50, 80), FONT)
-        draw_text(screen, target_text, (50, 120), FONT, GRAY)
+def get_board_position(x, y):
+    col = int((x - start_x) // square_size)
+    row = int((start_y - y) // square_size)
+    if 0 <= row < 8 and 0 <= col < 8:
+        return row, col
+    return None
 
-        pygame.draw.rect(screen, GRAY, (48, 200, 700, 40), 2)
-        draw_text(screen, input_text, (50, 210), FONT)
+def on_click(x, y):
+    global selected_piece, selected_pos
+    pos = get_board_position(x, y)
+    if not pos:
+        return
 
-        # Show WPM live
-        if active and not finished:
-            wpm = get_wpm(start_time, input_text)
-            draw_text(screen, f"Speed: {wpm} WPM", (50, 270), FONT, GREEN)
+    row, col = pos
+    current_piece = board[row][col]
 
-        if finished:
-            draw_text(screen, result, (50, 320), FONT, RED)
-            draw_text(screen, "Press Enter to restart", (50, 360), FONT, GRAY)
+    if selected_piece:
+        # Move selected piece to new location
+        if (row, col) != selected_pos:
+            board[row][col] = selected_piece
+            prev_row, prev_col = selected_pos
+            board[prev_row][prev_col] = ""
+        selected_piece = None
+        selected_pos = None
+        draw_board()
+    elif current_piece:
+        # Select a piece
+        selected_piece = current_piece
+        selected_pos = (row, col)
 
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
+# Initial draw
+draw_board()
+screen.onclick(on_click)
 
-            if event.type == pygame.KEYDOWN:
-                if not active and not finished:
-                    start_time = time.time()
-                    active = True
-
-                if event.key == pygame.K_RETURN:
-                    if finished:
-                        # Reset
-                        input_text = ''
-                        target_text = random.choice(sentences)
-                        result = ''
-                        active = False
-                        finished = False
-                        wpm = 0
-                    else:
-                        if input_text.strip() == target_text.strip():
-                            result = f"✅ Correct! Final Speed: {wpm} WPM"
-                        else:
-                            result = f"❌ Incorrect text. Final Speed: {wpm} WPM"
-                        finished = True
-                elif event.key == pygame.K_BACKSPACE:
-                    input_text = input_text[:-1]
-                elif not finished:
-                    input_text += event.unicode
-
-        pygame.display.update()
-        clock.tick(60)
-
-main()
-
+screen.mainloop()
