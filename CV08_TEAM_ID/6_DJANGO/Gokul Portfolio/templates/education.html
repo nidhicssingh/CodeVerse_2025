@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Education | {{ site_name|default:"My Portfolio" }}{% endblock %}
+{% block content %}
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #f5f7fa; color: #333; }
+
+  .hero {
+    text-align: center; padding: 4rem 1rem;
+    background: linear-gradient(135deg,#ff9a9e,#6a11cb);
+    color: white;
+  }
+  .hero h1 {
+    font-size: 2.8rem; opacity: 0;
+    animation: fadeInDown 0.8s ease-out forwards;
+  }
+  .hero p {
+    margin-top: 0.5rem; opacity: 0;
+    animation: fadeIn 1.2s ease-out 0.5s forwards;
+  }
+  @keyframes fadeInDown { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  .timeline {
+    max-width: 900px; margin: 3rem auto; position: relative; padding: 0 1rem;
+  }
+  .timeline::before {
+    content: ''; position: absolute; top: 0; left: 50%;
+    width: 3px; height: 100%; background: #6a11cb;
+    transform: translateX(-50%);
+  }
+
+  .edu-item {
+    position: relative; width: 50%; padding: 1.5rem 2rem;
+    opacity: 0; animation: slideUp 0.8s ease-out forwards;
+  }
+  .edu-item:nth-child(odd) { left: 0; text-align: right; }
+  .edu-item:nth-child(even) { left: 50%; }
+
+  .edu-item::before {
+    content: ''; position: absolute; top: 1.5rem;
+    width: 18px; height: 18px; background: #ff6ec4;
+    border-radius: 50%; box-shadow: 0 0 0 4px #f5f7fa;
+  }
+  .edu-item:nth-child(odd)::before { right: -11px; }
+  .edu-item:nth-child(even)::before { left: -11px; }
+
+  .edu-item h3 {
+    margin-bottom: .2rem; font-size: 1.3rem; color: #2575fc;
+    position: relative; overflow: hidden;
+  }
+  .edu-item h3::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 3px; background: #ff6ec4;
+    transition: width .3s ease;
+  }
+  .edu-item h3:hover::after { width: 100%; }
+
+  .edu-item .date {
+    font-size: .9rem; color: #777; margin-bottom: .5rem;
+  }
+  .edu-item p {
+    background: white; display: inline-block; padding: .6rem 1rem;
+    border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform .3s;
+  }
+  .edu-item:hover p { transform: translateY(-3px); }
+
+  @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+  @media (max-width: 800px) {
+    .edu-item, .timeline::before {
+      left: 5% !important; width: 90%;
+    }
+    .edu-item:nth-child(even) { left: 5%; text-align: left !important; }
+    .edu-item::before { left: -11px !important; }
+  }
+
+  footer {
+    text-align: center; margin: 3rem 0; color: #555; font-size: .9rem;
+  }
+</style>
+
+<section class="hero">
+  <h1>🎓 Education Journey</h1>
+  <p>Academic milestones woven into a timeline of passion and progress</p>
+</section>
+
+<div class="timeline">
+  <div class="edu-item" style="animation-delay: 0.2s;">
+    <h3>Swamy Vivekananda High School</h3>
+    <div class="date">SSLC • 96% (2022)</div>
+    <p>Strong academic foundation with excellence across all subjects.</p>
+  </div>
+  <div class="edu-item" style="animation-delay: 0.4s;">
+    <h3>JS Pre-University College</h3>
+    <div class="date">PUC • 88% (2024)</div>
+    <p>Focused on Science stream; developed critical thinking and analytical skills.</p>
+  </div>
+  <div class="edu-item" style="animation-delay: 0.6s;">
+    <h3>S-VYASA University</h3>
+    <div class="date">B.Tech CSE (Data Science) • 8.5 CGPA (Completed 1st Year)</div>
+    <p>Currently pursuing engineering; laying groundwork in data science and AI.</p>
+  </div>
+</div>
+
+<footer>&copy; {{ now|date:"Y" }} {{ site_name|default:"My Portfolio" }}</footer>
+{% endblock %}

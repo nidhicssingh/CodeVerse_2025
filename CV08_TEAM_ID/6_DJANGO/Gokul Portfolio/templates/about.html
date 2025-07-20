@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+  body {
+    background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    color: #2e3a46;
+  }
+  .card-container {
+    perspective: 1000px;
+  }
+  .about-card {
+    max-width: 500px;
+    margin: 80px auto;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .about-card:hover {
+    transform: translateY(-10px);
+  }
+  .about-card h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+    color: #1a1f29;
+    animation: fadeInDown 1s ease-in-out forwards;
+    opacity: 0;
+  }
+  .tagline {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    color: #37474f;
+    background: #d0f0f7;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-style: italic;
+    margin-bottom: 25px;
+    animation: fadeInUp 1s ease-in-out 0.3s forwards;
+    opacity: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  .about-card p span {
+    display: block;
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  .about-card p span:nth-child(1) { animation-delay: 0.6s; }
+  .about-card p span:nth-child(2) { animation-delay: 0.8s; }
+  .about-card p span:nth-child(3) { animation-delay: 1.0s; }
+  .about-card p span:nth-child(4) { animation-delay: 1.2s; }
+  .about-card p span:nth-child(5) { animation-delay: 1.4s; }
+
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out 1.6s forwards;
+    opacity: 0;
+  }
+  .skills span {
+    background: linear-gradient(45deg, #42a5f5, #7e57c2);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+  }
+  .skills span:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<div class="card-container" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+  <section class="about-card">
+    <h1>Gokul BS</h1>
+    <div class="tagline">Second‑Year B.Tech Data Science Student</div>
+    <p>
+      <span>I completed my first year of B.Tech Data Science with a CGPA of 8.5.</span>
+      <span>I’m now in my second year, continuing my passion for data science.</span>
+      <span>In 12th grade, I learned C++. During my first year of college, I expanded into Python, HTML, CSS, and Java.</span>
+      <span>I’m driven to apply these skills in real‑world data, machine learning, and web development projects.</span>
+      <span>Coding to solve problems and transforming data into insights excites me.</span>
+    </p>
+    <div class="skills">
+      <span>C++</span><span>Python</span><span>HTML</span><span>CSS</span><span>Java</span><span>Data Science</span>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script>
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+</script>
+{% endblock %}

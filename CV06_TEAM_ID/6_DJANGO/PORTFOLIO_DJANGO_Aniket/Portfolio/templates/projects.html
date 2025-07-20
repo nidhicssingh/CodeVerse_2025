@@ -1,0 +1,69 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %}My Projects{% endblock %}
+{% block content %}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">My Projects</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+        <!-- Debate AI Platform -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Debate AI Platform</h5>
+                    <p class="card-text">
+                        A web app for Asian Parliamentary debate prep with speech input, AI teammates, Sarvam API integration, and research tools. Includes dark-themed UI and feedback via radar chart.
+                    </p>
+                    <a href="#" class="btn btn-outline-primary">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AP Debate Case Prep Tool -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-success">
+                <div class="card-body">
+                    <h5 class="card-title">AP Case Prep Assistant</h5>
+                    <p class="card-text">
+                        A React + Express tool where users select a side and role, speak ideas, and get structured debate notes from AI teammates and a research assistant, using Sarvam API.
+                    </p>
+                    <a href="#" class="btn btn-outline-success">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student AI Mentor System -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-info">
+                <div class="card-body">
+                    <h5 class="card-title">AI Mentor for Students</h5>
+                    <p class="card-text">
+                        A platform with AI tools to guide students in career discovery, assignment evaluation, personalized testing, and bridging urban-rural learning gaps using interest-based guidance.
+                    </p>
+                    <a href="#" class="btn btn-outline-info">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- To-do & Utility Tools Website -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Everyday Tools Web App</h5>
+                    <p class="card-text">
+                        A beautifully animated app with tools like a to-do list (drag-and-drop), calculator, timer/stopwatch, notes with folders, and habit tracker with streaks—all React-based.
+                    </p>
+                    <a href="#" class="btn btn-outline-warning">View Project</a>
+                </div>
+            </div>
+        </div>
+
+       
+
+        
+
+    </div>
+</div>
+
+{% endblock %}

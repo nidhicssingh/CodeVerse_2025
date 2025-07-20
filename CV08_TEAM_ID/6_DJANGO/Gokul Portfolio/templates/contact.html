@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact | {{ site_name|default:"My Portfolio" }}{% endblock %}
+{% block content %}
+<style>
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Segoe UI',sans-serif; background:#f7fafd; color:#333; }
+
+  /* Animated mountain background accent */
+  body::before {
+    content:'';
+    position:fixed; bottom:0; left:0;
+    width:100%; height:200px;
+    background: linear-gradient(to top, #6a11cb, rgba(106,17,203,0));
+    z-index:-1;
+    animation: bgRise 4s infinite alternate ease-in-out;
+    opacity:0.2;
+  }
+  @keyframes bgRise { from{height:180px;} to{height:220px;} }
+
+  /* Hero section styling */
+  .hero {
+    text-align:center;
+    padding:3rem 1rem;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color:#333;
+    border-radius:12px;
+    margin:2rem auto;
+    max-width:800px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    animation:fadeDown 0.8s ease-out forwards;
+  }
+  .hero h1 {
+    font-size:2.6rem;
+    margin-bottom:0.5rem;
+    animation:fadeIn 1s ease-out forwards;
+    opacity:0;
+  }
+  .hero p {
+    font-size:1.1rem;
+    opacity:0;
+    animation:fadeIn 1s ease-out 0.3s forwards;
+  }
+  @keyframes fadeDown { from{transform:translateY(-20px);opacity:0;} to{transform:translateY(0);opacity:1;} }
+  @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+  /* Contact panel */
+  .contact-container {
+    max-width:600px;
+    margin:3rem auto 4rem;
+    background:#fff;
+    padding:2.5rem;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.1);
+    border-top:4px solid #6a11cb;
+    animation:liftUp 0.8s ease-out 0.5s forwards;
+    opacity:0;
+    transform:translateY(30px);
+  }
+  @keyframes liftUp { to{transform:translateY(0);opacity:1;} }
+
+  /* Form fields */
+  .contact-container form {
+    display:grid; gap:1.5rem;
+  }
+  label {
+    font-weight:bold; color:#444;
+  }
+  input, textarea {
+    width:100%;
+    padding:0.9rem;
+    border:2px solid #ddd;
+    border-radius:8px;
+    transition:border-color 0.3s, box-shadow 0.3s;
+    font-size:1rem;
+  }
+  input:focus, textarea:focus {
+    border-color:#ff9a9e;
+    box-shadow:0 0 10px rgba(255,154,158,0.3);
+    outline:none;
+  }
+
+  textarea {
+    min-height:160px;
+    resize:vertical;
+  }
+
+  /* Submit button */
+  button {
+    padding:0.85rem 1.8rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:1.05rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition: background 0.3s, transform 0.1s;
+  }
+  button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+  }
+  button:active {
+    transform:scale(0.97);
+  }
+
+  /* Contact links */
+  .contact-info {
+    margin-top:2.5rem;
+    text-align:center;
+    color:#555;
+    font-size:0.95rem;
+  }
+  .contact-info a {
+    color:#6a11cb;
+    text-decoration:none;
+    position:relative;
+  }
+  .contact-info a::after {
+    content:'';
+    position:absolute; left:0; bottom:-3px;
+    width:100%; height:2px;
+    background:#ff9a9e;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 0.3s ease;
+  }
+  .contact-info a:hover::after {
+    transform:scaleX(1);
+  }
+
+  @media(max-width:600px) {
+    .hero h1 { font-size:2.2rem; }
+    button { width:100%; }
+  }
+
+</style>
+
+<section class="hero">
+  <h1>📬 Get in Touch</h1>
+  <p>Feel free to reach out—whether you have a question or just want to say hi!</p>
+</section>
+
+<div class="contact-container">
+  <form method="post" action="">
+    {% csrf_token %}
+    <div>
+      <label for="id_name">Name</label>
+      <input type="text" id="id_name" name="name" placeholder="Your name" required>
+    </div>
+    <div>
+      <label for="id_email">Email</label>
+      <input type="email" id="id_email" name="email" placeholder="you@example.com" required>
+    </div>
+    <div>
+      <label for="id_message">Message</label>
+      <textarea id="id_message" name="message" placeholder="Your message..." required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="contact-info">
+    <p>Or email me directly at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>Connect on <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>, <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+  </div>
+</div>
+{% endblock %}

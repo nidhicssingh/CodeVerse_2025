@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Skills | {{ site_name|default:"My Portfolio" }}{% endblock %}
+{% block content %}
+<style>
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Poppins',sans-serif; background:#f3f6fa; color:#333; }
+
+  /* Hero Section with refined height */
+  .hero {
+    background: linear-gradient(135deg,#ff6ec4,#2575fc);
+    text-align: center; padding:4rem 1rem; /* reduced vertical padding */
+    color: #fff;
+    animation: fadeInDown 1s ease-out forwards;
+  }
+  .hero h1 {
+    font-size: 3rem; /* slightly smaller */
+    letter-spacing: 1px; margin-bottom: 0.6rem;
+  }
+  .hero p {
+    font-size: 1.3rem; opacity: 0;
+    animation: fadeIn 1.4s ease-out 0.8s forwards;
+  }
+  @keyframes fadeInDown { from{opacity:0;transform:translateY(-30px);} to{opacity:1;transform:translateY(0);} }
+  @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+  .intro {
+    max-width:800px; margin:3rem auto; text-align:center;
+    font-size:1.15rem; line-height:1.8; color:#555;
+  }
+  .intro strong { color:#523446; }
+
+  .intro ul {
+    text-align:left; display:inline-block;
+    margin-top:1rem; font-size:1.1rem; color:#555;
+    list-style-type: disc; padding-left:1.5rem;
+  }
+  .intro ul li { margin-bottom:0.7rem; }
+
+  .skills-bars {
+    max-width:900px; margin:3rem auto; padding:0 1rem;
+    display:flex; flex-direction:column; gap:2.5rem;
+  }
+
+  .skill-item {
+    background:#fff; padding:2rem; border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    position:relative; overflow:hidden;
+    transition:transform .3s, box-shadow .3s;
+  }
+  .skill-item:hover {
+    transform: translateY(-5px); box-shadow:0 16px 32px rgba(0,0,0,0.1);
+  }
+
+  .skill-header {
+    font-size:1.6rem; font-weight:700; color:#2575fc;
+    margin-bottom:0.5rem;
+  }
+  .skill-desc {
+    font-size:1.1rem; color:#444; margin-bottom:1rem;
+    line-height:1.6;
+  }
+
+  .bar-wrap {
+    position:relative; background:#eee; height:26px;
+    border-radius:60px; overflow:hidden;
+  }
+  .bar-fill {
+    height:100%; background:linear-gradient(90deg,#ff6ec4,#6a11cb);
+    transition:background .3s;
+    /* width will be set inline in HTML */
+  }
+  .bar-wrap:hover .bar-fill { background: linear-gradient(90deg,#6a11cb,#ff6ec4); }
+
+  /* The width of .bar-fill is set inline in the HTML using Django template tags */
+  .percent-label {
+    position:absolute; right:1rem; top:50%; transform:translateY(-50%);
+    font-weight:600; color:#333;
+  }
+
+  footer { text-align:center; margin:4rem 0; color:#555; font-size:0.9rem; }
+  @media(max-width:600px){
+    .hero h1{font-size:2.6rem;} .skill-header{font-size:1.4rem;}
+  }
+</style>
+
+<section class="hero">
+  <h1>✨ Skills & Expertise</h1>
+  <p>I thrive in coding with <strong>HTML, CSS, Python</strong> and rapidly pick up frameworks like Django and cloud tooling.</p>
+</section>
+
+<div class="intro">
+  <p>I’m known for my <strong>fast-paced learning</strong>—grasping new libraries or debugging patterns within hours. I decompose problems and write clean, efficient code that scales well.</p>
+  <p>My core strengths:</p>
+  <ul>
+    <li><strong>Adaptive learning</strong> – I recently mastered Django fundamentals and built functional features within days.</li>
+    <li><strong>Analytical thinking</strong> – I break down complex issues into logical modules and predictable workflows.</li>
+    <li><strong>Clear communication</strong> – I articulate technical solutions clearly to peers and non‑technical teams.</li>
+    <li><strong>Collaborative mindset</strong> – I welcome feedback, iterate quickly, and deliver polished results.</li>
+  </ul>
+</div>
+
+<div class="skills-bars">
+  {% for skill in skills_bars %}
+  <div class="skill-item">
+    <div class="skill-header">{{ skill.name }}</div>
+    <div class="skill-desc">{{ skill.description }}</div>
+    <div class="bar-wrap">
+      <div class="bar-fill" style="width: {{ skill.level }}%"></div>
+      <div class="percent-label">{{ skill.level }}%</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<footer>&copy; {{ now|date:"Y" }} {{ site_name|default:"My Portfolio" }}</footer>
+{% endblock %}

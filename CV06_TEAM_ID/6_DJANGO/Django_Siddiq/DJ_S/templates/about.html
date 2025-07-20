@@ -1,0 +1,104 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<style>
+  .about-wrapper {
+    background-color: #f9f9f9;
+    padding: 60px 30px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+ .about-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .about-image {
+    flex: 1 1 350px;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+
+  .about-text {
+    flex: 1 1 600px;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem;
+    color: #0d6efd;
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+
+  .highlight {
+    color: #dc3545;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="about-wrapper">
+  <div class="about-title">About Me</div>
+
+  <div class="about-container">
+    <div class="about-image">
+      <img src="{% static 'IMG/Siddiq.jpg ' %}" alt="Siddiq's Profile Photo">
+    </div>
+
+    <div class="about-text">
+      <h3>I'm Siddiq — A Creative Technologist & Learner</h3>
+      <p>
+  I’m <span class="highlight">Mohammed Siddiq</span>, a B.Tech student specializing in <span class="highlight">Artificial Intelligence and Machine Learning</span>. I'm passionate about using technology to bridge the gap between innovation and human impact. My journey in tech began with a fascination for how intelligent systems work—and since then, I’ve been exploring everything from web development to AI-powered applications.
+</p>
+<p>
+  My technical skills include <span class="highlight">Python, HTML, CSS, JavaScript, React, Django</span>, and UI/UX design. I enjoy working on projects that challenge my logical thinking while allowing room for <span class="highlight">visual creativity and storytelling</span>. Whether it’s building a voting system with dynamic animations or designing a futuristic AI interface, I focus on precision, responsiveness, and user experience.
+</p>
+<p>
+  I’m currently working on projects that blend <span class="highlight">AI, design, and social impact</span>
+</p>
+<p>
+  Outside of coding, I’m someone who loves <span class="highlight">nature, photography, music</span>, and diving into ideas that help me grow as a person. I value <span class="highlight">team collaboration, continuous learning</span>, and the power of small innovations to create meaningful change.
+</p>
+<p>
+  My ultimate goal? To become a developer who creates technology that's <span class="highlight">intelligent, intuitive, and impactful</span> one line of code at a time.
+</p>
+
+    </div>
+  </div> 
+</div>
+{% endblock %}

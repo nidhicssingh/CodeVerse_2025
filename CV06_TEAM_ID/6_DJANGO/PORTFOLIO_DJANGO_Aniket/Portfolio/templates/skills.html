@@ -1,0 +1,57 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %}My Skills{% endblock %}
+{% block content %}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">My Skills</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">HTML & CSS</h5>
+                    <p class="card-text">Proficient in creating responsive and semantic web pages using modern HTML5 and CSS3 standards.</p>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">JavaScript</h5>
+                    <p class="card-text">Comfortable with DOM manipulation, ES6+ syntax, and integrating dynamic client-side behavior.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Python</h5>
+                    <p class="card-text">Experienced in writing clean and modular Python code for web apps, scripting, and automation.</p>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Django</h5>
+                    <p class="card-text">Capable of building secure, scalable backends with Django and integrating with front-end templates.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+             <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">React</h5>
+                     <p class="card-text">Skilled in building dynamic and component-based user interfaces using React and modern state management.</p>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

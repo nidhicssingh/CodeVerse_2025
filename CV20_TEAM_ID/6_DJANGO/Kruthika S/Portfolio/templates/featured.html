@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Featured{% endblock %}
+
+{% block content %}
+
+<div class="featured-section">
+    <h2>Featured In</h2>
+    <p class="featured-description">
+        I was featured in the <strong>CodeVerse_2025</strong> program, where I showcased my technical skills and creativity. 
+        Being recognized among the top contributors was a proud moment that boosted my confidence and motivation to keep learning and growing in the field of development.
+    </p>
+    
+    <!-- Images of the featured event -->
+    <div class="featured-images">
+        <div class="featured-image">
+            <img src="Static/IMG/img2.jpeg" alt="Featured Image 1">
+        </div>
+        <div class="featured-image">
+            <img src="Static/IMG/img3.jpeg" alt="Featured Image 2">
+        </div>
+        <div class="featured-image">
+            <img src="Static/IMG/img4.jpeg" alt="Featured Image 3">
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block extra_css %}
+<style>
+.featured-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f6f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.featured-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #253037ff;
+    margin-bottom: 20px;
+}
+
+.featured-description {
+    font-size: 1.1em;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.featured-images {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.featured-image {
+    width: 30%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%; 
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.featured-image:hover img {
+    transform: scale(1.05); 
+}
+</style>
+{% endblock %}
+

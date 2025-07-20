@@ -1,0 +1,100 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %}project{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research and Projects</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f9ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #cce0ff;
+      padding-bottom: 5px;
+    }
+    .project, .research {
+      margin-bottom: 25px;
+    }
+    .title {
+      font-weight: bold;
+      color: #00509e;
+    }
+    .desc {
+      margin: 5px 0 10px;
+      color: #333;
+    }
+    .tech {
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Research and Projects</h1>
+  </header>
+
+  <div class="container">
+
+    <h2>Research Work</h2>
+
+    <div class="research">
+      <div class="title">1. AI in Education Systems</div>
+      <div class="desc">A study on how AI can personalize learning for students using adaptive testing and predictive analytics.</div>
+      <div class="tech"><strong>Tools:</strong> Python, Jupyter, TensorFlow</div>
+    </div>
+
+    <div class="research">
+      <div class="title">2. Renewable Energy Monitoring</div>
+      <div class="desc">A paper on using IoT devices to track and optimize solar panel output in real-time.</div>
+      <div class="tech"><strong>Tools:</strong> Arduino, Python, MQTT</div>
+    </div>
+
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="title">1. Student Attendance System</div>
+      <div class="desc">A face recognition-based attendance system built using OpenCV and a GUI with Tkinter.</div>
+      <div class="tech"><strong>Technologies:</strong> Python, OpenCV, Tkinter</div>
+    </div>
+
+    <div class="project">
+      <div class="title">2. ChatBot for College Info</div>
+      <div class="desc">Created a chatbot that answers common queries about the college courses, fees, and facilities.</div>
+      <div class="tech"><strong>Technologies:</strong> Python, NLTK, Flask</div>
+    </div>
+
+    <div class="project">
+      <div class="title">3. E-Voting System</div>
+      <div class="desc">Developed a secure online voting system using blockchain concepts to ensure transparency and security.</div>
+      <div class="tech"><strong>Technologies:</strong> Solidity, Ethereum, Web3.js</div>
+    </div>
+
+  </div>
+</body>
+</html>
+
+{% endblock %}

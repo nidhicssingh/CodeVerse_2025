@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects | {{ site_name|default:"My Portfolio" }}{% endblock %}
+{% block content %}
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family:'Segoe UI',sans-serif; background:#fff; color:#333; }
+
+  /* Dynamic subtle gradient backdrop */
+  body::before {
+    content:''; position:fixed; top:0; left:0;
+    width:100%; height:100%;
+    background: linear-gradient(120deg, #2575fc, #6a11cb, #ff6ec4);
+    background-size: 300% 300%;
+    animation: shift 8s ease infinite;
+    z-index:-1; opacity:0.15;
+  }
+  @keyframes shift {
+    0%,100%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+  }
+
+  /* Hero section with contrast overlay */
+  .hero {
+    margin-top:1rem;
+    padding:2.5rem 1rem;
+    text-align:center;
+    background: rgba(108, 56, 122, 0.5);
+    border-radius:12px;
+    color:#fff;
+  }
+  .hero h1 {
+    font-size:2.4rem; margin-bottom:0.4rem;
+  }
+  .hero p {
+    font-size:1.05rem;
+  }
+
+  .projects-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:2rem;
+    max-width:1000px;
+    margin:3rem auto;
+    padding:0 1rem;
+  }
+
+  .project-card {
+    background:#fafafa;
+    border-radius:12px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    overflow:hidden;
+    transform:translateY(30px);
+    opacity:0;
+    animation: appear 0.7s ease-out forwards;
+  }
+  .project-card:nth-child(1){animation-delay:0.2s}
+  .project-card:nth-child(2){animation-delay:0.4s}
+  .project-card:nth-child(3){animation-delay:0.6s}
+  @keyframes appear { to {opacity:1; transform:translateY(0);} }
+
+  .project-content {
+    padding:1.75rem;
+  }
+  .project-meta {
+    font-size:0.85rem; color:#666; margin-bottom:0.6rem;
+  }
+  .project-title {
+    font-size:1.45rem; font-weight:700;
+    margin-bottom:0.6rem; 
+    background: linear-gradient(90deg, #ff6ec4, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size:200% 200%;
+    transition:background-position 0.4s;
+  }
+  .project-card:hover .project-title {
+    background-position: right;
+  }
+
+  .project-desc {
+    font-size:1rem; color:#444;
+    line-height:1.6; margin-bottom:1rem;
+  }
+  .project-links a {
+    display:inline-block; margin-right:1rem;
+    background:#2575fc; color:#fff;
+    padding:0.6rem 1.2rem; border-radius:8px;
+    font-weight:600;
+    transition: transform .2s, background .3s;
+  }
+  .project-links a:hover {
+    transform:translateY(-2px);
+    background:#6a11cb;
+  }
+
+  footer {
+    text-align:center; padding:2rem 1rem;
+    background:#f0f0f0; color:#555; font-size:0.9rem;
+    margin-top:4rem;
+  }
+  @media(max-width:800px){
+    .hero h1{font-size:2rem;}
+    .project-title{font-size:1.2rem;}
+  }
+</style>
+
+<section class="hero">
+  <h1>💡 My Projects</h1>
+  <p>Discover the projects I've crafted using modern web technologies.</p>
+</section>
+
+<div class="projects-grid">
+  <div class="project-card">
+    <div class="project-content">
+      <div class="project-meta">2025 • Django • PostgreSQL • Bootstrap</div>
+      <h2 class="project-title">E‑Commerce Django Store</h2>
+      <p class="project-desc">A full-featured online store: products, user auth, cart functionality, order tracking, and secure payments.</p>
+      <div class="project-links">
+        <a href="#" target="_blank">Live Demo</a>
+        <a href="#" target="_blank">Source Code</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-content">
+      <div class="project-meta">2024 • HTML • CSS • JavaScript • WebSocket</div>
+      <h2 class="project-title">Real‑Time Chat App</h2>
+      <p class="project-desc">A responsive chat platform featuring private messaging, chat rooms, and emoji reactions.</p>
+      <div class="project-links">
+        <a href="#" target="_blank">Live Demo</a>
+        <a href="#" target="_blank">Source Code</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-content">
+      <div class="project-meta">2024 • Python • Flask • D3.js</div>
+      <h2 class="project-title">Data Visualizer Dashboard</h2>
+      <p class="project-desc">Empower data insights with interactive CSV visualization, charts, and smart filters.</p>
+      <div class="project-links">
+        <a href="#" target="_blank">Live Demo</a>
+        <a href="#" target="_blank">Source Code</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>&copy; {{ now|date:"Y" }} {{ site_name|default:"My Portfolio" }}</footer>
+{% endblock %}
