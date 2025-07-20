@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}blog{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/blogs.css' %}">
+{% endblock %}
+
+<div class="blog-container">
+    <h1>Simple Blog</h1>
+    {% for post in posts %}
+        <div class="blog-post">
+            <h2>{{ post.title }}</h2>
+            <p class="blog-meta">By {{ post.author }} on {{ post.published_date }}</p>
+            <div class="blog-content">
+                {{ post.content|linebreaks }}
+            </div>
+        </div>
+    {% empty %}
+        <p>No blog posts available.</p>
+    {% endfor %}
+</div>
+{% block content %}
+
+ {% endblock %}
