@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color: #333;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #6a11cb;
+  }
+
+  .blog-entry {
+    margin-bottom: 30px;
+    border-left: 5px solid #6a11cb;
+    padding-left: 20px;
+    animation: slideIn 0.5s ease;
+  }
+
+  .blog-entry h2 {
+    margin: 0;
+    color: #6a11cb;
+  }
+
+  .blog-entry p {
+    font-size: 16px;
+  }
+
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+</style>
+
+<div class="container">
+  <h1>My Blog</h1>
+
+  <div class="blog-entry">
+    <h2>🚀 Project Journey</h2>
+    <p>I explored Django and built my personal portfolio. Learned static files, templates, views and deployment. It was exciting!</p>
+  </div>
+
+  <div class="blog-entry">
+    <h2>💻 Coding Tools I Use</h2>
+    <p>VS Code, GitHub, Figma, Postman, and ChatGPT for logic correction. These tools make me more efficient.</p>
+  </div>
+
+  <footer>
+    &copy; {{ now|date:"Y" }} My Portfolio 🚀 Crafted with ❤️ & code.
+  </footer>
+</div>
+{% endblock %}

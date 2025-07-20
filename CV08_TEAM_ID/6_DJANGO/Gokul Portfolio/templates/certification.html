@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Certifications | {{ site_name|default:"My Portfolio" }}{% endblock %}
+{% block content %}
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #f0f5fb; color: #333; }
+  a { text-decoration: none; transition: color .3s; }
+
+  .hero {
+    text-align: center; padding: 4rem 1rem;
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: white;
+    animation: fadeDown 0.8s ease-out forwards;
+  }
+  .hero h1 { font-size: 2.8rem; margin-bottom: .5rem; }
+  .hero p { opacity:0; animation: fadeIn 1s ease-out 0.4s forwards; }
+
+  @keyframes fadeDown { from { opacity:0; transform:translateY(-30px);} to { opacity:1; transform:translateY(0);} }
+  @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+  .cert-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 2rem; max-width: 1100px; margin: 2rem auto; padding: 0 1rem;
+  }
+
+  .cert-card {
+    background: white; border-radius:12px; overflow:hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transform: translateY(20px); opacity:0;
+    animation: riseUp 0.6s ease-out forwards;
+  }
+  .cert-card:nth-child(1) { animation-delay: 0.2s; }
+  .cert-card:nth-child(2) { animation-delay: 0.4s; }
+  .cert-card:nth-child(3) { animation-delay: 0.6s; }
+
+  @keyframes riseUp { from { transform:translateY(30px); opacity:0; } to { transform:translateY(0); opacity:1; } }
+
+  .cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+  }
+
+  .cert-logo {
+    width: 80px; height: 80px; object-fit: contain;
+    margin: 1.5rem auto 1rem;
+    animation: pop-in 0.5s ease-out forwards;
+  }
+  @keyframes pop-in { from { transform: scale(0.6); opacity:0; } to { transform: scale(1); opacity:1; } }
+
+  .cert-title {
+    font-size: 1.3rem; font-weight: bold; color: #2575fc;
+    margin: 0.5rem 1rem;
+    position: relative; overflow: hidden;
+  }
+  .cert-title::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 3px; background: #ff6ec4;
+    transition: width .3s ease;
+  }
+  .cert-title:hover::after { width: 100%; }
+
+  .cert-org { font-size: .95rem; color: #555; margin: .3rem 1rem; }
+  .cert-desc { font-size: .9rem; color: #666; margin: .5rem 1rem 1rem; line-height: 1.4; }
+
+  .cert-link {
+    display: inline-block; margin: 0 1rem 1.5rem;
+    color: #6a11cb; font-weight: bold; position: relative;
+  }
+  .cert-link::after {
+    content: ' →'; transition: transform .3s;
+  }
+  .cert-link:hover::after { transform: translateX(4px); }
+  .cert-link:hover { color: #2575fc; }
+
+  footer {
+    text-align: center; padding: 2rem 1rem; margin-top: 3rem;
+    color: #555; font-size: .9rem;
+  }
+</style>
+
+<section class="hero">
+  <h1>🎓 Certifications</h1>
+  <p>Proof of my skills and dedication to continuous learning.</p>
+</section>
+
+<div class="cert-container">
+
+  <!-- Certificate 1 -->
+  <div class="cert-card">
+    <img src="{% static 'IMG/Gold-image.png' %}" alt="Django" class="cert-logo">
+    <div class="cert-title">Django Web Developer</div>
+    <div class="cert-org">TestCert Institute • March 2025</div>
+    <div class="cert-desc">Comprehensive course on building full‑stack applications with Django.</div>
+    <a href="{% static 'IMG/cert-django.jpg' %}" target="_blank" class="cert-link">View Certificate</a>
+  </div>
+
+  <!-- Certificate 2 -->
+  <div class="cert-card">
+    <img src="{% static 'IMG/Gold-image.png' %}" alt="Data Science" class="cert-logo">
+    <div class="cert-title">Data Science Essentials</div>
+    <div class="cert-org">DataAcademy • January 2025</div>
+    <div class="cert-desc">Covered Python, statistics, machine learning basics and real‑world projects.</div>
+    <a href="{% static 'IMG/cert-data-science.jpg' %}" target="_blank" class="cert-link">View Certificate</a>
+  </div>
+
+  <!-- Certificate 3 -->
+  <div class="cert-card">
+    <img src="{% static 'IMG/Gold-image.png' %}" alt="Cloud computing" class="cert-logo">
+    <div class="cert-title">Cloud Computing Fundamentals</div>
+    <div class="cert-org">CloudLearn • May 2025</div>
+    <div class="cert-desc">Learned AWS core services, deployment models, and DevOps basics.</div>
+    <a href="{% static 'IMG/cert-cloud.jpg' %}" target="_blank" class="cert-link">View Certificate</a>
+  </div>
+
+</div>
+
+
+<footer>&copy; {{ now|date:"Y" }} {{ site_name|default:"My Portfolio" }}</footer>
+{% endblock %}

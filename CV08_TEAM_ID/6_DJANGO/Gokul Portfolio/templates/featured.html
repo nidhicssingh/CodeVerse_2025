@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Featured Projects | {{ site_name|default:"My Portfolio" }}{% endblock %}
+{% block content %}
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #fafafa; color: #333; }
+
+  .hero {
+    text-align: center; padding: 4rem 1rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+  }
+  .hero h1 {
+    font-size: 2.8rem; animation: fadeDown 0.8s ease-out forwards;
+  }
+  .hero p {
+    margin-top: 0.5rem; opacity:0; animation: fadeIn 1s ease-out 0.5s forwards;
+  }
+  @keyframes fadeDown { from{transform:translateY(-20px);opacity:0} to{transform:translateY(0);opacity:1} }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .project-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: riseUp 0.6s ease-out forwards;
+  }
+  .project-card:nth-child(odd) { animation-delay: 0.2s; }
+  .project-card:nth-child(even) { animation-delay: 0.4s; }
+
+  @keyframes riseUp { to{transform:translateY(0);opacity:1} }
+
+  .project-img {
+    width: 100%; height: 200px;
+    object-fit: cover;
+    transition: transform .5s;
+  }
+  .project-card:hover .project-img { transform: scale(1.05); }
+
+  .project-content {
+    padding: 1rem;
+  }
+  .project-title {
+    font-size: 1.4rem; margin-bottom: .5rem;
+    color: #5d3fd3; transition: color .3s;
+  }
+  .project-card:hover .project-title { color: #2575fc; }
+
+  .project-desc {
+    font-size: .95rem; color: #555; margin-bottom: 1rem; line-height:1.4;
+  }
+  .project-links a {
+    margin-right: 1rem;
+    font-weight: bold; color: #6a11cb;
+    text-decoration: none; transition: color .3s;
+  }
+  .project-links a:hover { color: #2575fc; }
+
+  footer {
+    text-align:center; padding: 2rem 1rem; margin-top:4rem;
+    background: #f0f0f0; color: #555; font-size: .9rem;
+  }
+
+  @media(max-width:800px){
+    .hero h1 { font-size:2rem; }
+  }
+</style>
+
+<section class="hero">
+  <h1>🌟 Featured Projects</h1>
+  <p>Some of my best work—built with passion and precision</p>
+</section>
+
+<div class="projects">
+  {% for proj in featured_projects %}
+  <div class="project-card">
+    <img src="{{ proj.image_url }}" alt="{{ proj.title }}" class="project-img">
+    <div class="project-content">
+      <h2 class="project-title">{{ proj.title }}</h2>
+      <p class="project-desc">{{ proj.description }}</p>
+      <div class="project-links">
+        {% if proj.live_link %}<a href="{{ proj.live_link }}" target="_blank">Live</a>{% endif %}
+        {% if proj.code_link %}<a href="{{ proj.code_link }}" target="_blank">Code</a>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<footer>&copy; {{ now|date:"Y" }} {{ site_name|default:"My Portfolio" }}</footer>
+{% endblock %}

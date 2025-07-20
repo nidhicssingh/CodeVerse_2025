@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home – Gokul's Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="welcome-banner">
+    <h1>Welcome to My Portfolio</h1>
+  </div>
+  <div class="row align-items-center mt-4">
+    <div class="col-md-6">
+      <div id="carouselExample" class="carousel slide shadow-lg" data-bs-ride="carousel">
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <img src="https://plus.unsplash.com/premium_photo-1749760305507-e66205164a31?w=800" class="d-block w-100 carousel-image" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://plus.unsplash.com/premium_photo-1751895924527-65f56f8d3542?w=800" class="d-block w-100 carousel-image" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1752542362589-a5668de3b1c1?w=800" class="d-block w-100 carousel-image" alt="Slide 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-6 text-center text-md-start mt-4 mt-md-0">
+      <div class="intro-section">
+        <h2>Hello, I’m <span>Gokul</span> 👋</h2>
+        <p>I’m pursuing B.Tech in Data Science, passionate about crafting insights from data using clean and powerful code. I build intelligent solutions that matter.</p>
+      </div>
+      <div class="resume-button-container">
+        <a href="{% static 'files/MY RESUME.pdf' %}" class="resume-btn" download>
+          <i class="fas fa-download"></i> Download My Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  /* Page background gradient animation */
+  body {
+    background: #f2f5f9;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: linear-gradient(45deg, #ffe259, #ffa751, #ff6ec4, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: slideBG 12s ease infinite;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  @keyframes slideBG {
+    0%,100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Welcome banner */
+  .welcome-banner {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    padding: 25px 20px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    animation: fadeDown 0.8s ease-out forwards;
+  }
+  .welcome-banner h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ffe259, #ff6ec4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Carousel images */
+  .carousel-image {
+    height: 380px;
+    object-fit: cover;
+  }
+  @media (max-width: 767px) {
+    .carousel-image { height: 280px; }
+  }
+
+  /* Intro section style */
+  .intro-section {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+  }
+  .intro-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    background: radial-gradient(circle at 50% 50%, #ffe259, #ff6ec4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .intro-section span {
+    color: #2575fc;
+    font-weight: 700;
+  }
+  .intro-section p {
+    font-size: 1.1rem;
+    color: #48515c;
+    line-height: 1.6;
+  }
+
+  /* Resume button enhancements */
+  .resume-btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 1.15rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.2s, background 0.3s;
+  }
+  .resume-btn:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    text-decoration: none;
+  }
+
+  @keyframes fadeDown {
+    from { opacity:0; transform: translateY(-20px); }
+    to { opacity:1; transform: translateY(0); }
+  }
+
+  /* Media queries */
+  @media (max-width: 767px) {
+    .welcome-banner h1 { font-size: 2.4rem; }
+    .intro-section h2 { font-size: 2rem; }
+    .intro-section p { font-size: 1rem; }
+  }
+</style>
+{% endblock %}
