@@ -1,0 +1,83 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %}contact{% endblock %}
+
+{% block content %}
+
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 20px;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+
+    .info {
+      margin: 15px 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .info label {
+      font-weight: bold;
+      color: #00509e;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <h2>Contact Information</h2>
+    
+    <div class="info">
+      <label>Name:</label> Chetana
+    </div>
+
+    <div class="info">
+      <label>Email:</label> <a href="mailto:chetanaa@example.com">chetanaa@example.com</a>
+    </div>
+
+    <div class="info">
+      <label>Phone:</label> +91 9*******14
+    </div>
+
+    <div class="info">
+      <label>LinkedIn:</label> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+    </div>
+
+    <div class="info">
+      <label>GitHub:</label> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+    </div>
+
+    <div class="info">
+      <label>Location:</label> Bengaluru, India
+    </div>
+  </div>
+
+</body>
+</html>
+
+{%endblock%}

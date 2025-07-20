@@ -1,0 +1,107 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %}skills{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Skills - Computer Engineering</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .skills-section {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 30px;
+    }
+
+    .skill-category {
+      margin-bottom: 25px;
+    }
+
+    .skill-category h3 {
+      color: #00509e;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="skills-section">
+    <h2>My Skills in Computer Engineering</h2>
+
+    <div class="skill-category">
+      <h3>🔧 Programming Languages</h3>
+      <ul>
+        <li>Python</li>
+        <li>C / C++</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>🌐 Web Development</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React.js, Node.js (Basics)</li>
+        <li>Responsive Design with Bootstrap</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>🧠 Computer Science Fundamentals</h3>
+      <ul>
+        <li>Data Structures & Algorithms</li>
+        <li>Operating Systems</li>
+        <li>Computer Networks</li>
+        <li>Database Management Systems (SQL)</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>📊 Tools & Technologies</h3>
+      <ul>
+        <li>Git & GitHub</li>
+        <li>Visual Studio Code, IntelliJ</li>
+        <li>MySQL, MongoDB (Basics)</li>
+        <li>Linux Commands</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>💡 Soft Skills</h3>
+      <ul>
+        <li>Problem Solving</li>
+        <li>Team Collaboration</li>
+        <li>Presentation Skills</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
+{%endblock%}
