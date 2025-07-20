@@ -1,0 +1,56 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .skills-section {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        margin-top: 20px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .skills-section h2 {
+        text-align: center;
+        color: #333;
+    }
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+    .skills-list li {
+        background-color: #e0e0e0;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        color: #000;
+        transition: background-color 0.3s;
+    }
+    .skills-list li:hover {
+        background-color: #d1d1d1;
+    }
+</style>
+
+<div class="skills-section">
+    <h2>My Skills</h2>
+    <ul class="skills-list">
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% empty %}
+            <li>web designing</li>
+            <li>backend </li>
+            <li>painting </li>
+            <li>artificial intelligence.</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

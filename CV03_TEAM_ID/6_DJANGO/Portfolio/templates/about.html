@@ -1,0 +1,100 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<style>
+  .about-wrapper {
+    background-color: #f9f9f9;
+    padding: 60px 30px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+ .about-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .about-image {
+    flex: 1 1 350px;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+
+  .about-text {
+    flex: 1 1 600px;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem;
+    color: #0d6efd;
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+
+  .highlight {
+    color: #dc3545;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="about-wrapper">
+  <div class="about-title">About Me</div>
+
+  <div class="about-container">
+    <div class="about-image">
+      <img src="{% static 'IMG/girl.jpg' %}" alt="Profile Photo">
+    </div>
+
+    <div class="about-text">
+      <h3>I'm Sanjana D — A Creative Technologist & Learner</h3>
+      <p>
+        Hello! I'm a passionate <span class="highlight">Information Technology student</span> with a strong interest in building impactful and user-centric software solutions. My expertise includes web development, UI design, and working with modern frameworks.
+      </p>
+      <p>
+        I enjoy crafting applications that are both functional and beautifully designed. My projects often combine <span class="highlight">technical precision</span> with <span class="highlight">creative storytelling</span>, allowing me to express both logic and imagination.
+      </p>
+      <p>
+        Outside of development, I’m deeply interested in nature, music, and personal growth. I value <span class="highlight">team collaboration</span>, continuous learning, and solving real-world challenges through technology.
+      </p>
+      <p>
+        This portfolio reflects not just my skills, but the journey of becoming a better version of myself with every line of code.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

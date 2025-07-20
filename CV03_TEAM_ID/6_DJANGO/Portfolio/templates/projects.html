@@ -1,0 +1,62 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f2f2f2;
+        }
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .project-card {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .project-card h3 {
+            margin: 0;
+            color: #333;
+        }
+        .project-card p {
+            color: #666;
+        }
+        .project-card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Projects</h2>
+    <div class="project-list">
+        {% for project in projects %}
+            <div class="project-card">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <a href="{{ project.link }}" target="_blank">View Project</a>
+            </div>
+        {% empty %}
+             <p>Project 1: DJANGO</p>
+        <p>Project 2: turtle </p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
+{% endblock %}
