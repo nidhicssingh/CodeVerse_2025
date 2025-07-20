@@ -1,0 +1,2 @@
+This is my static file.
+Anyone can see our static files on server. never store any private or confidential data in static file.
