@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/skills.css' %}">
+{% endblock %}
+{% block content %}
+<div class="skills-page">
+    <h1>Skills</h1>
+    <section class="language-skills">
+        <h2>Language Skills</h2>
+        <ul>
+            <li><strong>English:</strong> Strong communication</li>
+            <li><strong>Telugu:</strong> Strong communication</li>
+            <li><strong>Hindi:</strong> Basic</li>
+            <li><strong>Kannada:</strong> Learning</li>
+            <li><strong>Malayalam:</strong> Learning</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}
