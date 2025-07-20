@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+  <div class="card" style="width: 18rem;">
+    <img src="Static/IMG/IMG1.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">KRUTHIKA S</h5>
+      <p class="card-text">
+        Software Engineering Student
+      </p>
+    </div>
+  </div>
+
+  <div class="text-content">
+    <p><i>
+      Hello, I'm KRUTHIKA S — a Software Engineering Student with a Passion for Problem-Solving and Innovation.  
+      I'm currently pursuing a degree in B.Tech Software Engineering in S-VYASA Deemed to be University, where I specialize in designing and developing scalable, user-centric applications. I thrive on building clean, efficient code and turning complex challenges into elegant solutions.
+    </p>
+    <p>
+      With a strong foundation in programming, web development, and software design principles, I’m constantly exploring new technologies and refining my skills through hands-on projects, internships, and team collaborations.
+    </p>
+    <p>
+      Whether it’s front-end interfaces, back-end systems, or full-stack applications, I love creating meaningful digital experiences. I'm eager to contribute to real-world projects and grow with a team that values creativity, curiosity, and continuous learning.
+    </p>
+    <p>
+      Let’s connect and create something impactful!</i>
+    </p>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 49px 30px 30px 60px;
+    flex-wrap: wrap; 
+  }
+
+  .card {
+    flex-shrink: 0;
+    object-fit: cover;
+    height: 380px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24); 
+    background-color:#eff5f5
+  }
+  .card-title{
+    font-family: Georgia, serif;
+  }
+  .card-text{
+    font-family:Jazz LET;
+    font-size:18px;
+  }
+
+  .card img {
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .text-content {
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 16px 0px 0px 0px;
+    
+  }
+
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text-content {
+      text-align: center;
+    }
+  }
+</style>
+{% endblock %}

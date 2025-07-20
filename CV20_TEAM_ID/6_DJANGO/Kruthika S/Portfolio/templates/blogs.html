@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}blog{% endblock %}
+
+
+{% block content %}
+<div class="blog-section">
+    <h2>OOPS NOT YET!!</h2>
+    <div class="no-blogs">
+        <p>Currently, there are no blogs yet. Stay tuned for upcoming posts!</p>
+    </div>
+</div>
+{% endblock %}
+{% block extra_css %}
+<style>
+.blog-section {
+    margin-top: 30px;
+    padding: 110px;
+    background-color: #f4f6f7; /* Light background for blog section */
+    border-radius: 7px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #375164ff; 
+    margin-bottom: 20px;
+}
+
+.no-blogs {
+    background-color: #ecf0f1; /* Light gray background for "No Blogs" message */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.no-blogs p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    font-weight: bold;
+}
+</style>
+{% endblock %}
+
+

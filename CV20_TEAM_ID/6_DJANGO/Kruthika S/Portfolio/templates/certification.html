@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+
+
+<div class="certification-section">
+    <h2>Certifications</h2>
+    <div class="certification-card">
+        <h3>Python Course Completion</h3>
+        <p class="organization">Issued by: Advanced Java Training Institutes</p>
+        <p>Completion Year: 2024</p>
+        <p>Description: Completed a comprehensive Python programming course covering topics such as functions, file handling, Oops, and more.</p>
+        <a href="#" class="view-cert-btn">STATUS : Completed</a>
+    </div>
+</div>
+{% endblock %}
+{% block extra_css %}
+<style>
+.certification-section {
+    margin-top: 40px;
+    padding: 34px;
+    background-color: #f4f6f7; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.certification-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #221c3aff; 
+    margin-bottom: 20px;
+    
+}
+
+.certification-card {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.certification-card h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.certification-card .organization {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.certification-card .view-cert-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.certification-card .view-cert-btn:hover {
+    background-color: #2980b9;
+}
+</style>
+{% endblock %}
+
+ 
