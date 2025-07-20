@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Nidhi's Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  
+<div class="welcome-banner">
+  <h1>Welcome to My Portfolio</h1>
+</div>
+  <div class="row">
+    <!-- Carousel -->
+    <div class="col-md-6">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://plus.unsplash.com/premium_photo-1749760305507-e66205164a31?w=500&auto=format&fit=crop&q=60" class="d-block w-100 carousel-image" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://plus.unsplash.com/premium_photo-1751895924527-65f56f8d3542?w=500&auto=format&fit=crop&q=60" class="d-block w-100 carousel-image" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1752542362589-a5668de3b1c1?w=500&auto=format&fit=crop&q=60" class="d-block w-100 carousel-image" alt="Slide 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div> 
+
+    </div>
+
+    <!-- Introduction and Resume -->
+    <div class="col-md-6 right-section">
+      <div class="intro-section">
+        <h2>Hello, I'm Nidhi 👋</h2>
+        <p>
+          I’m an IT Developer with a passion for clean code and smart solutions.  
+          I also love traveling, exploring new cultures, and finding inspiration in unexpected places.
+        </p>
+      </div>
+
+      <div class="resume-button-container">
+        <a href="{% static 'files/MY RESUME.pdf' %}" class="resume-btn" download>
+          <i class="fas fa-download"></i> Download My Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .carousel-image {
+    height: 400px;
+    object-fit: cover;
+  }
+  .right-section {
+    padding: 20px;
+  }
+  
+  .intro-section {
+    background-color: #ffffff;
+    padding: 60px 30px;
+    background: #ffffff;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .intro-section h2 {
+    background-color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  .intro-section p {
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .resume-button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .resume-btn {
+    background-color: #0d6efd;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .resume-btn:hover {
+    background-color: #084298;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  .welcome-banner {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  padding: 40px 20px;
+  text-align: center;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 0 0 10px 10px; 
+}
+
+.welcome-banner {
+  background-color: #ffffff; /* Matches navbar bg-dark */
+  padding: 00px 20px 20px 20px;
+  text-align: center;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  border-bottom: 3px solid #ffffff;
+  margin-top: 0;
+}
+
+.welcome-banner h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+</style>
+{% endblock %}
