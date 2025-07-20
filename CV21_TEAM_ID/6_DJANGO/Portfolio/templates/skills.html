@@ -1,0 +1,48 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<section id="skills" style="background: #f8f9fa; padding: 60px 0;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-size: 2.5rem; color: #2c3e50;">🛠 My Skills</h2>
+    <div class="row text-center">
+
+      <!-- Languages -->
+      <div class="col-md-3 mb-4">
+        <div class="p-3 shadow-sm bg-white rounded">
+          <h5 style="color: #2980b9;">Languages</h5>
+          <p style="font-size: 1.1rem;">Python, C, HTML, CSS, JavaScript</p>
+        </div>
+      </div>
+
+      <!-- Frameworks -->
+      <div class="col-md-3 mb-4">
+        <div class="p-3 shadow-sm bg-white rounded">
+          <h5 style="color: #27ae60;">Frameworks</h5>
+          <p style="font-size: 1.1rem;">Django, Bootstrap</p>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="col-md-3 mb-4">
+        <div class="p-3 shadow-sm bg-white rounded">
+          <h5 style="color: #8e44ad;">Tools</h5>
+          <p style="font-size: 1.1rem;">GitHub, Figma, Canva, VS Code</p>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="col-md-3 mb-4">
+        <div class="p-3 shadow-sm bg-white rounded">
+          <h5 style="color: #e67e22;">Soft Skills</h5>
+          <p style="font-size: 1.1rem;">Teamwork, Creativity, Communication, Time Management</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+{% endblock %}

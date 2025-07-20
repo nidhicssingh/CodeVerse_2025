@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="container py-5" style="background-color: #f5f7fa; border-radius: 12px;">
+    <div class="row text-center mb-4">
+        <!-- Profile Picture -->
+        <div class="col-md-4 mb-3">
+            <img src="{% static 'IMG/code0.jpg' %}" alt="Priyanka SP" class="img-fluid rounded shadow-lg" 
+                 style="width: 200px; height: 200px; object-fit: cover; border-radius:10px;">
+            <p class="mt-2 text-muted">That's me!</p>
+        </div>
+
+        <!-- CodeVerse Image 1 -->
+        <div class="col-md-4 mb-3">
+            <img src="{% static 'IMG/code2.jpg' %}" alt="CodeVerse Workshop" class="img-fluid rounded shadow-lg" 
+                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+            <p class="mt-2 text-muted">Workshop & Team Collaboration</p>
+        </div>
+
+        <!-- CodeVerse Image 2 -->
+        <div class="col-md-4 mb-3">
+            <img src="{% static 'IMG/code3.jpg' %}" alt="Interactive tech seminar" class="img-fluid rounded shadow-lg" 
+                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+            <p class="mt-2 text-muted">Interactive tech seminar</p>
+        </div>
+        <!-- About Text -->
+    <div class="row align-items-center">
+        <div class="col-md-12">
+            <h2 class="mb-3" style="color: #2c3e50;">👩‍💻 About Me</h2>
+            <p style="font-size: 1.1rem; color: #34495e;">
+                Hi, I'm <strong>Priyanka SP</strong> — a BTech Software Engineering student with a passion for turning creative ideas into interactive digital experiences. I'm an explorer at heart, always curious about learning modern tools and pushing my limits as a developer.
+            </p>
+            <p style="font-size: 1.1rem; color: #34495e;">
+                As part of <strong style="color: #8e44ad;">CodeVerse 2025</strong>, I immersed myself in a 3-week journey of intense learning, building, and collaboration. We explored <span style="color: #16a085;">Django, Git, React, Gen AI, AWS, Open Source</span>, and more, while working on capstone projects and even participating in a 24-hour hackathon. It was a transformational experience that shaped both my technical and collaborative abilities.
+            </p>
+            <p style="font-size: 1.1rem; color: #34495e;">
+                Through this portfolio, I aim to showcase my skills, creativity, and the journey I’ve begun in the tech world. From backend logic to frontend flair — it all starts here.
+            </p>
+        </div>
+    </div>
+
+
+    </div>
+
+
+        
+
+
+{% endblock %}

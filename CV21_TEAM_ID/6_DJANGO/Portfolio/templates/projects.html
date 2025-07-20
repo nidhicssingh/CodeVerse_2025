@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-5 fw-bold">💡 My Projects</h2>
+  <div class="row g-4">
+
+    <!-- Project 1 -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">🎨 Django Portfolio Website</h5>
+          <p class="card-text">A responsive personal portfolio website built using Django, HTML, Bootstrap, and static files. Showcases my skills, resume, certifications, and creativity. Designed for clean UI and mobile friendliness.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm disabled">CodeLink coming soon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">📚 Student Notes Manager App</h5>
+          <p class="card-text">A simple and user-friendly Django-based web application that allows students to save, organize, and manage their subject-wise notes online. Built using Python, SQLite, and Bootstrap for UI.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm disabled">Demo Coming Soon</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
