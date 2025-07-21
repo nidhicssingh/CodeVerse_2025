@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="container mt-5 p-4 rounded" style="background-color: #f8f9fa;">
+  <h1 class="text-center mb-4 text-primary">About Me</h1>
+  <div class="row align-items-center">
+    <div class="col-md-4 text-center mb-3">
+      <img src= "C:\Users\Sanjana JV\Downloads\camera.jpg" alt="My Photo" class="img-fluid rounded-circle shadow" width="250">
+    </div>
+    <div class="col-md-8">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <p class="text-dark">
+            Hi, I'm <span class="fw-bold text-info">Sanjana J.V.</span>, a <span class="badge bg-secondary">Computer Science</span> engineering student at <strong>S-VYASA Deemed to be University</strong> with a passion for technology and creative problem-solving.
+          </p>
+          <p>
+            I enjoy building <span class="text-success">responsive web apps</span> using Django, Python, HTML/CSS, and JavaScript. From real-time surveillance systems with <span class="text-warning">face recognition & Firebase</span> to stylish portfolios — I love projects that challenge and excite me.
+          </p>
+          <p>
+            I proudly participated in <span class="text-danger"><strong>CodeVerse 2025</strong></span> and other tech events where I showcased both my creativity and technical expertise.
+          </p>
+          <p>
+            Outside of coding, I’m into <span class="text-muted">directing cultural events</span>, <span class="text-muted">traveling</span>, and collaborating on meaningful ideas that drive innovation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
