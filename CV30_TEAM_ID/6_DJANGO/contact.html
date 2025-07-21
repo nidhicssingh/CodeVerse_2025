@@ -1,26 +1,29 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
 {% block content %}
-<div class="container my-5">
-    <h2>Contact Me</h2>
-    <form>
-        <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Your Name">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Your Message</label>
-            <textarea class="form-control" id="message" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Send</button>
-    </form>
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Contact Me</h1>
 
-    <hr class="my-4">
-
-    <h5>Other Contact Details</h5>
-    <p>Email: karthikeyachunchu08@Gmial.com.com<br>Phone: +91-7981517291<br>GitHub: github.com/karthikeya-dev<br>LinkedIn: linkedin.com/in/karthikeya-dev</p>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Email:</strong> shreyaashekhar05@gmail.com
+        </li>
+        <li class="list-group-item">
+          <strong>Phone:</strong> +91 XXXXXXXXXX
+        </li>
+        <li class="list-group-item">
+          <strong>GitHub:</strong> 
+          <a href="https://github.com/shreyaashekhar05" target="_blank">
+            github.com/shreyaashekhar05
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 {% endblock %}

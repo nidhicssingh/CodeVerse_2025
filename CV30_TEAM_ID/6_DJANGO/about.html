@@ -1,21 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
-{% extends 'base.html' %}
-{% block content %}
-<div class="container my-5">
-    <h2>About Me</h2>
-    <p>
-        I'm Karthikeya, a dedicated developer passionate about turning ideas into real-world web applications. I have hands-on experience with Python, Django, HTML, CSS, and Bootstrap. I'm currently pursuing my B.Tech in Computer Science at SVYASA University and constantly explore new technologies like React and REST APIs.
-    </p>
-    <p>
-        I believe in lifelong learning and solving real problems using code. Outside of development, I enjoy writing blogs and contributing to open-source projects.
-    </p>
-</div>
-{% endblock %}
-
 
 {% block title %}About Me{% endblock %}
 
 {% block content %}
-
+<div class="container mt-5">
+  <h1 class="text-center mb-4">About Me</h1>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img src="C:/Users/Shreyaa/Downloads/shreyaa.jpg" alt="My Photo" class="img-fluid rounded-circle" width="250">
+    </div>
+    <div class="col-md-8">
+      <p>
+        Hi, I'm <strong>Shreyaa.S</strong>, a passionate web developer currently pursuing my B.Tech in Computer Science at S-VYASA DEEMED TO BE University.
+      </p>
+      <p>
+        I enjoy building modern, responsive websites using Django, Python, HTML, and CSS. My interests also include exploring new technologies, writing scripts, and working on real-world projects that solve problems.
+      </p>
+      <p>
+        Beyond coding, I love traveling, Directing , and participating in programs like <strong>CodeVerse</strong>, where I showcased my creativity and technical skills.
+      </p>
+    </div>
+  </div>
+</div>
 {% endblock %}
