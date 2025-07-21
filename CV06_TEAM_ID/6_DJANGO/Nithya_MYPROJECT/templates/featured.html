@@ -1,0 +1,42 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %}Featured{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="card featured-card p-4 mt-5">
+    <div class="card-body">
+      <h4 class="card-title mb-2">🚀 Featured in <strong>CodeVerse_2025</strong></h4>
+      <span class="badge text-bg-light badge-featured mb-3">Achievement</span>
+      <p class="card-text">
+        I was featured in the <strong>CodeVerse</strong> program, where I showcased my technical skills and creativity.
+        Being recognized among the top contributors was a proud moment that boosted my confidence and motivation
+        to keep learning and growing in the field of development.
+      </p>
+
+      <hr>
+      <h6 class="mt-3 text-muted">Key Highlights</h6>
+      <ul>
+        <li>Recognized among top contributors nationwide</li>
+        <li>Boosted visibility and credibility in dev community</li>
+      </ul>
+
+      <a href="{% url 'base' %}" class="btn btn-outline-primary mt-3">← Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .featured-card {
+    max-width: 700px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .badge-featured {
+    font-size: 0.9rem;
+    background-color: #6f42c1;
+  }
+</style>
+{% endblock %}
