@@ -1,0 +1,40 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Skills  🛠️</h2>
+
+  <div class="row">
+    <!-- Technical Skills -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">Technical Skills</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">py Coding </li>
+            <li class="list-group-item">Web Development (HTML, CSS, JavaScript)</li>
+            <li class="list-group-item">Database Management (SQL, NoSQL)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">Soft Skills</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Analytical Thinking & Problem Solving</li>
+            <li class="list-group-item">Structured Learning Approach</li>
+            <li class="list-group-item">Attention to Detail</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
