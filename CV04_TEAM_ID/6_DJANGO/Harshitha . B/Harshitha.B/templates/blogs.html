@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}blog{% endblock %}
+
+{% block content %}
+<div class="container mt-5 blog-section">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 text-center">
+      <h2 class="blog-heading">My Blog</h2>
+      <p class="blog-subtext">
+        Thoughts, tutorials, and stories from my journey through tech, creativity, and beyond.
+      </p>
+
+      <div class="blog-card">
+        <h4>✨ Crafting ASCII Art in Python</h4>
+        <p>How I experimented with pywhatkit to turn images into text-based art. Creativity meets code!</p>
+        <a href="https://your-blog-link.com/ascii-art" target="_blank" class="blog-link">Read more</a>
+      </div>
+
+      <div class="blog-card">
+        <h4>💻 My Portfolio Journey</h4>
+        <p>A look into designing and developing my personal website—why it reflects both function and aesthetic.</p>
+        <a href="https://your-blog-link.com/portfolio-journey" target="_blank" class="blog-link">Read more</a>
+      </div>
+
+      <div class="blog-card">
+        <h4>☁️ Understanding Cloud Deployments</h4>
+        <p>A simplified guide to cloud computing concepts and how I turned technical ideas into a visual presentation.</p>
+        <a href="https://your-blog-link.com/cloud-basics" target="_blank" class="blog-link">Read more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ {% endblock %}

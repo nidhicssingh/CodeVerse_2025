@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Harshitha's Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+
+<div class="welcome-banner">
+  <h1>Welcome to My Portfolio</h1>
+  <div class="col-md-6">
+
+  <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="30000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="C:\Users\harshitha\Downloads\WhatsApp Image 2025-07-20 at 11.11.46 AM.jpeg" class="d-block w-100 carousel-image" >
+      </div>
+     
+    
+  </div>
+</div>
+
+
+    <!-- Introduction and Resume -->
+    <div class="col-md-6 right-section">
+      <div class="intro-section">
+        <h2>Hello, I'm Harshitha.B👋</h2>
+        <p>
+          I’m a student of S-Vyasa University with a passion for clean code and smart solutions.  
+          I also love traveling, exploring new cultures, and finding inspiration in unexpected places.
+        </p>
+      </div>
+
+      <div class="resume-button-container">
+        <a href="{% static 'files/Resume.pdf' %}" class="resume-btn" download>
+          <i class="fas fa-download"></i> Download My Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<!-- Font Awesome for icon support -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  .carousel-image {
+    height: 400px;
+    object-fit: cover;
+  }
+  .right-section {
+    padding: 20px;
+  }
+  
+  .intro-section {
+    background: linear-gradient(to right, #89f7fe, #db66ff); /* Cyan to light blue */
+    color: #1c1c1c;
+    
+    padding: 60px 30px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .intro-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #101010;
+    margin-bottom: 20px;
+  }
+  .intro-section p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .resume-button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .resume-btn {
+   background: linear-gradient(to right, #8a3ecd, #be78de); /* Soft pink to lavender */
+   color: #333;
+   border: 1px solid #361056;
+    
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .resume-btn:hover {
+    background-color: #084298;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  .welcome-banner {
+    background-color: linear-gradient(to right, #f9e4e4, #dbc1ac);
+;
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+    color: #000000;
+    font-family: 'Segoe UI', sans-serif;
+    border-bottom: 3px solid #ffffff;
+    margin-top: 0;
+  }
+  .welcome-banner h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+{% endblock %}

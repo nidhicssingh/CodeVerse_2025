@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} contact {% endblock title%}
+
+{% block body %}    
+<div class="container mt-5 contact-section">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 text-center">
+      <h2 class="contact-heading">Get in Touch</h2>
+      <p class="contact-subtext">
+        Whether it’s a project, a question, or just a hello—feel free to drop a message!
+      </p>
+
+      <!-- Contact Details -->
+      <div class="contact-details mb-4">
+        <p><strong>Email:</strong> harshitha@example.com</p>
+        <p><strong>Phone:</strong> +91-9876543210</p>
+        <p><strong>Location:</strong> Bengaluru, India</p>
+      </div>
+
+      <!-- Contact Form -->
+      <form method="post" action="/contact/submit/">
+        {% csrf_token %}
+        <div class="mb-3">
+          <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="contact-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

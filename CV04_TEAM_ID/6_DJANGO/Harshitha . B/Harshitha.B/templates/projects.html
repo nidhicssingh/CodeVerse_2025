@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="container mt-5 projects-section">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 text-center">
+      <h2 class="projects-heading">My Projects</h2>
+      <p class="projects-subtext">
+        A collection of interactive, artistic, and technically refined creations.
+      </p>
+      <div class="project-card">
+        <h4>🎨 ASCII Art Generator</h4>
+        <p>Transforms images into stunning ASCII visuals using Python and <code>pywhatkit</code>. A perfect blend of art and algorithm!</p>
+      </div>
+      <div class="project-card">
+        <h4>✍️ Handwriting Simulation Tool</h4>
+        <p>A fun script that simulates human-like handwriting for given text inputs. Ideal for creative notes and stylized outputs.</p>
+      </div>
+      <div class="project-card">
+        <h4>🌐 Portfolio Website</h4>
+        <p>Crafted with HTML, CSS, and Django—this site is where design meets responsiveness with animation highlights and visual elegance.</p>
+      </div>
+      <div class="project-card">
+        <h4>☁️ Cloud Computing Presentation</h4>
+        <p>A visual and conceptual guide to deployment models, security strategies, and cloud architecture basics.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
