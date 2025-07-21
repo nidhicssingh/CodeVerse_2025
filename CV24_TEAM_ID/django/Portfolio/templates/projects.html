@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects – Manas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f7f9fc;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #ddeeff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Projects</h1>
+    <table>
+        <tr>
+            <th>Project</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Pokémon with Turtle</td>
+            <td>Used Python’s Turtle module to draw Pokémon characters with custom shapes and colors.</td>
+        </tr>
+        <tr>
+            <td>Image Effects with Pillow</td>
+            <td>Manipulated images using the Pillow library, applying filters, transformations, and overlays.</td>
+        </tr>
+        <tr>
+            <td>Pygame Mini-Game</td>
+            <td>Developed a basic game demonstrating event handling, animation, and sprite movement.</td>
+        </tr>
+        <tr>
+            <td>GitHub Profile Explorer</td>
+            <td>Cloned and analyzed open-source repos to learn about version control and collaborative coding.</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+{% endblock %}

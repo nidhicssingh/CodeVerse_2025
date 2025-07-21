@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Education – Manas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f7f9fc;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #ddeeff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Education</h1>
+    <table>
+        <tr>
+            <th>Degree</th>
+            <th>University</th>
+            <th>Specialization</th>
+            <th>Years</th>
+        </tr>
+        <tr>
+            <td>B.Tech in Computer Science</td>
+            <td>SVYASA University</td>
+            <td>Data Science</td>
+            <td>2024 – 2029</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+{% endblock %}

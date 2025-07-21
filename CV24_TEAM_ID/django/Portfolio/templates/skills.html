@@ -1,0 +1,67 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills – Manas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f8faff;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ddeeff;
+        }
+        tr:nth-child(even) {
+            background-color: #eef2f7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Skills</h1>
+
+    <h2>Technical Skills</h2>
+    <table>
+        <tr><th>Skill</th></tr>
+        <tr><td>Python</td></tr>
+        <tr><td>Pillow</td></tr>
+        <tr><td>Pygame</td></tr>
+        <tr><td>Turtle Graphics</td></tr>
+        <tr><td>Git & GitHub</td></tr>
+        <tr><td>VS Code</td></tr>
+        <tr><td>Data Analysis (Basics)</td></tr>
+    </table>
+
+    <h2>Soft Skills</h2>
+    <table>
+        <tr><th>Skill</th></tr>
+        <tr><td>Problem-solving</td></tr>
+        <tr><td>Self-learning</td></tr>
+        <tr><td>Collaboration</td></tr>
+        <tr><td>Persistence</td></tr>
+        <tr><td>Creative Thinking</td></tr>
+    </table>
+</body>
+</html>
+
+
+{% endblock %}

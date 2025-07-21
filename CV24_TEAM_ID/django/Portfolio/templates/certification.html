@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certifications – Manas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f8faff;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #ddeeff;
+        }
+        tr:nth-child(even) {
+            background-color: #eef2f7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Certifications</h1>
+    <table>
+        <tr>
+            <th>Course Title</th>
+            <th>Platform</th>
+            <th>Completion Date</th>
+        </tr>
+        <tr>
+            <td>Data Analysis with Python</td>
+            <td>freeCodeCamp</td>
+            <td>June 2025</td>
+        </tr>
+        <tr>
+            <td>Python for Data Science</td>
+            <td>Coursera</td>
+            <td>May 2025</td>
+        </tr>
+        <tr>
+            <td>Version Control with Git</td>
+            <td>Udemy</td>
+            <td>March 2025</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+ 
+{% endblock %}
