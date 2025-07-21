@@ -15,6 +15,6 @@ def generate_random_message(name):
     return message_template.format(name=name)
 
 # Example usage
-name = "Gousiya"
+name = "Sanjana"
 random_message = generate_random_message(name)
 print(random_message)
