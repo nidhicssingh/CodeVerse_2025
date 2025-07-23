@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Haasini's Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  
+<div class="welcome-banner">
+  <h1 style="color:#913a52">Welcome to My Portfolio</h1>
+</div>
+
+    <!-- Introduction and Resume -->
+    <div class="col-md-6 right-section">
+      <div class="intro-section">
+        <h2 style="color:#07264a">Hello, I'm Haasini K 👋</h2>
+        <p>
+          I'm a student in S-VYASA School of Advanced Studies. I'm studying Bachelor of Technology (Software Engineering). I love learning about new technologies and applying them in real life to solve problems.
+        </p>
+      </div>
+          <div class="row">
+     <!-- Carousel  -->
+    <div class="col-md-6">
+  <div style="display: flex; gap: 10px; padding: 10px;">
+    <img src="{% Static 'IMG/Haasini.jpg' %}" alt="Haasini" class="rounded-circle" style="width: 150px; margin-bottom: 20px;">
+</div>
+
+
+      <div class="resume-button-container">
+        <a href="{% Static 'files/Haasini_Resume.pdf' %}" class="resume-btn" download>
+          <i class="fas fa-download"></i> Download My Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .carousel-image {
+    height: 300px;
+    object-fit: cover;
+  }
+  .right-section {
+    padding: 20px;
+  }
+  
+  .intro-section {
+    background-color: #f478b8;
+    padding: 60px 30px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .intro-section h2 {
+    background-color: #f478b8;  
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  .intro-section p {
+    background-color: #f478b8;
+    font-size: 1.2rem;
+    color: #000000;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .resume-button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .resume-btn {
+    background-color: #0d6efd;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .resume-btn:hover {
+    background-color: #084298;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  .welcome-banner {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  padding: 40px 20px;
+  text-align: center;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 0 0 10px 10px; 
+}
+
+.welcome-banner {
+  background-color: #ffffff; /* Matches navbar bg-dark */
+  padding: 00px 20px 20px 20px;
+  text-align: center;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  border-bottom: 3px solid #ffffff;
+  margin-top: 0;
+}
+
+.welcome-banner h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+{% endblock %}
