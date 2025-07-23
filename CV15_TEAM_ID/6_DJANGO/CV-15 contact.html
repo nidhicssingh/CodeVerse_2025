@@ -1,0 +1,26 @@
+<div class="contact-section">
+    <h2>📬 Get in Touch</h2>
+    
+    <p>If you'd like to connect—whether it's about a project, collaboration, or just to say hello—feel free to reach out through the form below.</p>
+
+    <form method="POST" action="{% url 'contact' %}">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+        <p><strong>Email:</strong> sushmabhattarai2006@gmail.com</p>
+        <p><strong>Email:</strong> poornimarp9@gmail.com</p>
+        <p><strong>Email:</strong> bushanvs06@gmail.com</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sushma-bhattarai-959370339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">yourusername</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Poorni88-RP/CV15_CodeVerse.git target="_blank">github.com/yourusername</a></p>
+ </div>
+</div>
