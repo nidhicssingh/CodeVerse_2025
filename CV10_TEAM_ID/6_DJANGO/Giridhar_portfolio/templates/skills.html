@@ -1,0 +1,63 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<div class="skills-section">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">Python</div>
+    <div class="skill-card">C</div>
+    <div class="skill-card">C++</div>
+    <div class="skill-card">Web Development</div>
+    <div class="skill-card">React</div>
+    <div class="skill-card">Figma</div>
+    <div class="skill-card">Javascript</div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+{% block extra_css %}
+<style>
+    .skills-section {
+  padding: 60px;
+  background-color: #f4f6f8;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #333;
+  font-family:Georgia, serif;
+
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-card {
+  padding: 30px 50px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background-color: #e0f7fa;
+  cursor: pointer;
+}
+</style>
+{% endblock %}
