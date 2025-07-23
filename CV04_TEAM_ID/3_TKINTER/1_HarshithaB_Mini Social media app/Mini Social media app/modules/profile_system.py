@@ -3,12 +3,12 @@ from modules import send_post
 
 def view_profile(root):
     window = tk.Toplevel(root)
-    window.title("Profile: Nidhi")
+    window.title("Profile: Harshitha")
     window.geometry("400x400")
 
-    tk.Label(window, text="👤 Nidhi's Profile", font=("Arial", 16, "bold")).pack(pady=10)
+    tk.Label(window, text="👤 Harshitha's Profile", font=("Arial", 16, "bold")).pack(pady=10)
 
-    posts = [p for p in send_post.posts if p["user"] == "Nidhi"]
+    posts = [p for p in send_post.posts if p["user"] == "Harshitha"]
 
     for post in posts:
         frame = tk.Frame(window, bg="#f5f6fa", padx=5, pady=5)
