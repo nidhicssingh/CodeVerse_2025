@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Education - TILAK's Portfolio{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Custom styles for the education page */
+    .education-header {
+        background-color: var(--white);
+        padding: 4rem 1rem;
+        border-radius: .75rem;
+    }
+
+    .education-card {
+        border: none;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .education-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        background-color: #e9ecef; /* Placeholder background */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main>
+    <!-- Header Section -->
+    <div class="container my-5">
+        <div class="education-header text-center shadow-sm reveal">
+            <h1 class="display-4 fw-bold">My Education</h1>
+            <p class="lead text-muted col-lg-8 mx-auto">
+                A timeline of my academic journey, from my foundational studies to my current engineering degree.
+            </p>
+        </div>
+    </div>
+
+    <!-- Education Cards Section -->
+    <div class="container pb-5">
+        <div class="row">
+
+            <!-- Card 1: University/College -->
+            <div class="col-md-4 mb-4 reveal">
+                <div class="card h-100 shadow-sm education-card">
+                    <!-- Add your college/university logo or a relevant image here -->
+                    <img src="https://scontent-maa2-1.xx.fbcdn.net/v/t39.30808-6/467745785_1335938444054372_169153169965347283_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=KsP6LhuBD2AQ7kNvwFeG8Jq&_nc_oc=Adld2E_COpzxk1zBrIeY0rQenzOoRr9Ebtl1eFZkabgjU0bAVkrMF16mJexk6pdnPlY&_nc_zt=23&_nc_ht=scontent-maa2-1.xx&_nc_gid=Hf3qG-f-NLYDS8_WkVmpXQ&oh=00_AfQOTvPl3djnr638ZT75uazdak96i3BYqTBGZHHlKJ_wRQ&oe=6887AED1" class="card-img-top" alt="School IMG Image">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">MDRS,ADAKAMARANAHALLI</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">SSLC</h6>
+                        <p class="card-text">
+                            <strong>COMPLETION DATE:</strong> [2022] <br>
+                            <strong>LOCATION:</strong> [BANGALORE, KARNATAKA] <br>
+                            <strong>COURSE:</strong> [SSLC]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: High School/Pre-University -->
+            <div class="col-md-4 mb-4 reveal">
+                <div class="card h-100 shadow-sm education-card">
+                     <!-- Add your school logo or a relevant image here -->
+                    <img src="https://pu.pes.edu/wp-content/uploads/2021/12/admission-1-400x257.jpg" class="card-img-top" alt="PU Image">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">PES PU COLLEGE</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">PUC</h6>
+                         <p class="card-text">
+                            <strong>GRADUATION YEAR:</strong> [2024] <br>
+                            <strong>LOCATION:</strong> [BANGALORE, KARNATAKA] <br>
+                            <strong>COURSE:</strong> [PCMC's]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Another Certification or School -->
+            <div class="col-md-4 mb-4 reveal">
+                <div class="card h-100 shadow-sm education-card">
+                     <!-- Add a relevant image here -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_7K2mb7hgfGraY9VmyzDrF30OOT_vp_LLg&s" class="card-img-top" alt="University Image">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">S-VYASA DEEMEED TO BE UNIVERSITY</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">CSE</h6>
+                         <p class="card-text">
+                            <strong>DATES ATTENDED:</strong> [2024, PRESENT] <br>
+                            <strong>LOCATION:</strong> [BANGALORE, KARNATAKA] <br>
+                            <strong>COURSE:</strong> [CSE]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+{% endblock %}

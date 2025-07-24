@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Skills - TILAK's Portfolio{% endblock %}
+
+{% block extra_css %}
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet">
+<style>
+    /* Custom styles for the Skills page */
+    .page-title {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container py-5">
+    <!-- Main Header -->
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-white shadow-sm reveal">
+        <div class="col-lg-8 px-0">
+            <h1 class="display-4 fst-italic page-title">My Technical Skills</h1>
+            <p class="lead my-3">A detailed overview of my core competencies, from front-end web development to backend programming and algorithmic problem-solving.</p>
+        </div>
+    </div>
+
+    <!-- Skills Details Section -->
+    <div class="row g-5">
+        <div class="col-md-8">
+            <div class="reveal">
+                <article class="blog-post">
+                    <h2 class="blog-post-title mb-3 pb-2 border-bottom page-title">Front-End Development</h2>
+                    <p>I create responsive, accessible, and user-friendly web interfaces with a focus on clean code and modern design principles.</p>
+                    <ul>
+                        <li><strong>Languages:</strong> HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li><strong>Frameworks & Libraries:</strong> Bootstrap 5, a foundational understanding of React concepts.</li>
+                        <li><strong>Tools:</strong> Git, VS Code, Browser DevTools, Responsive Design Testing</li>
+                    </ul>
+                    
+                    <hr class="my-4">
+
+                    <h2 class="blog-post-title mb-3 pb-2 border-bottom page-title">Python Programming</h2>
+                    <p>My core programming strength lies in Python, which I use for backend logic, data structures, and algorithmic problem-solving.</p>
+                     <ul>
+                        <li><strong>Core Concepts:</strong> Data Structures, Algorithms, Object-Oriented Programming (OOP)</li>
+                        <li><strong>Web Frameworks:</strong> Django</li>
+                        <li><strong>Libraries:</strong> Familiarity with standard libraries for data handling, web integration, and scripting.</li>
+                    </ul>
+
+                    <hr class="my-4">
+
+                    <h2 class="blog-post-title mb-3 pb-2 border-bottom page-title">Problem Solving</h2>
+                    <p>I enjoy tackling complex challenges and breaking them down into manageable, logical steps. I have experience with competitive programming platforms and applying analytical thinking to find efficient solutions.</p>
+                    <ul>
+                        <li><strong>Platforms:</strong> HackerRank, LeetCode</li>
+                        <li><strong>Methodologies:</strong> Algorithmic Thinking, Debugging, Code Optimization, Time/Space Complexity Analysis</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 6rem;">
+                <div class="p-4 mb-3 bg-light rounded reveal">
+                    <h4 class="fst-italic">My Approach</h4>
+                    <p class="mb-0">I believe in continuous learning and applying theoretical knowledge to practical, real-world projects. This portfolio is a testament to that philosophy, built entirely with the skills listed here.</p>
+                </div>
+
+                <div class="p-4 reveal">
+                    <h4 class="fst-italic">Development Tools</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="https://github.com/your-github" target="_blank">GitHub</a></li>
+                        <li><a href="https://code.visualstudio.com/" target="_blank">VS Code</a></li>
+                        <li><a href="https://www.djangoproject.com/" target="_blank">Django</a></li>
+                        <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+{% endblock %}

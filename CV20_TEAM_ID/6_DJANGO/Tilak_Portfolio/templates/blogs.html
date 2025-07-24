@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog - TILAK's Portfolio{% endblock %}
+
+{% block extra_css %}
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet">
+<style>
+    /* Custom styles for the Blog page */
+    .page-title {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    }
+    .blog-post-title {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    }
+    .blog-post-meta {
+        color: #6c757d; /* Bootstrap's text-secondary color */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container py-5">
+    <!-- Main Header -->
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-white shadow-sm reveal">
+        <div class="col-lg-8 px-0">
+            <h1 class="display-4 fst-italic page-title">From the Desk of TILAK S.</h1>
+            <p class="lead my-3">A space for my thoughts on Life, programming, and my journey as a developer and athlete.</p>
+        </div>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-md-8">
+            <div class="reveal">
+                <h2 class="pb-2 border-bottom page-title">Recent Posts</h2>
+
+                <!-- Blog Post 1: Nand2Tetris -->
+                <article class="blog-post my-4">
+                    <h3 class="blog-post-title display-5 link-body-emphasis mb-1">Building a Computer from First Principles: My Nand2Tetris Journey</h3>
+                    <p class="blog-post-meta">July 18, 2025 by <a href="#">Tilak</a></p>
+                    <p>One of the most rewarding challenges I've undertaken is the Nand2Tetris course. The experience of building a complete, modern computer from the ground up, starting with a single NAND gate, has been incredibly insightful.</p>
+                    <hr>
+                    <p>In the first five projects, I moved from elementary logic gates to building an Arithmetic Logic Unit (ALU), and finally, a fully functional CPU. Writing these components in a Hardware Description Language (HDL) provided a deep, practical understanding of computer architecture that goes far beyond theory. It's one thing to know what a CPU does; it's another to have built one yourself.</p>
+                    <a href="#">Continue reading...</a>
+                </article>
+
+                <!-- Blog Post 2: Portfolio -->
+                <article class="blog-post my-4">
+                    <h3 class="blog-post-title display-5 link-body-emphasis mb-1">My Very Good experience as an athlete</h3>
+                    <p class="blog-post-meta">June 25, 2025 by <a href="#">Tilak</a></p>
+                    <p>"My journey as a state-level yoga player and 1500m athlete has been one of discipline, perseverance, and constant self-improvement. From early morning training sessions to competing at challenging events, every step has shaped me into a stronger and more focused individual."</p>
+                    <hr>
+                    <p>"The people who I met in this journey were very supportive and shared their knowledge and experience with me , which made me an better human being and athlete".</p>
+                    <a href="#">Continue reading...</a>
+                </article>
+                
+                <!-- Pagination -->
+                <nav class="blog-pagination" aria-label="Pagination">
+                    <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+                    <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 6rem;">
+                <div class="p-4 mb-3 bg-light rounded reveal">
+                    <h4 class="fst-italic">About</h4>
+                    <p class="mb-0">This blog is where I document my learning journey, share insights, and explore new ideas in the world of software development.</p>
+                </div>
+
+                <div class="p-4 reveal">
+                    <h4 class="fst-italic">Elsewhere</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="https://github.com/your-github" target="_blank">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.hackerrank.com/your-hackerrank" target="_blank">HackerRank</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
