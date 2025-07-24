@@ -1,0 +1,45 @@
+import turtle
+
+# Setup the screen
+screen = turtle.Screen()
+screen.bgcolor("white")
+screen.title("Turtle Emoji Face")
+
+# Create a turtle
+face = turtle.Turtle()
+face.speed(3)
+
+# === Draw Face (Yellow Circle) ===
+face.penup()
+face.goto(0, -100)
+face.pendown()
+face.color("yellow")
+face.begin_fill()
+face.circle(100)
+face.end_fill()
+
+# === Draw Eyes ===
+def draw_eye(x, y):
+    face.penup()
+    face.goto(x, y)
+    face.pendown()
+    face.color("black")
+    face.begin_fill()
+    face.circle(10)
+    face.end_fill()
+
+# Left and Right Eyes
+draw_eye(-35, 20)
+draw_eye(35, 20)
+
+# === Draw Smile ===
+face.penup()
+face.goto(-40, -20)
+face.setheading(-60)
+face.pendown()
+face.width(5)
+face.circle(50, 120)  # Draw arc (part of a circle)
+
+# Hide turtle and finish
+face.hideturtle()
+turtle.done()
