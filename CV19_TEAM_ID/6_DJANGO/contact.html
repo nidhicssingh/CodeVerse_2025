@@ -1,0 +1,7 @@
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="name" placeholder="Aliya" class="form-control mb-2" required>
+  <input type="email" name="email" placeholder="abc@gmail.com" class="form-control mb-2" required>
+  <textarea name="message" placeholder="I am glad that i am a part of codeverse event." class="form-control mb-2" rows="4" required></textarea>
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
