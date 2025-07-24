@@ -1,6 +1,60 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}blog{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+    .blog-post {
+      margin: 2em;
+      padding: 1em;
+      border-bottom: 1px solid #ccc;
+    }
+    h2 {
+      color: #444;
+    }
+    p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Blog</h1>
+  </header>
+
+  <main>
+    <section class="blog-post">
+      <h2>First Blog Post</h2>
+      <p>Today I’m starting my journey as a blogger. Excited to share my thoughts and experiences!</p>
+    </section>
+
+    <section class="blog-post">
+      <h2>Another Update</h2>
+      <p>Just tried a new coffee blend—absolutely fantastic. Life’s little pleasures are underrated.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Blog. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
 
 {% block content %}
 
