@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<br>
+<br>
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            background-color: #4682b4; /* Steel Blue */
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+
+        .projects-container {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .project-box {
+            padding: 18px 22px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .project-1 { background-color: #fbe3c5ff; }  
+        .project-2 { background-color: #f2eaceff; } 
+        .project-3 { background-color: #e4ffe4; }  
+        .project-4 { background-color: #f0f0f0; }  
+
+        .project-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .project-description {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+    <div class="section-title">My Projects</div>
+
+    <div class="projects-container">
+        <div class="project-box project-1">
+            <div class="project-title">1. Gender Recognition by Voice (AI Project)</div>
+            <div class="project-description">Developed a machine learning model to identify gender using voice recordings, leveraging audio features and classification algorithms.</div>
+        </div>
+
+        <div class="project-box project-2">
+            <div class="project-title">2. Responsive Web Development</div>
+            <div class="project-description">Built interactive, mobile-friendly websites using HTML, CSS, and JavaScript. Gained hands-on experience in frontend development and layout design.</div>
+        </div>
+
+        <div class="project-box project-3">
+            <div class="project-title">3. Exploring Generative AI Tools</div>
+            <div class="project-description">Used modern AI platforms to generate images, videos, and text.</div>
+        </div>
+
+        <div class="project-box project-4">
+            <div class="project-title">4. Git and GitHub Team Collaboration</div>
+            <div class="project-description">Practiced version control with Git and collaborated on group projects using GitHub. Managed branches, pull requests, and resolved merge conflicts.</div>
+        </div>
+    </div>
+<br>
+<br>
+{% endblock %}
