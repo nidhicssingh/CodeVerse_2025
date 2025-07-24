@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} contact {% endblock title%}
+
+{% block body %}    
+<div class="container" style="max-width: 600px; margin-top: 40px;">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Yashaswinin V">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="yashaswininas@gmail.com">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message:</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="This is Yashaswini V..."></textarea>
+        </div>
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

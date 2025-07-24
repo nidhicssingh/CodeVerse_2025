@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="about-section" style="padding: 2rem; max-width: 800px; margin: auto;">
+    <h1 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">About Me</h1>
+    
+    <div style="display: flex; align-items: center; flex-wrap: wrap;">
+        <img src="{% static 'IMG/yashu.jpg' %}" alt="My Photo" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-right: 1.5rem;">
+        
+        <div>
+            <p>Hello! I'm <strong>Yashaswini V</strong>, a passionate web developer with experience in building dynamic and responsive websites using Django, HTML, CSS, and JavaScript.</p>
+            
+            <p>I enjoy solving problems through code and am always eager to learn new technologies. My portfolio includes several projects in areas such as personal blogs, education platforms, and service-based websites.</p>
+
+            <p>Outside of coding, I enjoy reading, exploring nature, and working on creative designs.</p>
+
+            <p>Feel free to check out the other sections of my portfolio to learn more about my work and skills!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

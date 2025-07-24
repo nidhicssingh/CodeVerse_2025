@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">My Projects</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+        <!-- 🕹️ Pygame Projects Card -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'IMG/yashu3.jpg' %}" class="card-img-top" alt="Pygame Projects">
+                <div class="card-body">
+                    <h5 class="card-title">Python Game Development</h5>
+                    <p class="card-text">
+                        I have developed several interactive games using <strong>Pygame</strong>, including:
+                        <ul>
+                            <li>🧩 Sudoku – Classic number puzzle with user-friendly interface</li>
+                            <li>🎮 Catch the Falling Block – Fast-paced reflex game</li>
+                            <li>⌨️ Typing Speed Test – Real-time typing accuracy and speed analyzer</li>
+                        </ul>
+                        These projects demonstrate my logical thinking, creativity, and programming skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🌐 Django Portfolio Card -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'IMG/yashu2.jpg' %}" class="card-img-top" alt="Django Portfolio">
+                <div class="card-body">
+                    <h5 class="card-title">Portfolio Website using Django</h5>
+                    <p class="card-text">
+                        I built a personal portfolio website using the <strong>Django</strong> web framework. It includes:
+                        <ul>
+                            <li>👤 About Me section</li>
+                            <li>📚 Education, Skills, and Certifications</li>
+                            <li>🛠️ Project showcase with images and tech stack</li>
+                            <li>📬 Contact form with backend functionality</li>
+                        </ul>
+                        This site is fully responsive, uses Bootstrap for styling, and Django templates for clean content management.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
