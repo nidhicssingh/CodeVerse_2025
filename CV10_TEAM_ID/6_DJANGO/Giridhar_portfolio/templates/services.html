@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} services {% endblock title%}
+
+{% block content %}
+<!-- Services Section -->
+<div class="services-section">
+    <h2>Services I Provide</h2>
+
+    <div class="services-container">
+        <!-- Service 1 -->
+        <div class="service-card">
+            <h3>Web Development</h3>
+            <p>Creating responsive and modern websites using the latest technologies</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+            <h3>Python Programming</h3>
+            <p>Developing Python-based solutions I can help you solve real-world problems using Python.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+            <h3>Figma Design</h3>
+            <p>Creating user-friendly and visually appealing designs.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block extra_css %}
+<style>
+    
+.services-section {
+    margin-top: 40px;
+    padding: 70px;
+    background-color: #f4f6f7; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #1c445dff; 
+    margin-bottom: 30px;
+    font-family: Georgia, serif;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-card h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.service-card:active {
+    transform: translateY(0);
+}
+</style>
+{% endblock %}
