@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Certifications{% endblock %}
+
+{% block content %}
+ <div class="container mt-4">
+    <h2 class="mb-4">My Certifications</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Certification 1 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Python for Everybody</h5>
+                    <p class="card-text">Completed through Coursera. Focused on Python basics, functions, data structures, and web access.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certification 2 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Full-Stack Web Development Bootcamp</h5>
+                    <p class="card-text">Covered HTML, CSS, JavaScript, Node.js, Express, MongoDB, and deployment practices.</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Certification 3 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Data Structures in C - NPTEL</h5>
+                    <p class="card-text">Explored arrays, linked lists, stacks, queues, trees, and graphs with in-depth algorithm design.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+{% endblock %}
