@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects - Praveen's Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4">🚀 My Projects</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+
+    <!-- Project 1 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">📘 VS Code Snippet Generator</h5>
+          <p class="card-text">
+            A Python tool that creates reusable code snippets directly from your terminal and auto-publishes them to your GitHub Gist.
+          </p>
+          <p class="text-muted">2025 • Python • GitHub API • VS Code</p>
+          <a href="#" class="btn btn-primary btn-sm">🔗 Live Demo</a>
+          <a href="#" class="btn btn-outline-dark btn-sm">💻 Source Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">📊 Productivity Tracker Web App</h5>
+          <p class="card-text">
+            A lightweight web app to log daily tasks, track progress, and visualize habits using simple graphs.
+          </p>
+          <p class="text-muted">2024 • HTML • JS • Flask • Chart.js</p>
+          <a href="#" class="btn btn-primary btn-sm">🔗 Live Demo</a>
+          <a href="#" class="btn btn-outline-dark btn-sm">💻 Source Code</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

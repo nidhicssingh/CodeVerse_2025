@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Tech Blog{% endblock %}
+
+{% block content %}
+<div class="blog-section">
+  <h1 class="blog-title">🧠 Praveen's Tech Diaries</h1>
+  <p class="blog-sub">Sharing my developer journey, lessons, and favorite tools</p>
+
+  <div class="blog-entry">
+    <h2>🚀 Project Journey</h2>
+    <p>
+      I recently built my own portfolio website using <strong>Django</strong>. It helped me learn about views, templates, static files, and the magic of routing URLs. 
+      Exploring how backend connects to frontend gave me a sense of how real websites are powered. It was tough at first—but when it finally worked, it felt amazing! ✨
+    </p>
+  </div>
+
+  <div class="blog-entry">
+    <h2>💻 Tools That Boost My Coding</h2>
+    <ul class="tool-list">
+      <li>✅ <strong>VS Code</strong> — clean interface + extensions make life easy</li>
+      <li>✅ <strong>GitHub</strong> — version control + sharing my code</li>
+      <li>✅ <strong>GitHub Copilot</strong> — helps me write smarter code faster</li>
+      <li>✅ <strong>ChatGPT</strong> — my debug buddy for logic & error explanations</li>
+    </ul>
+    <p>These tools have made me a faster, more confident developer.</p>
+  </div>
+
+  <div class="blog-entry">
+    <h2>📌 What's Next?</h2>
+    <p>
+      I’m planning to dive into APIs, JavaScript frameworks, and database integrations next. Every bug teaches me something new, and every fix feels like a level-up.
+    </p>
+    <p class="signature">— Praveen K Kambar👨‍💻</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .blog-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .blog-title {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #1a73e8;
+    margin-bottom: 10px;
+  }
+
+  .blog-sub {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .blog-entry {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 5px solid #1a73e8;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .blog-entry:hover {
+    transform: translateY(-3px);
+  }
+
+  .blog-entry h2 {
+    color: #222;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .blog-entry p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  .tool-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tool-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+
+  .signature {
+    margin-top: 20px;
+    font-style: italic;
+    color: #666;
+    text-align: right;
+  }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // Simple bounce effect when hovering blog entry
+  const entries = document.querySelectorAll('.blog-entry');
+  entries.forEach(entry => {
+    entry.addEventListener('mouseenter', () => {
+      entry.style.transform = 'scale(1.01)';
+    });
+    entry.addEventListener('mouseleave', () => {
+      entry.style.transform = 'scale(1)';
+    });
+  });
+</script>
+{% endblock %}

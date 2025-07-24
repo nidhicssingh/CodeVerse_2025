@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Education - Praveen{% endblock %}
+
+{% block content %}
+<div class="edu-container">
+  <h1 class="edu-title">📚 My Academic Journey</h1>
+  <p class="edu-subtitle">Here’s how I’ve grown, learned, and leveled up over the years!</p>
+
+  <div class="timeline">
+    <div class="timeline-card">
+      <h3>🏫 VishwaBharathi Public High School</h3>
+      <p><strong>Year:</strong> 2022</p>
+      <p><strong>10th Score:</strong> 89.76%</p>
+      <p>This is where my curiosity for science and tech began. 🌱</p>
+    </div>
+
+    <div class="timeline-card">
+      <h3>📘 Sri Chaitanya PUC College</h3>
+      <p><strong>Stream:</strong> Science (11th & 12th)</p>
+      <p><strong>Year:</strong> 2022 – 2024</p>
+      <p><strong>2nd PUC Score:</strong> 92%</p>
+      <p>Those two years sharpened my logic and built my confidence in problem-solving.</p>
+    </div>
+
+    <div class="timeline-card">
+      <h3>🎓 S-VYASA Deemed to be University</h3>
+      <p><strong>Course:</strong> B.Tech in Data Science</p>
+      <p><strong>Status:</strong> Currently Studying (2024 – Present)</p>
+      <p><strong>1st Sem GPA:</strong> 8.45 | <strong>2nd Sem GPA:</strong> 8.82</p>
+      <p>My passion for data and AI is growing every day. I’m building strong foundations in programming, logic, and analysis. 💡</p>
+    </div>
+  </div>
+
+  <div class="motivation">
+    <blockquote>
+      “The path to success is never a straight line. Each step, each challenge, and every lesson builds the future I dream of.” <br> <span>— Praveen</span>
+    </blockquote>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .edu-container {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fdfdfd;
+  }
+
+  .edu-title {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #1a73e8;
+    margin-bottom: 5px;
+  }
+
+  .edu-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .timeline-card {
+    padding: 25px;
+    background: #ffffff;
+    border-left: 6px solid #1a73e8;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+  }
+
+  .timeline-card:hover {
+    transform: translateX(5px);
+  }
+
+  .timeline-card h3 {
+    margin-top: 0;
+    color: #222;
+    font-size: 1.6rem;
+  }
+
+  .timeline-card p {
+    color: #555;
+    font-size: 1.05rem;
+    margin: 6px 0;
+  }
+
+  .motivation {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .motivation blockquote {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #444;
+    border-left: 4px solid #1a73e8;
+    padding-left: 20px;
+    margin: 0 auto;
+    max-width: 700px;
+    background: #f2f7ff;
+    padding: 25px;
+    border-radius: 10px;
+  }
+
+  .motivation span {
+    display: block;
+    margin-top: 10px;
+    color: #1a73e8;
+    font-weight: bold;
+  }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // Animate cards on scroll
+  const cards = document.querySelectorAll('.timeline-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateX(0)";
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = "translateX(-40px)";
+    observer.observe(card);
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services | {{ site_name|default:"My Portfolio" }}{% endblock %}
+{% block content %}
+{% for service in services %}
+<div class="service-card">
+  {% if service.icon %}
+    <div class="service-icon">{{ service.icon }}</div>
+  {% endif %}
+  <div class="service-title">{{ service.title }}</div>
+  <div class="service-desc">{{ service.description }}</div>
+  {% if service.link %}
+  <a href="{{ service.link }}" class="service-link" target="_blank">Learn More</a>
+  {% endif %}
+</div>
+{% endfor %}
+
+<!-- Static services related to Data Science -->
+<div class="service-card">
+  <div class="service-icon">🐍</div>
+  <div class="service-title">Python Scripting</div>
+  <div class="service-desc">Powerful and clean scripting using Python for automation, data analysis, and backend development.</div>
+  <a href="https://www.python.org" class="service-link" target="_blank">Learn More</a>
+</div>
+
+<div class="service-card">
+  <div class="service-icon">📊</div>
+  <div class="service-title">Data Visualization</div>
+  <div class="service-desc">Creating beautiful, insightful charts using Matplotlib, Seaborn, and Plotly to tell your data’s story.</div>
+  <a href="https://seaborn.pydata.org/" class="service-link" target="_blank">Learn More</a>
+</div>
+
+<div class="service-card">
+  <div class="service-icon">💻</div>
+  <div class="service-title">GitHub Projects</div>
+  <div class="service-desc">Well-documented GitHub repositories showcasing real-world projects with version control best practices.</div>
+  <a href="https://github.com" class="service-link" target="_blank">View GitHub</a>
+</div>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; color: #333; }
+
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+    animation: fadeDown 0.8s ease-out forwards;
+  }
+  .hero p {
+    margin-top: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out 0.5s forwards;
+  }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  #services {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  #services h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #5d3fd3;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  .service-card {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  .service-card:hover {
+    background-color: #def0ff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+  .service-icon {
+    font-size: 3rem;
+    color: #6a11cb;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+  }
+  .service-card:hover .service-icon {
+    color: #2575fc;
+  }
+  .service-title {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+    color: #5d3fd3;
+    text-transform: uppercase;
+  }
+  .service-desc {
+    font-size: .95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+  .service-link {
+    display: inline-block;
+    padding: .5rem 1.2rem;
+    background: linear-gradient(315deg, #6a11cb 0%, #2575fc 74%);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .service-link:hover {
+    background: linear-gradient(315deg, #4e089d 0%, #005bdc 74%);
+  }
+  footer {
+    text-align: center;
+    margin: 3rem 0;
+    color: #555;
+    font-size: .9rem;
+  }
+  @media(max-width:800px){
+    .hero h1 { font-size:2.2rem; }
+  }
+</style>
+
+<section class="hero">
+  <h1>What I Do</h1>
+  <p>Here are the services I offer to help you build modern web experiences.</p>
+</section>
+
+<section id="services">
+  <h2>My Services</h2>
+  <div class="services-grid">
+    {% for service in services %}
+    <div class="service-card">
+      {% if service.icon %}
+        <div class="service-icon">{{ service.icon }}</div>
+      {% endif %}
+      <div class="service-title">{{ service.title }}</div>
+      <div class="service-desc">{{ service.description }}</div>
+      {% if service.link %}
+      <a href="{{ service.link }}" class="service-link" target="_blank">Learn More</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<footer>&copy; {{ now|date:"Y" }} {{ site_name|default:"My Portfolio" }}</footer>
+{% endblock %}

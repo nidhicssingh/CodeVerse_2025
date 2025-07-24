@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About - Praveen{% endblock %}
+
+{% block content %}
+<div class="about-container">
+  <div class="intro-box">
+    <h1>Hi, I'm Praveen 👋</h1>
+    <p>I'm a passionate learner, aspiring developer, and an energetic soul who finds joy in creativity and coding.</p>
+  </div>
+
+  <div class="cricket-section">
+    <h2>🏏 Cricket is My Passion</h2>
+    <p>
+      Cricket isn't just a sport to me — it's an emotion. The sound of a clean hit, the thrill of a close match, and the spirit of teamwork are what drive me both on the field and in life.
+      Whether it's a gully match or a weekend tournament, you'll always find me giving it my best shot!
+    </p>
+    <blockquote>"Bat in hand, mind in the game — that’s how I play, that’s how I live." – Praveen</blockquote>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .about-container {
+    padding: 50px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: #f9f9f9;
+  }
+
+  .intro-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .intro-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1a73e8;
+  }
+
+  .intro-box p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .cricket-section {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 40px 30px;
+    border-left: 6px solid #28a745;
+    border-radius: 8px;
+  }
+
+  .cricket-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #28a745;
+  }
+
+  .cricket-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .cricket-section blockquote {
+    font-style: italic;
+    color: #555;
+    margin-top: 20px;
+    border-left: 4px solid #28a745;
+    padding-left: 15px;
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Featured - Praveen{% endblock %}
+
+{% block content %}
+<div class="featured-container">
+  <h1 class="featured-title">🌟 Featured Recognition</h1>
+  <p class="featured-intro">
+    I'm honored to have been featured in the <strong>CodeVerse Program</strong> for my technical creativity and dedication to learning. Being among the top contributors has truly inspired me to keep going further! 💪
+  </p>
+
+  <div class="featured-grid">
+    <!-- Image Section -->
+    <div class="featured-image">
+      <img src="{% static 'IMG/codeverse.png' %}" alt="CodeVerse Recognition" />
+    </div>
+
+    <!-- Highlight Text -->
+    <div class="highlight-box">
+      <h2>🏆 Highlighted Achievement</h2>
+      <p>
+        I built a fully responsive personal portfolio using <strong>Django</strong> and developed a smart <strong>data visualization tool</strong> that turns raw data into clear insights using Chart.js and Python.
+      </p>
+    </div>
+  </div>
+
+  <div class="project-showcase">
+    <h2>🔧 Top Projects Submitted</h2>
+    <ul>
+      <li><strong>MyPortfolio (Django):</strong> A personal site with resume, blog, and contact form.</li>
+      <li><strong>Data Insight App:</strong> Chart-based analytics dashboard with user input data support.</li>
+      <li><strong>Blog Engine:</strong> A clean blog platform with login, post CRUD, and search features.</li>
+    </ul>
+  </div>
+
+  <div class="quote-section">
+    <blockquote>
+      “Recognition is just a spark — real success is built every day with passion and purpose.”<br>
+      <span>— Praveen</span>
+    </blockquote>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .featured-container {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 30px;
+    background: linear-gradient(to bottom, #fdfdfd, #e8f0fe);
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  .featured-title {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #0066cc;
+    margin-bottom: 10px;
+  }
+
+  .featured-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .featured-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .featured-image {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .featured-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+
+  .image-caption {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  .highlight-box {
+    flex: 2;
+    background: #e1f5fe;
+    padding: 20px;
+    border-left: 6px solid #039be5;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .highlight-box:hover {
+    transform: scale(1.02);
+  }
+
+  .project-showcase h2 {
+    color: #0d47a1;
+  }
+
+  .project-showcase ul {
+    margin-top: 15px;
+    padding-left: 20px;
+  }
+
+  .project-showcase li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: #333;
+  }
+
+  .quote-section {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #444;
+    padding: 25px;
+    background-color: #f2f2f2;
+    border-left: 5px solid #1a73e8;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  blockquote span {
+    display: block;
+    margin-top: 10px;
+    color: #1a73e8;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .featured-grid {
+      flex-direction: column;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // Simple fade-in animation on scroll
+  const highlight = document.querySelector('.highlight-box');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  highlight.style.opacity = 0;
+  highlight.style.transform = "translateY(40px)";
+  observer.observe(highlight);
+</script>
+{% endblock %}

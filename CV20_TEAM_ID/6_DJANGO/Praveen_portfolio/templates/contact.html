@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact - Praveen{% endblock %}
+
+{% block content %}
+<div class="contact-container">
+  <h1 class="contact-title">📬 Get in Touch with Me</h1>
+  <p class="contact-sub">Have a question, suggestion, or collaboration idea? Feel free to reach out!</p>
+
+  <div class="contact-grid">
+    <!-- Contact Form -->
+    <form class="contact-form" onsubmit="return validateForm()">
+      <label for="name">👤 Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">📧 Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="phone">📱 Phone</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number">
+
+      <label for="message">📝 Your Message</label>
+      <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3>📌 Contact Details</h3>
+      <p><strong>Phone:</strong> +91-7406428649</p>
+      <p><strong>Email:</strong> praveen@gmail.com</p>
+      <p><strong>Location:</strong> Bengaluru, India</p>
+
+      <h3>🔗 Connect on Socials</h3>
+      <p><a href="https://www.linkedin.com/in/praveen" target="_blank">💼 LinkedIn Profile</a></p>
+      <p><a href="mailto:praveen@example.com">📨 Send Email</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .contact-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .contact-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a73e8;
+    margin-bottom: 10px;
+  }
+
+  .contact-sub {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-form label {
+    margin-top: 10px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .contact-form button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-form button:hover {
+    background-color: #0b56c2;
+  }
+
+  .contact-info {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .contact-info h3 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .contact-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .contact-info a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  function validateForm() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill out all required fields.");
+      return false;
+    }
+
+    alert("Message sent successfully! 🚀");
+    return true;
+  }
+</script>
+{% endblock %}
