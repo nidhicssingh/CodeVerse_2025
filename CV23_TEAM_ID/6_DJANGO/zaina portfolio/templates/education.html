@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4">Education</h2>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>10th Grade:</strong> The New Cambridge High School (ICSE) – 2022
+      <img src="{% static 'IMG/cambridge.avif' %}"style="right" alt="My Photo" style="max-width: 250px;">
+    </li>
+    <li class="list-group-item">
+      <strong>12th Grade:</strong> Carmel Pre-University – 2024
+      <img src="{% static 'IMG/carmel.jpg' %}"  alt="My Photo" style="max-width: 250px;">
+    </li>
+    <li class="list-group-item">
+      <strong>Degree:</strong> SVYASA University – 2024–2025
+      <img src="{% static 'IMG/svyasa.gif' %}" alt="My Photo" style="max-width: 250px;">
+    </li>
+  </ul>
+</div>
+{% endblock %}

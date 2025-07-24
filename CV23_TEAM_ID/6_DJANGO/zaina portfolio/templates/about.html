@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-4 text-center">
+      <img src="{% static 'IMG/zainaa.jpg' %}" alt="My Photo" style="max-width: 250px;">
+    </div>
+    <div class="col-md-8">
+      <h2 class="mb-3">About Me</h2>
+      <p>Hello! I'm <strong>Syed Zaina Manal</strong>, a passionate web developer and student currently pursuing my degree in Computer Science from <strong>S-Vyasa Deemed To Be University</strong>.</p>
+      <p>I specialize in front-end and back-end development using technologies like HTML, CSS, Bootstrap, Python, and Django. I love turning ideas into interactive, user-friendly websites.</p>
+      <p>In my free time, I explore open-source projects, design UIs, and write blogs to share what I learn. I'm also an active participant in coding programs like <strong>CodeVerse 2025</strong>, where I was featured for my creativity and technical skills.</p>
+      <p>My goal is to become a full-stack developer and contribute to impactful tech solutions.</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
