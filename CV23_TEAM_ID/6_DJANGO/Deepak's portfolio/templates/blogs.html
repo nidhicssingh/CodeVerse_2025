@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center mb-4">My Blogs & Media</h1>
+
+  <div class="row">
+    <!-- YouTube Blog -->
+    <div class="col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">My YouTube Tech Channel</h5>
+          <p class="card-text">
+            I post tutorials, project walkthroughs, and tech reviews on my YouTube channel. Check it out to learn coding with fun examples!
+          </p>
+          <a href="http://www.youtube.com/@AbhijithSkandaHN" target="_blank" class="btn btn-danger">Watch on YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Podcast Blog -->
+    <div class="col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Tech Talks – My Podcast</h5>
+          <p class="card-text">
+            In my podcast, I share thoughts on technology trends, coding habits, student tips, and more. Stream episodes anytime!
+          </p>
+          <a href="https://open.spotify.com/show/3VL1Bctk1rDAVh62BzgLVI?si=f5c33dff4b284d0a" target="_blank" class="btn btn-primary">Listen to Podcast</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
