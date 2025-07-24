@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Contact - NextSyntax{% endblock %} {% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="#" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Write your message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+
+            <hr class="my-4">
+
+            <div class="contact-info mt-4 text-center">
+                <p><strong>Email:</strong> nextsyntax.team@gmail.com</p>
+                <p><strong>Phone:</strong> +91 0000000987</p>
+                <p><strong>Location:</strong> SVYASA University, Bengaluru</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
