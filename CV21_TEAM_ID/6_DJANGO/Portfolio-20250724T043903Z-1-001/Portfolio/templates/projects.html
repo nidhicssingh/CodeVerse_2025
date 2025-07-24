@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center mb-4">My Projects</h1>
+
+  <div class="row">
+    <!-- Project 1: Portfolio -->
+    <div class="col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Personal Portfolio Website</h5>
+          <p class="card-text">
+            A personal portfolio website built using Django and Bootstrap. It showcases my projects, skills, education, and resume with a responsive UI.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Indian Flag Drawing -->
+    <div class="col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Drawing the Indian Flag Using Python Turtle</h5>
+          <p class="card-text">
+            A Python project using the Turtle graphics library to programmatically draw the Indian national flag. It uses loops, shape functions, and color fills to accurately represent the tricolor, Ashoka Chakra, and layout.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: Falling Blocks Game -->
+    <div class="col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Falling Blocks and Catching Game</h5>
+          <p class="card-text">
+            A fun arcade-style game developed using Python and Pygame. In this game, colorful blocks fall from the top of the screen and the player must move a basket to catch them. It includes different block types like bonus and harmful blocks, increasing difficulty levels, and real-time scoring.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
