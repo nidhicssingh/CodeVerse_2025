@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEWD Assignment - GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            gap: 5px;
+            justify-content: center;
+            margin-top: 20px;
+            background: #bbada0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .tile {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+            font-size: 2em;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My FEWD Assignment</h1>
+    <p>This is a simple HTML page for my Front-End Web Development assignment.</p>
+    <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank">Visit My GitHub</a>
+    
+    <h2>2048 Game</h2>
+    <div class="grid" id="grid"></div>
+    <p id="status"></p>
+    
+    <script>
+        const grid = document.getElementById("grid");
+        let board = Array(4).fill().map(() => Array(4).fill(0));
+
+        function createBoard() {
+            grid.innerHTML = "";
+            board.forEach((row, rIndex) => {
+                row.forEach((value, cIndex) => {
+                    const tile = document.createElement("div");
+                    tile.classList.add("tile");
+                    tile.textContent = value === 0 ? "" : value;
+                    tile.style.backgroundColor = value ? `hsl(${200 - value * 5}, 60%, 50%)` : "#eee";
+                    grid.appendChild(tile);
+                });
+            });
+        }
+
+        function addRandomTile() {
+            let emptyTiles = [];
+            board.forEach((row, r) => {
+                row.forEach((val, c) => {
+                    if (val === 0) emptyTiles.push([r, c]);
+                });
+            });
+            if (emptyTiles.length) {
+                let [r, c] = emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
+                board[r][c] = Math.random() > 0.1 ? 2 : 4;
+            }
+        }
+
+        function moveLeft() {
+            board = board.map(row => {
+                let filtered = row.filter(v => v);
+                for (let i = 0; i < filtered.length - 1; i++) {
+                    if (filtered[i] === filtered[i + 1]) {
+                        filtered[i] *= 2;
+                        filtered[i + 1] = 0;
+                    }
+                }
+                return [...filtered.filter(v => v), ...Array(4 - filtered.length).fill(0)];
+            });
+        }
+
+        function rotateBoard() {
+            board = board[0].map((_, i) => board.map(row => row[i]).reverse());
+        }
+
+        function handleKey(e) {
+            let prevBoard = JSON.stringify(board);
+            if (e.key === "ArrowLeft") moveLeft();
+            else if (e.key === "ArrowRight") { rotateBoard(); rotateBoard(); moveLeft(); rotateBoard(); rotateBoard(); }
+            else if (e.key === "ArrowUp") { rotateBoard(); rotateBoard(); rotateBoard(); moveLeft(); rotateBoard(); }
+            else if (e.key === "ArrowDown") { rotateBoard(); moveLeft(); rotateBoard(); rotateBoard(); rotateBoard(); }
+            if (prevBoard !== JSON.stringify(board)) addRandomTile();
+            createBoard();
+        }
+
+        document.addEventListener("keydown", handleKey);
+        addRandomTile();
+        addRandomTile();
+        createBoard();
+    </script>
+</body>
+</html>
