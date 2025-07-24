@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="container mt-5 p-4 bg-light rounded shadow">
+    <h1 class="mb-3 text-primary">About Me</h1>
+    <p>Hello! I'm <strong>Nishith</strong>, a passionate coder who loves turning ideas into reality through the power of code.</p>
+
+    <p>I specialize in technologies like <code>Python</code>, <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code>, and <code>C++</code>. I enjoy building web applications, solving algorithmic challenges, and exploring automation and game development.</p>
+
+    <p>My journey began with curiosity and quickly became a lifelong pursuit of excellence in software development. I constantly seek to improve my skills and learn new tools and frameworks.</p>
+
+    <p>In my free time, I explore open-source contributions, read tech blogs, and work on personal side projects. My goal is to build meaningful solutions that have real-world impact.</p>
+
+    <p class="mt-4"><em>Code is more than syntax — it's a way to create, innovate, and change the world.</em></p>
+
+    <img src="{% static 'C:\Users\Nishith\Downloads\Portfolio_Nishith\Static\IMG\photo-1571171637578-41bc2dd41cd2.avif' %}" alt="Coder at desk" class="img-fluid mt-4 rounded" style="max-height: 300px;">
+</div>
+{% endblock %}
