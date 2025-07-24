@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .project-content p {
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        .project-content .stack {
+            margin: 10px 0;
+            font-size: 0.85em;
+            color: #888;
+        }
+
+        .project-content a {
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 10px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Projects</h1>
+    <div class="grid">
+
+        <div class="project-card">
+            <img src="https://via.placeholder.com/400x180.png?text=Yoga+App" alt="Yoga App">
+            <div class="project-content">
+                <h3>31-Day Yoga Journey App</h3>
+                <p>A wellness-focused web app that helps users follow a daily yoga and mindfulness routine.</p>
+                <div class="stack">Tech: HTML, CSS, JavaScript, Django</div>
+                <a href="https://github.com/yourusername/yoga-app" target="_blank">GitHub</a>
+                <a href="https://yourapp.vercel.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://via.placeholder.com/400x180.png?text=Prompt+Idea+Checker" alt="Prompt App">
+            <div class="project-content">
+                <h3>AI Prompt Idea Checker</h3>
+                <p>Input your app idea and get feedback if it can be built using AI. Super useful for creators!</p>
+                <div class="stack">Tech: GPT-4, HTML, JS, Google AI Studio</div>
+                <a href="#">GitHub</a>
+                <a href="#">Try It</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://via.placeholder.com/400x180.png?text=Mythology+Shorts" alt="YouTube">
+            <div class="project-content">
+                <h3>Mythology YouTube Shorts</h3>
+                <p>Bringing ancient stories to life with animation, voiceovers, and cultural flavor!</p>
+                <div class="stack">Tool: CapCut, Canva, Notion</div>
+                <a href="https://youtube.com/yourchannel" target="_blank">Watch</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Featured Work</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .card-content p {
+      color: #666;
+      font-size: 0.95em;
+    }
+
+    .card-content a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Featured Work</h1>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180.png?text=Yoga+App" alt="Yoga App">
+      <div class="card-content">
+        <h3>Yoga Journey App</h3>
+        <p>A web app that helps users build a 31-day yoga habit with videos, tracking, and affirmations.</p>
+        <a href="https://github.com/yourusername/yoga-app" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180.png?text=Myth+Shorts" alt="Mythology Shorts">
+      <div class="card-content">
+        <h3>Mythology YouTube Shorts</h3>
+        <p>Creative storytelling of Indian epics with voiceovers, animations, and cultural depth.</p>
+        <a href="https://youtube.com/yourchannel" target="_blank">Watch Now</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180.png?text=Prompt+Bot" alt="Prompt Checker">
+      <div class="card-content">
+        <h3>AI Prompt App</h3>
+        <p>A tool that checks if AI can build your idea — helpful for aspiring creators and developers!</p>
+        <a href="https://github.com/yourusername/ai-prompt-checker" target="_blank">Try It</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

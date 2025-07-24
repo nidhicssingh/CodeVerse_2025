@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Education</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .timeline {
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #3498db;
+    }
+
+    .entry {
+      margin-bottom: 30px;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .entry::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #3498db;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #3498db;
+    }
+
+    .entry h2 {
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    .entry .details {
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    .entry p {
+      margin-top: 5px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Education</h1>
+  <div class="timeline">
+
+    <div class="entry">
+      <h2>Bachelor of Science in Yogic Science</h2>
+      <div class="details">S-VYASA University, Bengaluru | 2025 – Present</div>
+      <p>Learning ancient science + modern research. Exploring yoga, psychology, anatomy, and therapy. 🧘‍♀️🧠</p>
+    </div>
+
+    <div class="entry">
+      <h2>Pre-University Education</h2>
+      <div class="details">Narayana PU College, [City] | 2023 – 2025</div>
+      <p>Completed Physics, Chemistry, Math, and Biology with focus on academics & discipline.</p>
+    </div>
+
+    <div class="entry">
+      <h2>High School</h2>
+      <div class="details">[Your School Name], [City] | 2021 – 2023</div>
+      <p>Strong foundation in science, languages, and extracurricular activities. 🏆</p>
+    </div>
+
+  </div>
+</body>
+</html>
