@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center mb-4">About Me</h1>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img src="{% static 'C:\Users\Amisha Shivakumar\Downloads\drive-download-20250724T064832Z-1-001\Static\IMG\me.jpeg' %}" alt="My Photo" class="img-fluid rounded-circle" width="250">
+    </div>
+    <div class="col-md-8">
+      <p>
+        Hi, I'm <strong>Amisha Shivakumar</strong>, a passionate and enthusiastic web developer currently pursuing my B.Tech in Computer Science at S-VYASA DEEMED TO BE University.
+      </p>
+      <p>
+        I enjoy building modern, responsive websites using Django, Python, HTML, and CSS. My interests also include exploring new technologies, writing clean code, and working on real-world projects that solve problems.
+      </p>
+      <p>
+        Beyond coding, I love traveling, reading tech blogs, and participating in programs like <strong>CodeVerse</strong>, where I showcased my creativity and technical skills.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
