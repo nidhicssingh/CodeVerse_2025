@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shashi's Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>HELLO I'M <span class="highlight">SHAHILKANTH B</span></h1>
+        <p class="tagline">Python developer • Django explorer • Game builder</p>
+        <nav>
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+            <a href="{% url 'about' %}" class="nav-link">About</a>
+            <a href="{% url 'blogs' %}" class="nav-link">Blogs</a>
+        </nav>
+    </header>
+    <section class="intro">
+        <img src="/static/IMG/NIDHI.jpg" alt="Profile Photo" class="profile-pic">
+        <p>Welcome to my personal corner of the web. I create interactive games, automate tasks, and build sleek apps using Python and Django.</p>
+    </section>
+    <footer>
+        <p>Built with 💻 by Shashi</p>
+    </footer>
+</body>
+</html>
+

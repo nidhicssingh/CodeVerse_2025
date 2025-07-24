@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>"C:\Users\kanth\OneDrive\javscript\Pictures\WhatsApp Image 2024-12-19 at 21.23.07_6f7d0e53.jpg" 
+<body>
+    <h1>About Me</h1>
+    <img src="{% static 'C:\Users\kanth\OneDrive\javscript\Pictures\WhatsApp Image 2024-12-19 at 21.23.07_6f7d0e53.jpg' %}" alt="Profile Photo">
+
+
+    <p>I’m a curious and persistent learner exploring Python development, Django, Git, and game design with pygame. My work blends logic with creativity.</p>
+    <nav>
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'blogs' %}">Blogs</a>
+    </nav>
+</body>
+</html>
+
+
