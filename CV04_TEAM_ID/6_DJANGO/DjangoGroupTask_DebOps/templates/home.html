@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Banner -->
+<div class="container-fluid bg-dark text-white py-5">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Welcome to CodeVerse 2025</h1>
+    <p class="lead">A tech-powered journey of learning, innovation, and collaboration at SVYASA University</p>
+    <a href="{% url 'education' %}" class="btn btn-outline-light btn-lg mt-3">Explore Events</a>
+  </div>
+</div>
+
+<!-- About CodeVerse -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="{% static 'IMG/codeverse_banner.jpg' %}" class="img-fluid rounded shadow" alt="CodeVerse 2025">
+    </div>
+    <div class="col-md-6">
+      <h2>What is CodeVerse?</h2>
+      <p>
+        CodeVerse is a collaborative technology event hosted at SVYASA University where students from all departments
+        come together to learn web development, build real-world projects, and explore career-boosting tech skills using Django, Python, and more.
+      </p>
+      <p>Join us as we dive into hands-on sessions, certifications, and exciting projects across all sections (A, B, C).</p>
+      <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+</div>
+
+<!-- Highlights Section -->
+<div class="container py-5">
+  <h2 class="text-center mb-4">Featured Sections</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow h-100">
+        <img src="{% static 'IMG/events.jpg' %}" class="card-img-top" alt="Events">
+        <div class="card-body">
+          <h5 class="card-title">CodeVerse Events</h5>
+          <p class="card-text">Workshops, sessions, and hackathons that help you apply your skills in real scenarios.</p>
+          <a href="{% url 'education' %}" class="btn btn-outline-primary">View Events</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow h-100">
+        <img src="{% static 'IMG/skills.jpg' %}" class="card-img-top" alt="Skills">
+        <div class="card-body">
+          <h5 class="card-title">Tech Skills</h5>
+          <p class="card-text">Master web development, Django, Bootstrap, and Git by building real-world applications.</p>
+          <a href="{% url 'skills' %}" class="btn btn-outline-primary">Explore Skills</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow h-100">
+        <img src="{% static 'IMG/certification.jpg' %}" class="card-img-top" alt="Certification">
+        <div class="card-body">
+          <h5 class="card-title">Certifications</h5>
+          <p class="card-text">Earn official certificates upon completion of events and project contributions.</p>
+          <a href="{% url 'certification' %}" class="btn btn-outline-primary">Get Certified</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action -->
+<div class="container-fluid bg-primary text-white text-center py-4">
+  <h4 class="mb-2">Ready to build and innovate?</h4>
+  <a href="{% url 'projects' %}" class="btn btn-light btn-lg">View Student Projects</a>
+</div>
+
+{% endblock %}

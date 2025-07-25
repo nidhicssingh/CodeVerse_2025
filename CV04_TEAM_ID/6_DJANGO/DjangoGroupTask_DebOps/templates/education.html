@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container my-5">
+  <h1 class="mb-4 text-center">CodeVerse Learning Events</h1>
+  <p class="lead text-center">Explore our practical workshops, guided sessions, and technical bootcamps designed to empower learners of all levels.</p>
+
+  <hr class="my-5">
+
+  <!-- Hands-on Python Workshop -->
+  <section class="mb-5">
+    <h2 class="mb-3">Hands-on Python Workshop</h2>
+    <p><strong>Event Coordinators:</strong> Ms. Nidhi Singh, Ms. Banesori Ayekpam</p>
+
+    <div class="card shadow-sm p-3 mb-4">
+      <h5 class="card-title">Day 1 – July 14, 2025 (Monday)</h5>
+      <ul class="list-unstyled">
+        <li><strong>11:15 AM – 12:30 PM:</strong> GitHub Hands-on with Examples (Sections A & C)</li>
+        <li><strong>12:30 PM – 12:45 PM:</strong> Quick Calm: 15-Minute Yoga (Section A & C) – <em>Led by Ms. Kunj Verma</em></li>
+        <li><strong>1:45 PM – 3:15 PM:</strong> GUI Programming in Python using Tkinter  
+          <br>Team Tasks:
+          <ul>
+            <li>Build a Custom Calculator</li>
+            <li>Create a Python-based Quiz App</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card shadow-sm p-3">
+      <h5 class="card-title">Day 2 – July 15, 2025 (Tuesday)</h5>
+      <ul class="list-unstyled">
+        <li><strong>11:15 AM – 12:30 PM:</strong> Continuation: GitHub Hands-on (Section A, B, and C)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Expandable Future Sessions -->
+  <section class="mt-5">
+    <h2 class="mb-3">Upcoming Learning Tracks</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Full Stack Web Development</h5>
+            <p class="card-text">A practical bootcamp with structured schedules for HTML, CSS, JavaScript, React, and backend integration. Coordinated by subject matter experts.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm disabled">Schedule Coming Soon</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">AI & Python Essentials</h5>
+            <p class="card-text">Learn the foundations of AI and machine learning using Python. Real datasets, live coding, and guided labs included.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm disabled">Schedule Coming Soon</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Soft Skills for Tech Professionals</h5>
+            <p class="card-text">SSP program focused on communication, collaboration, and presentation skills in technical environments.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm disabled">Details Updating</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="text-center my-5">
+    <h3>Stay Informed</h3>
+    <p>Want to be the first to know about new workshops and tracks?</p>
+    <a href="{% url 'contact' %}" class="btn btn-primary">Join Our Mailing List</a>
+  </section>
+</div>
+
+{% endblock %}

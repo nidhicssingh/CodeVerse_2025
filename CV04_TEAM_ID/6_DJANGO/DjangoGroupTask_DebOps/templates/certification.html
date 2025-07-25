@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-5">
+  <h1 class="text-center mb-4">Certifications & Benefits</h1>
+
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <img src="{% static 'IMG/codeverse_certificate.jpg' %}" alt="CodeVerse Certificate" class="img-fluid rounded shadow">
+    </div>
+    <div class="col-md-6">
+      <p class="lead">
+        Upon successful completion of CodeVerse workshops and projects, students are awarded an official certificate endorsed by <strong>SVYASA University</strong>. This certificate validates your active participation in hands-on learning and your ability to develop real-world applications using <strong>Python</strong>, <strong>Django</strong>, and full-stack tools.
+      </p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">✔ Recognized by SVYASA and faculty mentors</li>
+        <li class="list-group-item">✔ Highlights technical and team collaboration skills</li>
+        <li class="list-group-item">✔ Boosts resume with real project experience</li>
+        <li class="list-group-item">✔ Valid proof of your full-stack journey</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="card h-100 border-success shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Project Recognition</h5>
+          <p class="card-text">Your team’s Django project will be listed as part of CodeVerse’s official GitHub showcase, making it publicly verifiable.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 border-primary shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Skill Validation</h5>
+          <p class="card-text">Demonstrates practical knowledge in Python, GitHub, Bootstrap, databases, and web development.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 border-warning shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Career Advantage</h5>
+          <p class="card-text">Enhances your internship and placement profile by showcasing verified learning backed by real results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

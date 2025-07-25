@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-5">
+  <h1 class="text-center mb-4">About CodeVerse 2025</h1>
+
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <p class="lead">
+        <strong>CodeVerse 2025</strong> is an educational initiative organized under the guidance of <strong>SVYASA University</strong>,
+        dedicated to empowering students from Sections A, B, and C with real-world coding skills. Through a series of expertly curated sessions,
+        hands-on workshops, and full-stack projects, students learn essential technologies like Python, GitHub, Django, Bootstrap, and more.
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="{% static 'IMG/codeverse_team.jpg' %}" alt="CodeVerse Team" class="img-fluid rounded shadow">
+    </div>
+  </div>
+
+  <hr class="my-4">
+
+  <div class="row text-center mb-5">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Mission</h5>
+          <p class="card-text">To nurture future developers through structured sessions, project-based learning, and peer collaboration.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Vision</h5>
+          <p class="card-text">To build a student-driven community of full-stack developers who learn by doing and grow by sharing knowledge.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Technology</h5>
+          <p class="card-text">Python, Django, HTML, CSS, Bootstrap, JavaScript, GitHub, SQLite, and deployment tools like Heroku or Netlify.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <h4>Powered by SVYASA University</h4>
+    <p class="mb-3">Inspired by innovation. Backed by mentorship.</p>
+    <img src="{% static 'IMG/svyasa_logo.png' %}" alt="SVYASA Logo" class="img-fluid" style="max-height: 80px;">
+  </div>
+</div>
+
+{% endblock %}

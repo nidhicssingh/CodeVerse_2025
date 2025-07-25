@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-5">
+  <h1 class="text-center mb-4">Contact Us</h1>
+
+  <div class="row">
+    <!-- Contact Info -->
+    <div class="col-md-5 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">CodeVerse 2025 – S‑VYASA City Campus</h5>
+          <p><strong>Campus Address:</strong><br>
+            S‑VYASA City Campus,<br>
+            Rajarajeshwari Nagar (RR Nagar),<br>
+            Mysore Road, Bengaluru, Karnataka – 560098
+          </p>
+          <p><strong>Email:</strong><br>
+            codeverse@svyasa.edu.in
+          </p>
+          <p><strong>Phone:</strong><br>
+            +91 94488 12345
+          </p>
+          <p><strong>Office Hours:</strong><br>
+            Monday – Friday: 9:00 AM to 5:30 PM
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="col-md-7 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Get in Touch</h5>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your full name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Type your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

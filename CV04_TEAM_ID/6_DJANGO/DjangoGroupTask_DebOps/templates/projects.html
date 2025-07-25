@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Team Projects from CodeVerse 2025</h2>
+  <p class="text-center mb-4">Real-world apps built by students from Section A, B & C using Django, Python, and Bootstrap.</p>
+
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'IMG/project1.jpg' %}" class="card-img-top" alt="Student Project 1">
+        <div class="card-body">
+          <h5 class="card-title">EduTrack</h5>
+          <p class="card-text">A student progress tracking portal developed by Section A using Django and Bootstrap forms.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'IMG/project2.jpg' %}" class="card-img-top" alt="Student Project 2">
+        <div class="card-body">
+          <h5 class="card-title">CodeHub</h5>
+          <p class="card-text">A collaborative blogging platform created by Section B students with tag-based post search.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'IMG/project3.jpg' %}" class="card-img-top" alt="Student Project 3">
+        <div class="card-body">
+          <h5 class="card-title">SkillMate</h5>
+          <p class="card-text">An interactive skill-sharing app from Section C that matches learners with mentors.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

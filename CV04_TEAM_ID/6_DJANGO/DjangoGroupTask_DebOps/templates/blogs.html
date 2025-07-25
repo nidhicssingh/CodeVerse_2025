@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-5">
+  <h1 class="text-center mb-4">Project Highlights & Blog</h1>
+  <p class="lead text-center mb-5">Explore featured projects developed by CodeVerse students using Python, Django, HTML, CSS, and GitHub. Each project reflects the creativity and teamwork of our budding developers.</p>
+
+  <div class="row g-4">
+    <!-- Blog Card 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'IMG/blog_calculator.jpg' %}" class="card-img-top" alt="Python Calculator">
+        <div class="card-body">
+          <h5 class="card-title">Smart Team Calculator</h5>
+          <p class="card-text">A GUI calculator app built using Python's Tkinter module. Features custom themes and extended operations. Developed by Team A during the GUI session.</p>
+        </div>
+        <div class="card-footer text-muted">Section A – Python Workshop</div>
+      </div>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'IMG/blog_quiz.jpg' %}" class="card-img-top" alt="Python Quiz App">
+        <div class="card-body">
+          <h5 class="card-title">Python Quiz Application</h5>
+          <p class="card-text">A Django-based quiz app with dynamic questions, scoring logic, and admin dashboard. Inspired by real Python assessment tools.</p>
+        </div>
+        <div class="card-footer text-muted">Section B – Final Project</div>
+      </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'IMG/blog_portfolio.jpg' %}" class="card-img-top" alt="Personal Portfolio">
+        <div class="card-body">
+          <h5 class="card-title">Personal Developer Portfolio</h5>
+          <p class="card-text">Responsive web portfolio with Bootstrap design, hosted using GitHub Pages. Shows project links, contact form, and coding achievements.</p>
+        </div>
+        <div class="card-footer text-muted">Section C – Self-Led Submission</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional Blog Post Section -->
+  <div class="mt-5 text-center">
+    <h3>Want to Share Your Project?</h3>
+    <p>Submit a short write-up about your project and get featured on our blog page!</p>
+    <a href="{% url 'contact' %}" class="btn btn-outline-primary">Submit Your Project</a>
+  </div>
+</div>
+
+{% endblock %}

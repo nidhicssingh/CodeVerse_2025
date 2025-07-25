@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Skills You’ll Learn at CodeVerse</h2>
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow">
+        <img src="{% static 'IMG/python.jpg' %}" class="card-img-top" alt="Python">
+        <div class="card-body">
+          <h5 class="card-title">Python Programming</h5>
+          <p class="card-text">Learn Python fundamentals, scripting, logic building, and working with libraries.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow">
+        <img src="{% static 'IMG/django.jpg' %}" class="card-img-top" alt="Django">
+        <div class="card-body">
+          <h5 class="card-title">Django Framework</h5>
+          <p class="card-text">Build powerful, scalable web apps with Django using models, templates, and views.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow">
+        <img src="{% static 'IMG/bootstrap.jpg' %}" class="card-img-top" alt="Bootstrap">
+        <div class="card-body">
+          <h5 class="card-title">Bootstrap UI Design</h5>
+          <p class="card-text">Create responsive layouts using Bootstrap grid, cards, buttons, and components.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
