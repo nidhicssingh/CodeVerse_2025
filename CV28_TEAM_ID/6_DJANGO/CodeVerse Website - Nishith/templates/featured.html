@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Webfolio Works - Featured{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-image:
+      linear-gradient(rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0.95)),
+      url('[YOUR_BACKGROUND_IMAGE_URL_HERE]');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: #343a40;
+  }
+
+  .bg-body-tertiary {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  }
+
+  .featured-card {
+    background: #ffffff;
+    border-left: 5px solid #20c997;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+
+  .featured-card h5 {
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+  }
+
+  .featured-card small {
+    color: #6c757d;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+  <div class="bg-body-tertiary">
+    <h1 class="mb-4">Featured Highlights</h1>
+
+    <div class="featured-card">
+      <h5>Capstone Project: Job & Resume Builder</h5>
+      <small>2025 · Webfolio Works Team</small>
+      <p>A full-stack application that lets users build professional portfolios and resumes in real time using Django and Bootstrap.</p>
+    </div>
+
+    <div class="featured-card">
+      <h5>Top Performer - CodeSprint Hackathon</h5>
+      <small>April 2024 · Ranked in Top 10</small>
+      <p>Created a prototype of a freelance platform using Django REST API and React, receiving recognition for clean UX.</p>
+    </div>
+
+    <div class="featured-card">
+      <h5>Featured on College Tech Newsletter</h5>
+      <small>January 2024 · XYZ University</small>
+      <p>Our team's innovative approach to student portfolio websites was featured in the official university newsletter.</p>
+    </div>
+
+  </div>
+</main>
+{% endblock %}
