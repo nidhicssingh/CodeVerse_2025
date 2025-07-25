@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+<div class="container mt-5 services-page">
+    <div class="glass-card p-5">
+        <h1 class="text-center mb-4">My Services on Fiverr</h1>
+        <p class="lead text-center mb-4">
+            Welcome! I offer a variety of professional services to help bring your technical ideas to life. Explore what I do best:
+        </p>
+        
+        <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item bg-transparent">
+                <i class="fas fa-code me-2 text-primary"></i>
+                <strong>Python Development:</strong> Custom scripts, automation, and web applications.
+            </li>
+            <li class="list-group-item bg-transparent">
+                <i class="fas fa-server me-2 text-success"></i>
+                <strong>Django Web Development:</strong> Full-stack web apps, REST APIs, and admin panels.
+            </li>
+            <li class="list-group-item bg-transparent">
+                <i class="fas fa-bug me-2 text-danger"></i>
+                <strong>Bug Fixing & Debugging:</strong> Troubleshooting and resolving code issues.
+            </li>
+            <li class="list-group-item bg-transparent">
+                <i class="fas fa-search me-2 text-warning"></i>
+                <strong>Code Review:</strong> Reviewing and optimizing your existing Python/Django code.
+            </li>
+            <li class="list-group-item bg-transparent">
+                <i class="fas fa-comments me-2 text-info"></i>
+                <strong>Consultation:</strong> Guidance on project architecture, best practices, and deployment.
+            </li>
+        </ul>
+
+        <div class="text-center">
+            <p class="mb-3">Interested in working together?</p>
+            <a href="https://www.fiverr.com/" target="_blank" class="btn btn-outline-primary px-4 py-2">
+                <i class="fab fa-fiverr me-2"></i>Visit My Fiverr Profile
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .glass-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .list-group-item {
+        border: none;
+        font-size: 1.1rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .services-page h1 {
+        font-weight: 700;
+        color: #222;
+    }
+
+    .services-page p {
+        color: #444;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<!-- Optional: Additional scripts or analytics -->
+{% endblock %}

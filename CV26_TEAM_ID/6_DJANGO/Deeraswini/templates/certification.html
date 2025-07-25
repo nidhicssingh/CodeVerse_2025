@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Certifications{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+  }
+
+  .certifications-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .certifications-section:hover {
+    transform: translateY(-5px);
+  }
+
+  .certifications-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  }
+
+  .certifications-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .certifications-section li {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .certifications-section li:last-child {
+    border-bottom: none;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="certifications-section">
+    <h2>Certifications</h2>
+    <ul>
+        <li>Fundamentals of Python</li>
+        <li>Fundamentals of JavaScript</li>
+        <li>Responsive Web Design (HTML & CSS)</li>
+        <li>Django Web Framework Basics</li>
+        <li>Bootstrap for UI Components</li>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+
+<style>
+  body {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    min-height: 100vh;
+  }
+
+  .glass-card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    padding: 2rem;
+    color: white;
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-5px);
+  }
+
+  h2, h3 {
+    font-weight: 700;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  ul li {
+    padding: 4px 0;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<div class="container my-5">
+  <div class="glass-card">
+
+    <h1 class="text-center mb-4">About Me</h1>
+
+    <h2>Deeraswini</h2>
+    <p class="mb-4">
+      I'm a B.Tech student studying at <strong>S-VYASA Deemed to be University</strong>. Passionate about building modern applications and learning new technologies.
+    </p>
+
+    <h3>Certificates</h3>
+    <ul>
+      <li>Fundamentals of Python</li>
+      <li>JavaScript</li>
+      <li>CSS</li>
+      <li>HTML</li>
+      <li>C++</li>
+    </ul>
+
+    <h3 class="mt-4">Project</h3>
+    <ul>
+      <li>Basic Command-line OS</li>
+    </ul>
+
+    <h3 class="mt-4">Languages</h3>
+    <ul>
+      <li>English (Fluent)</li>
+      <li>Telugu (Fluent)</li>
+      <li>Hindi (A little bit)</li>
+    </ul>
+    
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blogs{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .blog-container {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 20px;
+    color: #fff;
+  }
+
+  .blog-container h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  }
+
+  .blog-post {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .blog-post:hover {
+    transform: scale(1.015);
+    box-shadow: 0 12px 36px rgba(0, 255, 255, 0.2);
+  }
+
+  .blog-post h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #00ffff;
+    font-weight: 600;
+  }
+
+  .blog-meta {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 20px;
+  }
+
+  .blog-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f2f2f2;
+  }
+
+  .text-center {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 50px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+  <h1>My Blog</h1>
+
+  {% for post in posts %}
+    <div class="blog-post">
+      <h2>{{ post.title }}</h2>
+      <p class="blog-meta">By {{ post.author }} on {{ post.published_date }}</p>
+      <div class="blog-content">
+        {{ post.content|linebreaks }}
+      </div>
+    </div>
+  {% empty %}
+    <p class="text-center">No blog posts available.</p>
+  {% endfor %}
+</div>
+{% endblock %}

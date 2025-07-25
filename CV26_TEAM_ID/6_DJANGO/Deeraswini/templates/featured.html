@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Education{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .education-section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .education-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .education-header h2 {
+    font-size: 3rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin-bottom: 10px;
+  }
+
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+    animation: slideUp 0.6s ease-in-out;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  }
+
+  .feature-card h4 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+
+  .feature-card p {
+    font-size: 1rem;
+    color: #dddddd;
+    line-height: 1.6;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="education-section">
+  <div class="education-header">
+    <h2>B.Tech - Computer Science & Engineering (AI)</h2>
+    <p>Graduated from S-Vyasa Deemed to be University with specialization in Artificial Intelligence</p>
+  </div>
+
+  <div class="feature-cards">
+    <div class="feature-card">
+      <h4>Academic Foundation</h4>
+      <p>
+        Gained solid knowledge in Data Structures, Algorithms, Database Systems, Operating Systems, and AI through an intensive curriculum.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Project-Based Learning</h4>
+      <p>
+        Developed a command-line based custom OS prototype and participated in multiple real-world projects integrating AI and ML.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Competitive Coding</h4>
+      <p>
+        Actively participated in national-level hackathons and online contests. Solved over 300+ DSA problems across platforms.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Technical Skills</h4>
+      <p>
+        Hands-on experience with Python, C++, HTML, CSS, JavaScript, MySQL, and frameworks like Django. Strong in logic building and debugging.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Soft Skills & Collaboration</h4>
+      <p>
+        Built strong communication and team collaboration skills through continuous group work, presentations, and inter-college competitions.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Growth & Vision</h4>
+      <p>
+        My B.Tech journey nurtured a deep passion for AI. I’m now focused on solving meaningful problems through technology and innovation.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

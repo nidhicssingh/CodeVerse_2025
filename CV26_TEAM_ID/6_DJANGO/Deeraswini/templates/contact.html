@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #fff;
+  }
+
+  .contact-info {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .contact-info h2 {
+    font-size: 2.5rem;
+    color: #00ffff;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+  }
+
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+
+  .contact-info li {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 5px solid #00ffff;
+    transition: background 0.3s ease;
+  }
+
+  .contact-info li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .contact-info strong {
+    color: #00ffff;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="contact-info">
+    <h2>Contact</h2>
+    <ul>
+        <li><strong>Name:</strong> Deeraswini</li>
+        <li><strong>Email:</strong> Deeraswini@gmail.com</li>
+        <li><strong>Phone:</strong> +91-9876543210</li>
+        <li><strong>Address:</strong> S-VYASA Campus, RR Nagar, Bengaluru</li>
+    </ul>
+</div>
+{% endblock %}

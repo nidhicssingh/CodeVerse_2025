@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Education{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background: linear-gradient(135deg, #1c1c1c, #2a2a72);
+    color: #ffffff;
+  }
+
+  .education-section {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .education-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .education-section h2 {
+    font-size: 2.8rem;
+    color: #00ffff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    text-align: center;
+  }
+
+  .education-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #f1f1f1;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="education-section">
+  <h2>B.Tech Education</h2>
+  <p>
+    I'm doing my Bachelor of Technology (B.Tech) with a focus on Computer Science and Engineering, specialized in Artificial Intelligence.
+    My journey through these years was filled with learning, challenges, and growth. From mastering core programming concepts to working on
+    real-world projects, my B.Tech experience laid a strong foundation for my career in technology.
+  </p>
+  <p>
+    Throughout my studies, I actively participated in coding competitions, collaborated with peers on innovative projects, and developed a
+    passion for problem-solving. This journey not only enhanced my technical skills but also taught me the importance of perseverance and
+    continuous learning.
+  </p>
+</div>
+{% endblock %}

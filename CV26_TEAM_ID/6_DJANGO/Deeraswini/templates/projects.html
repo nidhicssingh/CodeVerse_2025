@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">My Projects</h2>
+    <div class="row">
+
+        <!-- Static Project Example -->
+        <div class="col-md-4">
+            <div class="card project-card glass-effect">
+                <img src="{% static 'default_project.jpg' %}" class="card-img-top" alt="Basic Command-line OS">
+                <div class="card-body">
+                    <h5 class="card-title">Basic Command-line Music Player</h5>
+                    <p class="card-text">
+                        A mini music player that allows users to play, pause, and stop music files via command line using Pygame. Supports MP3, WAV, OGG, and more.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Projects -->
+        {% for project in projects %}
+            <div class="col-md-4">
+                <div class="card project-card glass-effect">
+                    {% if project.image %}
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                    {% else %}
+                        <img src="{% static 'default_project.jpg' %}" class="card-img-top" alt="Default Project Image">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.description|truncatewords:25 }}</p>
+                        {% if project.link %}
+                            <a href="{{ project.link }}" class="btn btn-primary" target="_blank">View Project</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <!-- No Projects Message -->
+            <div class="col-12">
+                <div class="alert alert-info">
+                    <h5>No Projects Available</h5>
+                    <p><strong>Example:</strong> CL-Music Player</p>
+                    <p><strong>Source Code:</strong></p>
+                    <pre style="background:#f8f9fa; border:1px solid #ccc; border-radius:6px; padding:1em; overflow:auto;">
+<code>
+import os, time, pygame
+from mutagen.mp3 import MP3
+
+def play_music(file_path):
+    if not os.path.exists(file_path):
+        print("File does not exist.")
+        return
+    pygame.mixer.init()
+    pygame.mixer.music.load(file_path)
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy():
+        time.sleep(1)
+
+def stop_music(): pygame.mixer.music.stop()
+def pause_music(): pygame.mixer.music.pause()
+def resume_music(): pygame.mixer.music.unpause()
+
+if __name__ == "__main__":
+    print("Welcome to the Music Player!")
+    while True:
+        cmd = input("Command (play/pause/resume/stop/exit): ").strip().lower()
+        if cmd == "play": play_music(input("File path: ").strip())
+        elif cmd == "pause": pause_music()
+        elif cmd == "resume": resume_music()
+        elif cmd == "stop": stop_music()
+        elif cmd == "exit": break
+</code>
+                    </pre>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .project-card {
+    margin-bottom: 30px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .project-card h5 {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+    color: #444;
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .card-img-top {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 200px;
+    object-fit: cover;
+  }
+</style>
+{% endblock %}
