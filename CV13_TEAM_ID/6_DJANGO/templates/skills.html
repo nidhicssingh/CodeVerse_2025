@@ -1,0 +1,123 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skills | Svyasa - CODEVERSE_2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .skills-header {
+      background-color: #0d1117;
+      color: #00ffd5;
+      padding: 2rem;
+      text-align: center;
+    }
+    .skill-box {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: transform 0.2s;
+    }
+    .skill-box:hover {
+      transform: scale(1.02);
+    }
+    .skill-icon {
+      font-size: 2rem;
+      color: #00b894;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="skills-header">
+    <h1>Our Technical Skills</h1>
+    <p>Showcasing my capabilities gained through CODEVERSE_2025</p>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="container py-5">
+    <div class="row">
+
+      <!-- Python -->
+      <div class="col-md-4">
+        <div class="skill-box text-center">
+          <i class="fab fa-python skill-icon"></i>
+          <h5 class="mt-3">Python Programming</h5>
+          <p>Core concepts, OOP, file handling, and problem-solving.</p>
+        </div>
+      </div>
+
+      <!-- GUI Dev -->
+      <div class="col-md-4">
+        <div class="skill-box text-center">
+          <i class="fas fa-window-maximize skill-icon"></i>
+          <h5 class="mt-3">GUI Development</h5>
+          <p>Built apps using Tkinter, Pygame, and Turtle graphics.</p>
+        </div>
+      </div>
+
+      <!-- GitHub -->
+      <div class="col-md-4">
+        <div class="skill-box text-center">
+          <i class="fab fa-github skill-icon"></i>
+          <h5 class="mt-3">Git & GitHub</h5>
+          <p>Version control, project uploads, and team collaboration.</p>
+        </div>
+      </div>
+
+      <!-- Web Dev -->
+      <div class="col-md-4">
+        <div class="skill-box text-center">
+          <i class="fas fa-code skill-icon"></i>
+          <h5 class="mt-3">Web Technologies</h5>
+          <p>HTML, CSS, Bootstrap for clean and responsive design.</p>
+        </div>
+      </div>
+
+      <!-- APIs -->
+      <div class="col-md-4">
+        <div class="skill-box text-center">
+          <i class="fas fa-plug skill-icon"></i>
+          <h5 class="mt-3">API Integration</h5>
+          <p>Used APIs for WhatsApp automation, Spotify song search, etc.</p>
+        </div>
+      </div>
+
+      <!-- Teamwork -->
+      <div class="col-md-4">
+        <div class="skill-box text-center">
+          <i class="fas fa-users skill-icon"></i>
+          <h5 class="mt-3">Team Projects</h5>
+          <p>Collaborated on team calculator, quiz app, and mini-social app.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-3">
+    &copy; 2025 Svyasa | CODEVERSE_2025 Skills Showcase
+  </footer>
+
+</body>
+</html>
+{% endblock %}
