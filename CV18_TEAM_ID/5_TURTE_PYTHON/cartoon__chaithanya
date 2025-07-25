@@ -1,0 +1,140 @@
+import turtle
+
+# Setup
+screen = turtle.Screen()
+screen.bgcolor("lightyellow")
+
+jerry = turtle.Turtle()
+jerry.speed(3)
+
+# Head
+jerry.penup()
+jerry.goto(0, -100)
+jerry.pendown()
+jerry.begin_fill()
+jerry.color("brown")
+jerry.circle(100)  # head
+jerry.end_fill()
+
+# Left Ear
+jerry.penup()
+jerry.goto(-70, 50)
+jerry.pendown()
+jerry.begin_fill()
+jerry.circle(40)
+jerry.end_fill()
+
+# Right Ear
+jerry.penup()
+jerry.goto(70, 50)
+jerry.pendown()
+jerry.begin_fill()
+jerry.circle(40)
+jerry.end_fill()
+
+# Inner Ears
+jerry.penup()
+jerry.goto(-70, 60)
+jerry.pendown()
+jerry.begin_fill()
+jerry.color("pink")
+jerry.circle(25)
+jerry.end_fill()
+
+jerry.penup()
+jerry.goto(70, 60)
+jerry.pendown()
+jerry.begin_fill()
+jerry.circle(25)
+jerry.end_fill()
+
+# Eyes
+jerry.penup()
+jerry.goto(-35, 20)
+jerry.pendown()
+jerry.begin_fill()
+jerry.color("white")
+jerry.circle(15)
+jerry.end_fill()
+
+jerry.penup()
+jerry.goto(35, 20)
+jerry.pendown()
+jerry.begin_fill()
+jerry.circle(15)
+jerry.end_fill()
+
+# Pupils
+jerry.penup()
+jerry.goto(-30, 25)
+jerry.pendown()
+jerry.begin_fill()
+jerry.color("black")
+jerry.circle(5)
+jerry.end_fill()
+
+jerry.penup()
+jerry.goto(40, 25)
+jerry.pendown()
+jerry.begin_fill()
+jerry.circle(5)
+jerry.end_fill()
+
+# Nose
+jerry.penup()
+jerry.goto(0, 0)
+jerry.pendown()
+jerry.begin_fill()
+jerry.color("black")
+jerry.circle(7)
+jerry.end_fill()
+
+# Mouth (smile)
+jerry.penup()
+jerry.goto(-30, -40)
+jerry.setheading(-60)
+jerry.width(3)
+jerry.pendown()
+jerry.circle(40, 120)
+
+# Whiskers (left)
+jerry.penup()
+jerry.goto(-50, -10)
+jerry.setheading(180)
+jerry.pendown()
+jerry.forward(40)
+
+jerry.penup()
+jerry.goto(-50, -20)
+jerry.setheading(200)
+jerry.pendown()
+jerry.forward(40)
+
+jerry.penup()
+jerry.goto(-50, 0)
+jerry.setheading(160)
+jerry.pendown()
+jerry.forward(40)
+
+# Whiskers (right)
+jerry.penup()
+jerry.goto(50, -10)
+jerry.setheading(0)
+jerry.pendown()
+jerry.forward(40)
+
+jerry.penup()
+jerry.goto(50, -20)
+jerry.setheading(-20)
+jerry.pendown()
+jerry.forward(40)
+
+jerry.penup()
+jerry.goto(50, 0)
+jerry.setheading(20)
+jerry.pendown()
+jerry.forward(40)
+
+# Hide turtle and end
+jerry.hideturtle()
+turtle.done()
