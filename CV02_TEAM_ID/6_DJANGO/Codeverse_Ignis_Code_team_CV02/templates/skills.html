@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    background: url("{% static 'img/bg.jpg' %}") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .skills-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+  }
+
+  .progress-bar {
+    font-weight: bold;
+  }
+</style>
+
+<div class="container skills-container">
+  <h2 class="text-center mb-5">Our Skills</h2>
+
+  <!-- Team Technical Skills -->
+  <div class="mb-4">
+    <h4>Technical Skills</h4>
+
+    <div class="mb-3">
+      <label>HTML & CSS</label>
+      <div class="progress">
+        <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>JavaScript / React</label>
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width: 80%;">80%</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Python / Django</label>
+      <div class="progress">
+        <div class="progress-bar bg-warning" style="width: 85%;">85%</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Git & GitHub</label>
+      <div class="progress">
+        <div class="progress-bar bg-danger" style="width: 75%;">75%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teamwork & Other Skills -->
+  <div class="mb-4">
+    <h4>Team Strengths</h4>
+
+    <div class="mb-3">
+      <label>Team Collaboration</label>
+      <div class="progress">
+        <div class="progress-bar bg-primary" style="width: 95%;">95%</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>UI/UX Creativity</label>
+      <div class="progress">
+        <div class="progress-bar bg-secondary" style="width: 88%;">88%</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Problem Solving</label>
+      <div class="progress">
+        <div class="progress-bar bg-dark" style="width: 90%;">90%</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

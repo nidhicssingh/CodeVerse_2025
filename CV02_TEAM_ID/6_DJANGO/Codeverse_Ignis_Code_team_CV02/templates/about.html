@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load static %}
+
+<img src="Codeverse/Static/IMG/" alt="Team Image" class="img-fluid rounded">
+
+{% block content %}
+<style>
+  body {
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20241015/pngtree-abstract-watercolor-background-with-pastel-colors-like-light-blue-and-pink-image_16394760.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .team-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+</style>
+<section class="container py-5">
+  <h2 class="text-center mb-4">About Our Team</h2>
+
+  <div class="card p-4 shadow-sm mb-5">
+    <h4 class="text-center">Team Name: <strong>Ignis Code</strong></h4>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-md-4 mb-4" >
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Dhanushri</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Nishitha</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Chinmay</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Rakesh</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Jeffrey</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

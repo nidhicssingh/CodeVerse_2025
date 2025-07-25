@@ -1,0 +1,101 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<style>
+  .edu-section {
+    background: linear-gradient(to right, #f3e5f5, #e8f5e9);
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .edu-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4a148c;
+  }
+  .edu-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  .edu-card {
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border: none;
+    transition: transform 0.3s ease;
+  }
+  .edu-card:hover {
+    transform: scale(1.03);
+  }
+</style>
+
+<div class="edu-section">
+  <h2 class="edu-title">Our Educational Background</h2>
+  <p class="edu-subtitle">Created by <strong>Team Name</strong> | A collective journey of growth and learning</p>
+  
+  <div class="container">
+    <div class="row justify-content-center g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card edu-card p-3">
+          <img src="{% static 'img/school.png' %}" class="card-img-top rounded" alt="School">
+          <div class="card-body">
+            <h5 class="card-title">High School</h5>
+            <p class="card-text">Studied at ABC High School<br>Completed in 2018<br>90% Aggregate</p>
+            <p><strong>Member:</strong> Member 1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card edu-card p-3">
+          <img src="{% static 'img/college.png' %}" class="card-img-top rounded" alt="College">
+          <div class="card-body">
+            <h5 class="card-title">PU College</h5>
+            <p class="card-text">XYZ PU College<br>Completed in 2020<br>85% Aggregate</p>
+            <p><strong>Member:</strong> Member 2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card edu-card p-3">
+          <img src="{% static 'img/university.png' %}" class="card-img-top rounded" alt="University">
+          <div class="card-body">
+            <h5 class="card-title">University</h5>
+            <p class="card-text">SVYASA University<br>2021 - Present<br>CGPA: 8.7</p>
+            <p><strong>Member:</strong> Member 3</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card edu-card p-3">
+          <img src="{% static 'img/university.png' %}" class="card-img-top rounded" alt="University">
+          <div class="card-body">
+            <h5 class="card-title">Bachelor's Degree</h5>
+            <p class="card-text">Computer Science<br>Specializing in Django Projects</p>
+            <p><strong>Member:</strong> Member 4</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card edu-card p-3">
+          <img src="{% static 'img/university.png' %}" class="card-img-top rounded" alt="University">
+          <div class="card-body">
+            <h5 class="card-title">Bachelor's Degree</h5>
+            <p class="card-text">Team Leader Role<br>Coordinated Project Design</p>
+            <p><strong>Member:</strong> Member 5</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
