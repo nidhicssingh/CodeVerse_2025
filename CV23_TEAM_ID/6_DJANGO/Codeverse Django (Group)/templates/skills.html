@@ -1,0 +1,110 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skills | My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+      .skill-card {
+        min-height: 220px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- SVG ICONS -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="arduino" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm3 7h-2v2H7V7H5V5h2V3h2v2h2v2Z"/>
+      </symbol>
+      <symbol id="terminal" viewBox="0 0 16 16">
+        <path d="M1 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H1Zm2.854 3.146a.5.5 0 1 1 .707.708L3.207 7l1.354 1.146a.5.5 0 1 1-.707.708l-2-1.75a.5.5 0 0 1 0-.708l2-1.75ZM7 10a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1H7Z"/>
+      </symbol>
+      <symbol id="wifi" viewBox="0 0 16 16">
+        <path d="M8 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm.93-2.588a4 4 0 0 0-5.856 0 .5.5 0 1 0 .732.682 3 3 0 0 1 4.392 0 .5.5 0 0 0 .732-.682ZM8 7c-1.95 0-3.8.78-5.2 2.18a.5.5 0 1 0 .7.72C4.4 8.29 6.15 7.5 8 7.5s3.6.79 4.5 2.4a.5.5 0 0 0 .7-.72C11.8 7.78 9.95 7 8 7Z"/>
+      </symbol>
+      <symbol id="chat-bot" viewBox="0 0 16 16">
+        <path d="M8 1a7 7 0 1 0 4.546 12.242L15 15l-1.758-2.47A7 7 0 0 0 8 1Zm3 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM5 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm2.5 4a4.5 4.5 0 0 1-4.25-3h8.5a4.5 4.5 0 0 1-4.25 3Z"/>
+      </symbol>
+    </svg>
+
+    <div class="container px-4 py-5" id="skills-section">
+      <h2 class="pb-2 border-bottom text-center"Our Technical Skills</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 py-4">
+
+        <div class="col">
+          <div class="bg-light rounded shadow skill-card">
+            <svg class="bi mb-3 text-primary" width="40" height="40"><use xlink:href="#arduino"/></svg>
+            <h4 class="fw-bold">Arduino Prototyping</h4>
+            <p class="text-muted">Beginner level experience in prototyping and troubleshooting using Arduino boards and sensors.</p>
+          </div>
+        </div>
+
+        <!-- React, HTML, CSS, JS Skill Card -->
+<div class="col">
+  <div class="bg-light rounded shadow skill-card">
+    <svg class="bi mb-3 text-primary" width="40" height="40"><use xlink:href="#chat-bot"/></svg>
+    <h4 class="fw-bold">Frontend Web Development</h4>
+    <p class="text-muted">Skilled in building responsive UIs using React.js, HTML5, CSS3, and modern JavaScript (ES6+).</p>
+  </div>
+</div>
+
+<!-- Python Pygame & Turtle Libraries Skill Card -->
+<div class="col">
+  <div class="bg-light rounded shadow skill-card">
+    <svg class="bi mb-3 text-warning" width="40" height="40"><use xlink:href="#arduino"/></svg>
+    <h4 class="fw-bold">Python Game Development</h4>
+    <p class="text-muted">Hands-on experience with Pygame for 2D games and Turtle graphics for educational visualizations.</p>
+  </div>
+</div>
+        <div class="col">
+          <div class="bg-light rounded shadow skill-card">
+            <svg class="bi mb-3 text-dark" width="40" height="40"><use xlink:href="#terminal"/></svg>
+            <h4 class="fw-bold">Linux Terminal Usage</h4>
+            <p class="text-muted">Basic knowledge of navigating directories, managing files, and using essential Linux commands.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="bg-light rounded shadow skill-card">
+            <svg class="bi mb-3 text-success" width="40" height="40"><use xlink:href="#wifi"/></svg>
+            <h4 class="fw-bold">Network Scanning (Nmap)</h4>
+            <p class="text-muted">Able to scan, analyze, and interpret network activity using Nmap for cybersecurity practices.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="bg-light rounded shadow skill-card">
+            <svg class="bi mb-3 text-info" width="40" height="40"><use xlink:href="#chat-bot"/></svg>
+            <h4 class="fw-bold">WhatsApp Automation</h4>
+            <p class="text-muted">Automated message handling using <code>pywhatkit</code> and GUI scripting with <code>pyautogui</code>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About the NeuroForge team and our journey through the Codeverse Program.">
+  <meta name="author" content="NeuroForge">
+  <title>About Us · NeuroForge</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+  <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#712cf9">
+
+  <link href="https://getbootstrap.com/docs/5.3/examples/carousel/carousel.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: #000001a;
+      border: solid rgba(98, 9, 9, 0.66);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em #ffffff9a, inset 0 .125em .5em #00000026
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500
+    }
+
+    .bd-mode-toggle .bi {
+      width: 1em;
+      height: 1em
+    }
+
+    /* Custom styles for transparency and text clarity */
+    .carousel-item img {
+      opacity: 0.3; /* Adjust this value (0.0 to 1.0) for desired transparency */
+    }
+
+    .carousel-caption {
+      z-index: 10; /* Ensure text is above the image */
+      color: white; /* Set text color to white for better visibility */
+    }
+
+    .carousel-caption h1 {
+      font-weight: bold; /* Make the heading bold */
+      color: white; /* Ensure heading color is white */
+    }
+
+    .carousel-caption p {
+      font-weight: bold; /* Make the paragraph text bold */
+      opacity: 1; /* Override the default opacity-75 to make it fully visible */
+      color: white; /* Ensure paragraph color is white */
+    }
+  </style>
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+       <symbol id="check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></symbol>
+       <symbol id="circle-half" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/></symbol>
+       <symbol id="moon-stars-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774.258c.346-.115.617-.386.732-.732L13.863.1z"/></symbol>
+       <symbol id="sun-fill" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></symbol>
+  </svg>
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>Light<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg></button></li>
+      <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false"><svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>Dark<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg></button></li>
+      <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true"><svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>Auto<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg></button></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rectangle" width="1500" height="800" alt="A descriptive alt text">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>We are NeuroForge 🧑‍💻</h1> <p class="">Welcome! We are a dynamic team of five passionate tech enthusiasts immersed in the Codeverse Program, an intensive 18-day deep dive into cutting-edge technology from July 14th to August 1st, 2025.</p>
+              <p><a class="btn btn-lg btn-primary" href="#journey">Our Journey</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container marketing">
+      <div class="row" id="journey">
+        <div class="col-lg-4">
+          <img src="https://colleges18.s3.ap-south-1.amazonaws.com/svyasa_university_image_2_b208b5ed56.jpg" class="rounded-circle" width="200" height="200" alt="A descriptive alt text">
+          <h2 class="fw-normal">Foundation & Insights</h2>
+          <p>Our program kicked off with an inspiring session, "Bridging Campus to Corporate," by Mr. Vinay Kumar (Country Head, Pearson India), followed by hands-on Git & GitHub training and daily Yoga.</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="https://images.unsplash.com/photo-1592609931041-40265b692757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fHRlY2huaWNhbCUyMHNraWxscyUyMG9mJTIwY29tcHV0ZXIlMjBlbmdpbmVlcmFuZ3xlbnwwfHwwfHx8MA%3D%3D" class="rounded-circle" width="200" height="200" alt="A descriptive alt text">
+          <h2 class="fw-normal">Core Technical Skills</h2>
+          <p>We are building a robust skill set covering IoT with Arduino, Cloud Computing with AWS, advanced Python, Full-Stack Development with React, and practical sessions on Generative AI.</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="https://plus.unsplash.com/premium_photo-1713102866618-6e49ab90cecb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D" class="rounded-circle" width="200" height="200" alt="A descriptive alt text">
+          <h2 class="fw-normal">Showcase & Finale 🌟</h2>
+          <p>Our journey includes a talent showcase, a final Capstone Project, and culminates in a 24-hour hackathon to test our endurance and creativity, followed by an awards ceremony.</p>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">A Deep Dive into Our Skill Set. <span
+                class="text-body-secondary">From Cloud to Code.</span></h2>
+          <p class="lead">We dove deep into a variety of technologies, building a robust and versatile skill set:</p>
+            <ul>
+              <li><strong>Open-Source & IoT:</strong> Explored Kali Linux and worked on hardware projects using Arduino.</li>
+              <li><strong>Cloud Computing with AWS:</strong> Gained experience with EC2, S3, and CloudWatch.</li>
+              <li><strong>Python Mastery:</strong> Developed projects using Turtle, Pygame, Tkinter, and automated tasks with PyWhatKit.</li>
+              <li><strong>Full-Stack Development:</strong> Honing our skills in front-end and back-end development, focusing on React.</li>
+              <li><strong>Generative AI:</strong> Engaged in practical sessions to understand and implement AI models.</li>
+            </ul>
+        </div>
+        <div class="col-md-5">
+          <img src="https://plus.unsplash.com/premium_photo-1683120963435-6f9355d4a776?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fEFJfGVufDB8fDB8fHww" class="rectangle" width="400" height="500" alt="A descriptive alt text">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Beyond the Code. <span class="text-body-secondary">Creativity and
+                Endurance.</span></h2>
+          <p class="lead">Our collective experience is a testament to our dedication, collaborative spirit, and rapid learning capabilities. The program isn't just about code; it's about pushing our limits. We celebrated our diverse talents in a fun-filled event, and we are channeling all our knowledge into a final Capstone Project. The journey culminates in an exciting 24-hour hackathon before the final awards ceremony, marking the completion of our transformative journey.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="https://plus.unsplash.com/premium_photo-1674374441429-c23bfe78b285?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fDI0JTIwaG91cnMlMjBIYWNrYXRob24lMjBhbmQlMjBjYXBzdG9uZSUyMHByb2plY3R8ZW58MHx8MHx8fDA%3D" class="rounded-circle" width="300" height="300" alt="A descriptive alt text">
+          <br>
+          <img src="https://plus.unsplash.com/premium_photo-1663040543387-cb7c78c4f012?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rectangle" width="400" height="300" alt="A descriptive alt text">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+    </div>
+    <footer id="contact" class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>&copy; 2025 NeuroForge &middot; <a href="[Your LinkedIn URL]">LinkedIn</a> &middot; <a href="[Your GitHub/Portfolio URL]">GitHub</a></p>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+{% endblock %}

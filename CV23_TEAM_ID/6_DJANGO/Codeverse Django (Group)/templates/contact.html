@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Me - NeuroForge's Portfolio{% endblock %}
+
+{% block extra_css %}
+<style>
+    body {
+        background-color: #1e1e2f !important;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .contact-page-wrapper {
+        background-color: rgba(35, 27, 27, 0.1);
+        color: white;
+        border-radius: 16px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h1, h2, h3 {
+        color: #ffffff;
+    }
+
+    .contact-box {
+        background: #f9f9f9;
+        padding: 30px 25px;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        color: #333;
+        transition: transform 0.3s ease;
+    }
+
+    .contact-box:hover {
+        transform: translateY(-5px);
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+        font-size: 1rem;
+    }
+
+    .contact-item i {
+        color: #9e1c1c;
+        font-size: 20px;
+        width: 28px;
+        margin-right: 12px;
+    }
+
+    .contact-item a {
+        color: #1e1e2f;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .contact-item a:hover {
+        color: #e63946;
+    }
+
+    .contact-image {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 12px;
+        margin: 0 auto 30px;
+        display: block;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .social-badge {
+        background-color: #e7e7e7;
+        padding: 6px 10px;
+        border-radius: 6px;
+        margin-left: 10px;
+        font-size: 0.85rem;
+        color: #222;
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+        .contact-box {
+            margin-bottom: 24px;
+        }
+    }
+</style>
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block content %}
+<div class="col-lg-8 mx-auto p-4 py-md-5 contact-page-wrapper">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <span class="fs-4"><h3><b>Contact Me</b></h3></span>
+    </header>
+    <main>
+        <h1>Get in Touch</h1><br>
+        <p class="fs-5 col-md-8">I'm always happy to connect — whether it’s for collaboration, networking, or questions!</p>
+
+        <img src="https://images.unsplash.com/photo-1683721003111-070bcc053d8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0" alt="Contact Banner" class="contact-image">
+
+        <hr class="col-3 col-md-2 mb-5">
+
+        <div class="row g-5">
+            <!-- Direct Contact -->
+            <div class="col-md-6">
+                <div class="contact-box">
+                    <h2>📞 Direct Contact</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+91-9070907066">+91-9070907066</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@svyasa.edu.in">info@svyasa.edu.in</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-6">
+                <div class="contact-box">
+                    <h2>🌐 Social Media</h2>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/dr-mohamadi-begum-y-163b36a1" target="_blank">
+                            LinkedIn <span class="social-badge">@Dean</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/harshith276/CV_23_NeuroForge-Team.git" target="_blank">
+                            GitHub <span class="social-badge">/Neuroforge</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/svyasa.university" target="_blank">
+                            Instagram <span class="social-badge">@svyasa</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
+

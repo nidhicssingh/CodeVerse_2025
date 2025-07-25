@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Education page of my portfolio">
+  <meta name="author" content="[Your Name]">
+  <title>My Education</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <style>
+    .university-banner {
+      background-image: url("https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWR1Y2F0aW9ufGVufDB8fDB8fHww");
+      background-size: cover;
+      background-position: center;
+      height: 225px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .university-banner::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(29, 23, 23, 0.59);
+      z-index: 1;
+    }
+
+    .university-banner h4 {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      font-size: 1.75rem;
+    }
+
+    /* 🔧 Override middle background to dark */
+    .bg-body-tertiary {
+      background-color: #231b1b11 !important;
+    }
+  </style>
+</head>
+<body class="bg-dark text-light">
+  <main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light"><b>My Educational Journey</b></h1>
+          <p class="lead text-body-secondary"><h6>A summary of our academic background and current studies at SVYASA University.</h6></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-img-top university-banner">
+                <h4>SVYASA University</h4>
+              </div>
+
+              <div class="card-body">
+                <h3 class="card-title">B.Tech in Engineering Technology</h3>
+                <p class="card-text">
+                  <i>Currently pursuing Bachelor's degree in engineering Technology at <strong>SVYASA Deemed to be University</strong>.
+                  As a second-year student, we are gaining comprehensive knowledge in both yoga science and modern technology applications.</i>
+                </p>
+                <p class="card-text">
+                  <i>The program combines traditional yogic studies with technological applications, providing a unique interdisciplinary education.</i>
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-body-secondary">2024 - Present</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-body-secondary py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-1">&copy; NeuroForge</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}
+
+
+
