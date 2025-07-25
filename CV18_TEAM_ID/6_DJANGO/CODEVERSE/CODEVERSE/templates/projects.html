@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  }
+  img {
+  width: 200px;
+  height: 350px;
+  object-fit: cover; /* ensures image is scaled and cropped nicely */
+}
+
+</style>
+
+  <h2 class="text-center mb-4">Projects Built During CodeVerse’25</h2>
+
+  <div class="row">
+    <!-- Project 1 -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <img src="{% static 'IMG/img2.jpg' %}" class="card-img-top" alt="Portfolio Project">
+        <div class="image-box">
+          <h5 class="card-title">Personal Portfolio Website</h5>
+          <p class="card-text">Designed and developed a personal portfolio using Django, showcasing About, Projects, and Contact sections with a responsive UI.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+        <img src="{% static 'IMG/image1.jpg' %}" class="card-img-top" alt="Mini Game">
+        <div class="image-box">
+          <h5 class="card-title">Turtle Graphics</h5>
+          <p class="card-text">"Explored creative coding using Python’s Turtle module – students visualized logic through colorful patterns and geometric art".</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+        <img src="{% static 'IMG/code10.jpg' %}" class="card-img-top" alt="Mini Game">
+        <div class="image-box">
+          <h5 class="card-title">HackerRank Coding Challenge</h5>
+          <p class="card-text">Students participated in a timed HackerRank challenge focused on Python basics, logic building, and problem-solving skills. It was a test of accuracy, speed, and coding confidence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+
+      <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <img src="{% static 'IMG/imgg1.jpg' %}" class="card-img-top" alt="Mini Game">
+        <div class="image-box">
+          <h5 class="card-title">Mini Python Game (Optional)</h5>
+          <p class="card-text">Developed a basic terminal-based game in Python using functions and loops as part of the coding challenge segment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

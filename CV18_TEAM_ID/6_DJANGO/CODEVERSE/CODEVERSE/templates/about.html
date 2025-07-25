@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  }
+  </style>
+  
+<div class="container mt-5 mb-5">
+  <h2 class="text-center mb-4"> About CodeVerse</h2>
+  <p class="text-muted text-center mb-4">
+    <strong>CodeVerse</strong> is SVYASA University’s premier annual tech fest – a celebration of innovation, coding, creativity, and collaboration. Designed for budding engineers and tech enthusiasts, CodeVerse brings together learning and fun under one digital roof.
+  </p>
+
+  <!-- Vision & Mission -->
+  <div class="row mb-5">
+    <div class="col-md-6">
+      <div class="p-4 bg-light shadow-sm rounded">
+        <h4> Our Vision</h4>
+        <p>To create a thriving community of young innovators equipped with real-world tech skills, encouraging them to build, share, and grow together.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="p-4 bg-light shadow-sm rounded">
+        <h4> Our Mission</h4>
+        <p>We aim to expose students to emerging tech, practical tools, and collaborative opportunities — nurturing confidence and creativity in the digital space.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- What Happened -->
+  <h3 class="mb-4 text-center"> CodeVerse’25 – Highlights</h3>
+  <ul class="list-group list-group-flush mb-5">
+    <li class="list-group-item"> 6+ Hands-on Workshops (Git, AWS, Django, Bootstrap, etc.)</li>
+    <li class="list-group-item"> Expert talks from industry professionals and alumni</li>
+    <li class="list-group-item"> Tech games, coding challenges, and mini hackathons</li>
+    <li class="list-group-item"> Peer learning circles and portfolio-building sessions</li>
+    <li class="list-group-item"> Rewards, certificates, and campus-wide recognition</li>
+  </ul>
+
+  <!-- Core Values -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h4>Our Core Values</h4>
+    <ul>
+      <li><strong>Inclusivity:</strong> Open to all departments and skill levels</li>
+      <li><strong>Creativity:</strong> Encouraging innovation over perfection</li>
+      <li><strong>Collaboration:</strong> Teamwork over competition</li>
+      <li><strong>Practicality:</strong> Learn by doing, not just listening</li>
+    </ul>
+  </div>
+
+  <!-- Impact Section -->
+  <div class="bg-white p-4 rounded shadow-sm mb-5">
+    <h4> Impact of CodeVerse</h4>
+    <p>Over 300 students participated, 12 departments collaborated, and 25+ student projects were showcased during the fest. Many participants continued building their portfolios, joined internships, or even launched side-projects after the fest!</p>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="bg-light p-4 rounded shadow-sm mb-5">
+    <h4>🎙 Student Testimonials</h4>
+    <blockquote class="blockquote">
+      <p>"CodeVerse gave me the confidence to start freelancing. The portfolio session was a game changer!"</p>
+      <footer class="blockquote-footer">Ananya R., 2nd Year CSE</footer>
+    </blockquote>
+    <blockquote class="blockquote">
+      <p>"I had no idea about Git before. Now I contribute to open source projects thanks to the workshop."</p>
+      <footer class="blockquote-footer">Rakesh S., 1st Year ECE</footer>
+    </blockquote>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{% url 'events' %}" class="btn btn-outline-primary">📸 See All Events</a>
+  </div>
+</div>
+{% endblock %}

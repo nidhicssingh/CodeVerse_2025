@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  }
+  </style>
+  
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">CodeVerse '25 Photo Gallery</h2>
+  <p class="text-center text-muted mb-5">A glimpse into the incredible week of coding, creativity, and collaboration!</p>
+
+  <div class="row">
+    <!-- Image 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <img src="{% static 'IMG/code1.jpg' %}" class="card-img-top" alt="Workshop Day">
+        <div class="card-body">
+          <h5 class="card-title">Day 1: Inauguration & Icebreakers</h5>
+          <p class="card-text text-muted">The opening ceremony with guest speakers and team-building activities.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <img src="{% static 'IMG/code3.jpg' %}" class="card-img-top" alt="Coding Session">
+        <div class="card-body">
+          <h5 class="card-title">Hackathon Coding Begins</h5>
+          <p class="card-text text-muted">Students dive into building innovative apps and solving real-world problems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <img src="{% static 'IMG/code2.jpg' %}" class="card-img-top" alt="Team Collaboration">
+        <div class="card-body">
+          <h5 class="card-title">Team Collaboration</h5>
+          <p class="card-text text-muted">Teams brainstorming and designing UI/UX mockups for their projects.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- You can continue with similar cards for gallery4.jpg to gallery6.jpg -->
+  </div>
+</div>
+{% endblock %}

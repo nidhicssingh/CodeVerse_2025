@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  }
+  </style>
+  
+<div class="container mt-5">
+  <h2 class="text-center mb-4">CodeVerse’25 Sessions & Highlights</h2>
+
+  <div class="timeline">
+    <!-- Day 1 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Day 1 – Git & GitHub Workshop</h5>
+        <p class="card-text">Learned version control, commit cycles, and GitHub repository management with real-time collaboration demo.</p>
+        <img src="{% static 'IMG/code4.jpg' %}" class="img-fluid rounded" alt="GitHub Workshop">
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Day 2 – AWS & Cloud Fundamentals</h5>
+        <p class="card-text">Explored AWS console, EC2 instances, cloud deployment basics, and its real-world applications.</p>
+        <img src="{% static 'IMG/code3.jpg' %}" class="img-fluid rounded" alt="AWS Cloud Session">
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Day 3 – Freelancing & Resume Mastery</h5>
+        <p class="card-text">Discussed how to find freelance gigs, build a strong Fiverr/Upwork profile, and craft a winning resume.</p>
+        <img src="{% static 'IMG/code5.jpg' %}" class="img-fluid rounded" alt="Freelancing Session">
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Day 4 – Open Source & GitHub Collab</h5>
+        <p class="card-text">Contributed to sample open-source repositories and participated in a mini-hackathon using Git workflows.</p>
+        <img src="{% static 'IMG/code6.jpg' %}" class="img-fluid rounded" alt="Open Source Session">
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Day 5 – Django Web Development</h5>
+        <p class="card-text">Hands-on session on Django fundamentals, routing, templates, and building personal portfolios.</p>
+        <img src="{% static 'IMG/code7.jpg' %}" class="img-fluid rounded" alt="Django Workshop">
+      </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Day 6 – Frontend & UI Design</h5>
+        <p class="card-text">Learned HTML, CSS, Bootstrap, animations, and layout building with real-time demos.</p>
+        <img src="{% static 'IMG/code8.jpg' %}" class="img-fluid rounded" alt="Frontend Design Session">
+      </div>
+    </div>
+
+    <!-- Day 7 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Day 7 – Certificate Distribution & Group Photo</h5>
+        <p class="card-text">Celebrated learning and participation. Group photo with mentors and certificate ceremony concluded the event.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

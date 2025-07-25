@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  }
+  </style>
+  
+<div class="container mt-5 mb-5">
+  <h2 class="text-center mb-4"> Contact Me</h2>
+  <p class="text-center text-muted mb-5">Have questions or want to collaborate? Reach out using the form or contact details below!</p>
+
+  <div class="row">
+    <!-- Contact Info -->
+    <div class="col-md-5 mb-4">
+      <div class="bg-light p-4 rounded shadow-sm">
+        <h4 class="mb-3">Contact Information</h4>
+        <p><strong><i class="bi bi-person-circle me-2"></i>Name:</strong> svyasa deemed to be university</p>
+        <p><strong><i class="bi bi-envelope-fill me-2"></i>Email:</strong> svyasa@email.com</p>
+        <p><strong><i class="bi bi-telephone-fill me-2"></i>Phone:</strong> +91 XXXXX XXXXX</p>
+        <p><strong><i class="bi bi-geo-alt-fill me-2"></i>Location:</strong> SVYASA University, Bengaluru</p>
+        <div class="mt-3">
+          <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-linkedin"></i> LinkedIn</a>
+          <a href="#" class="btn btn-outline-dark btn-sm"><i class="bi bi-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="col-md-7">
+      <div class="bg-white p-4 border rounded shadow-sm">
+        <h4 class="mb-3">Send a Message</h4>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">YOUR NAME</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">YOUR EMAIL</label>
+            <input type="email" class="form-control" id="email" placeholder="example@email.com">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">📨 Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

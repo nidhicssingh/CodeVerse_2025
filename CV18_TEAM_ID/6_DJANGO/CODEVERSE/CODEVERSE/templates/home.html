@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  }
+
+  .hero-section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    color: #555;
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-outline-dark {
+    border-radius: 25px;
+  }
+</style>
+
+<div class="container text-center hero-section">
+  <img src="{% static 'IMG/code2.jpg' %}" class="rounded-circle shadow" alt="Profile" width="180" height="180">
+  <h1 class="mt-4">Welcome to My CodeVerse Website</h1>
+  <p class="lead">Tech. Learn. Build. Share.</p>
+
+  <p class="mt-4">
+    <strong>CodeVerse</strong> is SVYASA University’s premier annual tech fest – a vibrant blend of workshops, talks, and hands-on activities.
+    It empowers students to learn real-world tech skills like Git, AWS, Django, and more—building connections and confidence for their future.
+  </p>
+</div>
+
+<!-- Quick Links Section -->
+<div class="container mt-5">
+  <div class="row text-center">
+    <div class="col-md-4 mb-3">
+      <div class="card p-3">
+        <h5>My Skills</h5>
+        <p>Technologies and tools I’ve explored during CodeVerse.</p>
+        <a href="{% url 'skills' %}" class="btn btn-outline-dark">View Skills</a>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card p-3">
+        <h5>Projects</h5>
+        <p>Mini projects and tasks completed during the event.</p>
+        <a href="{% url 'projects' %}" class="btn btn-outline-dark">View Projects</a>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card p-3">
+        <h5>Gallery</h5>
+        <p>Moments captured during CodeVerse’25 week!</p>
+        <a href="{% url 'gallery' %}" class="btn btn-outline-dark">View Photos</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
