@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVerse Skills Development - Mastering Tomorrow's Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; line-height: 1.7; margin: 0; background-color: #f4f7f6; color: #333; }
+        .container { max-width: 900px; margin: auto; background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 30px; margin-bottom: 30px; }
+        h1 { font-size: 2.8em; color: #0056b3; text-align: center; margin-bottom: 30px; position: relative; }
+        h1::after { content: ''; display: block; width: 80px; height: 4px; background-color: #007bff; margin: 15px auto 0; border-radius: 2px; }
+        h2 { font-size: 2.2em; color: #007bff; margin-top: 40px; margin-bottom: 25px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; text-align: center; }
+        .intro-text { text-align: center; font-size: 1.1em; margin-bottom: 30px; color: #555; }
+        .skill-category { margin-bottom: 40px; }
+        .skill-list ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 20px; margin-top: 20px; }
+        .skill-list li { background: #eef5fb; padding: 20px 25px; border-radius: 8px; border-left: 5px solid #007bff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+        .skill-list li:hover { transform: translateY(-5px); }
+        .skill-list li strong { display: block; font-size: 1.4em; color: #0056b3; margin-bottom: 10px; }
+        .skill-list li ul { list-style: circle; padding-left: 25px; margin-top: 10px; font-size: 0.95em; color: #444; }
+        .skill-list li ul li { background: none; box-shadow: none; border: none; padding: 5px 0; margin-bottom: 0; }
+        .program-focus-image { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        footer { text-align: center; margin-top: 50px; padding: 30px 0; border-top: 1px solid #eee; color: #777; font-size: 0.9em; background-color: #f9f9f9; border-radius: 0 0 10px 10px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            .skill-list ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CodeVerse 2025: Empowering Your Digital Skillset</h1>
+        <p class="intro-text">The CodeVerse Summer Special Program is meticulously engineered to cultivate a dynamic blend of technical mastery, creative innovation, and personal development. Through immersive, project-driven learning, we ensure participants gain practical, future-ready skills that truly matter.</p>
+        <img src="https://media.istockphoto.com/id/1453376534/photo/university-students-watching-a-lecture-at-university-auditorium.webp?a=1&b=1&s=612x612&w=0&k=20&c=TEJs3RwLl5Xo_a0Gvn94srKu7CqMqw8K-5K1cwfVteI=" alt="Diverse group of students actively learning and coding on laptops" class="program-focus-image">
+
+        <section class="skill-category">
+            <h2>Core Technical & Development Skills</h2>
+            <div class="skill-list">
+                <ul>
+                    <li>
+                        <strong>Python Programming Mastery</strong>
+                        <ul>
+                            <li>Deep dive into Python fundamentals, frameworks, and advanced problem-solving techniques.</li>
+                            <li>GUI development with Tkinter for interactive applications.</li>
+                            <li>Game design and development using Pygame.</li>
+                            <li>Creative graphical programming with Python's Turtle library.</li>
+                            <li>Building robust web applications with the Django framework.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Full Stack Web Development</strong>
+                        <ul>
+                            <li>Comprehensive Frontend Web Development.</li>
+                            <li>Seamless integration of React with powerful backend systems.</li>
+                            <li>Crafting dynamic Full-Stack applications using Flask, MongoDB, and React.</li>
+                            <li>Art of Creative Web Design with HTML, CSS, and JavaScript.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Version Control & Collaboration (Git/GitHub)</strong>
+                        <ul>
+                            <li>Mastering industry-standard version control for effective teamwork and code management.</li>
+                            <li>Collaborating efficiently on projects using GitHub workflows.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Cloud Computing Essentials (AWS)</strong>
+                        <ul>
+                            <li>Fundamental concepts and practical deployment on AWS Cloud Hosting.</li>
+                            <li>Understanding cloud infrastructure for scalable applications.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Artificial Intelligence: Generative AI</strong>
+                        <ul>
+                            <li>Hands-on practical introduction to the exciting world of Generative AI.</li>
+                            <li>Exploring AI's potential for content creation and innovation.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Operating Systems & Command Line Proficiency</strong>
+                        <ul>
+                            <li>Essentials of Linux & Command Line Basics.</li>
+                            <li>Understanding terminal operations, shell scripting, and file permissions.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Competitive Programming & Problem Solving</strong>
+                        <ul>
+                            <li>Sharpening algorithmic thinking and coding skills through HackerRank practice sessions.</li>
+                            <li>Developing strategic approaches to complex coding challenges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="skill-category">
+            <h2>Professional & Personal Development Skills</h2>
+            <div class="skill-list">
+                <ul>
+                    <li>
+                        <strong>Entrepreneurial Mindset Cultivation</strong>
+                        <ul>
+                            <li>Fostering innovation, leadership, and a proactive approach to challenges.</li>
+                            <li>Insights into building and scaling new ventures.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Career & Placement Readiness</strong>
+                        <ul>
+                            <li>In-depth sessions preparing for industry expectations and job market demands.</li>
+                            <li>Bridging the gap between academic knowledge and corporate requirements.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Freelancing Acumen</strong>
+                        <ul>
+                            <li>Practical training on how to establish and grow a successful freelancing career.</li>
+                            <li>Strategies for identifying opportunities and managing client relationships.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Teamwork & Collaborative Dynamics</strong>
+                        <ul>
+                            <li>Enhancing collaborative spirit through team-based projects and hackathons.</li>
+                            <li>Developing effective communication and problem-solving within a group.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Project Management Fundamentals</strong>
+                        <ul>
+                            <li>Gaining experience in planning, executing, and evaluating real-world projects.</li>
+                            <li>Understanding project lifecycle and delivery.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Self-Awareness & Holistic Well-being</strong>
+                        <ul>
+                            <li>"Know yourself" psychological testing for personal insights.</li>
+                            <li>Daily "Quick Calm" Yoga for mental clarity, stress reduction, and physical health.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Presentation & Communication Skills</strong>
+                        <ul>
+                            <li>Opportunities to present project outcomes and engage in discussions, refining public speaking abilities.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 S-VYASA School of Advanced Studies. All rights reserved. | Building skills for a successful tomorrow.</p>
+        </footer>
+    </div>
+{% endblock %}

@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVerse Education - Cultivating Tomorrow's Tech Leaders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; line-height: 1.7; margin: 0; background-color: #f4f7f6; color: #333; }
+        .container { max-width: 950px; margin: auto; background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 30px; margin-bottom: 30px; }
+        h1 { font-size: 2.8em; color: #0056b3; text-align: center; margin-bottom: 30px; position: relative; }
+        h1::after { content: ''; display: block; width: 80px; height: 4px; background-color: #007bff; margin: 15px auto 0; border-radius: 2px; }
+        h2 { font-size: 2.2em; color: #007bff; margin-top: 40px; margin-bottom: 25px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; text-align: center; }
+        h3 { font-size: 1.6em; color: #333; margin-top: 25px; margin-bottom: 15px; }
+        .intro-text { text-align: center; font-size: 1.1em; margin-bottom: 30px; color: #555; }
+        .program-overview { margin-bottom: 40px; }
+        .course-list ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; margin-top: 20px; }
+        .course-list li { background: #eef5fb; padding: 20px 25px; border-radius: 8px; border-left: 5px solid #007bff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+        .course-list li:hover { transform: translateY(-5px); }
+        .course-list li strong { display: block; font-size: 1.4em; color: #0056b3; margin-bottom: 10px; }
+        .course-list li ul { list-style: circle; padding-left: 25px; margin-top: 10px; font-size: 0.95em; color: #444; }
+        .course-list li ul li { background: none; box-shadow: none; border: none; padding: 5px 0; margin-bottom: 0; }
+        .faculty-expertise { margin-top: 40px; }
+        .faculty-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .faculty-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 7px rgba(0,0,0,0.08); text-align: center; border: 1px solid #e0e0e0; }
+        .faculty-card strong { display: block; font-size: 1.2em; color: #0056b3; margin-bottom: 5px; }
+        .faculty-card p { font-size: 0.9em; color: #555; margin-top: 0; }
+        .expert-type { font-weight: bold; margin-top: 20px; color: #007bff; }
+        footer { text-align: center; margin-top: 50px; padding: 30px 0; border-top: 1px solid #eee; color: #777; font-size: 0.9em; background-color: #f9f9f9; border-radius: 0 0 10px 10px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            .course-list ul, .faculty-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CodeVerse 2025: Educational Program – Sculpting Tech Innovators</h1>
+        <p class="intro-text">The CodeVerse Summer Special Program, meticulously curated by the Department of Engineering and Technology at S-VYASA, offers a transformative educational experience. Our curriculum is steeped in a hands-on, project-driven methodology, ensuring participants not only grasp theoretical concepts but master practical application, empowering them for tomorrow's digital landscape.</p>
+        <img src="https://www.ualberta.ca/en/information-services-and-technology/media-library/images/tl-active-student-engagement.jpg" alt="Students engaged in a classroom learning session, highlighting the educational environment" style="width:100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 25px;">
+
+        <section class="program-overview">
+            <h2>Our Dynamic Program Structure & Curriculum</h2>
+            <p>Spanning 3 immersive weeks from July 14th to August 1st, 2025, with daily sessions from 9:00 am to 4:30 pm, our educational model integrates vibrant lectures, intensive hands-on labs, collaborative group projects, and interactive workshops. This holistic approach ensures deep understanding and practical mastery.</p>
+
+            <h3>Key Educational Modules:</h3>
+            <div class="course-list">
+                <ul>
+                    <li>
+                        <strong>Hands-on Python: A Comprehensive Dive</strong>
+                        <ul>
+                            <li>From foundational Python to advanced frameworks and real-world problem-solving.</li>
+                            <li>GUI development with Tkinter, game creation with Pygame, and graphical design with Turtle.</li>
+                            <li>Building robust web applications using the Django framework.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Full Stack Web Development: Building Digital Experiences</strong>
+                        <ul>
+                            <li>Mastering Frontend Web Development.</li>
+                            <li>Seamless integration of React with powerful backend technologies.</li>
+                            <li>Constructing cutting-edge full-stack applications with Flask, MongoDB & React.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Building with Generative AI: The Future is Now</strong>
+                        <ul>
+                            <li>A practical, hands-on introduction to the revolutionary concepts and applications of Generative AI.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>AWS Cloud Hosting: Deploy & Scale with Confidence</strong>
+                        <ul>
+                            <li>Essential training on fundamental concepts and practical deployment within cloud infrastructure.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Git and GitHub: Collaborative Coding Excellence</strong>
+                        <ul>
+                            <li>Acquiring vital skills for version control, efficient collaborative coding, and contributing to open-source projects.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Open Source in Action: Linux & Command Line Deep Dive</strong>
+                        <ul>
+                            <li>Exploring Linux fundamentals, mastering command-line operations, shell scripting, and file permissions.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Creative Web Design: HTML, CSS & JavaScript Artistry</strong>
+                        <ul>
+                            <li>Intensive practical sessions dedicated to crafting visually captivating and interactive web interfaces.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Hackathon Preparations: Strategize & Conquer</strong>
+                        <ul>
+                            <li>Dedicated sessions to hone competitive coding skills and develop winning strategies for hackathon scenarios.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Capstone Experience: Innovating Full-Scale Applications</strong>
+                        <ul>
+                            <li>The pinnacle project phase, where participants apply all learned skills to develop complex, dynamic web applications with React.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="faculty-expertise">
+            <h2>Our Stellar Faculty & Expert Team</h2>
+            <p>The CodeVerse program is enriched by a blend of distinguished internal faculty members and renowned invited external experts, ensuring a vibrant, diverse, and cutting-edge learning ecosystem.</p>
+            <h3>Program Leadership & Core Coordinators:</h3>
+            <div class="faculty-list">
+                <div class="faculty-card">
+                    <strong>Dr. Jobin Thomas</strong>
+                    <p>Overall Program Coordinator</p>
+                </div>
+                <div class="faculty-card">
+                    <strong>Ms. Banesori Ayekpam</strong>
+                    <p>Main Coordinator: Full Stack Web Development & Hands-on Python</p>
+                </div>
+            </div>
+
+            <h3 class="expert-type">Key Internal Faculty Experts & Coordinators:</h3>
+            <div class="faculty-list">
+                <div class="faculty-card"><strong>Ms. Sangeetha</strong><p>Section A Coordinator</p></div>
+                <div class="faculty-card"><strong>Ms. Sanjana</strong><p>Section B Coordinator</p></div>
+                <div class="faculty-card"><strong>Ms. Sai Shree</strong><p>Section C Coordinator</p></div>
+                <div class="faculty-card"><strong>Ms. Nidhi Singh</strong><p>Hands-on Python, Git & GitHub, Django, Hackerrank</p></div>
+                <div class="faculty-card"><strong>Ms. Shylaja B</strong><p>Full Stack Web Dev, Pygame, Turtle, Django, Hackerrank</p></div>
+                <div class="faculty-card"><strong>Dr. Amal M.R.</strong><p>AWS Cloud Hosting, Pygame, Django, Hackerrank</p></div>
+                <div class="faculty-card"><strong>Ms. Tamizharasi G S</strong><p>Full Stack Web Dev, Python Django Expert</p></div>
+                <div class="faculty-card"><strong>Mr. Shine V.J.</strong><p>Python Turtle, Django, Hackerrank, Open Source in Action</p></div>
+                <div class="faculty-card"><strong>Dr. Satish Kumar R</strong><p>Full Stack Web Dev, AWS Cloud Hosting</p></div>
+                <div class="faculty-card"><strong>Dr. Naveen N</strong><p>Full Stack Web Dev, GIT & Python Practice</p></div>
+                <div class="faculty-card"><strong>Dr. Priya</strong><p>Full Stack Web Development</p></div>
+                <div class="faculty-card"><strong>Ms. Kunj Verma</strong><p>Yoga, Freelancing Training, Python Yoga sessions</p></div>
+                <div class="faculty-card"><strong>Mr. Ritik Nagar</strong><p>Yoga, Extra-curricular activities</p></div>
+                <div class="faculty-card"><strong>Dr. Yadla Vishwa Sree</strong><p>Yoga Coordinator</p></div>
+                <div class="faculty-card"><strong>Mr. Veerendra Reddy</strong><p>Creative Web Design, GIT & Python Practice, Hackerrank</p></div>
+                <div class="faculty-card"><strong>Ms. Shwetha B.N.</strong><p>Python Hackerrank, Creative Web Design</p></div>
+                <div class="faculty-card"><strong>Mr. Anil Kumar S</strong><p>Python Hackerrank, Creative Web Design, GIT & Python Practice</p></div>
+                <div class="faculty-card"><strong>Mr. Somendra Kumar</strong><p>Python Hackerrank, Placement Readiness, Capstone Experience</p></div>
+                <div class="faculty-card"><strong>Mr. Vivek Khirasaria</strong><p>Python Hackerrank, Freelancing, Industrial Visit, Hackathon</p></div>
+                <div class="faculty-card"><strong>Ms. Sarvani</strong><p>Freelancing, Creative Web Design, GIT & Python, Hackathon</p></div>
+            </div>
+
+            <h3 class="expert-type">Distinguished Invited External Experts:</h3>
+            <div class="faculty-list">
+                <div class="faculty-card">
+                    <strong>Vinay Kumar</strong>
+                    <p>Country Head - Pearson India (Bridging Campus to Corporate: Industry Expectations)</p>
+                </div>
+                <div class="faculty-card">
+                    <strong>Madanmohan Rao</strong>
+                    <p>Research Director, YourStory (Igniting the Entrepreneurial Mindset)</p>
+                </div>
+                <div class="faculty-card">
+                    <strong>Mr. Aparna</strong>
+                    <p>Asst. Prof., RV University (AWS Cloud Hosting)</p>
+                </div>
+                <div class="faculty-card">
+                    <strong>Mr. Ritesh Nune</strong>
+                    <p>Asst. Prof., RV University (AWS Cloud Hosting)</p>
+                </div>
+                <div class="faculty-card">
+                    <strong>Specialists</strong>
+                    <p>Invited Experts for Entrepreneurial Session, Building with Generative AI, Full Stack Web Development, and Hackathon Preparations.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 S-VYASA School of Advanced Studies. All rights reserved. | Empowering learning, inspiring innovation.</p>
+        </footer>
+    </div>
+{% endblock %}

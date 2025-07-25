@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVerse Certifications - Recognizing Your Achievements</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; line-height: 1.7; margin: 0; background-color: #f4f7f6; color: #333; }
+        .container { max-width: 900px; margin: auto; background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 30px; margin-bottom: 30px; }
+        h1 { font-size: 2.8em; color: #0056b3; text-align: center; margin-bottom: 30px; position: relative; }
+        h1::after { content: ''; display: block; width: 80px; height: 4px; background-color: #007bff; margin: 15px auto 0; border-radius: 2px; }
+        h2 { font-size: 2.2em; color: #007bff; margin-top: 40px; margin-bottom: 25px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; text-align: center; }
+        h3 { font-size: 1.6em; color: #333; margin-top: 0; margin-bottom: 10px; }
+        .intro-text { text-align: center; font-size: 1.1em; margin-bottom: 30px; color: #555; }
+        .certification-info { margin-bottom: 40px; }
+        .detail-box { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #e0e0e0; margin-bottom: 20px; display: flex; align-items: flex-start; }
+        .detail-box:hover { transform: translateY(-7px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .detail-box img { max-width: 120px; height: auto; border-radius: 8px; margin-right: 25px; object-fit: cover; }
+        .box-content { flex-grow: 1; }
+        .box-content ul { list-style: none; padding: 0; margin-top: 10px; }
+        .box-content ul li { margin-bottom: 5px; font-size: 0.95em; color: #444; }
+        .committee-members { font-weight: bold; color: #0056b3; margin-top: 15px; display: block; }
+        .member-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 5px; font-size: 0.9em; }
+        .member-list span { background: #eef5fb; padding: 5px 10px; border-radius: 5px; color: #007bff; }
+        footer { text-align: center; margin-top: 50px; padding: 30px 0; border-top: 1px solid #eee; color: #777; font-size: 0.9em; background-color: #f9f9f9; border-radius: 0 0 10px 10px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            .detail-box { flex-direction: column; align-items: center; text-align: center; }
+            .detail-box img { margin: 0 auto 20px; }
+            .box-content { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CodeVerse 2025: Celebrating Excellence & Recognizing Achievement</h1>
+        <p class="intro-text">Your dedication and hard work at the CodeVerse Summer Special Program will culminate in well-deserved recognition. We are committed to formally acknowledging your participation and the valuable skills you acquire, empowering you for your future endeavors.</p>
+        <img src="assets/images/certification_hero.jpg" alt="A hand holding a diploma or certificate, symbolizing achievement" style="width:100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 25px;">
+
+        <section class="certification-info">
+            <h2>Official Program Completion Certificates</h2>
+            <div class="detail-box">
+                <img src="assets/images/certificate_icon.png" alt="Certificate icon">
+                <div class="box-content">
+                    <h3>The Dedicated Certificate & Prize Committee</h3>
+                    <p>A specialized committee meticulously oversees the entire process of recognizing participant achievements, from tracking progress to the design, printing, and distribution of official certificates and prestigious prizes for both students and dedicated coordinators.</p>
+                    <span class="committee-members">Key Committee Members:</span>
+                    <div class="member-list">
+                        <span>Ms. Roopashree</span>
+                        <span>Dr. Yashaswini D.K.</span>
+                        <span>Dr. Jismy</span>
+                    </div>
+                    <span class="committee-members" style="margin-top: 10px;">Supporting Team:</span>
+                    <div class="member-list">
+                        <span>Ms. Keerthana K M</span>
+                        <span>Ms. Linta</span>
+                        <span>Dr. Smrithi S P</span>
+                        <span>Dr. Sowbhagya S K</span>
+                        <span>Ms. Banesori Ayekpam</span>
+                        <span>Ms. Kunj Verma</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-box">
+                <img src="assets/images/awards_ceremony.jpg" alt="Awards ceremony with a stage and trophies">
+                <div class="box-content">
+                    <h3>The Grand Awards Ceremony: A Celebration of Success</h3>
+                    <p>The CodeVerse program proudly concludes with a formal feedback and awards ceremony, a moment to reflect on your journey and celebrate outstanding achievements.</p>
+                    <ul>
+                        <li><strong>Date:</strong> August 1, 2025</li>
+                        <li><strong>Time:</strong> 10:00 am - 11:00 am</li>
+                        <li><strong>Venue:</strong> The esteemed Seminar Hall</li>
+                        <li>Beyond certificates, exceptional performance, especially in the challenging Hackathon, will be recognized with well-deserved cash prizes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="certification-info">
+            <h2>Recognition for Outstanding Achievements</h2>
+            <div class="detail-box">
+                <img src="assets/images/hackathon_award.png" alt="Trophy icon">
+                <div class="box-content">
+                    <h3>Hackathon Victories & Awards</h3>
+                    <p>Participants who excel in the intense 24-hour Hackathon, demonstrating exceptional problem-solving and coding prowess, will be eligible for significant cash prizes.</p>
+                    <p>This competition focuses on developing innovative solutions to socially relevant problems, making your achievement even more impactful.</p>
+                </div>
+            </div>
+            <div class="detail-box">
+                <img src="assets/images/project_showcase_icon.png" alt="Project showcase icon">
+                <div class="box-content">
+                    <h3>Project Expo Recognition</h3>
+                    <p>The Project Expo offers a fantastic opportunity to showcase your developed projects to the entire campus community. This public presentation provides valuable exposure and recognition for your practical application of skills, often with external jury members providing feedback.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 S-VYASA School of Advanced Studies. All rights reserved. | Recognizing your journey to excellence.</p>
+        </footer>
+    </div>
+{% endblock %}

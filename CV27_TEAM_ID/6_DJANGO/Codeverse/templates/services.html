@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVerse Services - Empowering Your Digital Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; line-height: 1.7; margin: 0; background-color: #f4f7f6; color: #333; }
+        .container { max-width: 950px; margin: auto; background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 30px; margin-bottom: 30px; }
+        h1 { font-size: 2.8em; color: #0056b3; text-align: center; margin-bottom: 30px; position: relative; }
+        h1::after { content: ''; display: block; width: 80px; height: 4px; background-color: #007bff; margin: 15px auto 0; border-radius: 2px; }
+        h2 { font-size: 2.2em; color: #007bff; margin-top: 40px; margin-bottom: 25px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; text-align: center; }
+        h3 { font-size: 1.6em; color: #333; margin-top: 0; margin-bottom: 10px; }
+        .service-category { margin-bottom: 40px; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-top: 20px; }
+        .service-item { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #e0e0e0; }
+        .service-item:hover { transform: translateY(-7px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .service-item img { max-width: 60px; float: right; margin-left: 15px; margin-bottom: 10px; }
+        .service-item p { font-size: 0.95em; color: #555; margin-bottom: 10px; }
+        .expert-info { font-style: italic; color: #666; font-size: 0.9em; border-top: 1px dashed #eee; padding-top: 10px; margin-top: 15px; }
+        .expert-info strong { color: #0056b3; }
+        footer { text-align: center; margin-top: 50px; padding: 30px 0; border-top: 1px solid #eee; color: #777; font-size: 0.9em; background-color: #f9f9f9; border-radius: 0 0 10px 10px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            .service-grid { grid-template-columns: 1fr; }
+            .service-item img { float: none; margin: 0 auto 15px; display: block; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CodeVerse 2025: Program Offerings & Transformative Services</h1>
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 30px;">Embark on a comprehensive learning journey designed to empower you with cutting-edge skills and foster holistic development. CodeVerse delivers a diverse array of specialized sessions, workshops, and integrated services, meticulously crafted to prepare you for future-ready roles in the digital landscape.</p>
+
+        <section class="service-category">
+            <h2>Core Technical Mastery</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <img src="https://sdmntprcentralus.oaiusercontent.com/files/00000000-f470-61f5-b62e-2e3d7a1f194d/raw?se=2025-07-25T12%3A46%3A02Z&sp=r&sv=2024-08-04&sr=b&scid=f93d92e3-ac4a-5a29-be82-c6259d40fddc&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-25T10%3A57%3A12Z&ske=2025-07-26T10%3A57%3A12Z&sks=b&skv=2024-08-04&sig=etY5zPPym7vkGeUAIe0FYy59lwaqtzvmhGMUHGccaL8%3D" alt="Web Development Icon">
+                    <h3>Full Stack Web Development (React, Flask, MongoDB)</h3>
+                    <p>Unlock the power of modern web application development. From intuitive front-end interfaces with React to robust back-end systems with Flask and MongoDB, this module covers the entire spectrum of full-stack development.</p>
+                    <div class="expert-info">
+                        <strong>Expert-led:</strong> Invited External Experts<br>
+                        <strong>Coordinators:</strong> Ms. Banesori Ayekpam (Main), Ms. Shylaja, Dr. Satish Kumar R, Ms. Nidhi Singh, Dr. Naveen N, Ms. Tamizharasi, Dr. Priya.<br>
+                        <strong>Duration:</strong> July 25 & 26, 2025 (9:30 am - 3:15 pm)
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-e9ec-6230-87b1-62cc52996322/raw?se=2025-07-25T12%3A46%3A02Z&sp=r&sv=2024-08-04&sr=b&scid=2646fc3d-e223-5e64-9c37-18d0a0bbc603&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-25T10%3A43%3A47Z&ske=2025-07-26T10%3A43%3A47Z&sks=b&skv=2024-08-04&sig=8G1Tqnop6XHAFWfWEm9UEsPn%2BZDzdn1eOhvWXI48oNQ%3D" alt="Python Icon">
+                    <h3>Hands-on Python: From Basics to Advanced Frameworks</h3>
+                    <p>Master Python through practical, project-based learning. Explore GUI development with Tkinter, game creation with Pygame, artistic coding with Turtle, and robust web applications with Django.</p>
+                    <div class="expert-info">
+                        <strong>Faculty-led:</strong> Internal Faculty Experts<br>
+                        <strong>Coordinators:</strong> Ms. Nidhi Singh, Ms. Banesori Ayekpam.<br>
+                        <strong>Key Topics:</strong> GITHUB hands-on, Tkinter, Pygame, Turtle, Django Intro, Webpage Resume + App, Django Project (login page).
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-aca0-6230-bf02-72f533ae0e73/raw?se=2025-07-25T12%3A52%3A43Z&sp=r&sv=2024-08-04&sr=b&scid=2359f073-e39d-5252-b9bd-5b8f8f36b828&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-25T10%3A43%3A47Z&ske=2025-07-26T10%3A43%3A47Z&sks=b&skv=2024-08-04&sig=9O6YHsjjf72it5%2BYo5rVD%2B5AN3enm4Lt5zI6zFCNskA%3D" alt="AI Icon">
+                    <h3>Building with Generative AI: A Practical Introduction</h3>
+                    <p>Step into the future with a hands-on introduction to Generative AI. Understand its principles and explore practical applications in an interactive environment.</p>
+                    <div class="expert-info">
+                        <strong>Expert-led:</strong> Invited External Experts<br>
+                        <strong>Coordinators:</strong> Mr. Anil Kumar, Dr. Yashaswini D.K., Mr. Abhishek Chakraborty.<br>
+                        <strong>Date:</strong> July 28, 2025.
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-8d1c-6230-a49e-3180243d47ef/raw?se=2025-07-25T12%3A46%3A02Z&sp=r&sv=2024-08-04&sr=b&scid=3e563595-03a2-5272-a3b0-107468e069e4&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-25T10%3A43%3A14Z&ske=2025-07-26T10%3A43%3A14Z&sks=b&skv=2024-08-04&sig=9/qF/Gx9Mgy2nTa6gn/XB/WB0RH1KZ7xx%2B2xtFf9vLE%3D" alt="AWS Cloud Icon">
+                    <h3>AWS Cloud Hosting: Deploying on the Cloud</h3>
+                    <p>Gain essential skills in Amazon Web Services (AWS) cloud hosting. Learn to deploy and manage applications in a scalable and reliable cloud environment.</p>
+                    <div class="expert-info">
+                        <strong>Expert-led:</strong> Invited External Experts (incl. Mr. Aparna, Mr. Ritesh Nune)<br>
+                        <strong>Coordinators:</strong> Dr. Satish Kumar R., Dr. Amal M.R.<br>
+                        <strong>Dates:</strong> July 15 & 16, 2025 (for different sections).
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-cef0-6230-b43e-467b9349314d/raw?se=2025-07-25T12%3A53%3A38Z&sp=r&sv=2024-08-04&sr=b&scid=2eff5502-5d5a-521b-a1fc-a4d7fc037df4&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-24T21%3A58%3A04Z&ske=2025-07-25T21%3A58%3A04Z&sks=b&skv=2024-08-04&sig=Z792WGt9W8/PB6oYAlv46fbiztntpLkmeZpAD0pU8Qw%3D" alt="Git and GitHub Icon">
+                    <h3>Git and GitHub: Collaborative Version Control</h3>
+                    <p>Master the industry-standard tools for version control and collaborative development. Learn efficient workflows for managing codebases and contributing to projects.</p>
+                    <div class="expert-info">
+                        <strong>Faculty-led:</strong> Internal Faculty Members<br>
+                        <strong>Date:</strong> July 15, 2025 (for various sections).
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="blob:https://web.whatsapp.com/08bd8c3a-d96d-4137-a1fb-8a56fb5d1224" alt="Open Source Icon">
+                    <h3>Open Source in Action: Linux & Command Line</h3>
+                    <p>Explore the world of open-source. Get hands-on with Linux basics, command-line operations, shell scripting, and file permissions, fundamental skills for any developer.</p>
+                    <div class="expert-info">
+                        <strong>Faculty-led:</strong> Internal Faculty Members<br>
+                        <strong>Technical Expert:</strong> Mr. Shine V.J.<br>
+                        <strong>Dates:</strong> July 15 & 16, 2025 (for various sections).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-category">
+            <h2>Career & Personal Advancement</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <img src="assets/images/hackathon_icon.png" alt="Hackathon Icon">
+                    <h3>24 Hours Hackathon & Preparation Sessions</h3>
+                    <p>Engage in an exhilarating 24-hour hackathon, challenging you to innovate solutions for socially relevant problems. Includes dedicated prep sessions to sharpen your competitive edge. EdTech Partner: IBM.</p>
+                    <div class="expert-info">
+                        <strong>Expert-led:</strong> Invited External Experts for Preparations<br>
+                        <strong>Coordinators:</strong> Ms. Keerthana K M, Mr. Veerendra Reddy, Ms. Sarvani, Mr. Vivek, Dr. Amal, Ms. Nidhi Singh, Ms. Banesori Ayekpam.<br>
+                        <strong>Date:</strong> July 31, 2025 (24-hour event).
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="assets/images/placement_icon.png" alt="Placement Icon">
+                    <h3>Placement Readiness & Industry Expectations</h3>
+                    <p>Prepare for a successful career with sessions focused on industry expectations, interview skills, and bridging the gap between campus and corporate life.</p>
+                    <div class="expert-info">
+                        <strong>Expert-led:</strong> Ms. Usha R, Director - Placements, Training, and Alumni Relations.<br>
+                        <strong>Coordinators:</strong> Ms. Roopashree, Mr. Somendra Kumar.<br>
+                        <strong>Date:</strong> July 16, 2025.
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="assets/images/entrepreneur_icon.png" alt="Entrepreneurship Icon">
+                    <h3>Igniting the Entrepreneurial Mindset</h3>
+                    <p>Discover the entrepreneurial journey and cultivate an innovative mindset essential for future leaders and startup enthusiasts.</p>
+                    <div class="expert-info">
+                        <strong>Expert-led:</strong> Madanmohan Rao, Research Director, YourStory.<br>
+                        <strong>Coordinators:</strong> Ms. Nidhi Singh, Mr. Abhishek Chakraborty.<br>
+                        <strong>Date:</strong> July 22, 2025.
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="assets/images/freelance_icon.png" alt="Freelancing Icon">
+                    <h3>Freelancing Training: Your Path to Independent Work</h3>
+                    <p>Gain practical insights and strategies for launching a successful freelancing career, navigating platforms, and securing projects.</p>
+                    <div class="expert-info">
+                        <strong>Faculty-led:</strong> Internal Faculty Members<br>
+                        <strong>Technical Expert:</strong> Mr. Vivek Khirasaria.<br>
+                        <strong>Coordinators:</strong> Ms. Sarvani, Ms. Kunj Verma.<br>
+                        <strong>Date:</strong> July 15, 2025.
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="assets/images/wellbeing_icon.png" alt="Well-being Icon">
+                    <h3>Holistic Well-being: Yoga & Psychological Insights</h3>
+                    <p>Participate in daily "Quick Calm" 15-minute Yoga sessions for mental clarity and stress reduction, complemented by a "Know yourself" psychological test for personal growth.</p>
+                    <div class="expert-info">
+                        <strong>Yoga Coordinators:</strong> Mr. Ruthik Nagar, Ms. Kunj Verma, Dr. Yadla Vishwa Sree.<br>
+                        <strong>Psychological Test Date:</strong> July 30, 2025.
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="assets/images/industrial_visit_icon.png" alt="Industrial Visit Icon">
+                    <h3>Industrial Visits: Real-World Exposure</h3>
+                    <p>Experience the corporate environment firsthand with guided industrial visits to leading companies like Intel, HCL, and Pearson, bridging theoretical knowledge with practical industry operations.</p>
+                    <div class="expert-info">
+                        <strong>Coordinators:</strong> Dr. Sowbhagya S K, Mr. Vivek, Ms. Tamizharasi.<br>
+                        <strong>Date:</strong> July 23, 2025.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 S-VYASA School of Advanced Studies. All rights reserved. | Cultivating excellence in every service.</p>
+        </footer>
+    </div>
+{% endblock %}

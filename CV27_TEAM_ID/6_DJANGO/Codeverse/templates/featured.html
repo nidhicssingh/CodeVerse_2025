@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVerse Featured Highlights - Moments of Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; line-height: 1.7; margin: 0; background-color: #f4f7f6; color: #333; }
+        .container { max-width: 950px; margin: auto; background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 30px; margin-bottom: 30px; }
+        h1 { font-size: 2.8em; color: #0056b3; text-align: center; margin-bottom: 30px; position: relative; }
+        h1::after { content: ''; display: block; width: 80px; height: 4px; background-color: #007bff; margin: 15px auto 0; border-radius: 2px; }
+        h2 { font-size: 2.2em; color: #007bff; margin-top: 40px; margin-bottom: 25px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; text-align: center; }
+        .intro-text { text-align: center; font-size: 1.1em; margin-bottom: 30px; color: #555; }
+        .feature-section { margin-bottom: 40px; }
+        .feature-item { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #e0e0e0; display: flex; align-items: flex-start; margin-bottom: 20px; }
+        .feature-item:hover { transform: translateY(-7px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .feature-item img { max-width: 150px; height: auto; border-radius: 6px; margin-right: 25px; object-fit: cover; }
+        .feature-content { flex-grow: 1; }
+        .feature-content h3 { font-size: 1.6em; color: #0056b3; margin-top: 0; margin-bottom: 10px; }
+        .highlight-date { font-weight: bold; color: #777; font-size: 0.95em; margin-bottom: 8px; display: block; }
+        .speaker-info { font-style: italic; color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        .feature-description { font-size: 1.0em; color: #444; }
+        footer { text-align: center; margin-top: 50px; padding: 30px 0; border-top: 1px solid #eee; color: #777; font-size: 0.9em; background-color: #f9f9f9; border-radius: 0 0 10px 10px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            .feature-item { flex-direction: column; align-items: center; text-align: center; }
+            .feature-item img { margin: 0 auto 20px; max-width: 200px; }
+            .feature-content { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CodeVerse 2025: Featured Highlights – Moments of Innovation & Growth</h1>
+        <p class="intro-text">Explore the pinnacle moments of the CodeVerse Summer Special Program! This page spotlights the most impactful sessions, thrilling events, and unique learning opportunities that define our commitment to innovation and holistic development.</p>
+
+        <section class="feature-section">
+            <h2>Keynote Sessions by Visionary Experts</h2>
+
+            <div class="feature-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzvmq_LNgTt_oq5MlBX-iMnFjLZE3Pq-u6ew&s" alt="Vinay Kumar from Pearson India delivering a keynote speech">
+                <div class="feature-content">
+                    <h3>Bridging Campus to Corporate: Industry Expectations</h3>
+                    <span class="highlight-date">Date: July 14, 2025 (Monday)</span>
+                    <p class="speaker-info">Featuring: <strong>Vinay Kumar, Country Head - Pearson India</strong></p>
+                    <p class="feature-description">An indispensable session providing deep insights into current industry demands and equipping participants with the mindset and skills necessary for a successful transition from academia to the professional world. Venue: Seminar Hall.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="https://crowdsourcingweek.com/wp-content/uploads/2016/07/Madanmohan-Rao.jpg" alt="Madanmohan Rao from YourStory speaking about entrepreneurship">
+                <div class="feature-content">
+                    <h3>Igniting the Entrepreneurial Mindset</h3>
+                    <span class="highlight-date">Date: July 22, 2025 (Tuesday)</span>
+                    <p class="speaker-info">Featuring: <strong>Madanmohan Rao, Research Director, YourStory</strong></p>
+                    <p class="feature-description">An inspiring address designed to spark innovation and cultivate an entrepreneurial spirit among participants, encouraging them to think creatively and embrace the challenges of building something new. Venue: Seminar Hall.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="https://miro.medium.com/v2/resize:fit:1024/1*-24ONCf5FCEcu3bvQPYx5w.jpeg" alt="Illustration representing generative AI creating art or code">
+                <div class="feature-content">
+                    <h3>Building with Generative AI: A Practical Introduction</h3>
+                    <span class="highlight-date">Date: July 28, 2025 (Monday)</span>
+                    <p class="feature-description">Dive into the cutting-edge realm of Generative AI. This practical session offers hands-on experience and foundational knowledge in one of the most transformative technologies of our time. Venue: Room Nos. 14, 15 & 16.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <h2>Pivotal Projects & High-Impact Competitions</h2>
+
+            <div class="feature-item">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQEGdMi4yXpnRA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1721271727331?e=2147483647&v=beta&t=kdzYS-Va3klwxT8x3MUuTnSGTi_vxdus5bD2EutF22g" alt="Team of students intensely focused on laptops during a hackathon event">
+                <div class="feature-content">
+                    <h3>The CodeVerse 24 Hours Hackathon: Innovate for Social Impact</h3>
+                    <span class="highlight-date">Date: July 31, 2025 (9:00 am to 9:00 am next day)</span>
+                    <p class="feature-description">An electrifying 24-hour coding marathon where teams will develop innovative solutions to pressing socially relevant problems. Sponsored by IBM as our EdTech Partner, this event challenges participants to think creatively under pressure. Venue: Room Nos. 14, 15, 16, 05 and 06.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="https://budventure.technology/public/frontend/images/services/frontend/react/Process_1.webp" alt="Software development team presenting their React web application project">
+                <div class="feature-content">
+                    <h3>Capstone Project: Dynamic Web Development with React</h3>
+                    <span class="highlight-date">Dates: July 23, 24, & 29, 2025</span>
+                    <p class="feature-description">The culmination of technical learning, where participants design and build sophisticated dynamic web applications using React, showcasing their full-stack development prowess. Venue: Room Nos. 14, 15 & 16.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="https://www.teachingenglish.org.uk/sites/teacheng/files/images/student-presentations.jpg" alt="Students presenting their projects at a science or tech expo">
+                <div class="feature-content">
+                    <h3>Project Expo: A Campus-Wide Showcase of Innovation</h3>
+                    <span class="highlight-date">Date: July 30, 2025 (1:30 pm)</span>
+                    <p class="feature-description">An open exhibition where the innovative projects developed throughout the program are presented to the entire campus community, including faculty from other departments who serve as jury members. Venue: Room Nos. 14, 15, 16, 05 and 06.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <h2>Unique Learning & Growth Experiences</h2>
+
+            <div class="feature-item">
+                <img src="https://dypimed.edu.in/wp-content/uploads/2024/03/Industrial-Visit-Software-Technology-Park-of-India-in-Hinjewadi-5.png" alt="Students on an industrial visit, observing machinery or a presentation">
+                <div class="feature-content">
+                    <h3>Industrial Visits: Real-World Industry Immersion</h3>
+                    <span class="highlight-date">Date: July 23, 2025 (Wednesday)</span>
+                    <p class="feature-description">Gain invaluable insights into the operational environments of leading companies such as Intel, HCL, and Pearson, bridging academic knowledge with practical industry insights.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="https://www.svyasa.edu.in/img/facility/prashanthi-kutiram/cultutal1.JPG" alt="Students participating in a talent show on stage">
+                <div class="feature-content">
+                    <h3>Talent Hunt: Celebrating Student Abilities & Unity</h3>
+                    <span class="highlight-date">Date: July 22, 2025 (Tuesday, 2:00 pm)</span>
+                    <p class="feature-description">An engaging extra-curricular event designed to provide a platform for students to showcase their diverse talents and foster a strong sense of community and camaraderie. Venue: Stage, 6th floor.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="https://plus.unsplash.com/premium_photo-1744851724485-78f9c4d06799?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Group of people doing light yoga exercises in a bright room">
+                <div class="feature-content">
+                    <h3>Quick Calm: Daily 15-Minute Yoga Sessions</h3>
+                    <span class="highlight-date">Daily during program hours</span>
+                    <p class="feature-description">Integrated daily yoga sessions provide a brief respite and mental recharge, enhancing focus, reducing stress, and promoting overall well-being amidst intensive technical training. Venue: Room Nos. 14, 15 & 16.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 S-VYASA School of Advanced Studies. All rights reserved. | Highlighting paths to digital excellence.</p>
+        </footer>
+    </div>
+{% endblock %}

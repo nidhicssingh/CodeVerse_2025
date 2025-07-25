@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVerse Blog - Journey of Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; line-height: 1.7; margin: 0; background-color: #f4f7f6; color: #333; }
+        .container { max-width: 900px; margin: auto; background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 30px; margin-bottom: 30px; }
+        h1 { font-size: 2.8em; color: #0056b3; text-align: center; margin-bottom: 30px; position: relative; }
+        h1::after { content: ''; display: block; width: 80px; height: 4px; background-color: #007bff; margin: 15px auto 0; border-radius: 2px; }
+        .intro-text { text-align: center; font-size: 1.1em; margin-bottom: 40px; color: #555; }
+        .blog-post { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); margin-bottom: 40px; border: 1px solid #e0e0e0; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .blog-post:hover { transform: translateY(-7px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .blog-post img { width: 100%; height: 280px; object-fit: cover; border-radius: 6px; margin-bottom: 20px; }
+        .blog-post h2 { font-size: 2.2em; color: #007bff; margin-top: 0; margin-bottom: 15px; }
+        .post-meta { font-size: 0.9em; color: #777; margin-bottom: 15px; }
+        .post-meta span { margin-right: 15px; }
+        .post-content p { margin-bottom: 15px; color: #444; }
+        .read-more { display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease; }
+        .read-more:hover { background-color: #0056b3; }
+        .social-media-section { text-align: center; margin-top: 50px; padding: 30px; background: #e6f7ff; border-radius: 10px; border: 1px dashed #007bff; }
+        .social-media-section h2 { color: #0056b3; margin-bottom: 15px; }
+        .social-media-icons img { width: 40px; height: 40px; margin: 0 10px; transition: transform 0.3s ease; }
+        .social-media-icons img:hover { transform: scale(1.1); }
+        footer { text-align: center; margin-top: 50px; padding: 30px 0; border-top: 1px solid #eee; color: #777; font-size: 0.9em; background-color: #f9f9f9; border-radius: 0 0 10px 10px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            .blog-post h2 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CodeVerse 2025 Blog: Your Journey of Innovation & Discovery</h1>
+        <p class="intro-text">Welcome to the official CodeVerse blog, your exclusive portal to the dynamic world of our Summer Special Program 2025. Here, we share exciting updates, delve into program highlights, celebrate achievements, and provide insightful glimpses into the daily journey of our aspiring innovators at S-VYASA's Department of Engineering and Technology.</p>
+
+        <section class="blog-post">
+            <img src="https://web.whatsapp.com/cbc172c8-d823-409d-8f19-51ab1e750295" alt="Students and faculty at the CodeVerse program launch event">
+            <h2>Kickstarting CodeVerse 2025: A Transformative Journey Begins!</h2>
+            <div class="post-meta">
+                <span><i class="fas fa-calendar-alt"></i> Posted on: July 14, 2025</span> | <span><i class="fas fa-tag"></i> Category: Program Launch, Keynote</span>
+            </div>
+            <div class="post-content">
+                <p>The highly anticipated CodeVerse Summer Special Program officially launched today, marking the beginning of three weeks of intensive learning and boundless innovation! The day commenced with an enthusiastic registration process, followed by an engaging ice-breaking session that helped our participants connect and form teams. A key highlight was the insightful opening address delivered by <strong>Vinay Kumar, Country Head - Pearson India</strong>, on "Bridging Campus to Corporate: Industry Expectations." This foundational session set a clear vision for career readiness.</p>
+                <p>Participants were efficiently grouped into three vibrant sections—Section A (Room 14, Ms. Sangeetha), Section B (Room 15, Ms. Sanjana), and Section C (Room 16, Ms. Sai Shree)—each poised for focused learning. The afternoon was packed with foundational technical sessions, including explorations into AWS Cloud Hosting, Open Source in Action, and essential Git and GitHub workshops. We are incredibly excited to witness the blend of technology, creativity, and personal growth that will unfold!</p>
+                </div>
+        </section>
+
+        <section class="blog-post">
+            <img src="https://images.unsplash.com/photo-1722573783625-eceb04251036?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U3R1ZGVudHMlMjBlbmdyb3NzZWQlMjBpbiUyMGElMjBQeXRob24lMjBjb2RpbmclMjBzZXNzaW9uJTIwYW5kJTIwYSUyMHNwZWFrZXIlMjBhdCUyMGFuJTIwZW50cmVwcmVuZXVyc2hpcCUyMGV2ZW50fGVufDB8fDB8fHww" alt="Students engrossed in a Python coding session and a speaker at an entrepreneurship event">
+            <h2>Unleashing Potential: Python Prowess & Entrepreneurial Spark!</h2>
+            <div class="post-meta">
+                <span><i class="fas fa-calendar-alt"></i> Posted on: July 22, 2025</span> | <span><i class="fas fa-tag"></i> Category: Skill Development, Entrepreneurship, Events</span>
+            </div>
+            <div class="post-content">
+                <p>This past week at CodeVerse has been an electrifying blend of deep technical dives and inspiring entrepreneurial insights! Our "Hands-on Python" sessions have been a hub of activity, with participants delving into complex problem-solving, crafting engaging quiz apps, and building collaborative team calculators. The practical application of Python frameworks has truly come alive!</p>
+                <p>A significant highlight was the much-anticipated "Igniting the Entrepreneurial Mindset" session held on July 22nd. Led by the renowned <strong>Madanmohan Rao, Research Director, YourStory</strong>, this talk ignited new perspectives on innovation and business acumen, encouraging our participants to envision themselves as future creators and leaders.</p>
+                <p>Adding to the vibrant atmosphere, the "Talent Hunt: A Stage for Student Talent and Unity" also captivated the campus on July 22nd, showcasing the diverse talents and strong community spirit within CodeVerse. As we move forward, we're eagerly anticipating the start of Frontend Web Development and exciting industrial visits scheduled for next week!</p>
+                </div>
+        </section>
+
+        <section class="blog-post">
+            <img src="https://media.istockphoto.com/id/1361638260/photo/business-people-in-the-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=ed-RihWv62xMA4SZGpgLCVtRsG20c0eGdwfT0LLOXmA=" alt="Group of students brainstorming ideas for a hackathon project on a whiteboard">
+            <h2>Innovation on the Horizon: Countdown to Hackathon & Project Expo!</h2>
+            <div class="post-meta">
+                <span><i class="fas fa-calendar-alt"></i> Posted on: July 29, 2025</span> | <span><i class="fas fa-tag"></i> Category: Capstone Projects, Hackathon, Showcase</span>
+            </div>
+            <div class="post-content">
+                <p>The energy at CodeVerse is reaching fever pitch as we approach the grand culmination of our program's project phase! Intensive Capstone Project work, focusing on Web Development using React, has been progressing remarkably across all sections. Our participants are pouring their creativity and technical skills into building truly impactful web applications.</p>
+                <p>The excitement builds for tomorrow, July 30th, as we host our highly anticipated <strong>Project Expo</strong>! This showcase, open to the entire campus, will be a vibrant display of innovation, featuring all the hard work and ingenuity of our CodeVerse participants. It's happening in Room Nos. 14, 15, 16, 05 and 06.</p>
+                <p>And then, the ultimate challenge awaits: July 31st marks the commencement of our <strong>24 Hours Hackathon</strong>! Participants are gearing up to tackle socially relevant problem statements in an intense, collaborative coding marathon, with IBM proudly serving as our EdTech Partner. Dedicated preparation sessions are already underway, ensuring everyone is primed for this thrilling challenge. Stay tuned for live updates as our CodeVerse innovators transform ideas into tangible solutions!</p>
+                </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 S-VYASA School of Advanced Studies. All rights reserved. | Documenting the future of tech.</p>
+        </footer>
+    </div>
+{% endblock %}

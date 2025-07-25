@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CodeVerse - Our Vision & Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; line-height: 1.7; margin: 0; background-color: #f4f7f6; color: #333; }
+        .container { max-width: 950px; margin: auto; background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 30px; margin-bottom: 30px; }
+        h1 { font-size: 2.8em; color: #0056b3; text-align: center; margin-bottom: 30px; position: relative; }
+        h1::after { content: ''; display: block; width: 80px; height: 4px; background-color: #007bff; margin: 15px auto 0; border-radius: 2px; }
+        h2 { font-size: 2em; color: #007bff; margin-bottom: 20px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+        h3 { font-size: 1.6em; color: #333; margin-top: 25px; margin-bottom: 15px; }
+        .section { padding: 20px 0; }
+        .mission-statement { background: #e6f7ff; padding: 35px; border-left: 6px solid #007bff; border-radius: 8px; margin-bottom: 30px; font-size: 1.15em; color: #2a6496; text-align: center; font-style: italic; }
+        .program-overview p { margin-bottom: 15px; }
+        .team-section { margin-top: 40px; }
+        .team-member-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px; }
+        .team-member-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease; border: 1px solid #e0e0e0; }
+        .team-member-card:hover { transform: translateY(-7px); }
+        .team-member-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #007bff; }
+        .team-member-card h4 { margin: 0; color: #0056b3; font-size: 1.3em; }
+        .team-member-card p { font-size: 0.95em; color: #555; margin-top: 5px; }
+        .committee-list ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .committee-list li { background: #eef5fb; padding: 15px 20px; border-radius: 8px; border-left: 4px solid #007bff; font-size: 1.05em; margin-bottom: 10px; }
+        .committee-list li strong { color: #0056b3; }
+        .committee-role { font-size: 0.95em; color: #555; margin-top: 5px; }
+        footer { text-align: center; margin-top: 50px; padding: 30px 0; border-top: 1px solid #eee; color: #777; font-size: 0.9em; background-color: #f9f9f9; border-radius: 0 0 10px 10px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            h3 { font-size: 1.4em; }
+            .team-member-grid, .committee-list ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About CodeVerse: Our Vision, Our People</h1>
+
+        <section class="section program-overview">
+            <img src="https://www.svyasa.edu.in/img/facility/global/classroom/8.JPG" alt="Team members collaborating on a project, showcasing vision and teamwork" style="width:100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 25px;">
+            <h2>Our Guiding Vision</h2>
+            <p class="mission-statement">"CodeVerse is more than just a program; it's a transformative journey crafted to foster holistic growth. We are dedicated to providing a hands-on, project-driven learning experience that seamlessly blends technological prowess with creative problem-solving and profound personal development. Our ultimate aim is to empower participants with the skills and mindset required for future-ready roles in a dynamic world."</p>
+            <p>Organized by the esteemed Department of Engineering and Technology at S-VYASA (Swami Vivekananda Yoga Anusandhana Samsthana), CodeVerse is an intensive 3-week program. From July 14th to August 1st, 2025, participants will immerse themselves in cutting-edge technologies, guided by a curriculum that prioritizes practical application and real-world project development, running daily from 9:00 am to 4:30 pm.</p>
+        </section>
+
+        <section class="section leadership-team">
+            <h2>Meet Our Dedicated Team</h2>
+            <p>The success of CodeVerse is built on the unwavering commitment and expertise of our faculty and administrative committees. Their dedication ensures a seamless and enriching experience for every participant.</p>
+
+            <h3>Overall Program Leadership</h3>
+            <div class="team-member-grid">
+                <div class="team-member-card">
+                    <img src="blob:" alt="Dr. Jobin Thomas">
+                    <h4>Dr. Jobin Thomas</h4>
+                    <p>Program Coordinator</p>
+                    <p class="committee-role">Responsible for the overall vision, strategic planning, and meticulous execution of the CodeVerse program.</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="assets/images/ms_banesori_ayekpam.png" alt="Ms. Banesori Ayekpam">
+                    <h4>Ms. Banesori Ayekpam</h4>
+                    <p>Main Coordinator - Full Stack Web Dev. & Hands-on Python</p>
+                    <p class="committee-role">Leads the core technical curriculum and ensures a high-quality learning experience in key programming domains.</p>
+                </div>
+            </div>
+
+            <h3>Dynamic Event Coordination Committee</h3>
+            <div class="committee-list">
+                <ul>
+                    <li><strong>Ms. Saishree Basnet</strong>
+                        <p class="committee-role">Oversees registration, group divisions, venue allocation, and attendance tracking.</p>
+                    </li>
+                    <li><strong>Ms. Sangeeta Behera</strong>
+                        <p class="committee-role">Manages daily event logistics, prayer/silent prayer, and inter-committee coordination.</p>
+                    </li>
+                    <li><strong>Ms. Sanjana Gupta</strong>
+                        <p class="committee-role">Coordinates with technical experts, monitors group performance, and integrates non-academic sessions.</p>
+                    </li>
+                </ul>
+                <p>This committee ensures every aspect of the program runs smoothly, from daily operations to integrating wellness and holistic development.</p>
+            </div>
+
+            <h3>Specialized Committees & Technical Experts</h3>
+            <p>Our program is enriched by the expertise of various specialized committees, each focusing on a critical aspect of participant development:</p>
+
+            <div class="committee-list">
+                <ul>
+                    <li><strong>Guest Sessions:</strong> Ms. Arunima Sharma, Dr. Sowbhagya S K
+                        <p class="committee-role">Managing invitations and reception for internal and external technical experts.</p>
+                    </li>
+                    <li><strong>Placement Readiness:</strong> Ms. Roopashree, Mr. Somendra Kumar
+                        <p class="committee-role">Facilitating career preparedness and industry alignment for participants.</p>
+                    </li>
+                    <li><strong>Generative AI Workshop:</strong> Mr. Anil Kumar, Dr. Yashaswini D.K., Mr. Abhishek Chakraborty
+                        <p class="committee-role">Coordinating cutting-edge sessions on AI and emerging technologies.</p>
+                    </li>
+                    <li><strong>Entrepreneurship Session:</strong> Ms. Nidhi Singh, Mr. Abhishek Chakraborty
+                        <p class="committee-role">Fostering innovative thinking and entrepreneurial skills.</p>
+                    </li>
+                    <li><strong>AWS Cloud Hosting:</strong> Dr. Satish Kumar R., Dr. Amal M.R.
+                        <p class="committee-role">Defining prerequisites and planning execution for cloud technology sessions.</p>
+                    </li>
+                    <li><strong>Social Media Advertisement:</strong> Ms. Keerthana K M
+                        <p class="committee-role">Documenting daily events and managing online presence.</p>
+                    </li>
+                    <li><strong>Certificate and Prize:</strong> Ms. Roopashree, Dr. Yashaswini D.K., Dr. Jismy
+                        <p class="committee-role">Overseeing recognition and awards for participants' achievements.</p>
+                    </li>
+                    <li><strong>Extra-curricular Activities:</strong> Dr. Sowbhagya S K, Ms. Linta, Dr. Smrithi S P, Ms. Roopashree, Dr. Jismy, Mr. Ruthik Nagar, Ms. Kunj Verma
+                        <p class="committee-role">Organizing engaging activities and talent showcases.</p>
+                    </li>
+                    <li><strong>Yoga & Well-being:</strong> Mr. Ruthik Nagar, Ms. Kunj Verma, Dr. Yadla Vishwa Sree
+                        <p class="committee-role">Conducting daily "Quick Calm" yoga sessions for holistic well-being.</p>
+                    </li>
+                    <li><strong>Industrial Visit:</strong> Dr. Sowbhagya S K, Mr. Vivek, Ms. Tamizharasi
+                        <p class="committee-role">Arranging exposure trips to leading industry companies.</p>
+                    </li>
+                    <li><strong>Freelancing Training:</strong> Ms. Sarvani, Ms. Kunj Verma
+                        <p class="committee-role">Providing guidance and resources for aspiring freelancers.</p>
+                    </li>
+                    <li><strong>GIT and Python Practice:</strong> Ms. Nidhi Singh, Ms. Banesori Ayekpam
+                        <p class="committee-role">Facilitating hands-on practice in version control and advanced Python.</p>
+                    </li>
+                    <li><strong>Full-Stack Apps (Flask, MongoDB & React):</strong> Ms. Banesori Ayekpam, Ms. Nidhi Singh, Dr. Priya, Ms. Shylaja, Ms. Tamizharasi, Dr. Naveen N, Dr. Satish Kumar R.
+                        <p class="committee-role">Coordinating with external experts for comprehensive web development training.</p>
+                    </li>
+                    <li><strong>Creative Web Design (HTML, CSS & JavaScript):</strong> Mr. Veerendra Reddy, Mr. Anil Kumar S
+                        <p class="committee-role">Guiding participants in creating impactful web designs and portfolios.</p>
+                    </li>
+                    <li><strong>Capstone Experience & Open Source:</strong> Mr. Somendra Kumar, Dr. Naveen N, Mr. Shine V.J.
+                        <p class="committee-role">Overseeing major project development and open-source contributions.</p>
+                    </li>
+                    <li><strong>24 Hours Hackathon:</strong> Ms. Keerthana K M, Mr. Veerendra Reddy, Ms. Sarvani, Mr. Vivek, Dr. Amal, Ms. Nidhi Singh, Ms. Banesori Ayekpam
+                        <p class="committee-role">Managing all aspects of the high-impact Hackathon event.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 S-VYASA School of Advanced Studies. All rights reserved. | Cultivating future innovators.</p>
+        </footer>
+    </div>
+{% endblock %}
