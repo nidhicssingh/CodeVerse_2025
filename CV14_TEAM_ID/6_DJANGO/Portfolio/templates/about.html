@@ -4,36 +4,54 @@
 {% block title %}About Me{% endblock %}
 
 {% block content %}
+<style>
+    body {
+        background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+    }
+    .profile-img {
+        border: 5px solid #0d6efd;
+        transition: transform 0.3s ease;
+    }
+    .profile-img:hover {
+        transform: scale(1.05);
+    }
+    .card {
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
 <div class="container my-5">
-    <div class="text-center">
-        <h1 class="display-4 fw-bold mb-4">Welcome to CodeVerse 2025</h1>
-        <!-- Make sure the event logo or group photo is in your static folder -->
-        <img src="{% static 'IMG/CODEVERSE.jpg' %}" alt="CodeVerse 2025 Logo" class="rounded mb-4" style="width: 200px;">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Hi, I'm Gaurav HV</h1>
+        <img src="{% static 'IMG/GAURAV.jpg' %}" alt="Gaurav HV" class="rounded-circle profile-img" style="width: 200px;">
     </div>
 
-    <p class="fs-5 lh-lg text-center">
-        <strong>CodeVerse 2025</strong> is a vibrant and immersive summer program designed for passionate developers and tech enthusiasts. This initiative brings together curious minds to build real-world projects, learn cutting-edge technologies, and collaborate in a dynamic, hands-on environment.
-        <br><br>
-        From web development with Django and React to mastering version control and UI frameworks like Tailwind CSS, CodeVerse is more than a learning platform — it's a launchpad for future tech leaders.
-    </p>
+    <div class="card p-4 mb-5 bg-white">
+        <p class="fs-5 lh-lg text-center mb-0">
+            I’m a passionate developer with a love for creative coding and solving real-world problems through technology. 
+            My journey revolves around crafting efficient backend logic with Django and building smooth user experiences using modern UI frameworks.
+        </p>
+    </div>
 
-    <h2 class="mt-5">What We Offer</h2>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Workshops on Python, Django, JavaScript, and React</li>
-        <li class="list-group-item">Hands-on projects with mentorship support</li>
-        <li class="list-group-item">Collaborative environment to boost teamwork</li>
-        <li class="list-group-item">Sessions on Git, GitHub, and deployment</li>
-        <li class="list-group-item">Focus on clean UI/UX using Tailwind CSS</li>
-    </ul>
+    <div class="card p-4 mb-5 bg-white">
+        <h2 class="mb-4 text-center text-primary">What I Work On</h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Full-stack web development (Django + React)</li>
+            <li class="list-group-item">Desktop apps using Python & Tkinter</li>
+            <li class="list-group-item">UI design with Bootstrap & Tailwind</li>
+            <li class="list-group-item">Version control (Git, GitHub)</li>
+            <li class="list-group-item">Team collaboration and open-source projects</li>
+        </ul>
+    </div>
 
-    <h2 class="mt-5">Get in Touch</h2>
-    <p class="fs-5">
-        For queries or collaborations, reach us at 
-        <a href="mailto:codeverse2025@gmail.com">codeverse2025@gmail.com</a>
-        or follow us on 
-        <a href="https://linkedin.com/company/codeverse2025" target="_blank">LinkedIn</a>.
-    </p>
+    <div class="card p-4 bg-white text-center">
+        <h2 class="mb-3 text-success">Let's Connect</h2>
+        <p class="fs-5">
+            📧 <a href="mailto:gauravhv.dev@gmail.com">gauravhv.dev@gmail.com</a><br>
+            💼 <a href="https://linkedin.com/in/gauravhv" target="_blank">LinkedIn Profile</a>
+        </p>
+    </div>
 </div>
-
-
 {% endblock %}
+
