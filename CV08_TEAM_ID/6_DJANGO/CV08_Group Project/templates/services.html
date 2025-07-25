@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services - SVYASA University{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center text-gradient fw-bold mb-5 animate-slide">🛎️ Student Services at SVYASA</h1>
+
+  <div class="row g-4">
+    <!-- Hostel -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow service-card border-0 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-primary fw-bold">🏠 Hostel Facilities</h5>
+          <p class="card-text text-muted">Separate and secure accommodations for boys and girls with healthy food and serene environment.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Library -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow service-card border-0 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-primary fw-bold">📚 Central Library</h5>
+          <p class="card-text text-muted">A rich collection of books, journals, and e-resources on Yoga, Science, Management, and Health.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Placement -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow service-card border-0 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-primary fw-bold">🎯 Placement Cell</h5>
+          <p class="card-text text-muted">Strong industry connections and dedicated training for career readiness and placements.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Health -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow service-card border-0 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-primary fw-bold">🏥 Health & Wellness Center</h5>
+          <p class="card-text text-muted">24x7 healthcare, naturopathy, and yoga therapy services for all students and staff.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Labs -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow service-card border-0 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-primary fw-bold">🔬 Computer & Research Labs</h5>
+          <p class="card-text text-muted">State-of-the-art labs for engineering, IT, and research in Yoga Science and AI.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yoga -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow service-card border-0 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-primary fw-bold">🧘 Yoga & Meditation Halls</h5>
+          <p class="card-text text-muted">Spacious halls with daily yoga practice, therapy, and advanced sadhana sessions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background-color: #f0f6ff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #1565c0, #42a5f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    background-color: #e3f2fd;
+    transition: 0.3s ease;
+  }
+
+  .animate-fade {
+    animation: fadeIn 1.2s ease-in-out;
+  }
+
+  .animate-slide {
+    animation: slideUp 1.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+{% endblock %}

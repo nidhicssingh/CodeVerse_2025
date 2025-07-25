@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blogs - SVYASA University{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center text-gradient fw-bold mb-5 animate-slide">📝 Campus Blogs & Articles</h1>
+
+  <div class="row g-4">
+    <!-- Blog Post -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 border-0 shadow">
+        <img src="{% static 'IMG/1.jpg' %}" class="card-img-top" alt="Yoga Blog">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">The Science Behind Yoga & Breath</h5>
+          <p class="text-muted">By Dr. Nagarathna • July 2025</p>
+          <p class="card-text">Explore how pranayama improves immunity and mental clarity, based on SVYASA research.</p>
+          <span class="badge bg-primary">#Yoga</span>
+          <span class="badge bg-success">#Wellness</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Post -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 border-0 shadow">
+        <img src="{% static 'IMG/2.jpg' %}" class="card-img-top" alt="AI Blog">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Integrating AI with Yoga Therapy</h5>
+          <p class="text-muted">By Shreya - B.Tech CSE • June 2025</p>
+          <p class="card-text">How AI-based yoga tracking apps are revolutionizing holistic health approaches in therapy.</p>
+          <span class="badge bg-warning text-dark">#AI</span>
+          <span class="badge bg-info">#HealthTech</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Post -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 border-0 shadow">
+        <img src="{% static 'IMG/3.jpg' %}" class="card-img-top" alt="Campus Blog">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">A Day in the Life at SVYASA</h5>
+          <p class="text-muted">By Akash - MBA • May 2025</p>
+          <p class="card-text">What it feels like to study yoga and management together in the lush green campus of SVYASA.</p>
+          <span class="badge bg-danger">#CampusLife</span>
+          <span class="badge bg-secondary">#MBA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- More blogs can go below... -->
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3f51b5, #00bcd4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animate-slide {
+    animation: slideUp 1.2s ease-in-out;
+  }
+
+  .animate-fade {
+    animation: fadeIn 1.4s ease-in;
+  }
+
+  @keyframes slideUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+</style>
+{% endblock %}

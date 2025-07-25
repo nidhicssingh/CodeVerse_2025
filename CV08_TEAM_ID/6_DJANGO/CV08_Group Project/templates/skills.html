@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Skills Development - SVYASA University{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center text-gradient fw-bold mb-5 animate-slide">🌟 Skills Developed at SVYASA</h1>
+
+  <div class="row g-4">
+    <!-- Skill Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card text-center shadow border-0 h-100 p-4">
+        <div class="fs-1 text-success">🧘‍♂️</div>
+        <h5 class="fw-bold mt-3">Holistic Wellness</h5>
+        <p class="text-muted">Students develop mental clarity, emotional balance, and physical wellness through daily yoga and meditation practices.</p>
+      </div>
+    </div>
+
+    <!-- Skill Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card text-center shadow border-0 h-100 p-4">
+        <div class="fs-1 text-primary">💻</div>
+        <h5 class="fw-bold mt-3">Technical Skills</h5>
+        <p class="text-muted">Hands-on training in programming, AI/ML, IoT, and research tools through industry-aligned curriculum and labs.</p>
+      </div>
+    </div>
+
+    <!-- Skill Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card text-center shadow border-0 h-100 p-4">
+        <div class="fs-1 text-warning">🗣️</div>
+        <h5 class="fw-bold mt-3">Communication</h5>
+        <p class="text-muted">Presentation, public speaking, group discussions, and soft-skills training are part of every semester.</p>
+      </div>
+    </div>
+
+    <!-- Skill Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card text-center shadow border-0 h-100 p-4">
+        <div class="fs-1 text-danger">🌱</div>
+        <h5 class="fw-bold mt-3">Ethics & Values</h5>
+        <p class="text-muted">Gurukula system and Yoga-based education instill values like integrity, compassion, and self-discipline.</p>
+      </div>
+    </div>
+
+    <!-- Skill Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card text-center shadow border-0 h-100 p-4">
+        <div class="fs-1 text-info">🤝</div>
+        <h5 class="fw-bold mt-3">Leadership</h5>
+        <p class="text-muted">Students participate in workshops, clubs, and events that grow leadership, project management, and teamwork skills.</p>
+      </div>
+    </div>
+
+    <!-- Skill Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card text-center shadow border-0 h-100 p-4">
+        <div class="fs-1 text-secondary">📊</div>
+        <h5 class="fw-bold mt-3">Entrepreneurship</h5>
+        <p class="text-muted">Incubation support, innovation cells, and startup mentorship help students develop entrepreneurial thinking.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .text-gradient {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animate-fade {
+    animation: fadeIn 1.5s ease-in;
+  }
+
+  .animate-slide {
+    animation: slideUp 1.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes slideUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects - SVYASA University{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center text-gradient fw-bold mb-5 animate-slide">🚀 Student & Campus Projects</h1>
+
+  <div class="row g-4">
+    <!-- Project Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow border-0">
+        <img src="{% static 'IMG/4.jpg' %}" class="card-img-top" alt="AI Yoga Assistant">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">🧠 AI-Based Yoga Posture Correction</h5>
+          <p class="card-text">A deep learning project that uses computer vision to guide yoga posture alignment through webcam feedback.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow border-0">
+        <img src="{% static 'IMG/5.jpg' %}" class="card-img-top" alt="IoT Health Tracker">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">📟 IoT-Based Health Monitoring</h5>
+          <p class="card-text">Built by B.Tech students, this wearable system tracks vitals during yoga sessions and sends alerts using cloud services.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow border-0">
+        <img src="{% static 'IMG/6.jpg' %}" class="card-img-top" alt="Stress App">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">📱 Stress Management App</h5>
+          <p class="card-text">An app developed by MCA students that combines guided breathing, motivational quotes, and yoga timers for stress relief.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow border-0">
+        <img src="{% static 'IMG/7.jpg' %}" class="card-img-top" alt="Research Paper">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">📚 Research on Yoga & Immunity</h5>
+          <p class="card-text">Published in peer-reviewed journals, this research project explores how yoga impacts immunity and chronic illnesses.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow border-0">
+        <img src="{% static 'IMG/8.jpg' %}" class="card-img-top" alt="SVYASA Portal">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">🌐 Campus Web Portal</h5>
+          <p class="card-text">BCA & MCA students collaborated to build an internal portal for student profiles, event updates, and academic tracking.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card -->
+    <div class="col-md-4 animate-fade">
+      <div class="card h-100 shadow border-0">
+        <img src="{% static 'IMG/9.jpg' %}" class="card-img-top" alt="Green Campus">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">🌿 Eco-Sustainability Initiative</h5>
+          <p class="card-text">An interdisciplinary project aimed at turning SVYASA into a zero-waste campus through smart bins, composting, and solar energy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #2196f3, #00bcd4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animate-fade {
+    animation: fadeIn 1.5s ease-in;
+  }
+
+  .animate-slide {
+    animation: slideUp 1.3s ease-in-out;
+  }
+
+  .card-title {
+    color: #1a237e;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes slideUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Certifications - SVYASA University{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center fw-bold text-gradient mb-4 animate-slide">🏅 Our Accreditations & Certifications</h1>
+
+  <div class="row justify-content-center mb-5 animate-fade">
+    <div class="col-md-6 text-center">
+      <img src="{% static 'IMG/NAAC_A+.jpeg' %}" alt="NAAC A+ Grade" class="img-fluid rounded shadow-lg" style="max-height: 280px;">
+      <h3 class="mt-3 text-success fw-semibold">NAAC Accredited with A+ Grade</h3>
+      <p class="text-muted">SVYASA has been awarded the prestigious NAAC A+ Grade for its commitment to quality education, research, and value-based learning.</p>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- Certification 1 -->
+    <div class="col-md-4 animate-slide">
+      <div class="card border-0 shadow h-100 text-center p-3">
+        <div class="fs-1 text-primary">🎓</div>
+        <h5 class="fw-bold mt-2">UGC Recognized</h5>
+        <p class="text-muted">Recognized by the University Grants Commission (UGC), SVYASA meets the highest standards in education.</p>
+      </div>
+    </div>
+
+    <!-- Certification 2 -->
+    <div class="col-md-4 animate-slide">
+      <div class="card border-0 shadow h-100 text-center p-3">
+        <div class="fs-1 text-info">📜</div>
+        <h5 class="fw-bold mt-2">ISO Certified</h5>
+        <p class="text-muted">The university is ISO 9001:2015 certified, ensuring quality management systems across departments.</p>
+      </div>
+    </div>
+
+    <!-- Certification 3 -->
+    <div class="col-md-4 animate-slide">
+      <div class="card border-0 shadow h-100 text-center p-3">
+        <div class="fs-1 text-warning">🔬</div>
+        <h5 class="fw-bold mt-2">AICTE Approved</h5>
+        <p class="text-muted">SVYASA’s technical programs like B.Tech, MBA, and MCA are approved by the All India Council for Technical Education (AICTE).</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background-color: #f9fcff;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #0d47a1, #42a5f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animate-slide {
+    animation: slideUp 1.2s ease;
+  }
+
+  .animate-fade {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+{% endblock %}

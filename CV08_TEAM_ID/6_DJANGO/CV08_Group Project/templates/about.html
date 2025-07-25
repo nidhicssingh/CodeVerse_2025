@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - SVYASA University{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center text-gradient mb-4 fw-bold animate-slide">🌿 About SVYASA</h1>
+
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <img src="{% static 'IMG/svyasa_1.jpeg' %}" alt="SVYASA Campus" class="img-fluid rounded-4 shadow-lg animate-fade">
+    </div>
+    <div class="col-md-6 animate-slide-right">
+      <p class="lead text-muted">
+        <strong>Swami Vivekananda Yoga Anusandhana Samsthana (SVYASA)</strong> is more than just a university — it’s a place where yoga, science, and technology come together in a unique and meaningful way.
+        Located in the peaceful surroundings of <strong>SATTVA Global City, Bangalore</strong>, SVYASA stands out for combining the ancient wisdom of yoga with cutting-edge scientific research.
+      </p>
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div class="col-md-12 animate-fade">
+      <h3 class="text-primary fw-bold">🎓 Leadership</h3>
+      <p class="text-muted mt-2">
+        The university is led by <strong>Dr. R. Nagarathna</strong>, an accomplished medical doctor (MBBS, MD), and a Fellow of the Royal College of Physicians (Edinburgh).
+        Her vision ensures that modern healthcare and ancient yoga work hand-in-hand to create a healthier future.
+      </p>
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div class="col-md-12 animate-fade">
+      <h3 class="text-primary fw-bold">📘 Academic Programs</h3>
+      <p class="text-muted">
+        SVYASA offers a wide range of programs:
+        <ul>
+          <li>Bachelor’s, Master’s, Diploma, and Ph.D. programs in <strong>Yoga and Allied Sciences</strong></li>
+          <li>B.Tech in <strong>Computer Science & Engineering</strong>, <strong>AI & Machine Learning</strong>, and <strong>Electronics & Communication</strong></li>
+        </ul>
+        All these programs promote not just technical skills, but a balanced lifestyle through yoga and value-based education.
+      </p>
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div class="col-md-12 animate-slide">
+      <h3 class="text-primary fw-bold">🏥 Arogyadhama - Yoga Therapy</h3>
+      <p class="text-muted">
+        The campus houses <strong>Arogyadhama</strong>, a unique integrative health center offering evidence-based yoga therapy for lifestyle diseases — combining traditional healing with scientific practices.
+      </p>
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div class="col-md-12 animate-slide-right">
+      <h3 class="text-primary fw-bold">🌍 Global Impact & Research</h3>
+      <p class="text-muted">
+        With over <strong>600+ research publications</strong>, global collaborations, online education, and regular international conferences, SVYASA has made a mark in both the academic and wellness domains.
+        The faculty is supportive and experienced, encouraging students to live the values they learn.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background-color: #f8fbff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #0d47a1, #00bcd4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animate-fade { animation: fadeIn 1.5s ease-in-out; }
+  .animate-slide { animation: slideUp 1.5s ease-in-out; }
+  .animate-slide-right { animation: slideRight 1.2s ease-in-out; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideRight {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+</style>
+{% endblock %}

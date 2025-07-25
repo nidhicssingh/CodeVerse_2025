@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Education - SVYASA University{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center mb-5 fw-bold text-gradient animate-slide">🎓 Our Academic Programs</h1>
+
+  <div class="row g-4">
+    <!-- B.Tech -->
+    <div class="col-md-4 animate-fade">
+      <div class="card shadow h-100 border-0 course-card">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">💻 B.Tech in Computer Science</h5>
+          <p class="card-text text-muted">Advanced computer education with a yoga-integrated lifestyle.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BCA -->
+    <div class="col-md-4 animate-fade">
+      <div class="card shadow h-100 border-0 course-card">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">🖥️ BCA - Bachelor of Computer Applications</h5>
+          <p class="card-text text-muted">Application-based IT program with hands-on software skills.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BBA -->
+    <div class="col-md-4 animate-fade">
+      <div class="card shadow h-100 border-0 course-card">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">📊 BBA - Bachelor of Business Administration</h5>
+          <p class="card-text text-muted">Management with ethics rooted in yogic and holistic values.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MBA -->
+    <div class="col-md-4 animate-fade">
+      <div class="card shadow h-100 border-0 course-card">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">🏢 MBA - Master of Business Administration</h5>
+          <p class="card-text text-muted">Leadership in HR, Finance, Healthcare & more with wellness focus.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MCA -->
+    <div class="col-md-4 animate-fade">
+      <div class="card shadow h-100 border-0 course-card">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">🧠 MCA - Master of Computer Applications</h5>
+          <p class="card-text text-muted">Postgraduate program in AI, Data Science & Cloud Computing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- M.Sc. Yoga Therapy -->
+    <div class="col-md-4 animate-fade">
+      <div class="card shadow h-100 border-0 course-card">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">🧘 M.Sc. in Yoga Therapy</h5>
+          <p class="card-text text-muted">Yoga-based healing science blended with modern clinical approaches.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- B.Sc. Yoga -->
+    <div class="col-md-4 animate-fade">
+      <div class="card shadow h-100 border-0 course-card">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">🌿 B.Sc. Yoga</h5>
+          <p class="card-text text-muted">Deep dive into yogic sciences, anatomy, psychology & philosophy.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diploma Programs -->
+    <div class="col-md-4 animate-fade">
+      <div class="card shadow h-100 border-0 course-card">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">📘 PG Diploma in Yoga</h5>
+          <p class="card-text text-muted">1-year certified course for health professionals & therapists.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate Course -->
+    <div class="col-md-4 animate-fade">
+      <div class="card shadow h-100 border-0 course-card">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">📝 Certificate Courses in Yoga & Wellness</h5>
+          <p class="card-text text-muted">Short-term intensive programs for teachers, trainers & wellness seekers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background: #f0f6ff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #1976d2, #42a5f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .course-card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    background-color: #e3f2fd;
+  }
+
+  .animate-fade {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .animate-slide {
+    animation: slideUp 1.2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes slideUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - SVYASA University{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+
+  <!-- Hero Banner -->
+  <section class="text-center py-5 px-4 hero-section rounded-4 shadow-lg">
+    <h1 class="display-4 fw-bold text-white animate-slide">Welcome to SVYASA University</h1>
+    <p class="lead text-light mt-3 animate-fade">World's Leading Yoga University | Bangalore 🧘‍♂️📚</p>
+    <a href="{% static 'files/college_brochure.pdf' %}" class="btn btn-light btn-lg mt-4 animate-bounce" download>
+      📄 Download Brochure
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section class="row align-items-center my-5 about-section">
+    <div class="col-md-6">
+      <img src="{% static 'IMG/svyasa_1.jpeg' %}" class="img-fluid rounded-4 shadow animate-fade" alt="Campus">
+    </div>
+    <div class="col-md-6 p-4 animate-slide-right">
+      <h2 class="text-primary fw-bold">About SVYASA</h2>
+      <p class="text-muted mt-3">
+        SVYASA is a Deemed University in Yoga Science, located in Bangalore. Our mission is to combine the best of
+        ancient traditions with modern scientific research. With lush green campuses and highly rated faculty, we offer
+        programs in Yoga, Naturopathy, Management, and more.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs Offered -->
+  <section class="my-5">
+    <h2 class="text-center text-gradient mb-4 animate-slide">📘 Popular Programs</h2>
+    <div class="row g-4">
+      {% comment %} Add B.Tech, BCA, BBA, MCA, MBA, Yoga {% endcomment %}
+      {% for course in courses %}
+      <div class="col-md-4 animate-fade">
+        <div class="card h-100 shadow border-0 course-card">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold emoji-title">{{ course.emoji }} {{ course.name }}</h5>
+            <p class="card-text text-muted">{{ course.desc }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Image Carousel -->
+  <section class="my-5">
+    <h2 class="text-center text-gradient mb-4 animate-slide">🏞️ Campus Life</h2>
+    <div id="carouselSvyasa" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'IMG/Svyasa_2.jpeg' %}" class="d-block w-100" alt="Campus 1">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'IMG/Svyasa_3.jpeg' %}" class="d-block w-100" alt="Campus 2">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'IMG/Svyasa_4.jpeg' %}" class="d-block w-100" alt="Campus 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselSvyasa" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselSvyasa" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+      </button>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background: #f4f8fb;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #2196f3, #21cbf3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .course-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #1976d2;
+    background: #ffffff;
+  }
+
+  .course-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .emoji-title {
+    font-size: 1.3rem;
+    color: #0d47a1;
+  }
+
+  .carousel-item img {
+    height: 450px;
+    object-fit: cover;
+  }
+
+  /* Animations */
+  .animate-fade {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .animate-slide {
+    animation: slideUp 1.5s ease-in-out;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 1.2s ease-in-out;
+  }
+
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes slideUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  @keyframes slideRight {
+    from {opacity: 0; transform: translateX(-40px);}
+    to {opacity: 1; transform: translateX(0);}
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0);}
+    50% { transform: translateY(-5px);}
+  }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // Courses for dynamic rendering
+  const courseData = [
+    { emoji: "💻", name: "B.Tech (CSE)", desc: "Technical foundation in Computer Science & Engineering." },
+    { emoji: "🧠", name: "BCA", desc: "Bachelor in Computer Applications with modern tech skills." },
+    { emoji: "📊", name: "BBA", desc: "Bachelor of Business Administration with yoga-integrated modules." },
+    { emoji: "📈", name: "MBA", desc: "Advanced business strategies with wellness management." },
+    { emoji: "🖥️", name: "MCA", desc: "Masters in Computer Applications with project exposure." },
+    { emoji: "🧘‍♀️", name: "M.Sc. Yoga", desc: "Deep dive into therapy, physiology & research in yoga." }
+  ];
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const row = document.querySelectorAll('.row.g-4')[0];
+    row.innerHTML = '';
+    courseData.forEach(course => {
+      row.innerHTML += `
+      <div class="col-md-4 animate-fade">
+        <div class="card h-100 shadow border-0 course-card">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold emoji-title">${course.emoji} ${course.name}</h5>
+            <p class="card-text text-muted">${course.desc}</p>
+          </div>
+        </div>
+      </div>`;
+    });
+  });
+</script>
+{% endblock %}

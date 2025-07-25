@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - SVYASA{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center text-gradient fw-bold mb-4 animate-slide">📬 Contact SVYASA</h1>
+  <p class="text-center text-muted mb-5">We’d love to hear from you. Reach out to us via the form or through our official contacts below.</p>
+
+  <div class="row g-5">
+    <!-- Contact Form -->
+    <div class="col-md-7 animate-fade">
+      <div class="card shadow border-0 p-4">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message 🚀</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="col-md-5 animate-slide-right">
+      <div class="p-4 bg-light rounded shadow">
+        <h4 class="fw-bold mb-3">📞 Contact Info</h4>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <i class="bi bi-person-circle me-2 text-primary"></i><strong>Name:</strong> SVYASA University
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-envelope-fill me-2 text-primary"></i><strong>Email:</strong> svyasa@example.com
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-telephone-fill me-2 text-primary"></i><strong>Phone:</strong> +91 9***14
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-geo-alt-fill me-2 text-primary"></i><strong>Location:</strong> Bengaluru, India
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-linkedin me-2 text-primary"></i><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a>
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-github me-2 text-primary"></i><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animate-fade {
+    animation: fadeIn 1.4s ease;
+  }
+
+  .animate-slide {
+    animation: slideUp 1.2s ease-in-out;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 1.2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slideRight {
+    from { transform: translateX(-30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+</style>
+{% endblock %}
