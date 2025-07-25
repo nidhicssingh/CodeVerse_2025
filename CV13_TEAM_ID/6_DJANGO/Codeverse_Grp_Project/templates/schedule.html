@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4">Event Wise Schedule - Hands-on Python</h1>
+    <p>Event Coordinators: Ms. Nidhi Singh, Ms. Banesori Ayekpam</p> [cite: 3]
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Date and Day</th>
+                    <th>Session Time</th>
+                    <th>Section</th>
+                    <th>Topics/Outcome</th>
+                    <th>Expert</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in schedule_data %}
+                <tr>
+                    <td>{{ item.date_day|linebreaksbr }}</td>
+                    <td>{{ item.time|linebreaksbr }}</td>
+                    <td>{{ item.section|linebreaksbr }}</td>
+                    <td>{{ item.topics_outcome|linebreaksbr }}</td>
+                    <td>{{ item.expert|linebreaksbr }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

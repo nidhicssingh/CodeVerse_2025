@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Codeverse_2025{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About CODEVERSE_2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #f4f8fb;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .header {
+      background-color: #0d1117;
+      color: #00ffd5;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .section-title {
+      color: #0d1117;
+      margin-top: 2rem;
+    }
+    .feature-icon {
+      font-size: 1.8rem;
+      color: #00b894;
+    }
+    .highlight {
+      background-color: #e3f9f5;
+      padding: 1rem;
+      border-left: 5px solid #00b894;
+      margin-top: 1rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>CODEVERSE_2025</h1>
+    <p class="lead">Innovate, Build & Collaborate with Python</p>
+  </div>
+
+  <div class="container py-4">
+    
+    <!-- Overview -->
+    <section>
+      <h3 class="section-title"> What is CODEVERSE_2025?</h3>
+      <p>CODEVERSE_2025 is a hands-on coding initiative focused on Python programming, GUI application development, creative graphics, and teamwork. Through this program, we explored popular Python libraries like <strong>Tkinter</strong>, <strong>Pygame</strong>, and <strong>Turtle</strong> to build real-world projects and applications.</p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h3 class="section-title"> Skills Gained</h3>
+      <ul>
+        <li>Python programming fundamentals and OOP</li>
+        <li>Graphical User Interface (GUI) development with Tkinter</li>
+        <li>2D Game Development with Pygame</li>
+        <li>Creative drawing using the Turtle library</li>
+        <li>Teamwork and project collaboration using GitHub</li>
+        <li>API Integration for automation tasks</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h3 class="section-title"> Key Projects</h3>
+      <div class="highlight">
+        <strong>1. Team Calculator</strong> - GUI calculator with extended features like history and themes.<br>
+        <strong>2. Quiz App</strong> - An interactive quiz with timer and score tracking.<br>
+        <strong>3. Spotify Song Search</strong> - Search and play songs via API.<br>
+        <strong>4. WhatsApp Message Generator</strong> - Send automated messages using PyWhatKit.<br>
+        <strong>5. To-Do List GUI</strong> - Task manager with save/load functionality.<br>
+        <strong>6. Social Media GUI App</strong>- Like & post system using Tkinter.<br>
+        <strong>7. Pygame-Based Game</strong> - Fun 2D game with scoring logic.<br>
+        <strong>8. Turtle Graphics Art</strong> - Patterns and drawings using Python Turtle.
+      </div>
+    </section>
+
+    <!-- Certification -->
+    <section>
+      <h3 class="section-title"> Certification</h3>
+      <p>Upon successful completion of CODEVERSE_2025, I received a certificate for demonstrating proficiency in Python application development and collaborative coding. This certification validates my skills in building GUI apps, games, and automation tools using Python.</p>
+    </section>
+
+    <!-- GitHub -->
+    <section>
+      <h3 class="section-title"> Project Repository</h3>
+      <a href="https://github.com/nidhicssingh/CodeVerse_2025.git" class="btn btn-dark" target="_blank">
+        <i class="fab fa-github"></i> View GitHub Projects
+      </a>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-3 mt-4">
+    &copy; 2025 Svyasa | CODEVERSE_2025 Showcase
+  </footer>
+
+</body>
+</html>
+
+{% endblock %}

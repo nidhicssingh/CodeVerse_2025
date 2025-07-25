@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Codeverse Highlights{% endblock title %}
+
+{% block content %} {# Using 'content' block as established in base.html #}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Codeverse Highlights</h1>
+
+    <div id="codeverseCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#codeverseCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#codeverseCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#codeverseCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'IMG/hig3.jpeg' %}" class="d-block w-100" alt="Codeverse Highlight 1" style="max-height: 500px; object-fit: contain;">
+                <div class="carousel-caption d-none d-md-block bg-dark opacity-75 rounded p-2">
+                    <h5>Hands-on Sessions</h5>
+                    <p>Participants engaging in practical coding exercises.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'IMG/high3.jpeg' %}" class="d-block w-100" alt="Codeverse Highlight 2" style="max-height: 500px; object-fit: contain;">
+                <div class="carousel-caption d-none d-md-block bg-dark opacity-75 rounded p-2">
+                    <h5>Expert Guidance</h5>
+                    <p>Mentors providing insights and support to students.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'IMG/high2.jpeg' %}" class="d-block w-100" alt="Codeverse Highlight 3" style="max-height: 500px; object-fit: contain;">
+                <div class="carousel-caption d-none d-md-block bg-dark opacity-75 rounded p-2">
+                    <h5>Team Projects</h5>
+                    <p>Collaborative efforts on exciting coding challenges.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#codeverseCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#codeverseCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="text-center mt-5 mb-5">
+        <p class="lead">Explore the vibrant moments from the Codeverse event!</p>
+    </div>
+</div>
+{% endblock content %}
