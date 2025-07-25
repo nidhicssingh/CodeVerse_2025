@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Education | V. Puneetha{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/education.css' %}">
+<style>
+.education-section {
+  padding: 80px 20px;
+  background: #f4f9fb;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.04);
+}
+
+.education-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.timeline-item {
+  border-left: 5px solid #3498db;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+}
+
+.timeline-item strong {
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+.year {
+  color: #16a085;
+  font-size: 0.95rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="education-section container mt-5">
+  <h2>Education</h2>
+
+  <div class="timeline-item">
+    <strong>Bachelor of Technology (CSE)</strong><br>
+    SVYASA Deemed to be University
+    <span class="year">Graduation: July 2025 | CGPA: 8.50</span>
+  </div>
+
+  <p class="mt-4">
+    I am currently pursuing my Bachelor of Technology (B.Tech) in Computer Science and Engineering at <strong>S-Vyasa Deemed to be University</strong>. This academic journey has shaped my interest in technology, especially in building innovative solutions and solving real-world problems.
+  </p>
+</div>
+{% endblock %}

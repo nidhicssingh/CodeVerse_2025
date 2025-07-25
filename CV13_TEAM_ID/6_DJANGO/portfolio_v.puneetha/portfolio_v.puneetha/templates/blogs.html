@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blogs | V. Puneetha{% endblock %}
+
+{% block extra_head %}
+<style>
+    .blogs-page {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        background: #f9f9fb;
+    }
+
+    .blogs-heading {
+        text-align: center;
+        font-size: 2.2rem;
+        color: #3a3a3a;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .blog-card {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-card h2 {
+        font-size: 1.4rem;
+        color: #333;
+        margin-bottom: 0.4rem;
+    }
+
+    .blog-date {
+        font-size: 0.85rem;
+        color: #888;
+        margin-bottom: 1rem;
+    }
+
+    .blog-summary {
+        font-size: 1rem;
+        color: #444;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        background: #ff6b6b;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+
+    .read-more:hover {
+        background: #e84343;
+    }
+</style>
+{% endblock %}
+
+{% block header %}
+<h1 class="blogs-heading">My Personal Tech Blogs</h1>
+{% endblock %}
+
+{% block content %}
+<div class="blogs-page">
+
+    <div class="blog-card">
+        <h2>🌱 My Journey from Biology to Computer Science</h2>
+        <p class="blog-date">July 20, 2025</p>
+        <p class="blog-summary">
+            Transitioning from Biology to Computer Science wasn't easy, but it was worth it.
+            In this blog, I share the story of how curiosity turned into passion, and how I embraced
+            the world of logic, code, and creativity. From DNA sequences to Python scripts—
+            here's how I found my true calling.
+        </p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="blog-card">
+        <h2>⚙️ Why I Chose Django for My Portfolio</h2>
+        <p class="blog-date">July 18, 2025</p>
+        <p class="blog-summary">
+            While exploring many frameworks, Django stood out for its structure, speed, and built-in features.
+            Building this portfolio gave me a deeper appreciation for reusable templates,
+            routing, and Django admin. This post covers what made Django the best choice for me.
+        </p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="blog-card">
+        <h2>💻 How I Fell in Love with Programming</h2>
+        <p class="blog-date">July 15, 2025</p>
+        <p class="blog-summary">
+            I still remember the thrill of printing my first “Hello World.” Since then, every small program,
+            every error, and every solution has shaped my path. In this post, I talk about the emotional and
+            logical journey that led me to fall in love with code.
+        </p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="blog-card">
+        <h2>🧠 5 Things I Wish I Knew Before Learning React</h2>
+        <p class="blog-date">July 12, 2025</p>
+        <p class="blog-summary">
+            React is powerful—but it can be overwhelming. If you're new to it,
+            this post lists 5 crucial tips that would've saved me hours of confusion.
+            Hooks, components, and JSX explained through real examples.
+        </p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="blog-card">
+        <h2>🚀 My Favorite Projects That Shaped Me</h2>
+        <p class="blog-date">July 10, 2025</p>
+        <p class="blog-summary">
+            Every project teaches something new—some taught me design, some debugging,
+            and some patience. This blog shares the top 5 projects that helped me grow
+            technically and creatively.
+        </p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+
+</div>
+{% endblock %}

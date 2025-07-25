@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services | V. Puneetha{% endblock %}
+
+{% block content %}
+<div class="services-section container mt-5">
+  <h2 class="mb-4 text-center">What I Can Do for You</h2>
+  <p class="text-center">
+    As a passionate and creative developer, I offer a variety of services that help bring your digital ideas to life.
+    Whether you're an individual, student, or startup, I can assist in building clean, modern, and professional assets.
+  </p>
+
+  <div class="row mt-5">
+
+    <div class="col-md-6 mb-4">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">🌐 Website Development</h5>
+          <p class="card-text">
+            Build responsive and clean websites using HTML, CSS, JavaScript, Django, and React.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">🎨 UI/UX Design</h5>
+          <p class="card-text">
+            Craft intuitive user interfaces with a strong focus on user experience and visual appeal.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">📄 Resume Design</h5>
+          <p class="card-text">
+            Design modern, impactful resumes tailored for tech and creative roles.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">👩‍💻 Portfolio Building</h5>
+          <p class="card-text">
+            Create a stunning personal portfolio to showcase your skills, projects, and personality.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="text-center mt-4">
+    Let's collaborate to bring your ideas to life with creativity and precision.
+  </p>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.services-section {
+  padding: 80px 20px;
+  background: #fefefe;
+}
+
+.service-card {
+  background: #ffffff;
+  border-left: 5px solid #16a085;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-card:hover {
+  background-color: #eafaf1;
+  transform: translateY(-5px);
+}
+
+.service-card h5 {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #555;
+  font-size: 1rem;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects | V. Puneetha{% endblock %}
+
+{% block extra_css %}
+<style>
+/* Container Styling */
+.projects-section {
+  padding: 80px 20px;
+  background: #f9fcff;
+}
+
+/* Section Title */
+.projects-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 2.5rem;
+}
+
+/* Project Card */
+.project-card {
+  margin-bottom: 30px;
+  border-left: 5px solid #1abc9c;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background-color: #e8f8f5;
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.project-card .card-body {
+  padding: 1rem;
+}
+
+.project-card h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.project-card .btn {
+  background-color: #1abc9c;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background-color: #16a085;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container projects-section">
+  <h2>My Projects</h2>
+  <div class="row">
+
+    <!-- Static Project Cards -->
+    <div class="col-md-4">
+      <div class="card project-card">
+        <img src="https://sdmntpreastus2.oaiusercontent.com/files/00000000-8484-61f6-bfc3-fa0689a40ab4/raw?se=2025-07-25T05%3A03%3A53Z&sp=r&sv=2024-08-04&sr=b&scid=462eb439-44d6-5583-a20c-8f64ea7f7be2&skoid=02b7f7b5-29f8-416a-aeb6-99464748559d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-24T22%3A16%3A49Z&ske=2025-07-25T22%3A16%3A49Z&sks=b&skv=2024-08-04&sig=h66tkOBtVSXWUn3vfe/OFceHQRmFjxTYIskKEjye0WA%3D" class="card-img-top" alt="Command-line OS">
+        <div class="card-body">
+          <h5 class="card-title">Basic Command-line OS</h5>
+          <p class="card-text">
+            A simple operating system with a command-line interface, demonstrating core OS concepts and basic shell commands.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card project-card">
+        <img src="https://github.com/nidhicssingh/CodeVerse_2025/blob/main/CV13_TEAM_ID/4_PYGAME/pygame/typingGame_v.puneetha.png.png?raw=true" class="card-img-top" alt="Typing Speed Game">
+        <div class="card-body">
+          <h5 class="card-title">Typing Speed Game</h5>
+          <p class="card-text">
+            Built with Python and Pygame to help users improve their typing speed in a fun and interactive way.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card project-card">
+        <img src="https://sdmntpreastus2.oaiusercontent.com/files/00000000-8484-61f6-bfc3-fa0689a40ab4/raw?se=2025-07-25T05%3A03%3A53Z&sp=r&sv=2024-08-04&sr=b&scid=462eb439-44d6-5583-a20c-8f64ea7f7be2&skoid=02b7f7b5-29f8-416a-aeb6-99464748559d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-24T22%3A16%3A49Z&ske=2025-07-25T22%3A16%3A49Z&sks=b&skv=2024-08-04&sig=h66tkOBtVSXWUn3vfe/OFceHQRmFjxTYIskKEjye0WA%3D" class="card-img-top" alt="E-Commerce Front-End">
+        <div class="card-body">
+          <h5 class="card-title">E-Commerce Front-End</h5>
+          <p class="card-text">
+            Developed with React including product listing, cart management, search, and checkout flow.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card project-card">
+        <img src="https://sdmntpreastus2.oaiusercontent.com/files/00000000-7630-61f6-b43c-cf36fc959c20/raw?se=2025-07-25T05%3A17%3A12Z&sp=r&sv=2024-08-04&sr=b&scid=9203da2c-7332-54cf-883b-5d5bb7dcc0db&skoid=02b7f7b5-29f8-416a-aeb6-99464748559d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-24T22%3A18%3A09Z&ske=2025-07-25T22%3A18%3A09Z&sks=b&skv=2024-08-04&sig=V%2B6L5rZXVUJ5wqFGgdfU7XYs%2B9tL5miUa7XjUtDRvTQ%3D" class="card-img-top" alt="Portfolio Website">
+        <div class="card-body">
+          <h5 class="card-title">Portfolio Website</h5>
+          <p class="card-text">
+            A full-stack Django application showcasing my resume, certifications, blog posts, and contact form.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic Project Cards -->
+    {% for project in projects %}
+      <div class="col-md-4">
+        <div class="card project-card">
+          {% if project.image %}
+            <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+          {% else %}
+            <img src="{% static 'default_project.jpg' %}" class="card-img-top" alt="Default Project Image">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description|truncatewords:25 }}</p>
+            {% if project.link %}
+              <a href="{{ project.link }}" class="btn" target="_blank">View Project</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+          Name of the project is RFOS
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Reserved for future scripts -->
+{% endblock %}
