@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Certifications | V. Puneetha{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/certification.css' %}">
+<style>
+.certifications-section {
+  background: #fefefe;
+  padding: 60px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.06);
+}
+
+.certifications-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  color: #34495e;
+  background-color: #ffffff;
+  border: 1px solid #dcdde1;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #e3f2fd;
+  color: #1a237e;
+  font-weight: 500;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="certifications-section container mt-5">
+    <h2>Certifications</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Python for Everybody – Coursera</li>
+        <li class="list-group-item">Web Development Bootcamp – Udemy</li>
+        <li class="list-group-item">Git and GitHub – Great Learning</li>
+    </ul>
+</div>
+{% endblock %}

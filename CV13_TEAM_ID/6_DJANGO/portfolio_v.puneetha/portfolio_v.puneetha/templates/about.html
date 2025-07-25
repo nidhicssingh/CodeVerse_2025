@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block header %}
+<h1>About Me</h1>
+{% endblock %}
+
+{% block content %}
+<div class="about">
+    <div class="about-container">
+        <div class="about-info">
+            <h2>V. Puneetha</h2>
+            <p>
+                I am V. Puneetha, a dedicated B.Tech student at S-Vyasa Deemed to be University. I’m passionate about technology and enjoy building practical solutions through creative problem-solving.
+            </p>
+
+            <h3>Certificates</h3>
+            <ul>
+                <li>Python Programming – Fundamentals</li>
+                <li>JavaScript Essentials</li>
+                <li>CSS for Web Design</li>
+                <li>HTML Basics</li>
+                <li>Object-Oriented Programming in C++</li>
+            </ul>
+
+            <h3>Project</h3>
+            <ul>
+                <li>Built a Basic Command-line Operating System to understand core OS concepts and improve my system-level programming skills.</li>
+            </ul>
+
+            <h3>Languages</h3>
+            <ul>
+                <li>Kannada – Fluent</li>
+                <li>English – Fluent</li>
+                <li>Hindi – Fluent</li>
+                <li>Telugu – Can understand</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.about {
+    padding: 60px 30px;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.about-info h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.about-info p {
+    font-size: 1.05rem;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-info h3 {
+    margin-top: 30px;
+    font-size: 1.4rem;
+    color: #1a237e;
+}
+
+.about-info ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.about-info li {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+</style>
+{% endblock %}
+

@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} services {% endblock title%}
+
+{% block extra_css %}
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s, transform 0.2s;
+  }
+  .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    transform: translateY(-6px) scale(1.03);
+  }
+  .service-title {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+  }
+  .service-desc {
+    font-size: 1.08rem;
+    color: #334155;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  }
+  .service-platforms {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  .service-platforms-list {
+    display: inline-block;
+    background: rgba(255,255,255,0.6);
+    border-radius: 1rem;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(31,38,135,0.08);
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  }
+  .service-platforms-list a {
+    color: #6366f1;
+    font-weight: 600;
+    margin: 0 0.7rem;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .service-platforms-list a:hover {
+    color: #06b6d4;
+    text-decoration: underline;
+  }
+  .inactive-note {
+    color: #ef4444;
+    font-size: 1rem;
+    margin-top: 0.7rem;
+    font-style: italic;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4 service-title"><i class="fas fa-cogs"></i> My Services</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="glass-card h-100">
+        <div class="card-body text-center">
+          <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+          <h5 class="card-title service-title">Web Development</h5>
+          <p class="card-text service-desc">Building responsive and modern web applications using Django, React, and more.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100">
+        <div class="card-body text-center">
+          <i class="fas fa-database fa-3x mb-3 text-success"></i>
+          <h5 class="card-title service-title">Database Design</h5>
+          <p class="card-text service-desc">Designing efficient, scalable databases and integrating them with web apps.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100">
+        <div class="card-body text-center">
+          <i class="fas fa-cloud fa-3x mb-3 text-info"></i>
+          <h5 class="card-title service-title">Cloud Solutions</h5>
+          <p class="card-text service-desc">Deploying and managing cloud-based solutions for high availability and performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="service-platforms">
+    <div class="service-platforms-list">
+      Services previously provided on:
+      <a href="https://www.fiverr.com/" target="_blank">Fiverr</a> |
+      <a href="https://www.freelancer.com/" target="_blank">Freelancer.com</a> |
+      <a href="https://radiantfruit.com/" target="_blank">radiantfruit.com</a>
+    </div>
+    <div class="inactive-note">
+      <i class="fas fa-info-circle"></i> Currently not active on these platforms.
+    </div>
+  </div>
+</div>
+{% endblock %}

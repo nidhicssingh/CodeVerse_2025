@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Skills{% endblock %}
+
+{% block extra_css %}
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s, transform 0.2s;
+    padding: 2rem 1.5rem;
+  }
+  .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    transform: translateY(-6px) scale(1.03);
+  }
+  .skills-title {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+  }
+  .progress {
+    height: 1.5rem;
+    border-radius: 1rem;
+    background: rgba(99, 102, 241, 0.08);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
+  }
+  .progress-bar {
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 1rem;
+  }
+  .skill-badge {
+    display: inline-block;
+    margin: 0.3rem 0.5rem 0.3rem 0;
+    padding: 0.5rem 1.1rem;
+    border-radius: 1rem;
+    background: #f0fdfa;
+    color: #6366f1;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
+  }
+  .skill-icon {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+    vertical-align: middle;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4 skills-title"><i class="fas fa-tools"></i> My Skills</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="glass-card mb-4">
+        <h5><i class="fab fa-python text-warning skill-icon"></i> Python</h5>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;">90%</div>
+        </div>
+        <h5><i class="fab fa-js-square text-warning skill-icon"></i> JavaScript</h5>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 80%;">80%</div>
+        </div>
+        <h5><i class="fab fa-html5 text-danger skill-icon"></i> HTML5</h5>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;">85%</div>
+        </div>
+        <h5><i class="fab fa-css3-alt text-primary skill-icon"></i> CSS3</h5>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;">75%</div>
+        </div>
+        <h5><i class="fas fa-code text-secondary skill-icon"></i> C++</h5>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;">70%</div>
+        </div>
+        <h5><i class="fas fa-video text-danger skill-icon"></i> Video Editing</h5>
+        <span class="skill-badge"><i class="fas fa-star"></i> Adobe Premiere Pro</span>
+        <span class="skill-badge"><i class="fas fa-star"></i> DaVinci Resolve</span>
+        <h5 class="mt-3"><i class="fas fa-cube text-success skill-icon"></i> 3D Modelling</h5>
+        <span class="skill-badge"><i class="fas fa-star"></i> Blender</span>
+        <h5 class="mt-3"><i class="fas fa-image text-info skill-icon"></i> Photo-Editing</h5>
+        <span class="skill-badge"><i class="fas fa-star"></i> Adobe Photoshop</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

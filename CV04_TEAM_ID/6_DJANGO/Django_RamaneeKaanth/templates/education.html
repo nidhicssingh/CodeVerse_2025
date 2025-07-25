@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Education{% endblock %}
+
+{% block extra_css %}
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s, transform 0.2s;
+    padding: 2rem 1.5rem;
+  }
+  .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    transform: translateY(-6px) scale(1.03);
+  }
+  .edu-title {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+  }
+  .timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+  }
+  .timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #0d6efd;
+    transform: translateX(-50%);
+  }
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+  }
+  @media (max-width: 767px) {
+    .timeline:before { left: 8px; }
+    .timeline-item { width: 100%; left: 0 !important; text-align: left; padding: 20px 20px; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4 edu-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="glass-card">
+        <ul class="timeline">
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">S-Vyasa Deemed to be University</h5>
+            <p class="text-muted mb-2">Currently Studying</p>
+            <p>Pursuing undergraduate studies with a focus on holistic education and research.</p>
+          </li>
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">Certification in Viscom (Image Institute)</h5>
+            <p class="text-muted mb-2">Attempted, Dropped</p>
+            <p>Started a certification in Visual Communication at Image Institute but did not complete.</p>
+          </li>
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">Sri Seshaas International Public School</h5>
+            <p class="text-muted mb-2">Schooling Completed</p>
+            <p>Completed school education with a strong academic record and extracurricular participation.</p>
+          </li>
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">Python: Fundamentals to Intermediate</h5>
+            <p class="text-muted mb-2">Completed</p>
+            <p>Covered core Python programming concepts, data structures, and problem-solving.</p>
+          </li>
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">Blender Basics</h5>
+            <p class="text-muted mb-2">Completed</p>
+            <p>Learned the essentials of 3D modelling, rendering, and animation in Blender.</p>
+          </li>
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">AWS Basics</h5>
+            <p class="text-muted mb-2">Completed</p>
+            <p>Gained foundational knowledge of Amazon Web Services and cloud computing.</p>
+          </li>
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">Codeverse (Planned)</h5>
+            <p class="text-muted mb-2">Future</p>
+            <p>Plan to complete Codeverse for advanced coding and development skills.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

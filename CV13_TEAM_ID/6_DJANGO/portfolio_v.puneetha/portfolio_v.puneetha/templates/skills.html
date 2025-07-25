@@ -1,0 +1,87 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills | V. Puneetha{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/skills.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="skills-section container mt-5">
+  <h1 class="text-center mb-4">Skills</h1>
+
+  <!-- Language Skills -->
+  <section class="language-skills mb-5">
+    <h2 class="mb-3">Language Skills</h2>
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Kannada:</strong> Fluent communication</li>
+      <li class="list-group-item"><strong>English:</strong> Fluent communication</li>
+      <li class="list-group-item"><strong>Hindi:</strong> Fluent communication</li>
+      <li class="list-group-item"><strong>Telugu:</strong> Can understand well</li>
+    </ul>
+  </section>
+
+  <!-- Technical Skills Grid -->
+  <section class="technical-skills">
+    <h2 class="mb-4">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Python</div>
+      <div class="card">C++</div>
+      <div class="card">React</div>
+      <div class="card">Django</div>
+      <div class="card">Git & GitHub</div>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.skills-section {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #ffffff, #e6f7ff);
+}
+
+.skills-section h1, .skills-section h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.language-skills ul {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 15px;
+}
+
+.skills-grid .card {
+  background: #ffffff;
+  border: 2px solid #3498db20;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+
+.skills-grid .card:hover {
+  background: #f0faff;
+  transform: translateY(-5px);
+}
+</style>
+{% endblock %}

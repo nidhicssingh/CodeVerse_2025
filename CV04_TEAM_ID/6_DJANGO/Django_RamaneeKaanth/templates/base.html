@@ -1,0 +1,110 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Ramanee Kaanth's Portfolio{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% block extra_css %}{% endblock %}
+    <style>
+      body {
+        background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+        min-height: 100vh;
+        font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      }
+      .navbar {
+        background: rgba(30, 41, 59, 0.85) !important;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 0 0 1.5rem 1.5rem;
+        box-shadow: 0 4px 24px rgba(31, 38, 135, 0.10);
+      }
+      .navbar-profile-pic {
+        border: 2px solid #6366f1;
+        box-shadow: 0 2px 8px rgba(99, 102, 241, 0.10);
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      .navbar-profile-pic:hover {
+        border-color: #06b6d4;
+        box-shadow: 0 4px 16px rgba(6, 182, 212, 0.15);
+      }
+      .nav-link {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: color 0.2s;
+      }
+      .nav-link.active, .nav-link:focus, .nav-link:hover {
+        color: #6366f1 !important;
+      }
+      .btn-outline-success {
+        border-radius: 2rem;
+        border-width: 2px;
+        font-weight: 500;
+        transition: background 0.2s, color 0.2s;
+      }
+      .btn-outline-success:hover {
+        background: #6366f1;
+        color: #fff;
+        border-color: #6366f1;
+      }
+      footer.bg-dark {
+        background: rgba(30, 41, 59, 0.85) !important;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 1.5rem 1.5rem 0 0;
+        box-shadow: 0 -4px 24px rgba(31, 38, 135, 0.10);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'IMG/RAMANEEKAANTH.jpg' %}" alt="Profile" class="navbar-profile-pic" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'education' %}">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'certification' %}">Certification</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'skills' %}">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Research Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'blogs' %}">Blogs</a></li>
+          </ul>
+
+          <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item me-3"><a class="nav-link text-white" href="https://github.com/RamaneeKaanthRS" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+            <li class="nav-item me-3"><a class="nav-link text-white" href="https://linkedin.com/in/ramaneekaanthrs" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="https://www.hackerrank.com/ramaneekaanthrs" target="_blank"><i class="fab fa-hackerrank fa-lg"></i></a></li>
+          </ul>
+           <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+  <p class="mb-1">&copy; 2025 Ramanee Kaanth. All rights reserved.</p>
+  <p class="mb-2">📧 Ramanee Kaanth@example.com | 📱 +91-0000000000</p>
+   </footer>
+ </body>
+</html>

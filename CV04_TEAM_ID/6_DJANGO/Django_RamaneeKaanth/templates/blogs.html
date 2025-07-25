@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}blog{% endblock %}
+
+{% block extra_css %}
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s, transform 0.2s;
+  }
+  .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    transform: translateY(-6px) scale(1.03);
+  }
+  .blog-title {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+  }
+  .blog-desc {
+    font-size: 1.08rem;
+    color: #334155;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  }
+  .btn-modern {
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.10);
+  }
+  .btn-modern.btn-outline-primary:hover {
+    background: #6366f1;
+    color: #fff;
+    border-color: #6366f1;
+  }
+  .btn-modern.btn-outline-success:hover {
+    background: #06b6d4;
+    color: #fff;
+    border-color: #06b6d4;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4 blog-title"><i class="fas fa-blog"></i> My Blogs</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="glass-card h-100 p-3">
+        <div class="card-body">
+          <h5 class="card-title blog-title">How to Build a Django Portfolio</h5>
+          <p class="card-text blog-desc">A step-by-step guide to creating a personal portfolio website using Django and Bootstrap.</p>
+          <a href="#" class="btn btn-outline-primary btn-modern">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100 p-3">
+        <div class="card-body">
+          <h5 class="card-title blog-title">Top 5 Python Libraries for Data Science</h5>
+          <p class="card-text blog-desc">Explore the most popular Python libraries that every data scientist should know.</p>
+          <a href="#" class="btn btn-outline-success btn-modern">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

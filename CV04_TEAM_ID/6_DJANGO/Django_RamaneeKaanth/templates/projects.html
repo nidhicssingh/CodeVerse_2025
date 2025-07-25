@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block extra_css %}
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s, transform 0.2s;
+  }
+  .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    transform: translateY(-6px) scale(1.03);
+  }
+  .project-title {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+  }
+  .project-desc {
+    font-size: 1.08rem;
+    color: #334155;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  }
+  .card-img-top {
+    border-radius: 1.5rem 1.5rem 0 0;
+    object-fit: cover;
+    height: 220px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4 project-title"><i class="fas fa-flask"></i> Research Projects</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="glass-card h-100">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&auto=format&fit=crop&q=60" class="card-img-top" alt="Project 1">
+        <div class="card-body">
+          <h5 class="card-title project-title">AI-Powered Chatbot</h5>
+          <p class="card-text project-desc">Developed a smart chatbot using NLP and machine learning to automate customer support for a fintech company.</p>
+          <span class="badge bg-primary">Python</span>
+          <span class="badge bg-success">NLP</span>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop&q=60" class="card-img-top" alt="Project 2">
+        <div class="card-body">
+          <h5 class="card-title project-title">Portfolio Website</h5>
+          <p class="card-text project-desc">Designed and deployed a personal portfolio website with Django, featuring interactive sections and a blog.</p>
+          <span class="badge bg-primary">Django</span>
+          <span class="badge bg-info">Bootstrap</span>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&auto=format&fit=crop&q=60" class="card-img-top" alt="Command-line OS">
+        <div class="card-body">
+          <h5 class="card-title project-title">Command-line OS</h5>
+          <p class="card-text project-desc">Built a custom command-line operating system interface in Python, supporting basic file operations and user commands.</p>
+          <span class="badge bg-dark">Python</span>
+          <span class="badge bg-secondary">CLI</span>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=500&auto=format&fit=crop&q=60" class="card-img-top" alt="Website Hosting">
+        <div class="card-body">
+          <h5 class="card-title project-title">Website Hosting</h5>
+          <p class="card-text project-desc">Deployed and managed a website using modern hosting solutions, ensuring uptime and scalability.</p>
+          <span class="badge bg-primary">Hosting</span>
+          <span class="badge bg-info">Web</span>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100">
+        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=500&auto=format&fit=crop&q=60" class="card-img-top" alt="Pygame Game">
+        <div class="card-body">
+          <h5 class="card-title project-title">Game using Pygame</h5>
+          <p class="card-text project-desc">Developed an interactive game using the Pygame library, featuring custom graphics and sound effects.</p>
+          <span class="badge bg-success">Python</span>
+          <span class="badge bg-warning text-dark">Pygame</span>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100">
+        <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b43?w=500&auto=format&fit=crop&q=60" class="card-img-top" alt="Turtle Graphics">
+        <div class="card-body">
+          <h5 class="card-title project-title">Turtle Graphics</h5>
+          <p class="card-text project-desc">Created visual art and educational demos using Python's Turtle Graphics module.</p>
+          <span class="badge bg-success">Python</span>
+          <span class="badge bg-info">Turtle</span>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=500&auto=format&fit=crop&q=60" class="card-img-top" alt="Automation with Pywhatkit">
+        <div class="card-body">
+          <h5 class="card-title project-title">Automation using Pywhatkit</h5>
+          <p class="card-text project-desc">Automated tasks such as sending WhatsApp messages, searching the web, and more using the Pywhatkit library.</p>
+          <span class="badge bg-success">Python</span>
+          <span class="badge bg-dark">Automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

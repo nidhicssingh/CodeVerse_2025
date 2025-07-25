@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact | V. Puneetha{% endblock %}
+
+{% block extra_css %}
+<style>
+.contact-section {
+  padding: 80px 20px;
+  background: #f0f9ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  background-color: #fff;
+  border: 1px solid #dcdde1;
+  margin-bottom: 10px;
+  color: #34495e;
+  transition: background 0.3s ease;
+}
+
+.list-group-item strong {
+  color: #1a237e;
+}
+
+.list-group-item:hover {
+  background-color: #e3f2fd;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="contact-section container mt-5">
+  <h2>Contact</h2>
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Name:</strong> V. Puneetha</li>
+    <li class="list-group-item"><strong>Phone No.:</strong> 9902483291</li>
+    <li class="list-group-item"><strong>Email-ID:</strong> vpuneetha@gmail.com</li>
+  </ul>
+</div>
+{% endblock %}
