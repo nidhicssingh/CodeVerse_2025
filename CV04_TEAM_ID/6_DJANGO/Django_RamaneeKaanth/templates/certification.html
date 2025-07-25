@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Certifications{% endblock %}
+
+{% block extra_css %}
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s, transform 0.2s;
+  }
+  .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    transform: translateY(-6px) scale(1.03);
+  }
+  .cert-title {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+  }
+  .cert-desc {
+    font-size: 1.08rem;
+    color: #334155;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4 cert-title"><i class="fas fa-certificate"></i> Certifications</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+    <div class="col">
+      <div class="glass-card h-100 p-3 border-warning">
+        <div class="card-body text-center">
+          <i class="fab fa-python fa-3x mb-3 text-warning"></i>
+          <h5 class="card-title cert-title">Python: Fundamentals to Intermediate</h5>
+          <p class="card-text cert-desc">Completed core Python programming concepts, data structures, and problem-solving.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100 p-3 border-info">
+        <div class="card-body text-center">
+          <i class="fas fa-cube fa-3x mb-3 text-info"></i>
+          <h5 class="card-title cert-title">Blender Basics</h5>
+          <p class="card-text cert-desc">Learned essentials of 3D modelling, rendering, and animation in Blender.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100 p-3 border-primary">
+        <div class="card-body text-center">
+          <i class="fab fa-aws fa-3x mb-3 text-primary"></i>
+          <h5 class="card-title cert-title">AWS Basics</h5>
+          <p class="card-text cert-desc">Gained foundational knowledge of Amazon Web Services and cloud computing.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="glass-card h-100 p-3 border-secondary">
+        <div class="card-body text-center">
+          <i class="fas fa-graduation-cap fa-3x mb-3 text-secondary"></i>
+          <h5 class="card-title cert-title">Codeverse (Planned)</h5>
+          <p class="card-text cert-desc">Plan to complete Codeverse for advanced coding and development skills.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

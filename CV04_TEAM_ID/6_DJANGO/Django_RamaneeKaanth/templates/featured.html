@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Featured{% endblock %}
+
+{% block extra_css %}
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s, transform 0.2s;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    transform: translateY(-6px) scale(1.03);
+  }
+  .featured-title {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+  }
+  .film-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.15rem;
+    color: #334155;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  }
+  .film-list li {
+    margin-bottom: 0.7rem;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  .film-list li:before {
+    content: '\2022';
+    color: #6366f1;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="glass-card">
+        <h2 class="featured-title"><i class="fas fa-film"></i> Short-film Direction</h2>
+        <p>Directed and contributed to several short films, focusing on storytelling, cinematography, and editing.</p>
+        <ul class="film-list">
+          <li>PSYLER</li>
+          <li>PARADOX</li>
+          <li>ANITHAM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

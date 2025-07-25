@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block extra_css %}
+<style>
+  body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+    min-height: 100vh;
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s;
+  }
+  .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+  }
+  .profile-img-modern {
+    border: 4px solid #6366f1;
+    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.15);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .profile-img-modern:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 8px 32px rgba(6, 182, 212, 0.18);
+  }
+  .modern-title {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+  }
+  .modern-subtitle {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #6366f1;
+    font-weight: 500;
+  }
+  .modern-desc {
+    font-size: 1.1rem;
+    color: #334155;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="glass-card p-4">
+        <div class="row g-0 align-items-center">
+          <div class="col-md-4 text-center p-4">
+            <img src="{% static 'IMG/RAMANEEKAANTH.jpg' %}" class="img-fluid rounded-circle profile-img-modern" style="width: 150px; height: 150px; object-fit: cover;" alt="Ramanee Kaanth Profile">
+          </div>
+          <div class="col-md-8 p-4">
+            <h2 class="modern-title mb-3">Ramanee Kaanth</h2>
+            <h5 class="modern-subtitle mb-3">B.Tech Student</h5>
+            <p class="modern-desc">I'm passionate about building Python, C++, Web Applications & exploring new technologies, testing & upscaling my skills to the fullest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} contact {% endblock title%}
+
+{% block extra_css %}
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s, transform 0.2s;
+  }
+  .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    transform: translateY(-6px) scale(1.03);
+  }
+  .contact-title {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+  }
+  .btn-modern {
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.10);
+  }
+  .btn-modern.btn-primary:hover {
+    background: #6366f1;
+    color: #fff;
+    border-color: #6366f1;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4 contact-title"><i class="fas fa-envelope"></i> Contact Me</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <div class="glass-card p-4">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Type your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-modern">Send Message</button>
+        </form>
+        <div class="mt-4 text-center">
+          <p><i class="fas fa-envelope"></i> nidhi@example.com</p>
+          <p><i class="fas fa-phone"></i> +91-0000000000</p>
+          <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
