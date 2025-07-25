@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About | CodeVerse 2025{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Using the styles from the layout you provided */
+    .hero-section {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://media.licdn.com/dms/image/v2/D5622AQE8QHh3sTHmGw/feedshare-shrink_2048_1536/B56ZgI3dDfGUAs-/0/1752495418851?e=1756339200&v=beta&t=snTrs4diWh2XvFLlyXXsj95uXln_TspGR4izYcZy32Q");
+        height: 75vh;
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: 25% 80%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero-content {
+        text-align: center;
+        color: white;
+        animation: fadeIn 1.5s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content .lead {
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 1.5rem auto;
+    }
+
+    .hero-content .btn {
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 50px;
+        margin: 0.5rem;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .hero-content .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    
+    .about-program-section {
+        background-color: var(--white, #ffffff);
+        border-radius: 15px;
+    }
+    
+    .program-logo {
+        width: 180px;
+        height: 180px;
+        object-fit: contain; /* Use contain for logos */
+        border-radius: 50%;
+        background-color: #f8f9fa; /* Light background for logo */
+        padding: 20px;
+        border: 5px solid var(--primary-color, #00A7E1);
+    }
+    
+    .focus-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color, #00A7E1);
+        width: 80px;
+        height: 80px;
+        background-color: #e6f7ff; /* A light, techy blue */
+        border-radius: 50%;
+    }
+
+    /* STYLES for Coordinator Section */
+    .coordinator-section {
+        background-color: var(--white);
+    }
+    .coordinator-card {
+        border: 1px solid #e9ecef;
+        border-radius: 15px;
+        padding: 1.5rem;
+        transition: box-shadow 0.3s ease;
+    }
+    .coordinator-card:hover {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    /* NEW: Style for coordinator images */
+    .coordinator-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 4px solid var(--primary-color, #00A7E1);
+    }
+    .coordinator-card h5 {
+        font-weight: 600;
+        color: var(--dark-charcoal);
+    }
+    .coordinator-card p {
+        margin-bottom: 0;
+        color: #6c757d;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="hero-section d-flex align-items-center justify-content-center">
+    <div class="hero-content px-3">
+        <h1>About CodeVerse 2025</h1>
+        <p class="lead">
+            To provide a hands-on, project-driven learning journey to blend technology, creativity, and personal growth that prepares participants for future-ready roles.
+        </p>
+        <a href="{% url 'schedule' %}" class="btn btn-primary btn-lg">View Full Schedule</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">Contact Us</a>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="p-4 p-md-5 about-program-section shadow-sm reveal">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <img src="{% static 'IMG/s-vyasa-university-logo.svg' %}" alt="S-VYASA University Logo" class="program-logo shadow">
+            </div>
+            <div class="col-lg-8">
+                <h2 class="fw-bold">Program Overview</h2>
+                <p class="text-muted">
+                    CodeVerse is an intensive three-week summer program hosted by the Department of Engineering and Technology at S-VYASA. It is meticulously designed for ambitious students ready to bridge the gap between academic knowledge and real-world industry demands.
+                </p>
+                <p class="text-muted">
+                    Our curriculum focuses on practical application, collaborative projects, and direct interaction with industry experts, ensuring that every participant graduates with a portfolio of skills and the confidence to tackle future-ready roles.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="text-center mb-5 reveal">
+        <h2 class="fw-bold">Our 3-Week Journey</h2>
+        <p class="lead text-muted">A structured curriculum designed for maximum impact.</p>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4 mb-4 reveal">
+            <div class="p-4">
+                <div class="focus-icon d-inline-flex align-items-center justify-content-center mb-3 shadow-sm">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h4 class="fw-bold">Week 1: Foundations</h4>
+                <p class="text-muted">Building a strong base with Python, AWS cloud hosting, Git version control, and essential career-readiness skills.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 reveal">
+            <div class="p-4">
+                <div class="focus-icon d-inline-flex align-items-center justify-content-center mb-3 shadow-sm">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h4 class="fw-bold">Week 2: Development</h4>
+                <p class="text-muted">Diving deep into Frontend and Full-Stack Development using React, gaining industry insights, and starting capstone projects.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 reveal">
+            <div class="p-4">
+                <div class="focus-icon d-inline-flex align-items-center justify-content-center mb-3 shadow-sm">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h4 class="fw-bold">Week 3: Innovation</h4>
+                <p class="text-muted">Exploring Generative AI and showcasing your skills in a final Project Expo and an exciting 24-Hour Hackathon.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Class Coordinators Section -->
+<div class="coordinator-section py-5">
+    <div class="container">
+        <div class="text-center mb-5 reveal">
+            <h2 class="fw-bold">Meet Our Class Coordinators</h2>
+            <p class="lead text-muted">Guiding you through every step of the program.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="coordinator-card text-center">
+                    <!-- UPDATED: Added image placeholder -->
+                    <img src="https://placehold.co/120x120/e0f7ff/00A7E1?text=S" alt="Ms. Sangeetha Gupta" class="coordinator-img">
+                    <h5>Ms. Sangeetha</h5>
+                    <p>Section A - Room No. 14</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="coordinator-card text-center">
+                    <!-- UPDATED: Added image placeholder -->
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocJNEEm4phazFLCyMwIEXl0mjMbHhBCLjeS4mhPBWiBJzlB1dAU=s640" alt="Ms. Sanjana Gupta" class="coordinator-img">
+                    <h5>Ms. Sanjana</h5>
+                    <p>Section B - Room No. 15</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="coordinator-card text-center">
+                    <!-- UPDATED: Added image placeholder -->
+                    <img src="https://placehold.co/120x120/e0f7ff/00A7E1?text=S" alt="Ms. Sai Shree" class="coordinator-img">
+                    <h5>Ms. Sai Shree</h5>
+                    <p>Section C - Room No. 16</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

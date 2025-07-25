@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Featured | CodeVerse 2025{% endblock %}
+
+{% block extra_css %}
+<style>
+    .featured-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://media.licdn.com/dms/image/v2/D5622AQFFbbZ_CMritg/feedshare-shrink_1280/B56ZgONgI6HMAo-/0/1752585079123?e=1756339200&v=beta&t=TizZ5dtET6_toey0humACWsICrZ_ApjmPjl1-YOH6Vc");
+        background-size: cover;
+        background-position: 25% 35%;
+        color: var(--white);
+    }
+
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 2rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+        text-align: center;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-color);
+    }
+
+    .event-card {
+        background-color: var(--white);
+        border: 1px solid #e9ecef;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .event-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .event-icon {
+        font-size: 4rem;
+        color: var(--primary-color);
+    }
+    
+    .speaker-card {
+        text-align: center;
+    }
+    .speaker-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 5px solid var(--primary-color);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .speaker-card h5 {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+    .speaker-card p {
+        color: #6c757d;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <!-- Header Section -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center featured-header">
+        <div class="col-md-8 p-lg-5 mx-auto my-5 reveal">
+            <h1 class="display-3 fw-bold">Featured Events</h1>
+            <h3 class="fw-normal mb-3">The cornerstones of the CodeVerse experience.</h3>
+        </div>
+    </div>
+
+    <!-- Main Events Section -->
+    <div class="container py-5">
+        <div class="row g-4 align-items-stretch">
+            <!-- Hackathon Card -->
+            <div class="col-lg-6 reveal">
+                <div class="event-card p-5 text-center">
+                    <div class="event-icon mb-4"><i class="fas fa-trophy"></i></div>
+                    <h2 class="fw-bold">24-Hour Hackathon</h2>
+                    <p class="lead text-muted">A high-energy event where participants team up to build innovative solutions for socially relevant problems. With support from our EdTech partner IBM, this is your chance to shine, innovate, and create something impactful under pressure.</p>
+                    <p class="fw-bold mt-3">Date: July 31, 2025</p>
+                </div>
+            </div>
+            <!-- Project Expo Card -->
+            <div class="col-lg-6 reveal">
+                <div class="event-card p-5 text-center">
+                    <div class="event-icon mb-4"><i class="fas fa-lightbulb"></i></div>
+                    <h2 class="fw-bold">Project Expo</h2>
+                    <p class="lead text-muted">The grand finale of our capstone projects. The Project Expo is open to the entire campus community, providing a platform for students to demonstrate their projects, share their learning journey, and receive feedback from peers and faculty.</p>
+                    <p class="fw-bold mt-3">Date: July 30, 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guest Speakers Section -->
+    <div class="bg-white py-5">
+        <div class="container">
+            <div class="reveal">
+                <h2 class="section-title">Expert Guest Speakers</h2>
+                <p class="lead text-muted text-center mb-5">Learn from the best in the industry.</p>
+            </div>
+            <div class="row g-5">
+                <!-- Speaker 1 -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="speaker-card">
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQHBmNGuK0DTYw/feedshare-shrink_2048_1536/B56ZgI3dDKHMAs-/0/1752495418385?e=1756339200&v=beta&t=KI11c986sOO-Bg-5-HYPF8k2njUARKVeUpFjjdPy-wA" alt="Vinay Kumar" class="speaker-img">
+                        <h5>Vinay Kumar</h5>
+                        <p>Country Head, Pearson India</p>
+                        <p class="text-muted fst-italic">"Bridging Campus to Corporate: Industry Expectations"</p>
+                    </div>
+                </div>
+                <!-- Speaker 2 -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="speaker-card">
+                        <img src="data:image/jpeg;base64,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" alt="Madamohan Rao" class="speaker-img">
+                        <h5>Madamohan Rao</h5>
+                        <p>Research Director, YourStory</p>
+                        <p class="text-muted fst-italic">"Igniting the Entrepreneurial Mindset"</p>
+                    </div>
+                </div>
+                <!-- Speaker 3 -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="speaker-card">
+                        <img src="{% static 'IMG/image.png' %}" alt="Ms. Usha R." class="speaker-img">
+                        <h5>Ms. Usha R.</h5>
+                        <p>Director - Placements, Training & Alumni</p>
+                        <p class="text-muted fst-italic">"Placement Readiness"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

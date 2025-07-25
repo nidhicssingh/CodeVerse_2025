@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Me - S-VYASA{% endblock %}
+
+{% block extra_css %}
+<style>
+    .contact-info-section {
+        background-color: var(--dark-charcoal);
+        color: var(--white);
+        padding: 3rem;
+        border-radius: 0.75rem;
+    }
+
+    .contact-info-section h3, .contact-info-section h4 {
+        color: var(--white);
+    }
+
+    .contact-info-section a {
+        color: var(--light-gray);
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .contact-info-section a:hover {
+        color: var(--primary-color);
+    }
+    
+    .contact-icon {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+    <!-- Page Header -->
+    <div class="text-center mb-5 reveal">
+        <h1 class="display-4 fw-bold">Get In Touch</h1>
+        <p class="lead text-muted">Have a question, a project proposal, or just want to connect? Here's how you can reach me.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Contact Information -->
+        <div class="col-lg-8 reveal">
+            <div class="contact-info-section h-100 d-flex flex-column justify-content-center text-center shadow-lg">
+                <h3 class="fw-bold mb-4">Contact Information</h3>
+                <ul class="list-unstyled d-inline-block mx-auto text-start fs-5">
+                    <li class="d-flex align-items-center mb-3">
+                        <i class="fas fa-envelope fa-fw me-3 contact-icon"></i>
+                        <a href="mailto:tarun192006@gmail.com">info@svyasa.edu.in admissions@svyasa.org</a>
+                    </li>
+                    <li class="d-flex align-items-center mb-4">
+                        <i class="fas fa-phone fa-fw me-3 contact-icon"></i>
+                        <a href="tel:+917483966841">080-2263 9968</a>
+                    </li>
+                </ul>
+                
+                <hr class="w-50 mx-auto my-4" style="border-color: rgba(255,255,255,0.2);">
+
+                <h4 class="fw-bold mt-3 mb-3">Follow Me</h4>
+                <div class="mb-3 d-flex justify-content-center">
+                    {% include 'partials/social_links.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

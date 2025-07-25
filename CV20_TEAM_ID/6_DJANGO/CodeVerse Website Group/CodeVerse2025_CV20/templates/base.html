@@ -1,0 +1,195 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{% block title %}CodeVerse 2025 | S-VYASA University{% endblock %}</title>
+    <meta name="description" content="A hands-on, project-driven learning journey to blend technology, creativity, and personal growth for future-ready roles.">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'IMG/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'IMG/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'IMG/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'IMG/favicon/site.webmanifest' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    :root {
+        --primary-color: #00A7E1;
+        --secondary-color: #0077B6;
+        --dark-charcoal: #2A2D34;
+        --light-gray: #f8f9fa;
+        --white: #ffffff;
+        --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--light-gray) !important;
+        color: var(--dark-charcoal);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+    }
+
+    /* UPDATED: Simplified navbar style for a permanent solid background */
+    .navbar {
+        background-color: var(--white) !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    #mainNavbar .nav-link,
+    #mainNavbar .navbar-brand {
+        color: var(--dark-charcoal);
+    }
+    
+    .navbar .nav-link {
+        position: relative;
+        padding: 0.5rem 0;
+        margin: 0 0.5rem; 
+        transition: color 0.3s ease-in-out;
+        font-size: 0.875rem;
+    }
+    #mainNavbar .nav-link:hover {
+        color: var(--primary-color);
+    }
+
+    .navbar .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--primary-color);
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .nav-link:hover::after {
+        transform: scaleX(1);
+    }
+
+    .navbar .nav-link.active {
+        color: var(--primary-color) !important;
+        font-weight: 600;
+    }
+    .navbar .nav-link.active::after {
+        transform: scaleX(1);
+    }
+
+    .social-icon-shape {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background-color: var(--dark-charcoal);
+        color: var(--white) !important;
+        border-radius: 4px;
+        transition: background-color 0.2s ease-in-out;
+        font-size: 16px;
+    }
+
+    a:hover .social-icon-shape {
+        background-color: var(--primary-color);
+    }
+
+    .reveal {
+        position: relative;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+    .btn-primary:hover {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+</style>
+    
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- REMOVED: 'is-transparent' class from navbar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-xl fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'IMG/s-vyasa-university-logo.svg' %}" alt="S-VYASA University Logo" style="height: 40px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link {% if active_page == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link {% if active_page == 'about' %}active{% endif %}" href="{% url 'about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link {% if active_page == 'programs' %}active{% endif %}" href="{% url 'programs' %}">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link {% if active_page == 'schedule' %}active{% endif %}" href="{% url 'schedule' %}">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link {% if active_page == 'faculties' %}active{% endif %}" href="{% url 'faculties' %}">Faculties</a></li>
+                    <li class="nav-item"><a class="nav-link {% if active_page == 'participants' %}active{% endif %}" href="{% url 'participants' %}">Participants</a></li>
+                    <li class="nav-item"><a class="nav-link {% if active_page == 'featured' %}active{% endif %}" href="{% url 'featured' %}">Featured</a></li>
+                    <li class="nav-item"><a class="nav-link {% if active_page == 'blog' %}active{% endif %}" href="{% url 'blog' %}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link {% if active_page == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+                <div class="navbar-nav flex-row align-items-center ps-lg-3">
+                    {% include 'partials/social_links.html' %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 80px; padding-bottom: 5rem;">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer mt-auto py-5 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-2">A Program by the Department of Engineering and Technology</p>
+            <div class="mb-3 d-flex justify-content-center">
+                {% include 'partials/social_links.html' %}
+            </div>
+            <p class="mb-0 small">&copy; {% now "Y" %} S-VYASA Deemed to be University. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // REMOVED: JavaScript for transparent navbar effect is no longer needed.
+
+            const revealElements = document.querySelectorAll(".reveal");
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

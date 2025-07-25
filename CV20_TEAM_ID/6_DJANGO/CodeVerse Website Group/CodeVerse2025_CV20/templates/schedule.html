@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Schedule | CodeVerse 2025{% endblock %}
+
+{% block extra_css %}
+<style>
+    .schedule-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://media.licdn.com/dms/image/v2/D5622AQHbE3pt6uBNYg/feedshare-shrink_1280/B56ZgONgI3HsAo-/0/1752585078395?e=1756339200&v=beta&t=nMrYWte0BPwPODyKYqTz1s5LkJZ7DeT7uqG7Ta8tPyo");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+    }
+
+    .timeline {
+        position: relative;
+        padding: 2rem 0;
+        list-style: none;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 4px;
+        background: #e9ecef;
+    }
+
+    .timeline-item {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--white);
+        border: 4px solid var(--primary-color);
+        z-index: 1;
+    }
+
+    .timeline-content {
+        margin-left: 50px;
+        background-color: var(--white);
+        border-radius: 10px;
+        padding: 1.5rem;
+        border: 1px solid #e9ecef;
+        box-shadow: var(--card-shadow);
+    }
+
+    .timeline-date {
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .session-time {
+        font-weight: 600;
+        color: var(--dark-charcoal);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <!-- Header Section -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center schedule-header">
+        <div class="col-md-8 p-lg-5 mx-auto my-5 reveal">
+            <h1 class="display-3 fw-bold">Program Schedule</h1>
+            <h3 class="fw-normal mb-3">Your day-by-day guide to the CodeVerse experience.</h3>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <ul class="timeline">
+            <!-- Week 1 -->
+            <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 14, Monday</h4>
+                    <p><span class="session-time">9:00 - 11:00 AM:</span> Talk: Bridging Campus to Corporate by Vinay Kumar (Country Head - Pearson India). Venue: Seminar Hall</p>
+                    <p><span class="session-time">1:30 - 3:15 PM:</span> AWS Cloud Hosting (Sec-B), Open Source in Action (Sec-A), Git and GitHub (Sec-C). Venue: Room Nos. 14, 15 & 16</p>
+                </div>
+            </li>
+            <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 15, Tuesday</h4>
+                    <p><span class="session-time">9:15 AM - 11:00 AM:</span> Freelancing Training. Venue: Seminar Hall</p>
+                    <p><span class="session-time">1:30 - 3:15 PM:</span> AWS Cloud Hosting (Sec-C), Open Source in Action (Sec-A), Git and GitHub (Sec-B). Venue: Room Nos. 14, 15 & 16</p>
+                </div>
+            </li>
+            <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 16, Wednesday</h4>
+                    <p><span class="session-time">9:15 AM - 11:00 AM:</span> Placement Readiness by Ms. Usha R. (Director - Placements, Training, and Alumni Relations). Venue: Seminar Hall</p>
+                    <p><span class="session-time">1:30 - 3:15 PM:</span> AWS Cloud Hosting (Sec-B), Open Source in Action (Sec-C), Git and GitHub (Sec-A). Venue: Room No. 1, 5 and 6</p>
+                </div>
+            </li>
+            <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 17 & 18, Thursday & Friday</h4>
+                    <p><span class="session-time">9:15 AM onwards:</span> Hands-on Python: Frameworks and Problem Solving (Sec-A, B, C). Venue: Room No. 1, 5 and 6</p>
+                </div>
+            </li>
+
+            <!-- Week 2 -->
+             <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 21, Monday</h4>
+                    <p><span class="session-time">9:15 AM onwards:</span> Frontend Web Development (Sec-A, B, C). Venue: Room Nos. 14, 15 & 16</p>
+                </div>
+            </li>
+             <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 22, Tuesday</h4>
+                    <p><span class="session-time">9:15 AM:</span> Igniting the Entrepreneurial Mindset by Madamohan Rao (Research Director, YourStory). Venue: Seminar Hall</p>
+                    <p><span class="session-time">2:00 PM:</span> Talent Hunt: A Stage for Student Talent and Unity. Venue: Stage, 6th floor</p>
+                </div>
+            </li>
+             <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 23 & 24, Wednesday & Thursday</h4>
+                    <p><span class="session-time">All Day:</span> Industrial Visit (Intel, HCL, and Pearson) & Capstone Project: Web Dev using React. Venue: Room Nos. 14, 15 & 16</p>
+                </div>
+            </li>
+             <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 25 & 26, Friday & Saturday</h4>
+                    <p><span class="session-time">9:15 AM onwards:</span> Full stack web development: Integrating React with back-end (Sec-A, B, C). Venue: Room Nos. 14, 15 & 16</p>
+                </div>
+            </li>
+
+            <!-- Week 3 -->
+            <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 28, Monday</h4>
+                    <p><span class="session-time">9:15 AM onwards:</span> Building with Generative AI: A Practical Introduction (Sec-A, B, C). Venue: Room Nos. 14, 15 & 16</p>
+                </div>
+            </li>
+            <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 29, Tuesday</h4>
+                    <p><span class="session-time">All Day:</span> Capstone Project: Web Dev using React (Sec-A, B, C)</p>
+                    <p><span class="session-time">1:45 PM:</span> Preparation sessions for the Hackathon (EdTech Partner: IBM). Venue: Seminar Hall</p>
+                </div>
+            </li>
+            <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 30, Wednesday</h4>
+                    <p><span class="session-time">All Day:</span> Capstone Project: Web Dev using React (Sec-A, B, C)</p>
+                    <p><span class="session-time">1:30 PM:</span> Project Expo (Open for everyone on campus). Venue: Room Nos. 14, 15, 16, 05 and 06</p>
+                </div>
+            </li>
+            <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">July 31, Thursday</h4>
+                    <p><span class="session-time">9:00 AM - 9:00 PM:</span> 24 Hours Hackathon on socially relevant problem statements (Sec-A, B, C). Venue: Room Nos. 14, 15, 16, 05 and 06</p>
+                </div>
+            </li>
+            <li class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4 class="timeline-date">August 1, Friday</h4>
+                    <p><span class="session-time">10:00 AM - 11:00 AM:</span> Feedback and Awards Ceremony. Venue: Seminar Hall</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>
+
+{% endblock %}

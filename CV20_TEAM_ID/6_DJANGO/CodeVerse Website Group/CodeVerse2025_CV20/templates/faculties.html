@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Faculties | CodeVerse 2025{% endblock %}
+
+{% block extra_css %}
+<style>
+    .faculties-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://media.licdn.com/dms/image/v2/D5622AQFcPmTV9KFalw/feedshare-shrink_2048_1536/B56ZgONgI.HQAw-/0/1752585078371?e=1756339200&v=beta&t=Bvg96OuZwzaAuIkQ1dVNoC_rp9QRkisvyn00etCYObk");
+        background-size: cover;
+        background-position: 25% 35%;
+        color: var(--white);
+    }
+
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 2rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+        text-align: center;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-color);
+    }
+
+    .faculty-card {
+        background-color: var(--white);
+        border: 1px solid #e9ecef;
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        box-shadow: var(--card-shadow);
+    }
+    .faculty-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .faculty-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+        border: 5px solid var(--primary-color);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .faculty-card h5 {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+    .faculty-card p {
+        color: #6c757d;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <!-- Header Section -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center faculties-header">
+        <div class="col-md-8 p-lg-5 mx-auto my-5 reveal">
+            <h1 class="display-3 fw-bold">Meet the Faculty</h1>
+            <h3 class="fw-normal mb-3">The dedicated team behind the CodeVerse program.</h3>
+        </div>
+    </div>
+
+    <!-- Faculty Grid -->
+    <div class="container py-5">
+        <div class="reveal">
+            <h2 class="section-title">Our Mentors & Coordinators</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <!-- Dean -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=MB" alt="Dean Mrs. Mohumadi Begum" class="faculty-img">
+                    <h5>Mrs. Mohumadi Begum</h5>
+                    <p>Dean</p>
+                </div>
+            </div>
+            <!-- Dr. Jobin -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=DJ" alt="Dr. Jobin" class="faculty-img">
+                    <h5>Dr. Jobin</h5>
+                    <p>Event Director</p>
+                </div>
+            </div>
+            <!-- Mr. Vivek -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=MV" alt="Mr. Vivek" class="faculty-img">
+                    <h5>Mr. Vivek</h5>
+                    <p>Faculty</p>
+                </div>
+            </div>
+            <!-- Mr. Shine -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=MS" alt="Mr. Shine" class="faculty-img">
+                    <h5>Mr. Shine</h5>
+                    <p>Faculty</p>
+                </div>
+            </div>
+            <!-- Mrs. Nidhi Singh -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=NS" alt="Mrs. Nidhi Singh" class="faculty-img">
+                    <h5>Mrs. Nidhi Singh</h5>
+                    <p>Faculty</p>
+                </div>
+            </div>
+            <!-- Mr. Veerendra Reddy -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=VR" alt="Mr. Veerendra Reddy" class="faculty-img">
+                    <h5>Mr. Veerendra Reddy</h5>
+                    <p>Faculty</p>
+                </div>
+            </div>
+            <!-- Mrs. Banesori -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=MB" alt="Mrs. Banesori" class="faculty-img">
+                    <h5>Mrs. Banesori</h5>
+                    <p>Faculty</p>
+                </div>
+            </div>
+            <!-- Ms. Sangeetha -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=S" alt="Ms. Sangeetha" class="faculty-img">
+                    <h5>Ms. Sangeetha</h5>
+                    <p>Class Coordinator</p>
+                </div>
+            </div>
+            <!-- Ms. Sanjana -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=S" alt="Ms. Sanjana" class="faculty-img">
+                    <h5>Ms. Sanjana</h5>
+                    <p>Class Coordinator</p>
+                </div>
+            </div>
+            <!-- Ms. Sai Shree -->
+            <div class="col-lg-3 col-md-4 col-sm-6 reveal">
+                <div class="faculty-card">
+                    <img src="https://placehold.co/150x150/e0f7ff/00A7E1?text=SS" alt="Ms. Sai Shree" class="faculty-img">
+                    <h5>Ms. Sai Shree</h5>
+                    <p>Class Coordinator</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

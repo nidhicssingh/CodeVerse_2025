@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog | CodeVerse 2025{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Custom styles for the blog page */
+    .blog-header {
+        background-color: var(--light-gray);
+        border-bottom: 1px solid #dee2e6;
+    }
+    .blog-header-logo {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--dark-charcoal);
+    }
+    .blog-post-title {
+        font-weight: 700;
+    }
+    .blog-post-meta {
+        color: #6c757d;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container py-5">
+    <!-- Featured Post -->
+    <div class="p-4 p-md-5 mb-4 rounded text-white bg-dark reveal">
+        <div class="col-lg-8 px-0">
+            <h1 class="display-4 fst-italic">The CodeVerse Kick-off: A Resounding Success!</h1>
+            <p class="lead my-3">The first week of our Summer Special Program has been an incredible journey of learning, collaboration, and inspiration. From expert talks to hands-on workshops, the energy has been electric.</p>
+            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+        </div>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                From the CodeVerse Chronicle
+            </h3>
+
+            <article class="blog-post reveal">
+                <h2 class="display-5 link-body-emphasis mb-1 blog-post-title">Industry Insights: Key Takeaways from Our Guest Speakers</h2>
+                <p class="blog-post-meta">July 22, 2025 by the CodeVerse Team</p>
+
+                <p>This week, we had the privilege of hosting several industry leaders who shared their invaluable knowledge with our participants. Vinay Kumar from Pearson India kicked things off with a powerful session on bridging the gap between campus and corporate life, emphasizing the need for practical skills and a proactive mindset.</p>
+                <p>Later in the week, Madamohan Rao of YourStory captivated the audience with his talk on "Igniting the Entrepreneurial Mindset," encouraging students to think like innovators and problem-solvers. These sessions have provided our participants with a clear roadmap for their future careers.</p>
+            </article>
+
+            <article class="blog-post reveal">
+                <h2 class="display-5 link-body-emphasis mb-1 blog-post-title">Hackathon Prep: Gearing Up for 24 Hours of Innovation</h2>
+                <p class="blog-post-meta">July 29, 2025 by the CodeVerse Team</p>
+
+                <p>The excitement is building as we approach the final week and our most anticipated event: the 24-Hour Hackathon. In partnership with IBM, we hosted a special preparation session to equip our teams with the tools and strategies they need to succeed.</p>
+                <p>Participants learned about effective brainstorming, rapid prototyping, and delivering a compelling pitch. The goal is not just to build an application, but to create a viable solution to a socially relevant problem. We can't wait to see what our talented teams will create!</p>
+            </article>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-light rounded reveal">
+                    <h4 class="fst-italic">About CodeVerse</h4>
+                    <p class="mb-0">CodeVerse is a three-week intensive program by the S-VYASA Department of Engineering and Technology, designed to equip students with the skills and confidence needed for future-ready tech roles.</p>
+                </div>
+
+                <div class="p-4 reveal">
+                    <h4 class="fst-italic">Program Archives</h4>
+                    <ol class="list-unstyled mb-0">
+                        <li><a href="#">July 2025</a></li>
+                        <li><a href="#">June 2025</a></li>
+                    </ol>
+                </div>
+
+                <div class="p-4 reveal">
+                    <h4 class="fst-italic">Follow Us</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">S-VYASA Website</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

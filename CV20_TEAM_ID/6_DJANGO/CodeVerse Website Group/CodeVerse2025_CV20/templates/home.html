@@ -1,0 +1,229 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | CodeVerse 2025{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Hero Section Styling */
+    .hero-section {
+        position: relative; /* Needed for the video background */
+        overflow: hidden; /* Hides any video overflow */
+        color: white;
+        padding: 8rem 0;
+        text-align: center;
+    }
+    #hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+    }
+    .hero-section::after { /* Creates the dark overlay */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(42, 45, 52, 0.7);
+        z-index: -1;
+    }
+    .hero-section .container {
+        position: relative;
+        z-index: 2;
+    }
+    .hero-section .display-4 {
+        font-weight: 700;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    /* General Section Styling */
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary-color);
+    }
+    .text-center .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* About Section: Image Carousel Styling */
+    .carousel-image {
+        max-height: 400px; 
+        object-fit: cover;
+        width: 100%;
+    }
+
+    /* Program Highlights Section */
+    .highlights-section {
+        background-color: var(--white);
+    }
+    .feature-card {
+        background-color: #f8f9fa; /* Use the light gray for the card itself */
+        border: 1px solid #e9ecef;
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        background-color: #e0f7ff; /* A light shade of the primary color */
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        background: linear-gradient(rgba(42, 45, 52, 0.8), rgba(42, 45, 52, 0.8)), url('{% static "IMG/cta_background.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        border-radius: 15px;
+        padding: 3rem;
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section reveal">
+    <!-- Video Background -->
+    <video playsinline autoplay muted loop id="hero-video">
+        <!-- NOTE: You must add a video named 'hero_video.mp4' to your static/IMG folder -->
+        <source src="{% static 'IMG/Your Journey Begins Here – S-VYASA Campus Life.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <h1 class="display-4">Welcome to CodeVerse 2025</h1>
+        <p class="lead col-lg-8 mx-auto">
+            A hands-on, project-driven learning journey to blend technology, creativity, and personal growth for future-ready roles.
+        </p>
+        <hr class="my-4 bg-light mx-auto" style="width: 50%;">
+        <p><strong>Dates:</strong> July 14th to August 1st, 2025</p>
+        <a class="btn btn-primary btn-lg mt-3" href="{% url 'schedule' %}" role="button">View Full Schedule</a>
+    </div>
+</div>
+
+<!-- About Section -->
+<div class="container my-5 py-5">
+    <div class="row align-items-center reveal">
+        <div class="col-lg-6 mb-4 mb-lg-0 reveal">
+          <div id="portfolioCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-3">
+              <div class="carousel-item active">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHCnEk8xVbnKQ/feedshare-shrink_2048_1536/B56ZgYNTqpHQA8-/0/1752752799087?e=1756339200&v=beta&t=IFMKGbHIYI4dIeVgs-OOzuy6Ho5rglZ0d_0VHhBZ5HQ" class="d-block w-100 carousel-image" alt="A team collaborating on a project board">
+              </div>
+              <div class="carousel-item">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHVNMxnEsFAcg/feedshare-shrink_2048_1536/B56ZgYNTqjG0As-/0/1752752799127?e=1756339200&v=beta&t=9e_J8VOh5Sl0YkPKZ-fG5gKQMkpwxsLpmEp3KhKiFVo" class="d-block w-100 carousel-image" alt="A person presenting code in a meeting">
+              </div>
+              <div class="carousel-item">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFL6beQBnWFYQ/feedshare-shrink_1280/B56ZgYNTruHMAo-/0/1752752799167?e=1756339200&v=beta&t=nmjVArxluORLi1sf1DhlvOdB3rO-MjPdh5xqwA8ZtxQ" class="d-block w-100 carousel-image" alt="Developers working together on laptops">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-6">
+            <h2 class="section-title">About The Program</h2>
+            <p class="text-muted mt-4">The Summer Special Program by the Department of Engineering and Technology is designed to bridge the gap between academic knowledge and industry expectations. Through a series of workshops, expert talks, and a 24-hour hackathon, participants will gain practical skills in today's most in-demand technologies.</p>
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Hands-on Python & Full-Stack Web Development</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>AWS Cloud Hosting & Generative AI</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Entrepreneurship & Placement Readiness</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Industrial Visits & Expert Sessions</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Key Features Section -->
+<div class="highlights-section py-5">
+    <div class="container">
+        <div class="text-center mb-5 reveal">
+            <h2 class="section-title">Program Highlights</h2>
+            <p class="lead text-muted">Experience a curriculum designed for the real world.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h4 class="mb-3">Expert-Led Sessions</h4>
+                    <p class="text-muted">Learn directly from industry leaders from companies like Pearson and YourStory, and our expert internal faculty.</p>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4 class="mb-3">Hands-On Workshops</h4>
+                    <p class="text-muted">Engage in practical workshops on Python, React, Generative AI, AWS, Git, and GitHub to build tangible skills.</p>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4 class="mb-3">24-Hour Hackathon</h4>
+                    <p class="text-muted">Compete in a high-energy hackathon to solve socially relevant problems and showcase your innovation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Section -->
+<!-- UPDATED: Changed 'my-5 py-3' to 'mt-5' to remove bottom margin and padding -->
+<div class="container mt-5">
+    <div class="cta-section text-center reveal">
+        <h2 class="mb-3">Ready to Build the Future?</h2>
+        <p class="lead mb-4">Explore our detailed schedule and see how CodeVerse can accelerate your career.</p>
+        <a href="{% url 'schedule' %}" class="btn btn-primary btn-lg">Explore the Schedule</a>
+    </div>
+</div>
+
+{% endblock %}

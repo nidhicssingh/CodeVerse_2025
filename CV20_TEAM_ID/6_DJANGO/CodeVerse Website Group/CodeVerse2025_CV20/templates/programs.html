@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Programs | CodeVerse 2025{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Custom styles for the programs page */
+    .program-header {
+        /* UPDATED: Replaced solid color with a background image and overlay */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://media.licdn.com/dms/image/v2/D5622AQGzy7nMbS___A/feedshare-shrink_1280/B56ZgS8DA0HUAs-/0/1752664389737?e=1756339200&v=beta&t=KL2L6KhcNf7bbqIQoKg0GynTvAco-g2MJoc1tN57haY");
+        background-size: cover;
+        background-position: 25% 35%;
+        color: var(--white);
+    }
+
+    .program-section {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary-color);
+    }
+
+    .program-card {
+        background-color: var(--white);
+        border: 1px solid #e9ecef;
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+    .program-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    .program-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        background-color: #e0f7ff;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border-radius: 50%;
+    }
+    .program-card h4 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <!-- Header Section -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center program-header">
+        <div class="col-md-8 p-lg-5 mx-auto my-5 reveal">
+            <h1 class="display-3 fw-bold">CodeVerse2025 Curriculum</h1>
+            <h3 class="fw-normal mb-3">A Deep Dive into Future-Ready Technologies</h3>
+            <div class="d-flex gap-3 justify-content-center lead fw-normal">
+                <a class="btn btn-primary" href="{% url 'schedule' %}">View Detailed Schedule</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Program Details Grid -->
+    <div class="program-section">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <h2 class="section-title">Core Technical Modules</h2>
+                <p class="lead text-muted">Building a comprehensive skill set from the ground up.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Core Programming -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fab fa-python"></i></div>
+                        <h4>Core Programming</h4>
+                        <p class="text-muted">Build a strong foundation with hands-on Python sessions focusing on practical frameworks and advanced problem-solving techniques.</p>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fas fa-code"></i></div>
+                        <h4>Web Development</h4>
+                        <p class="text-muted">Dive into modern web technologies, starting with Frontend development using React and progressing to Full-Stack integration.</p>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fab fa-aws"></i></div>
+                        <h4>Cloud & DevOps</h4>
+                        <p class="text-muted">Learn to deploy and manage applications on AWS. Master version control with Git and GitHub through our "Open Source in Action" sessions.</p>
+                    </div>
+                </div>
+
+                <!-- AI & Innovation -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fas fa-robot"></i></div>
+                        <h4>AI & Innovation</h4>
+                        <p class="text-muted">Get a practical introduction to the exciting world of Generative AI and learn how to build intelligent, cutting-edge applications.</p>
+                    </div>
+                </div>
+
+                <!-- Career Development -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fas fa-briefcase"></i></div>
+                        <h4>Career Development</h4>
+                        <p class="text-muted">Bridge the gap to the corporate world with expert talks on industry expectations, freelancing, and placement readiness.</p>
+                    </div>
+                </div>
+
+                <!-- Project-Based Learning -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fas fa-trophy"></i></div>
+                        <h4>Project-Based Learning</h4>
+                        <p class="text-muted">Apply your skills in the Capstone Project, a 24-Hour Hackathon, and showcase your work at the final Project Expo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

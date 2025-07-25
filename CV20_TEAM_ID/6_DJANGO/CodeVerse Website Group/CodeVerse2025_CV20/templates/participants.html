@@ -1,0 +1,506 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Participants | CodeVerse 2025{% endblock %}
+
+{% block extra_css %}
+<style>
+    .participants-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://media.licdn.com/dms/image/v2/D5622AQHRP-FyAP6Clw/feedshare-shrink_1280/B56ZhAa_GcG0CA-/0/1753427473846?e=1756339200&v=beta&t=5Ott0AO5b3DFN3sIfMF59e2VYFDj0N79Sqo_dM3ftVM");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+    }
+
+    .participant-card {
+        background-color: var(--white);
+        border: 1px solid #e9ecef;
+        border-radius: 15px;
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: var(--card-shadow);
+    }
+    .participant-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .card-header {
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-weight: 600;
+        border-bottom: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .card-body ul {
+        padding-left: 1.2rem;
+        margin-bottom: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <!-- Header Section -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center participants-header">
+        <div class="col-md-8 p-lg-5 mx-auto my-5 reveal">
+            <h1 class="display-3 fw-bold">Meet the Participants</h1>
+            <h3 class="fw-normal mb-3">The talented teams of CodeVerse 2025.</h3>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Team CV01 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV01 - 404 not found</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Gowri DM</li>
+                            <li>Aditya K</li>
+                            <li>Trisha Joshi</li>
+                            <li>Nishitha.T.S</li>
+                            <li>CHINMAY</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV02 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV02 - Ignis code</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Dhanushri G</li>
+                            <li>G Rakesh Reddy</li>
+                            <li>Jeffrey D'souza</li>
+                            <li>KANISH RAJ B</li>
+                            <li>Nikitha joshi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV03 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV03 - Script Techies</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Shobhitha</li>
+                            <li>SANJANA D</li>
+                            <li>Aditya Pranav</li>
+                            <li>Ramanee Kaanth R S</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV04 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV04 - Debops</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Mrugula V</li>
+                            <li>Harshitha.B</li>
+                            <li>Nishant</li>
+                            <li>Ayush kumar singh</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV05 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV05 - Nexus Networking</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Anish Joylin A</li>
+                            <li>S Jemimah</li>
+                            <li>Gira Trinetta T</li>
+                            <li>Aniket Das</li>
+                            <li>Khader</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV06 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV06 - Code Matrix</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Nithya L</li>
+                            <li>Kamasani Bhavya</li>
+                            <li>Jayashree N</li>
+                            <li>Mohammed Siddiq</li>
+                            <li>Aniket Kamlesh Sonone</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV07 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV07 - Cyber Knights</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Impana N</li>
+                            <li>Pragna GB</li>
+                            <li>Mohammed zain ulla</li>
+                            <li>Amaragonda Vinay</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV08 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV08</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Shravya J Raj</li>
+                            <li>Gokul BS</li>
+                            <li>Chetana V</li>
+                            <li>Azian Pasha</li>
+                            <li>Ramya R</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV09 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV09</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Yekkirala Aakarsh</li>
+                            <li>Daniyal Reihan</li>
+                            <li>Harshitha A U</li>
+                            <li>Raksha. P</li>
+                            <li>Sachitha S Gowda</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV10 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV10 - BinaryBros</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Haasini K</li>
+                            <li>GIRIDHAR GOKUL OLETY V</li>
+                            <li>Primrose.c</li>
+                            <li>Ganavi J</li>
+                            <li>Ullas B</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV11 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV11</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Vetsa chitti surya</li>
+                            <li>Sandhya M</li>
+                            <li>Yelina Misal</li>
+                            <li>Mohammed Mustafa</li>
+                            <li>Kuber B Raju</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV12 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV12</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Khushi s budihal</li>
+                            <li>Shreya yogesh</li>
+                            <li>Aishwarya</li>
+                            <li>R.Karthikeyan</li>
+                            <li>Yashas.C</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV13 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV13</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Yuktha S</li>
+                            <li>Narendra Halhalli</li>
+                            <li>V.Puneetha</li>
+                            <li>bhuvan n urs</li>
+                            <li>Harshini.N</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV14 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV14 - Team Error</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Divyansh Trivedi</li>
+                            <li>Gaurav H V</li>
+                            <li>Yashita</li>
+                            <li>Shruthi Dusava ch</li>
+                            <li>Abhishek ks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV15 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV15</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Poornima RP</li>
+                            <li>Bhushan vs</li>
+                            <li>Darshan K</li>
+                            <li>Sushma Bhattarai</li>
+                            <li>Chaithanya R</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV16 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV16</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Sakshi M Shetty</li>
+                            <li>Shanka Srujana</li>
+                            <li>RD VENKATESH</li>
+                            <li>Moolinti karthik sreenivas</li>
+                            <li>VADDI VISHNU SAI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV17 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV17</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Sharmila GM</li>
+                            <li>Meghana K</li>
+                            <li>Tharun c</li>
+                            <li>Varsha G</li>
+                            <li>Pushka Kashyap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV18 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV18 - Neurogrid</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Skanda Sai K.S.</li>
+                            <li>Tarun S</li>
+                            <li>Manasa S V</li>
+                            <li>Chaithanya.ks</li>
+                            <li>Dipen Patel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV19 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV19 - TEAM NXTGEN</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Pooja P</li>
+                            <li>Aliya Sultana</li>
+                            <li>Ujwal A Bhansali</li>
+                            <li>RaghavareddygariTeja</li>
+                            <li>Shafaqqat Ali</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV20 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV20 - Tech Titans</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Tarun A</li>
+                            <li>Kruthika S</li>
+                            <li>Praveen K Kambar</li>
+                            <li>Chandana C</li>
+                            <li>Tilak S</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV21 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV21 - DREAMERS</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Monish R</li>
+                            <li>Chiranjeevi V</li>
+                            <li>SAVAN RD</li>
+                            <li>Priyanka SP</li>
+                            <li>Yashaswini V</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV22 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV22 - INNOVATORS</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Abhijith Skanda HN</li>
+                            <li>Sumit sharma</li>
+                            <li>Priyanka Govind Mirashi</li>
+                            <li>Hamman khan</li>
+                            <li>Amisha Shivakumar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV23 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV23 - NeuroForge</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Harshith N</li>
+                            <li>Syed Zaina Manal</li>
+                            <li>shankar.m</li>
+                            <li>Navya.G</li>
+                            <li>Deepak Kumar R</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV24 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV24 - ERROR 404</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Manas</li>
+                            <li>Punith C</li>
+                            <li>D Pruthvi raj</li>
+                            <li>Vaishnavi peddakotla</li>
+                            <li>Amrutha.k</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV25 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV25 - TECHNO TRIBE</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Tanushree Shivram Gowda</li>
+                            <li>Trisha Deepak</li>
+                            <li>Shreya Sharma</li>
+                            <li>CHINNA CHENNAPPA GARI AISHWAR REDDY</li>
+                            <li>K Srujan Rao</li>
+                            <li>Rohith s</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV26 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV26 - Brainy squads</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Kamati guru deeraswini</li>
+                            <li>Amulya HN</li>
+                            <li>Shashikanth B</li>
+                            <li>Shamith G</li>
+                            <li>Srujan S</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV27 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV27 - Commanders</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Dudekula Gousiya</li>
+                            <li>Sanjana JV</li>
+                            <li>Dhruthi MR</li>
+                            <li>Kailash SB</li>
+                            <li>Yashawanth SB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV28 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV28 - Coders</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Nishith</li>
+                            <li>V. Abinaya Reddy</li>
+                            <li>LAKSHMI G</li>
+                            <li>Sumit Sharma</li>
+                            <li>K Anandha Krishnan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV29 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV29 - OVERDOSE TECH</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Rushil AR</li>
+                            <li>Princess Oliva Jasmine</li>
+                            <li>Shivananda Kumar M</li>
+                            <li>Chinmayi Gururaj Chimmalagi</li>
+                            <li>Madhu ER</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Team CV30 -->
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="participant-card">
+                    <div class="card-header">CV30 - The Iterators</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Shreyaa.S</li>
+                            <li>B.krishnaveni</li>
+                            <li>Bunkmate</li>
+                            <li>Sushil S Mudernnur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
