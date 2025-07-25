@@ -1,0 +1,79 @@
+#Home - Gaurav's Portfolio
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Education{% endblock %}
+{% block content %}
+{% load static %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-gradient">🌐 CodeVerse 2025</h1>
+        <p class="lead text-muted">A Summer of Innovation, Code & Collaboration by <strong>SVYASA University</strong></p>
+        <img src="{% static 'IMG/LOGO.jpg' %}" alt="CodeVerse Logo" class="rounded shadow mt-3" style="width: 220px;">
+    </div>
+
+    <div class="card p-4 shadow-lg border-0 mb-5" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef);">
+        <p class="fs-5 lh-lg text-center">
+            <strong>CodeVerse 2025</strong>, proudly hosted by <strong>SVYASA University</strong>, is an immersive summer program designed for tech enthusiasts to build real-world web projects and collaborate on innovative solutions. 
+            Focused on cutting-edge stacks like Django, React, and TailwindCSS, this event empowers learners to explore, build, and grow in a collaborative environment.
+        </p>
+    </div>
+
+    <div class="row text-center g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <i class="fas fa-laptop-code fa-2x text-primary mb-3"></i>
+                    <h5 class="card-title">Tech Workshops</h5>
+                    <p class="card-text">Hands-on sessions on Django, Python, JavaScript, and React with real-world use cases.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <i class="fas fa-users fa-2x text-success mb-3"></i>
+                    <h5 class="card-title">Team Projects</h5>
+                    <p class="card-text">Collaborate in teams to build end-to-end applications under mentor guidance and industry input.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <i class="fas fa-brain fa-2x text-warning mb-3"></i>
+                    <h5 class="card-title">Skill Development</h5>
+                    <p class="card-text">Boost your skills in UI/UX, Git workflows, cloud deployment, debugging, and agile methodology.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 text-center">
+        <h2 class="mb-4">📬 Contact & Connect</h2>
+        <p class="fs-5">
+            Want to participate or collaborate with <strong>SVYASA University</strong>'s CodeVerse 2025?<br>
+            <a href="mailto:codeverse2025@gmail.com" class="btn btn-outline-primary mt-2 me-2">
+                <i class="fas fa-envelope"></i> Email Us
+            </a>
+            <a href="https://linkedin.com/company/codeverse2025" class="btn btn-outline-info mt-2" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </p>
+    </div>
+</div>
+
+<style>
+    .text-gradient {
+        background: -webkit-linear-gradient(45deg, #007cf0, #00dfd8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
+
+
+{% endblock %}

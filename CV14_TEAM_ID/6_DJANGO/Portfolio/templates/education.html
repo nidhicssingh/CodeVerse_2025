@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Education{% endblock %}
+
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <h2 class="mb-5 text-center">
+        <i class="fas fa-calendar-alt text-primary me-2"></i>CodeVerse 2025 Timeline
+    </h2>
+
+    <div class="row g-4">
+        <!-- Timeline Item 1 -->
+        <div class="col-md-6">
+            <div class="border-start border-3 border-primary ps-4 py-3 bg-light rounded shadow-sm h-100">
+                <h4><i class="fas fa-rocket me-2 text-primary"></i>Program Launch & Orientation</h4>
+                <p class="text-muted mb-1"><i class="fas fa-calendar-day me-1"></i> June 1, 2025</p>
+                <p>Kick-off session introducing participants, mentors, and the goals of CodeVerse 2025.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="col-md-6">
+            <div class="border-start border-3 border-success ps-4 py-3 bg-light rounded shadow-sm h-100">
+                <h4><i class="fas fa-tools me-2 text-success"></i>Workshops & Skill Building</h4>
+                <p class="text-muted mb-1"><i class="fas fa-calendar-range me-1"></i> June 2 – June 20, 2025</p>
+                <p>Hands-on training in Django, React, Tailwind CSS, Git, and collaborative development practices.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="col-md-6">
+            <div class="border-start border-3 border-warning ps-4 py-3 bg-light rounded shadow-sm h-100">
+                <h4><i class="fas fa-code-branch me-2 text-warning"></i>Project Development Phase</h4>
+                <p class="text-muted mb-1"><i class="fas fa-calendar me-1"></i> June 21 – July 15, 2025</p>
+                <p>Participants form teams and begin working on real-world projects with guidance from mentors.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="col-md-6">
+            <div class="border-start border-3 border-danger ps-4 py-3 bg-light rounded shadow-sm h-100">
+                <h4><i class="fas fa-lightbulb me-2 text-danger"></i>Demo Day & Showcase</h4>
+                <p class="text-muted mb-1"><i class="fas fa-calendar-check me-1"></i> July 20, 2025</p>
+                <p>Teams present their final projects to peers, mentors, and industry professionals during the closing ceremony.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

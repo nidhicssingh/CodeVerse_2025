@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">
+        <i class="fas fa-folder-open me-2 text-primary"></i>Highlighted Projects – CodeVerse 2025
+    </h2>
+
+    <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow border-0 rounded-4">
+                <img src="{% static 'images/project1.jpg' %}" class="card-img-top rounded-top-4" alt="Portfolio Website">
+                <div class="card-body">
+                    <h5 class="card-title text-primary fw-bold">Portfolio Website</h5>
+                    <p class="card-text">Built using Django and Bootstrap to professionally showcase resume, achievements & CodeVerse profile.</p>
+                    <a href="https://github.com/yourusername/portfolio" class="btn btn-outline-primary btn-sm" target="_blank">
+                        <i class="fab fa-github me-1"></i>View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow border-0 rounded-4">
+                <img src="{% static 'images/project2.jpg' %}" class="card-img-top rounded-top-4" alt="To-Do List App">
+                <div class="card-body">
+                    <h5 class="card-title text-success fw-bold">To-Do List App</h5>
+                    <p class="card-text">Task management app with login, CRUD operations, and a clean Bootstrap UI. Built during CodeVerse sprints.</p>
+                    <a href="https://github.com/yourusername/todo-app" class="btn btn-outline-success btn-sm" target="_blank">
+                        <i class="fab fa-github me-1"></i>View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow border-0 rounded-4">
+                <img src="{% static 'images/project3.jpg' %}" class="card-img-top rounded-top-4" alt="Weather App">
+                <div class="card-body">
+                    <h5 class="card-title text-info fw-bold">Weather App</h5>
+                    <p class="card-text">Real-time weather dashboard using OpenWeatherMap API. Showcased during CodeVerse Demo Day 2025.</p>
+                    <a href="https://github.com/yourusername/weather-app" class="btn btn-outline-info btn-sm" target="_blank">
+                        <i class="fab fa-github me-1"></i>View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

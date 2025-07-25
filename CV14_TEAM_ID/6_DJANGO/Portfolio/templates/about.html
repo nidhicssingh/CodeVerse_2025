@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="text-center">
+        <h1 class="display-4 fw-bold mb-4">Welcome to CodeVerse 2025</h1>
+        <!-- Make sure the event logo or group photo is in your static folder -->
+        <img src="{% static 'IMG/CODEVERSE.jpg' %}" alt="CodeVerse 2025 Logo" class="rounded mb-4" style="width: 200px;">
+    </div>
+
+    <p class="fs-5 lh-lg text-center">
+        <strong>CodeVerse 2025</strong> is a vibrant and immersive summer program designed for passionate developers and tech enthusiasts. This initiative brings together curious minds to build real-world projects, learn cutting-edge technologies, and collaborate in a dynamic, hands-on environment.
+        <br><br>
+        From web development with Django and React to mastering version control and UI frameworks like Tailwind CSS, CodeVerse is more than a learning platform — it's a launchpad for future tech leaders.
+    </p>
+
+    <h2 class="mt-5">What We Offer</h2>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Workshops on Python, Django, JavaScript, and React</li>
+        <li class="list-group-item">Hands-on projects with mentorship support</li>
+        <li class="list-group-item">Collaborative environment to boost teamwork</li>
+        <li class="list-group-item">Sessions on Git, GitHub, and deployment</li>
+        <li class="list-group-item">Focus on clean UI/UX using Tailwind CSS</li>
+    </ul>
+
+    <h2 class="mt-5">Get in Touch</h2>
+    <p class="fs-5">
+        For queries or collaborations, reach us at 
+        <a href="mailto:codeverse2025@gmail.com">codeverse2025@gmail.com</a>
+        or follow us on 
+        <a href="https://linkedin.com/company/codeverse2025" target="_blank">LinkedIn</a>.
+    </p>
+</div>
+
+
+{% endblock %}

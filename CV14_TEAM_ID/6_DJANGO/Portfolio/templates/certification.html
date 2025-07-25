@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Certifications{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">
+        <i class="fas fa-trophy text-warning me-2"></i>Achievements & Recognitions – CodeVerse 2025
+    </h2>
+
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-6">
+            <div class="p-4 shadow-sm border rounded-4 bg-white h-100">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-code fa-2x text-primary me-3"></i>
+                    <div>
+                        <h4 class="mb-0">Best Django Project Award</h4>
+                        <small class="text-muted">July 2025</small>
+                    </div>
+                </div>
+                <p>Recognized for building a full-stack web app using Django, PostgreSQL, and Tailwind CSS.</p>
+                <a href="{% static 'certificates/django_award.pdf' %}" target="_blank" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-file-download me-1"></i>View Certificate
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6">
+            <div class="p-4 shadow-sm border rounded-4 bg-white h-100">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-palette fa-2x text-success me-3"></i>
+                    <div>
+                        <h4 class="mb-0">Frontend Excellence Recognition</h4>
+                        <small class="text-muted">July 2025</small>
+                    </div>
+                </div>
+                <p>Awarded for outstanding UI/UX implementation using React and Tailwind during the program.</p>
+                <a href="{% static 'certificates/frontend_award.pdf' %}" target="_blank" class="btn btn-sm btn-outline-success">
+                    <i class="fas fa-file-download me-1"></i>View Certificate
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6">
+            <div class="p-4 shadow-sm border rounded-4 bg-white h-100">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-users fa-2x text-warning me-3"></i>
+                    <div>
+                        <h4 class="mb-0">Team Collaboration & Innovation</h4>
+                        <small class="text-muted">July 2025</small>
+                    </div>
+                </div>
+                <p>Honored for exceptional teamwork and project innovation during the CodeVerse Hackathon.</p>
+                <a href="{% static 'certificates/team_award.pdf' %}" target="_blank" class="btn btn-sm btn-outline-warning">
+                    <i class="fas fa-file-download me-1"></i>View Certificate
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+{% endblock %}
