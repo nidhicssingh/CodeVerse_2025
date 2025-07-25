@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}certification{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">My Certifications</h2>
+    <div class="row">
+
+        <!-- Certificate 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+                <img src="{% static 'IMG/certificate1.jpg' %}" class="card-img-top" alt="Certificate 1">
+                <div class="card-body">
+                    <h5 class="card-title">CodeVerse 2025 Participation</h5>
+                    <p class="card-text">Awarded for active participation in CodeVerse 2025, contributing to the Django website project and workshops.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

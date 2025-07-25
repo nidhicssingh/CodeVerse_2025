@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="{% static '' %}" class="img-fluid rounded-circle shadow" alt="Your Image" style="width: 250px;">
+        </div>
+        <div class="col-md-8">
+            <h2 class="mb-3">Hi, we are the students of CodeVerse 2025</h2>
+            <p class="lead">
+                I'm a passionate tech enthusiast and currently a part of the CodeVerse 2025 event. I love building web applications  and exploring new technologies.
+            </p>
+            <p>
+                In this project, I contributed to the development and design of various web pages, ensuring they are responsive and visually appealing. 
+            </p>
+            <p>
+                <strong>Skills:</strong> Django, Python, HTML, CSS, Bootstrap, Git
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

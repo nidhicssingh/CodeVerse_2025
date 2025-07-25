@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}blog{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Latest Blogs & Updates</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <img src="{% static 'IMG/blog1.jpg' %}" class="card-img-top" alt="Blog Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Day 1 Highlights</h5>
+                    <p class="card-text">A detailed overview of the inaugural session of CodeVerse 2025, featuring keynote speakers and panel discussions.</p>
+                </div>
+                <div class="card-footer text-end">
+                    <small class="text-muted">Posted on July 20, 2025</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <img src="{% static 'IMG/blog2.jpg' %}" class="card-img-top" alt="Blog Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Tech Workshops Recap</h5>
+                    <p class="card-text">A glimpse into the hands-on workshops where participants explored Django, AI, and modern web development practices.</p>
+                </div>
+                <div class="card-footer text-end">
+                    <small class="text-muted">Posted on July 21, 2025</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <img src="{% static 'IMG/blog3.jpg' %}" class="card-img-top" alt="Blog Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">Team Activities & Collaboration</h5>
+                    <p class="card-text">An inside look at how teams collaborated to create innovative solutions for real-world problems using Django.</p>
+                </div>
+                <div class="card-footer text-end">
+                    <small class="text-muted">Posted on July 22, 2025</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

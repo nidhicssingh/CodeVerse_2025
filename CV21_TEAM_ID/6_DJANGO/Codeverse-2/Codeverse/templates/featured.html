@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">Featured at CodeVerse 2025</h2>
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+                <img src="{% static 'IMG/featured2.jpg' %}" class="card-img-top" alt="Featured 2">
+                <div class="card-body">
+                    <h5 class="card-title">Hackathon Finale</h5>
+                    <p class="card-text">A thrilling 24-hour coding challenge where students collaborated to build innovative.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
