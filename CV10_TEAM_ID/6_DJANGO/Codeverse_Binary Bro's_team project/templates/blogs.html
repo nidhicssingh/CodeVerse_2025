@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Webfolio Works - Blog{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-image:
+      linear-gradient(rgba(248, 249, 250, 0.9), rgba(233, 236, 239, 0.9)),
+      url('[YOUR_BACKGROUND_IMAGE_URL_HERE]');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: #343a40;
+  }
+
+  .bg-body-secondary,
+  .bg-body-tertiary {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 0.75rem;
+  }
+
+  .display-4, .display-5 {
+    font-weight: 800;
+    color: #212529;
+  }
+
+  .lead, p, li {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #495057;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+
+  ul li i {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #0d6efd;
+  }
+
+  .fw-bold {
+    color: #0d6efd !important;
+    text-decoration: none;
+  }
+
+  .fw-bold:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-6 px-0">
+      <h1 class="display-4 fst-italic">Welcome to Webfolio Works Blog</h1>
+      <p class="lead my-3">Stay inspired with project stories, portfolio ideas, and insights from our creative team.</p>
+      <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-body-tertiary">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary-emphasis">Design</strong>
+          <h3 class="mb-0">Portfolio Tips</h3>
+          <div class="mb-1 text-body-secondary">July 24</div>
+          <p class="card-text mb-auto">Learn how to create visually stunning portfolios that stand out.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link fw-bold">
+            Continue reading
+            <i class="fas fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+            <title>Thumbnail</title>
+            <rect width="100%" height="100%" fill="#55595c"></rect>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-body-tertiary">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success-emphasis">Projects</strong>
+          <h3 class="mb-0">Behind the Scenes</h3>
+          <div class="mb-1 text-body-secondary">July 23</div>
+          <p class="mb-auto">Explore how our capstone projects come to life from idea to execution.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link fw-bold">
+            Continue reading
+            <i class="fas fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+            <title>Thumbnail</title>
+            <rect width="100%" height="100%" fill="#55595c"></rect>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        From the Team @ Webfolio Works
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">How We Built Our Portfolio Platform</h2>
+        <p class="blog-post-meta">July 22, 2025 by <a href="#">Team Webfolio</a></p>
+        <p>This post explores the development journey of our team’s Webfolio Works website, the challenges we faced, and the tools we used.</p>
+        <hr>
+        <p>Our stack included HTML, Bootstrap, Django, and creative collaboration using Figma and GitHub.</p>
+
+        <h2>Blockquote Sample</h2>
+        <blockquote class="blockquote">
+          <p>"The journey of building together taught us more than any course could have."</p>
+        </blockquote>
+
+        <h3>Tools We Used</h3>
+        <ul>
+          <li><i class="fas fa-check-circle text-success me-2"></i>Django for backend</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>Bootstrap 5 for styling</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>GitHub for collaboration</li>
+        </ul>
+      </article>
+
+      <nav class="blog-pagination mt-4" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic"><i class="fas fa-users me-2"></i>About Webfolio Works</h4>
+          <p class="mb-0">We are a team of enthusiastic creators dedicated to helping people build standout portfolios with ease and creativity.</p>
+        </div>
+
+        <div class="p-4 bg-body-tertiary rounded mb-3">
+          <h4 class="fst-italic"><i class="fas fa-archive me-2"></i>Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">July 2025</a></li>
+            <li><a href="#">June 2025</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4 bg-body-tertiary rounded">
+          <h4 class="fst-italic"><i class="fas fa-link me-2"></i>Follow Us</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

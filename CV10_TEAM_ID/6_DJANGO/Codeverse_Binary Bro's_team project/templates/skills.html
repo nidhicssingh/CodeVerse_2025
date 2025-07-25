@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Binary Bro's - Skills{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-image:
+      linear-gradient(rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0.95)),
+      url('{% static "images/skills_bg.jpg" %}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: #343a40;
+  }
+
+  .bg-body-secondary,
+  .bg-body-tertiary {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  }
+
+  .display-4, .display-5 {
+    font-weight: 800;
+    color: #212529;
+  }
+
+  p, li {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #495057;
+  }
+
+  .skill-box {
+    border-left: 5px solid #0d6efd;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .skill-box h5 {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  .skill-box small {
+    color: #6c757d;
+    font-weight: 500;
+  }
+
+  .fw-bold {
+    color: #0d6efd !important;
+    text-decoration: none;
+  }
+
+  .fw-bold:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-10 px-0">
+      <h1 class="display-4 fst-italic">Skills That Define Binary Bro's</h1>
+      <p class="lead my-3">A powerful set of technical abilities that drive our projects from idea to launch.</p>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">Technical Expertise</h2><br>
+
+
+        <div class="skill-box">
+          <h5>Frontend Development</h5>
+          <small>HTML, CSS, JavaScript, React</small>
+          <p>Crafting responsive, interactive, and user-focused web interfaces.</p>
+        </div>
+
+        <div class="skill-box">
+          <h5>Backend Development</h5>
+          <small>Python, Django, REST APIs</small>
+          <p>Building robust, scalable, and secure backend logic and integrations.</p>
+        </div>
+
+        <div class="skill-box">
+          <h5>Version Control</h5>
+          <small>Git & GitHub</small>
+          <p>Ensuring effective team collaboration and seamless deployment with proper code tracking.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic"><i class="fas fa-lightbulb me-2"></i>What We Do</h4>
+          <p class="mb-0">Turning designs into dynamic websites and solving complex problems with clean code.</p>
+        </div>
+
+        <div class="p-4 bg-body-tertiary rounded mb-3">
+          <h4 class="fst-italic"><i class="fas fa-toolbox me-2"></i>Core Tools</h4>
+          <ol class="list-unstyled mb-0">
+            <li>VS Code</li>
+            <li>Postman</li>
+            <li>Chrome DevTools</li>
+          </ol>
+        </div>
+
+        <div class="p-4 bg-body-tertiary rounded">
+          <h4 class="fst-italic"><i class="fas fa-cogs me-2"></i>Focus Areas</h4>
+          <ol class="list-unstyled">
+            <li><i class="fas fa-check-circle me-2 text-success"></i>Clean UI</li>
+            <li><i class="fas fa-check-circle me-2 text-success"></i>Reusable Code</li>
+            <li><i class="fas fa-check-circle me-2 text-success"></i>Scalable Architecture</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

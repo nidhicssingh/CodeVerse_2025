@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me & Certifications{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-image:
+      linear-gradient(rgba(248, 249, 250, 0.9), rgba(233, 236, 239, 0.9)),
+      url('[YOUR_BACKGROUND_IMAGE_URL_HERE]');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: #343a40;
+  }
+
+  .bg-body-secondary,
+  .bg-body-tertiary {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 0.75rem;
+  }
+
+  .display-4, .display-5 {
+    font-weight: 800;
+    color: #212529;
+  }
+
+  .lead, p, li {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #495057;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+
+  ul li i {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #0d6efd;
+  }
+
+  .fw-bold {
+    color: #0d6efd !important;
+    text-decoration: none;
+  }
+
+  .fw-bold:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-10 px-0">
+      <h1 class="display-4 fst-italic">Meet the Developer – Webfolio Works</h1>
+      <p class="lead my-3">
+        Passionate about clean code and impactful solutions, I'm part of the Webfolio Works team focused on developing user-friendly web applications.
+      </p>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">About Me</h2>
+        <p>Hello! We are <strong>Webfolio Works</strong>, a passionate web developers skilled in:</p>
+        <ul>
+          <li><i class="fas fa-code"></i> HTML, CSS, and JavaScript</li>
+          <li><i class="fab fa-python"></i> Python & Django</li>
+          <li><i class="fas fa-tools"></i> Problem-solving and real-world application building</li>
+        </ul>
+        <p>I thrive in team environments, constantly learning and contributing to web solutions that matter.</p>
+
+        <hr>
+
+        <h2 class="display-5 link-body-emphasis mb-1">Certifications</h2>
+        <ul>
+          <li><i class="fas fa-certificate"></i> Full Stack Web Development - Coursera (June 2025)</li>
+          <li><i class="fas fa-certificate"></i> Responsive Web Design - freeCodeCamp (May 2025)</li>
+          <li><i class="fas fa-certificate"></i> Python for Everybody - edX (April 2025)</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic"><i class="fas fa-user me-2"></i>About Developer</h4>
+          <p class="mb-0">A tech enthusiast focused on modern web development and continuous improvement through hands-on projects.</p>
+        </div>
+
+        <div class="p-4 bg-body-tertiary rounded mb-3">
+          <h4 class="fst-italic"><i class="fas fa-graduation-cap me-2"></i>Cert Highlights</h4>
+          <ol class="list-unstyled mb-0">
+            <li><strong>2025:</strong> 3 industry-grade certifications</li>
+          </ol>
+        </div>
+
+        <div class="p-4 bg-body-tertiary rounded">
+          <h4 class="fst-italic"><i class="fas fa-tools me-2"></i>Tech Stack</h4>
+          <ol class="list-unstyled">
+            <li><i class="fas fa-check-circle me-2 text-success"></i>HTML, CSS, JS</li>
+            <li><i class="fas fa-check-circle me-2 text-success"></i>Python & Django</li>
+            <li><i class="fas fa-check-circle me-2 text-success"></i>Git & GitHub</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Codeverse{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    /* --- EDIT THIS SECTION FOR BACKGROUND --- */
+    /* The linear-gradient creates a semi-transparent overlay so text is readable. */
+    /* Replace the placeholder URL with your own image link. */
+    background-image:
+      linear-gradient(rgba(248, 249, 250, 0.9), rgba(233, 236, 239, 0.9)),
+      url('[YOUR_BACKGROUND_IMAGE_URL_HERE]');
+    
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Fixes the background during scroll for a parallax effect */
+    
+    font-family: 'Inter', sans-serif;
+    color: #343a40;
+  }
+
+  .bg-body-secondary,
+  .bg-body-tertiary {
+    /* Made cards slightly transparent to blend with the background */
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 0.75rem;
+  }
+
+  .display-4, .display-5 {
+    font-weight: 800;
+    color: #212529;
+  }
+
+  .lead, p, li {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #495057;
+  }
+
+  .blog-post-meta {
+    font-size: 0.95rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+
+  ul li i {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #0d6efd;
+  }
+
+  .fw-bold {
+    color: #0d6efd !important;
+    text-decoration: none;
+  }
+  .fw-bold:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-10 px-0">
+      <h1 class="display-4 fst-italic">Unlock Your Potential with Codeverse</h1>
+      <p class="lead my-3">
+        Codeverse is a transformative learning experience designed to bridge the gap between academic knowledge and industry demands. We empower students with hands-on skills in cutting-edge technologies.
+      </p>
+      <p class="lead mb-0"><a href="#learn-more" class="text-body-emphasis fw-bold">Explore the curriculum &rarr;</a></p>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <article class="blog-post" id="learn-more">
+        <h2 class="display-5 link-body-emphasis mb-1">Core Learning Modules</h2>
+        <p class="blog-post-meta">Program Start: July 31, 2025</p>
+
+        <p>The Codeverse curriculum dives deep into essential technologies that power modern software and infrastructure.</p>
+        <hr>
+
+        <h3>Key Technologies</h3>
+        <ul>
+          <li><i class="fab fa-python"></i><strong>Python & Django:</strong> Build robust, scalable backend systems and APIs with the industry's most versatile language and framework.</li>
+          <li><i class="fas fa-code"></i><strong>Frontend Development:</strong> Master HTML, CSS, and JavaScript to craft beautiful, responsive, and interactive user interfaces.</li>
+          <li><i class="fab fa-aws"></i><strong>AWS Cloud:</strong> Gain hands-on experience with Amazon Web Services to deploy, manage, and scale applications in the cloud.</li>
+          <li><i class="fab fa-git-alt"></i><strong>Open Source & Collaboration:</strong> Learn to contribute to real-world projects using Git, GitHub, and professional collaboration workflows.</li>
+          <li><i class="fab fa-linux"></i><strong>Linux & Shell Scripting:</strong> Master the command line and automate tasks in the environment trusted by developers worldwide.</li>
+        </ul>
+
+        <h3>Experiential Learning</h3>
+        <ul>
+          <li><i class="fas fa-building"></i><strong>Industrial Visits:</strong> See technology in action with guided tours and networking opportunities at leading tech companies.</li>
+          <li><i class="fas fa-project-diagram"></i><strong>Capstone Projects:</strong> Develop a full-stack software solution from concept to deployment, building a portfolio-ready showcase of your skills.</li>
+          <li><i class="fas fa-laptop-code"></i><strong>24-Hour Hackathon:</strong> Compete in a high-energy coding marathon on <strong>July 31st, 2025</strong>, where innovation and teamwork take center stage.</li>
+        </ul>
+        <p>Join us to transform your passion for technology into a professional career. Let's build the future, together.</p>
+      </article>
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic"><i class="fas fa-info-circle me-2"></i>About Codeverse</h4>
+          <p class="mb-0">An immersive tech program focused on practical skills, cloud computing, and real-world collaboration to prepare students for top-tier careers.</p>
+        </div>
+
+        <div class="p-4 bg-body-tertiary rounded mb-3">
+          <h4 class="fst-italic"><i class="fas fa-calendar-check me-2"></i>Key Date</h4>
+          <ol class="list-unstyled mb-0">
+            <li><strong>July 31, 2025:</strong> 24-Hour Kickoff Hackathon</li>
+          </ol>
+        </div>
+
+        <div class="p-4 bg-body-tertiary rounded">
+          <h4 class="fst-italic"><i class="fas fa-tools me-2"></i>Tech Stack</h4>
+          <ol class="list-unstyled">
+            <li><i class="fas fa-check-circle me-2 text-success"></i>Python & Django</li>
+            <li><i class="fas fa-check-circle me-2 text-success"></i>HTML, CSS, JS</li>
+            <li><i class="fas fa-check-circle me-2 text-success"></i>Amazon Web Services (AWS)</li>
+            <li><i class="fas fa-check-circle me-2 text-success"></i>Git & GitHub</li>
+            <li><i class="fas fa-check-circle me-2 text-success"></i>Linux</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

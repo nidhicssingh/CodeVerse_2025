@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Binary Bro's - Contact{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-image:
+      linear-gradient(rgba(248, 249, 250, 0.9), rgba(233, 236, 239, 0.9)),
+      url('[YOUR_BACKGROUND_IMAGE_URL_HERE]');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: #343a40;
+  }
+
+  .bg-body-tertiary {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  }
+
+  h1, h2 {
+    font-weight: 800;
+    color: #212529;
+  }
+
+  p, label, input, textarea {
+    font-size: 1.1rem;
+    color: #495057;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    background-color: #0d6efd;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #0b5ed7;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+  <div class="bg-body-tertiary">
+    <h1>Contact Binary Bro's</h1>
+    <p class="mb-4">Have a question, suggestion, or want to collaborate? Reach out to us using the form below.</p>
+
+    <form method="post">
+      {% csrf_token %}
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit"><i class="fas fa-paper-plane me-2"></i>Send Message</button>
+    </form>
+  </div>
+</main>
+{% endblock %}

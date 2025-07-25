@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Binary Bro's- Services{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-image:
+      linear-gradient(rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0.95)),
+      url('{% static "images/services_bg.jpg" %}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: #343a40;
+  }
+
+  .bg-body-tertiary {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  }
+
+  h1, h2, h3, h5 {
+    font-weight: 800;
+    color: #212529;
+  }
+
+  p, li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .list-group-item {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+  }
+
+  .list-group-item strong {
+    color: #0d6efd;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+  <div class="bg-body-tertiary p-4 rounded shadow-sm">
+    <h1 class="mb-4">Our Services</h1>
+    <p>At <strong class="fw-bold">Binary Bro's</strong>, we offer tailored services to help you create a professional and impactful portfolio. Here's what we provide:</p>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong>Resume Builder:</strong> Easily craft and download personalized resumes.
+      </li>
+      <li class="list-group-item">
+        <strong>Project Showcase:</strong> Upload and organize your work in an interactive portfolio.
+      </li>
+      <li class="list-group-item">
+        <strong>Certifications Upload:</strong> Highlight your achievements with verified certificates.
+      </li>
+      <li class="list-group-item">
+        <strong>Job & Internship Matching:</strong> Get connected with opportunities that fit your profile.
+      </li>
+    </ul>
+  </div>
+</main>
+{% endblock %}
