@@ -1,27 +1,20 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}Home - Nidhi's Portfolio{% endblock %}
-
-{% block content %}
 <div class="container mt-5">
-  
-<div class="welcome-banner">
-  <h1>Welcome to My Portfolio</h1>
-</div>
+  <div class="welcome-banner">
+    <h1>Welcome to My Portfolio</h1>
+  </div>
   <div class="row">
     <!-- Carousel -->
     <div class="col-md-6">
       <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://plus.unsplash.com/premium_photo-1749760305507-e66205164a31?w=500&auto=format&fit=crop&q=60" class="d-block w-100 carousel-image" alt="Slide 1">
+            <img src="https://i.imgur.com/g2iEP1s.jpeg" class="d-block w-100 carousel-image" alt="Bhushan Photo">
           </div>
           <div class="carousel-item">
-            <img src="https://plus.unsplash.com/premium_photo-1751895924527-65f56f8d3542?w=500&auto=format&fit=crop&q=60" class="d-block w-100 carousel-image" alt="Slide 2">
+            <img src="https://i.imgur.com/g2iEP1s.jpeg" class="d-block w-100 carousel-image" alt="Bhushan Photo">
           </div>
           <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1752542362589-a5668de3b1c1?w=500&auto=format&fit=crop&q=60" class="d-block w-100 carousel-image" alt="Slide 3">
+            <img src="https://i.imgur.com/g2iEP1s.jpeg" class="d-block w-100 carousel-image" alt="Bhushan Photo">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -31,30 +24,29 @@
           <span class="carousel-control-next-icon"></span>
         </button>
       </div> 
-
     </div>
 
     <!-- Introduction and Resume -->
     <div class="col-md-6 right-section">
       <div class="intro-section">
-        <h2>Hello, I'm Nidhi 👋</h2>
+        <h2>Hello, I am Bhushan Vs 👋</h2>
         <p>
-          I’m an IT Developer with a passion for clean code and smart solutions.  
-          I also love traveling, exploring new cultures, and finding inspiration in unexpected places.
+          I am a passionate creator, coder, and AI enthusiast currently pursuing my B.Tech in Artificial Intelligence and Machine Learning. 
+          I’m on a mission to blend creativity with technology. I love singing, building meaningful platforms, and helping others improve their communication skills through tech.
+          <br><br>
+          Check out my work at <a href="https://bhushanvhavle.blogspot.com/" target="_blank">bhushanvhavle.blogspot.com</a>
         </p>
       </div>
 
       <div class="resume-button-container">
-        <a href="{% static 'files/MY RESUME.pdf' %}" class="resume-btn" download>
+        <a href="assets/BHUSHAN_RESUME.pdf" class="resume-btn" download>
           <i class="fas fa-download"></i> Download My Resume
         </a>
       </div>
     </div>
   </div>
 </div>
-{% endblock %}
 
-{% block extra_css %}
 <style>
   .carousel-image {
     height: 400px;
@@ -63,7 +55,6 @@
   .right-section {
     padding: 20px;
   }
-  
   .intro-section {
     background-color: #ffffff;
     padding: 60px 30px;
@@ -72,19 +63,25 @@
     font-family: 'Segoe UI', sans-serif;
   }
   .intro-section h2 {
-    background-color: #ffffff;
     font-size: 2.5rem;
     font-weight: 700;
     color: #222;
     margin-bottom: 20px;
   }
   .intro-section p {
-    background-color: #ffffff;
     font-size: 1.2rem;
     color: #555;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
+  }
+  .intro-section a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .intro-section a:hover {
+    text-decoration: underline;
   }
   .resume-button-container {
     text-align: center;
@@ -110,42 +107,29 @@
     text-decoration: none;
   }
   .welcome-banner {
-  background: linear-gradient(to right, #ffffff, #ffffff);
-  padding: 40px 20px;
-  text-align: center;
-  color: black;
-  font-family: 'Segoe UI', sans-serif;
-  border-radius: 0 0 10px 10px; 
-}
-
-.welcome-banner {
-  background-color: #ffffff; /* Matches navbar bg-dark */
-  padding: 00px 20px 20px 20px;
-  text-align: center;
-  color: #000000;
-  font-family: 'Segoe UI', sans-serif;
-  border-bottom: 3px solid #ffffff;
-  margin-top: 0;
-}
-
-.welcome-banner h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin: 0;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    padding: 40px 20px;
+    text-align: center;
+    color: black;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 0 0 10px 10px; 
+    border-bottom: 3px solid #ffffff;
+    margin-top: 0;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .welcome-banner h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
   }
-}
-
-
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 </style>
-{% endblock %}
