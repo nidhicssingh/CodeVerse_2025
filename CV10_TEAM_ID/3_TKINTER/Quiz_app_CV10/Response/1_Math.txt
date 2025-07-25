@@ -1,0 +1,9 @@
+Q1: What is 5 + 7?
+Your Answer: 12
+Correct Answer: 12
+
+Q2: What is square root of 64?
+Your Answer: 9
+Correct Answer: 8
+
+Final Score: 1/2
