@@ -1,0 +1,58 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Skills</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<section class="skills-section">
+  <h2 class="section-title">💼 Our Skills</h2>
+  <p class="section-subtitle">From frontend to AI — we've got it covered!</p>
+
+  <div class="skills-grid">
+
+    <div class="skill-card frontend">
+      <h3>Frontend Development</h3>
+      <p>HTML, CSS, JavaScript, React, Tailwind, Bootstrap</p>
+    </div>
+
+    <div class="skill-card backend">
+      <h3>Backend Development</h3>
+      <p>Python, Django, Node.js, Express</p>
+    </div>
+
+    <div class="skill-card uiux">
+      <h3>UI/UX Design</h3>
+      <p>Figma, Canva, Adobe XD, Wireframing</p>
+    </div>
+
+    <div class="skill-card ai">
+      <h3>AI & ML</h3>
+      <p>Python, TensorFlow, ChatGPT APIs, NLP</p>
+    </div>
+
+    <div class="skill-card db">
+      <h3>Database Management</h3>
+      <p>MySQL, PostgreSQL, MongoDB</p>
+    </div>
+
+    <div class="skill-card teamwork">
+      <h3>Teamwork & Collaboration</h3>
+      <p>Git, GitHub, Agile, Presentations</p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
+
+{% endblock %}

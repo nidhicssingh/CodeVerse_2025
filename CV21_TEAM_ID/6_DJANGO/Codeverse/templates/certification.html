@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certifications</title>
+  <link rel="stylesheet" href="{% static 'css/certifications.css' %}">
+</head>
+<body>
+  <section class="certifications-section">
+    <h2 class="section-title">🏅 Certifications & Achievements</h2>
+    <div class="scroll-wrapper">
+      <div class="certification-card">
+        <h3>📁 Capstone Projects</h3>
+        <p>Built Portfolio, E-commerce, and Python Games using Turtle, Tkinter, and Pygame.</p>
+      </div>
+      <div class="certification-card">
+        <h3>🎮 Game Dev Hackathon</h3>
+        <p>Created fun Python games under pressure during the CodeVerse Hackathon.</p>
+      </div>
+      <div class="certification-card">
+        <h3>🧠 UI/UX Sprint</h3>
+        <p>Conducted UX research, created personas, and solved design problems creatively.</p>
+      </div>
+      <div class="certification-card">
+        <h3>🎓 CodeVerse Showcase</h3>
+        <p>Presented projects and received feedback from peers & mentors.</p>
+      </div>
+      <div class="certification-card">
+        <h3>🛠 Tech Tools</h3>
+        <p>Worked hands-on with GitHub, Django, ReactJS, Figma, and Canva.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+{% endblock %}

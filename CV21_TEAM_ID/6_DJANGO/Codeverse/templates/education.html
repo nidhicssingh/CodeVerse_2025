@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Education{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Education</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<section class="education-section">
+  <h2 class="section-title">🎓 Education</h2>
+  <div class="education-wrapper">
+    <div class="edu-content">
+      <div class="edu-cards">
+        <div class="edu-card">
+          <h3>S-VYASA University</h3>
+          <p>Organized the “CodeVerse” tech program – a dynamic, student-led initiative promoting coding culture and innovation.</p>
+        </div>
+        <div class="edu-card">
+          <h3>Core Areas</h3>
+          <p>Focus on Full Stack Development, UI/UX, AI projects, and student community engagement through real-time tech events.</p>
+        </div>
+        <div class="edu-card">
+          <h3>Learning Vision</h3>
+          <p>We believe in hands-on, collaborative learning where ideas turn into running programs. 💡💻</p>
+        </div>
+      </div>
+    </div>
+    <div class="edu-image">
+      <img src="{% static 'IMG/web2.jpg' %}" alt="Education Visual">
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
+{% endblock %}

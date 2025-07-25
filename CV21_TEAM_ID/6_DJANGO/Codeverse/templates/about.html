@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<section class="about-section">
+  <h1 class="section-title">About Us</h1>
+  <h2 class="team-name">Compile Dreamers</h2>
+  <p class="tagline">Where <span>ideas</span> turn into <span>running programs</span></p>
+
+  <div class="image-gallery">
+    <img src="{% static 'IMG/web1.jpg' %}" alt="Team Work 1">
+    <img src="{% static 'IMG/web5.jpg' %}" alt="Team Work 2">
+    <img src="{% static 'IMG/web3.jpg' %}" alt="Team Work 3">
+    <img src="{% static 'IMG/code2.jpg' %}" alt="Team Work 4">
+  </div>
+
+  <div class="team-members">
+  <h3>Our Team</h3>
+  <p>
+    <span class="member priyanka">Priyanka</span> |
+    <span class="member monish">Monish</span> |
+    <span class="member gange">Ganga</span> |
+    <span class="member chiru">Chiranjeevi</span> |
+    <span class="member savan">Savan</span>|
+    <span class="member anish">yashaswini</span> |
+  </p>
+</div>
+
+  <div class="university">
+    <p>We are students from <strong>SVYASA University</strong>, participating in the innovative <strong>CodeVerse Program</strong> conducted exclusively here to nurture tech creativity and real-world skills.</p>
+  </div>
+</section>
+{% endblock %}

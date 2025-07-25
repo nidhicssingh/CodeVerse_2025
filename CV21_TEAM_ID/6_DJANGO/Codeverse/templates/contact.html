@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} contact {% endblock title%}  
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<section class="contact-section">
+  <div class="contact-container">
+
+    <div class="contact-info">
+      <h2>📞 Get in Touch</h2>
+      <p>We’d love to hear from you! Whether you have a question, idea, or collaboration offer — reach out! 🚀</p>
+      <ul>
+        <li><strong>Email:</strong> codeverse2025@gmail.com</li>
+        <li><strong>Phone:</strong> +91 98765 43210</li>
+        <li><strong>Location:</strong> Bengaluru, India</li>
+      </ul>
+    </div>
+
+    <div class="contact-form">
+      <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
+{% endblock %}

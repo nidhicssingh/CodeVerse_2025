@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}blog{% endblock %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeVerse Blog</title>
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <section class="blog-section">
+    <h2 class="blog-title">📝 Explore Our Tech Blogs</h2>
+    <div class="blog-container">
+
+      <div class="blog-card">
+        <h3>🚀 Building CodeVerse: A Journey</h3>
+        <p>Discover how the CodeVerse project evolved from concept to full-stack platform. We talk tech stacks, teamwork, and debugging!</p>
+        <a href="#">Read More →</a>
+      </div>
+
+      <div class="blog-card">
+        <h3>🎯 Capstone Secrets: Making Projects Shine</h3>
+        <p>How we made our Python games and full-stack e-commerce stand out using planning, design thinking, and code strategy.</p>
+        <a href="#">Read More →</a>
+      </div>
+
+      <div class="blog-card">
+        <h3>🎨 UI/UX Tips from Our Designers</h3>
+        <p>Top 5 UI/UX ideas used in CodeVerse — including layout psychology, prototyping, and accessibility tricks.</p>
+        <a href="#">Read More →</a>
+      </div>
+
+      <div class="blog-card">
+        <h3>🤖 Learning Full-Stack Fast: How We Did It</h3>
+        <p>From Django to React, we picked up full-stack dev fast. Here’s our resource list, sprint strategy, and team hacks.</p>
+        <a href="#">Read More →</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
+ {% endblock %}

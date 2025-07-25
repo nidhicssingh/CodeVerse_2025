@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <section class="project-section">
+    <h2 class="section-title">✨ Our Creative Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="project-block left">
+      <img src="{% static 'IMG/port.jpg' %}" alt="Portfolio Website" class="project-img" height="250" width="350">
+      <div class="project-info">
+        <h3>Dark Themed Portfolio Website</h3>
+        <p>A sleek portfolio with dark UI, animations, and responsive design built using HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-block right">
+      <div class="project-info">
+        <h3>WearAura – E-commerce Website</h3>
+        <p>A capstone project featuring cart, filter, payment mockup, and local hub-based discounts — built with Django & React.</p>
+      </div>
+      <img src="{% static 'IMG/ecom.jpg' %}" alt="E-commerce Website" class="project-img" height="250" width="350">
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-block center">
+      <img src="{% static 'IMG/turtle.jpg' %}" alt="Turtle Graphics Project" class="project-img" height="250" width="350">
+      <div class="project-info">
+        <h3>Turtle-Based Drawing App</h3>
+        <p>Used Python Turtle module to design interactive patterns and visualizations.</p>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-block left">
+      <img src="{% static 'IMG/tkinter.jpg' %}" alt="Tkinter GUI App" class="project-img" height="250" width="350">
+      <div class="project-info">
+        <h3>Tkinter GUI Applications</h3>
+        <p>Designed basic desktop applications like Calculator and To-Do list using Python’s Tkinter library.</p>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-block right">
+      <div class="project-info">
+        <h3>Pygame Mini Game</h3>
+        <p>Created a bike race game using Python’s Pygame module with keyboard controls and score tracking.</p>
+      </div>
+      <img src="{% static 'IMG/pygame.jpg' %}" alt="Pygame Project" class="project-img" height="250" width="350">
+    </div>
+  </section>
+</body>
+</html>
+{% endblock %}
