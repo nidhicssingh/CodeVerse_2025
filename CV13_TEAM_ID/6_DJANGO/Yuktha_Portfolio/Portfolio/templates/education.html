@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Education</title>
+    <style>
+        body {
+            background-color: #f8dfecff;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Education {
+            background: #c2d9e4ff;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            white-space: pre-line; /* Handles line breaks like <pre> */
+        }
+    </style>
+</head>
+<body>
+    <div class="Education">
+        <h1><b>My Education</b></h1>
+        <p>
+• I studied my schooling in Sri Chaitanya Techno School and secured 85% in my SSLC.
+• Later, I completed my Pre-University in Jain College, VV puram. I had chosen Science[PCMC] as my stream and secured 87.3% in my 12th.
+• Currently I am studying BTECH[Software]in SVYASA Deemed To Be University. I have completed by BTECH first year.
+        </p>
+    </div>
+</body>
+</html>
+
+<br>
+<br>
+{% endblock %}

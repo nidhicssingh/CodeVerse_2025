@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home -Yuktha S Portfolio{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<div class="container mt-5">
+<div class="welcome-banner">
+  <h1>Welcome to My Portfolio</h1>
+</div>
+  <div class="row">
+    <!-- Carousel -->
+    <div class="col-md-6">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.pinimg.com/736x/58/54/c1/5854c1283dd27e5f053be1bf3e5cbee1.jpg" class="d-block w-100 carousel-image" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.pinimg.com/736x/d5/9b/f1/d59bf1fe70888bbd360a2c3d56f5bf8c.jpg" class="d-block w-100 carousel-image" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.pinimg.com/736x/90/5a/ca/905aca07acfab1b6e375cf7fd795a235.jpg" class="d-block w-100 carousel-image" alt="Slide 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div> 
+
+    </div>
+
+    <!-- Introduction and Resume -->
+    <div class="col-md-6 right-section">
+      <div class="intro-section">
+        <h2>Hello, I'm Yuktha S 👋</h2>
+        <pre>
+        <p>
+I study in SVYASA Deemed To Be University. 
+I have taken BTECH course and my specialization is Software.
+I have completed my first year in BTECH and currently in the 3-SEM
+        </p>
+      </pre>
+      </div>
+
+      <div class="row">
+     <!-- Carousel  -->
+    <div class="col-md-6">
+  <div style="display: flex; gap: 10px; padding: 10px;">
+    <img src="{% Static 'Yuktha.jpg' %}" alt="Yuktha" class="rounded-circle" style="width: 150px; margin-bottom: 20px;">
+</div>
+
+      <div class="resume-button-container">
+        <a href="{% static 'files/Yuktha_Resume.docx' %}" class="resume-btn" download>
+          <i class="fas fa-download"></i> Download My Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .carousel-image {
+    height: 400px;
+    object-fit: cover;
+  }
+  .right-section {
+    padding: 20px;
+  }
+  
+  .intro-section {
+    background-color: #f9ceceff;
+    padding: 60px 30px;
+    background: #ffcdcdff;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .intro-section h2 {
+    background-color: #f9e7e7ff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  .intro-section p {
+    background-color: #e3c7e3ff;
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .resume-button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .resume-btn {
+    background-color: #0d6efd;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .resume-btn:hover {
+    background-color: #4da6aaff;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  .welcome-banner {
+  background: linear-gradient(to right, #e8e5adff, #b9cf97ff);
+  padding: 40px 20px;
+  text-align: center;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 0 0 10px 10px; 
+}
+
+.welcome-banner {
+  background-color: #9fc395ff; /* Matches navbar bg-dark */
+  padding: 00px 20px 20px 20px;
+  text-align: center;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  border-bottom: 3px solid #c36e6eff;
+  margin-top: 0;
+}
+
+.welcome-banner h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+</style>
+{% endblock %}
