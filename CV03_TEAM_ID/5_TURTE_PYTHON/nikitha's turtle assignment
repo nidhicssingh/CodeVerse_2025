@@ -1,0 +1,78 @@
+import turtle
+
+# Set up the screen
+screen = turtle.Screen()
+screen.bgcolor("black")
+screen.title("Daisy Flower with Attached Leaves")
+
+# Create turtle
+t = turtle.Turtle()
+t.speed(0)
+t.pensize(2)
+
+# Function to draw one petal
+def draw_petal():
+    t.color("white", "white")
+    t.begin_fill()
+    t.circle(60, 60)
+    t.left(120)
+    t.circle(60, 60)
+    t.end_fill()
+    t.right(60)
+
+# Function to draw the flower petals
+def draw_flower(petals=24):
+    t.penup()
+    t.goto(0, 0)
+    t.setheading(90)
+    t.pendown()
+    for _ in range(petals):
+        draw_petal()
+        t.right(360 / petals)
+
+# Draw the yellow center of the daisy
+def draw_center():
+    t.penup()
+    t.goto(0, -20)
+    t.setheading(0)
+    t.pendown()
+    t.color("yellow", "gold")
+    t.begin_fill()
+    t.circle(20)
+    t.end_fill()
+
+# Draw the stem of the flower
+def draw_stem():
+    t.penup()
+    t.goto(0, -20)
+    t.setheading(-90)
+    t.pensize(8)
+    t.color("green")
+    t.pendown()
+    t.forward(180)
+
+# Draw a leaf attached to the stem
+def draw_leaf(position):
+    # position: "left" or "right"
+    t.penup()
+    t.goto(0, -100)
+    angle = -160 if position == "left" else -20
+    t.setheading(angle)
+    t.pendown()
+    t.color("green", "forest green")
+    t.begin_fill()
+    t.circle(60, 80)
+    t.left(100)
+    t.circle(60, 80)
+    t.end_fill()
+
+# Main drawing sequence
+draw_flower()
+draw_center()
+draw_stem()
+draw_leaf("left")
+draw_leaf("right")
+
+# Hide turtle and keep window open
+t.hideturtle()
+screen.mainloop()
