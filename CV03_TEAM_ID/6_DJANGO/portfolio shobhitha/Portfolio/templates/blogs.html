@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}blog{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shobhitha's Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .blog-section {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .blog-section img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .blog-title {
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+        .blog-content {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .highlight {
+            color: #d14d72;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blog-section">
+        <img src="https://radcliffe-harvard-edu.imgix.net/7db9b6b8-ead7-4054-bb9c-78953d7ad0b0/Dakin-photog-John-Deane-MGraham-Night_Journey_Kick_MR-WEB.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=0%2C2071%2C10000%2C13323" alt="Shobhitha Dancing">
+        <!-- Replace the URL above with your image link -->
+
+        <h2 class="blog-title">My Passion for <span class="highlight">Dancing</span></h2>
+        <div class="blog-content">
+            <p>
+                <span class="highlight">Dancing</span> has always been a part of who I am. It's more than just a hobby—it's a way for me to express 
+                <span class="highlight">creativity</span>, emotion, and energy. Whether it's classical, contemporary, or freestyle, I love exploring different 
+                dance forms and learning new moves.
+            </p>
+            <p>
+                I often participate in <span class="highlight">college events</span> and cultural fests, and I enjoy choreographing group performances. 
+                <span class="highlight">Dance</span> helps me stay active, focused, and confident—it brings balance to my tech-filled world.
+            </p>
+            <p>
+                Through my blog, I hope to share my experiences as a <span class="highlight">dancer</span> and connect with others who are equally passionate 
+                about the art of movement.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+ {% endblock %}
