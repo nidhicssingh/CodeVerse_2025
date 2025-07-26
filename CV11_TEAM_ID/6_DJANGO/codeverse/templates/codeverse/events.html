@@ -1,0 +1,90 @@
+{% extends 'codeverse/base.html' %}
+{% load static %}
+{% block title %}Events - CodeVerse 2025{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #0d1117;
+        color: #f0f6fc;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .event-card {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        box-shadow: 0 0 8px rgba(0, 206, 209, 0.2);
+        transition: 0.3s ease;
+    }
+
+    .event-card:hover {
+        border-color: #00CED1;
+        box-shadow: 0 0 15px rgba(0, 206, 209, 0.4);
+        transform: translateY(-3px);
+    }
+
+    .event-title {
+        color: #58a6ff;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    .event-meta {
+        color: #8b949e;
+        font-size: 0.95rem;
+    }
+
+    hr {
+        border-color: #30363d;
+        margin: 40px 0;
+    }
+</style>
+
+<div class="container py-5">
+    <h1 class="text-center text-info mb-4">📅 CodeVerse 2025 Events</h1>
+    <p class="text-center lead mb-5">Here are the exciting events & workshops conducted during our 2-week CodeVerse program:</p>
+
+    <div class="row justify-content-center">
+
+        <!-- 🧊 Example Event 1 -->
+        <div class="col-md-6">
+            <div class="event-card">
+                <h3 class="event-title">Inaugural Session & Ice-Breaker</h3>
+                <p class="event-meta">📅 July 14, 2025 | 🕘 9:00 AM - 4:30 PM | 📍 Seminar Hall</p>
+                <p>Kickstarting CodeVerse 2025 with an inaugural by Vinay Kumar, group activities, AWS/Git intro & Yoga.</p>
+            </div>
+        </div>
+
+        <!-- 🛠️ Example Event 2 -->
+        <div class="col-md-6">
+            <div class="event-card">
+                <h3 class="event-title">Hands-on Python Workshops</h3>
+                <p class="event-meta">📅 July 17–18, 2025 | 🕘 9:30 AM - 12:45 PM | 📍 Lab</p>
+                <p>Interactive sessions for all sections to master Python fundamentals and logical thinking via code.</p>
+            </div>
+        </div>
+
+        <!-- 🎤 Example Event 3 -->
+        <div class="col-md-6">
+            <div class="event-card">
+                <h3 class="event-title">Entrepreneur Talk & Talent Hunt</h3>
+                <p class="event-meta">📅 July 22, 2025 | 🕘 9:30 AM - 4:00 PM | 📍 Seminar Hall</p>
+                <p>Talk by Madanmohan Rao + Talent Hunt finals. Showcasing creativity and pitch confidence.</p>
+            </div>
+        </div>
+
+        <!-- 💡 Example Event 4 -->
+        <div class="col-md-6">
+            <div class="event-card">
+                <h3 class="event-title">24-Hour Hackathon</h3>
+                <p class="event-meta">📅 July 31 – Aug 1, 2025 | 🕘 9:00 AM - 9:00 AM | 📍 Labs</p>
+                <p>Endurance, innovation, teamwork. Build & deploy live prototypes under pressure — best ideas win!</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'codeverse/base.html' %}
+{% load static %}
+{% block title %}Home - CodeVerse 2025{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #0d1117 !important;
+        color: #f0f6fc;
+    }
+
+    .glow-btn {
+        background: linear-gradient(135deg, #00CED1, #1E90FF);
+        color: #fff;
+        padding: 12px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 15px #00ced1a8;
+        transition: 0.3s ease;
+    }
+
+    .glow-btn:hover {
+        box-shadow: 0 0 25px #00ced1;
+        transform: scale(1.05);
+    }
+
+    .logo {
+        animation: neonPulse 3s infinite ease-in-out;
+    }
+
+    @keyframes neonPulse {
+        0% {
+            filter: drop-shadow(0 0 5px #00CED1);
+            transform: scale(1);
+        }
+        50% {
+            filter: drop-shadow(0 0 20px #00CED1);
+            transform: scale(1.05);
+        }
+        100% {
+            filter: drop-shadow(0 0 5px #00CED1);
+            transform: scale(1);
+        }
+    }
+
+    .about-card {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        color: #f0f6fc;
+        transition: all 0.3s ease;
+    }
+
+    .about-card:hover {
+        border-color: #00CED1;
+        box-shadow: 0 0 10px #00CED1;
+        transform: scale(1.02);
+    }
+
+    hr {
+        border-color: #30363d;
+    }
+</style>
+
+<!-- 🌟 HERO SECTION - Professional Style -->
+<section class="hero-section text-center d-flex flex-column justify-content-center align-items-center px-4" style="min-height: 80vh; background: linear-gradient(120deg, #1E1E2F, #0D1117);">
+    <img src="{% static 'codeverse/gallery/IMG/teamlogo.png' %}" alt="Team Logo" class="img-fluid logo mb-4" width="160">
+
+    <h1 class="display-3 fw-bold text-info mb-3" style="letter-spacing: 1px;">CodeVerse 2025 🚀</h1>
+
+    <p class="lead mb-4" style="max-width: 700px; font-size: 1.25rem; line-height: 1.6;">
+        Welcome to our official platform! Built with Django and Bootstrap by the <strong>CLOUD ENTITY</strong> from SVYASA University, this project showcases our passion for clean design, secure code, and team synergy.
+    </p>
+
+    <a href="/events/" class="glow-btn">Explore Events</a>
+</section>
+
+
+
+{% endblock %}

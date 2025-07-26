@@ -1,0 +1,143 @@
+{% extends 'codeverse/base.html' %}
+{% load static %}
+{% block title %}Sessions - CodeVerse 2025{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #0d1117;
+        color: #f0f6fc;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .session-table {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .session-table h2 {
+        color: #58a6ff;
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    th, td {
+        padding: 12px 15px;
+        border: 1px solid #30363d;
+        text-align: left;
+    }
+
+    th {
+        background-color: #1f2937;
+        color: #00CED1;
+    }
+
+    tr:nth-child(even) {
+        background-color: #1a1f2c;
+    }
+
+    tr:hover {
+        background-color: #273043;
+    }
+
+    .icon {
+        margin-right: 6px;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="session-table">
+        <h2 class="text-info text-center">🗓️ CodeVerse 2025 - Daily Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Activities</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>July 14 (Mon)</td>
+                    <td>9:00 AM – 4:30 PM</td>
+                    <td>Inauguration, Ice-breaking, AWS/Git, Yoga</td>
+                </tr>
+                <tr>
+                    <td>July 15 (Tue)</td>
+                    <td>9:30 AM – 12:45 PM</td>
+                    <td>Freelancing, AWS/Git, Yoga</td>
+                </tr>
+                <tr>
+                    <td>July 16 (Wed)</td>
+                    <td>9:30 AM – 12:45 PM</td>
+                    <td>Placement Readiness, AWS/Git, Yoga</td>
+                </tr>
+                <tr>
+                    <td>July 17–18</td>
+                    <td>9:30 AM – 12:45 PM</td>
+                    <td>Python Hands-on (All Sections), Talent Hunt Practice, Yoga</td>
+                </tr>
+                <tr>
+                    <td>July 19 (Sat)</td>
+                    <td>-</td>
+                    <td>Holiday</td>
+                </tr>
+                <tr>
+                    <td>July 21 (Mon)</td>
+                    <td>9:30 AM – 12:45 PM</td>
+                    <td>Frontend Web Dev, Talent Hunt, Yoga</td>
+                </tr>
+                <tr>
+                    <td>July 22 (Tue)</td>
+                    <td>9:30 AM – 4:00 PM</td>
+                    <td>Entrepreneur Talk (Madanmohan Rao), Talent Hunt Event</td>
+                </tr>
+                <tr>
+                    <td>July 23–24</td>
+                    <td>All Day</td>
+                    <td>Industrial Visit / Capstone Project</td>
+                </tr>
+                <tr>
+                    <td>July 25–26</td>
+                    <td>9:30 AM – 12:45 PM</td>
+                    <td>Full Stack Dev, Yoga</td>
+                </tr>
+                <tr>
+                    <td>July 28 (Mon)</td>
+                    <td>9:30 AM – 12:45 PM</td>
+                    <td>Generative AI Workshop, Yoga</td>
+                </tr>
+                <tr>
+                    <td>July 29 (Tue)</td>
+                    <td>9:30 AM – 3:15 PM</td>
+                    <td>Capstone Project, Hackathon Prep (IBM), Yoga</td>
+                </tr>
+                <tr>
+                    <td>July 30 (Wed)</td>
+                    <td>9:30 AM – 4:30 PM</td>
+                    <td>Project Expo, Yoga, Psychological Test</td>
+                </tr>
+                <tr>
+                    <td>July 31–Aug 1</td>
+                    <td>24 Hours</td>
+                    <td>⚡ 24-Hour Hackathon, Yoga</td>
+                </tr>
+                <tr>
+                    <td>August 1 (Fri)</td>
+                    <td>10:00 AM – 11:00 AM</td>
+                    <td>🎉 Feedback & Awards Ceremony</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

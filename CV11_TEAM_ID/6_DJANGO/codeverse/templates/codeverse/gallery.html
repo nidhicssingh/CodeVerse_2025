@@ -1,0 +1,106 @@
+{% extends 'codeverse/base.html' %}
+{% load static %}
+{% block title %}Gallery - CodeVerse 2025{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #0d1117;
+        color: #f0f6fc;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .gallery-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #58a6ff;
+        margin: 40px 0 20px;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px 40px 60px;
+    }
+
+    .gallery-box {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 0 6px #00ced175;
+        transition: 0.3s ease-in-out;
+    }
+
+    .gallery-box img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-box:hover img {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 992px) {
+        .gallery-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .gallery-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<h2 class="gallery-title">📸 CodeVerse 2025 Gallery</h2>
+
+<div class="gallery-container">
+    <!-- Paste these blocks 38 times and change image number -->
+    {% comment %} Repeat and edit filenames up to img38.jpg {% endcomment %}
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img1.jpg' %}" alt="Image 1"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img2.jpg' %}" alt="Image 2"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img3.jpg' %}" alt="Image 3"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img4.jpg' %}" alt="Image 4"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img4.jpg' %}" alt="Image 4"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img5.jpg' %}" alt="Image 5"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img6.jpg' %}" alt="Image 6"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img7.jpg' %}" alt="Image 7"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img8.jpg' %}" alt="Image 8"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img9.jpg' %}" alt="Image 9"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img10.jpg' %}" alt="Image 10"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img11.jpg' %}" alt="Image 11"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img12.jpg' %}" alt="Image 12"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img13.jpg' %}" alt="Image 13"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img14.jpg' %}" alt="Image 14"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img15.jpg' %}" alt="Image 15"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img16.jpg' %}" alt="Image 16"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img17.jpg' %}" alt="Image 17"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img18.jpg' %}" alt="Image 18"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img19.jpg' %}" alt="Image 19"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img20.jpg' %}" alt="Image 20"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img21.jpg' %}" alt="Image 21"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img22.jpg' %}" alt="Image 22"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img23.jpg' %}" alt="Image 23"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img24.jpg' %}" alt="Image 24"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img25.jpg' %}" alt="Image 25"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img26.jpg' %}" alt="Image 26"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img27.jpg' %}" alt="Image 27"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img28.jpg' %}" alt="Image 28"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img29.jpg' %}" alt="Image 29"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img30.jpg' %}" alt="Image 30"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img31.jpg' %}" alt="Image 31"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img32.jpg' %}" alt="Image 32"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img33.jpg' %}" alt="Image 33"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img34.jpg' %}" alt="Image 34"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img35.jpg' %}" alt="Image 35"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img36.jpg' %}" alt="Image 36"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img37.jpg' %}" alt="Image 37"></div>
+    <div class="gallery-box"><img src="{% static 'codeverse/gallery/IMG/img38.jpg' %}" alt="Image 38"></div>
+</div>
+
+{% endblock %}

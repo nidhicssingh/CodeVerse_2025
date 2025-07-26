@@ -1,0 +1,119 @@
+{% extends 'codeverse/base.html' %}
+{% load static %}
+{% block title %}Team Profile - CodeVerse 2025{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #0d1117;
+        color: #f0f6fc;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .team-section {
+        max-width: 1200px;
+        margin: auto;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .team-section h1 {
+        color: #58a6ff;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        color: #f0f6fc;
+        transition: 0.3s ease;
+        border-radius: 15px;
+    }
+
+    .card:hover {
+        border-color: #00CED1;
+        box-shadow: 0 0 12px #00CED1;
+        transform: scale(1.02);
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .card-title {
+        font-weight: 600;
+        color: #00CED1;
+    }
+
+    .card-body p {
+        font-size: 0.95rem;
+    }
+</style>
+
+<div class="team-section">
+    <h1>🚀 Meet Our Team</h1>
+    <div class="row g-4 justify-content-center">
+
+        <!-- Team Leader -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'codeverse/gallery/IMG/chitti.jpg' %}" class="card-img-top" alt="Chitti Surya">
+                <div class="card-body">
+                    <h5 class="card-title">Chitti Surya</h5>
+                    <p class="card-text">Team Leader · Project Manager</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Member 1 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{% static 'codeverse/gallery/IMG/mustafa.jpg' %}" class="card-img-top" alt="Mohammed Mustafa">
+                <div class="card-body">
+                    <h5 class="card-title">Mohammed Mustafa</h5>
+                    <p class="card-text">Full Stack Developer · UI Integration</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{% static 'codeverse/gallery/IMG/kuber.jpg' %}" class="card-img-top" alt="Kuber B Raju">
+                <div class="card-body">
+                    <h5 class="card-title">Kuber B Raju</h5>
+                    <p class="card-text">Frontend Developer · Events Module</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{% static 'codeverse/gallery/IMG/sandhya.jpg' %}" class="card-img-top" alt="Sandhya M">
+                <div class="card-body">
+                    <h5 class="card-title">Sandhya M</h5>
+                    <p class="card-text">Media Designer · Gallery & Styling</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{% static 'codeverse/gallery/IMG/yelina.jpg' %}" class="card-img-top" alt="Yelina Misal">
+                <div class="card-body">
+                    <h5 class="card-title">Yelina Misal</h5>
+                    <p class="card-text">Content & Schedule Manager</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
