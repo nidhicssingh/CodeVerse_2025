@@ -1,127 +1,138 @@
 import pygame
-import sys
+import time
+import copy
 
-# Initialize Pygame
 pygame.init()
+WIDTH, HEIGHT = 540, 600
+WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Sudoku Game")
 
-# Constants
-WIDTH, HEIGHT = 300, 300
-LINE_WIDTH = 5
-BOARD_ROWS = 3
-BOARD_COLS = 3
-SQUARE_SIZE = WIDTH // 3
-CIRCLE_RADIUS = SQUARE_SIZE // 3
-CIRCLE_WIDTH = 10
-CROSS_WIDTH = 15
-SPACE = SQUARE_SIZE // 4
+FONT = pygame.font.SysFont("comicsans", 40)
+SMALL_FONT = pygame.font.SysFont("comicsans", 25)
 
-# Colors
-BG_COLOR = (28, 170, 156)
-LINE_COLOR = (23, 145, 135)
-CIRCLE_COLOR = (239, 231, 200)
-CROSS_COLOR = (84, 84, 84)
+# Sample Sudoku Board (0 = empty)
+board = [
+    [7, 8, 0, 4, 0, 0, 1, 2, 0],
+    [6, 0, 0, 0, 7, 5, 0, 0, 9],
+    [0, 0, 0, 6, 0, 1, 0, 7, 8],
+    [0, 0, 7, 0, 4, 0, 2, 6, 0],
+    [0, 0, 1, 0, 5, 0, 9, 3, 0],
+    [9, 0, 4, 0, 6, 0, 0, 0, 5],
+    [0, 7, 0, 3, 0, 0, 0, 1, 2],
+    [1, 2, 0, 0, 0, 7, 4, 0, 0],
+    [0, 4, 9, 2, 0, 6, 0, 0, 7]
+]
 
-# Screen setup
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Tic Tac Toe")
-screen.fill(BG_COLOR)
+original_board = copy.deepcopy(board)
 
-# Board
-board = [[0 for _ in range(BOARD_COLS)] for _ in range(BOARD_ROWS)]
+selected = None
 
-# Draw grid lines
-def draw_lines():
-    # Horizontal
-    pygame.draw.line(screen, LINE_COLOR, (0, SQUARE_SIZE), (WIDTH, SQUARE_SIZE), LINE_WIDTH)
-    pygame.draw.line(screen, LINE_COLOR, (0, 2 * SQUARE_SIZE), (WIDTH, 2 * SQUARE_SIZE), LINE_WIDTH)
-    # Vertical
-    pygame.draw.line(screen, LINE_COLOR, (SQUARE_SIZE, 0), (SQUARE_SIZE, HEIGHT), LINE_WIDTH)
-    pygame.draw.line(screen, LINE_COLOR, (2 * SQUARE_SIZE, 0), (2 * SQUARE_SIZE, HEIGHT), LINE_WIDTH)
+def draw_grid(win):
+    gap = WIDTH // 9
+    for i in range(10):
+        thickness = 4 if i % 3 == 0 else 1
+        pygame.draw.line(win, (0, 0, 0), (0, i * gap), (WIDTH, i * gap), thickness)
+        pygame.draw.line(win, (0, 0, 0), (i * gap, 0), (i * gap, WIDTH), thickness)
 
-# Draw Xs and Os
-def draw_figures():
-    for row in range(BOARD_ROWS):
-        for col in range(BOARD_COLS):
-            if board[row][col] == 1:
-                # Draw X
-                pygame.draw.line(screen, CROSS_COLOR,
-                                 (col * SQUARE_SIZE + SPACE, row * SQUARE_SIZE + SPACE),
-                                 (col * SQUARE_SIZE + SQUARE_SIZE - SPACE, row * SQUARE_SIZE + SQUARE_SIZE - SPACE),
-                                 CROSS_WIDTH)
-                pygame.draw.line(screen, CROSS_COLOR,
-                                 (col * SQUARE_SIZE + SPACE, row * SQUARE_SIZE + SQUARE_SIZE - SPACE),
-                                 (col * SQUARE_SIZE + SQUARE_SIZE - SPACE, row * SQUARE_SIZE + SPACE),
-                                 CROSS_WIDTH)
-            elif board[row][col] == 2:
-                # Draw O
-                pygame.draw.circle(screen, CIRCLE_COLOR,
-                                   (col * SQUARE_SIZE + SQUARE_SIZE // 2, row * SQUARE_SIZE + SQUARE_SIZE // 2),
-                                   CIRCLE_RADIUS, CIRCLE_WIDTH)
+def draw_numbers(win, board):
+    gap = WIDTH // 9
+    for i in range(9):
+        for j in range(9):
+            if board[i][j] != 0:
+                text = FONT.render(str(board[i][j]), True, (0, 0, 0))
+                win.blit(text, (j * gap + 20, i * gap + 10))
 
-# Check for win
-def check_win(player):
-    # Vertical
-    for col in range(BOARD_COLS):
-        if all(board[row][col] == player for row in range(BOARD_ROWS)):
-            return True
-    # Horizontal
-    for row in range(BOARD_ROWS):
-        if all(board[row][col] == player for col in range(BOARD_COLS)):
-            return True
-    # Diagonals
-    if all(board[i][i] == player for i in range(BOARD_ROWS)):
-        return True
-    if all(board[i][BOARD_COLS - i - 1] == player for i in range(BOARD_ROWS)):
-        return True
-    return False
+def draw_selected(win, row, col):
+    if row is not None and col is not None:
+        gap = WIDTH // 9
+        pygame.draw.rect(win, (0, 255, 0), (col * gap, row * gap, gap, gap), 3)
 
-# Check for draw
-def is_draw():
-    for row in board:
-        if 0 in row:
+def is_valid(bo, num, pos):
+    row, col = pos
+    for i in range(9):
+        if bo[row][i] == num and i != col:
             return False
+        if bo[i][col] == num and i != row:
+            return False
+    box_x = col // 3
+    box_y = row // 3
+    for i in range(box_y * 3, box_y * 3 + 3):
+        for j in range(box_x * 3, box_x * 3 + 3):
+            if bo[i][j] == num and (i, j) != pos:
+                return False
     return True
 
-# Restart game
-def restart_game():
-    global board, current_player
-    board = [[0 for _ in range(BOARD_COLS)] for _ in range(BOARD_ROWS)]
-    screen.fill(BG_COLOR)
-    draw_lines()
-    current_player = 1
+def is_complete(bo):
+    for i in range(9):
+        for j in range(9):
+            num = bo[i][j]
+            if num == 0 or not is_valid(bo, num, (i, j)):
+                return False
+    return True
 
-# Initial Draw
-draw_lines()
-current_player = 1  # Player 1 -> X, Player 2 -> O
-game_over = False
+def main():
+    global selected
+    run = True
+    key = None
+    clock = pygame.time.Clock()
 
-# Game Loop
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+    while run:
+        clock.tick(30)
+        WIN.fill((255, 255, 255))
+        draw_grid(WIN)
+        draw_numbers(WIN, board)
+        if selected:
+            draw_selected(WIN, selected[0], selected[1])
 
-        if event.type == pygame.MOUSEBUTTONDOWN and not game_over:
-            mouseX = event.pos[0]
-            mouseY = event.pos[1]
-            clicked_row = mouseY // SQUARE_SIZE
-            clicked_col = mouseX // SQUARE_SIZE
+        pygame.display.update()
 
-            if board[clicked_row][clicked_col] == 0:
-                board[clicked_row][clicked_col] = current_player
-                if check_win(current_player):
-                    print(f"Player {current_player} wins!")
-                    game_over = True
-                elif is_draw():
-                    print("It's a draw!")
-                    game_over = True
-                current_player = 2 if current_player == 1 else 1
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
 
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_r:
-                restart_game()
-                game_over = False
+            # Mouse click
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                x, y = pygame.mouse.get_pos()
+                gap = WIDTH // 9
+                col = x // gap
+                row = y // gap
+                selected = (row, col)
 
-    draw_figures()
-    pygame.display.update()
+            # Keyboard input
+            if event.type == pygame.KEYDOWN:
+                if selected and original_board[selected[0]][selected[1]] == 0:
+                    if event.key == pygame.K_1:
+                        key = 1
+                    elif event.key == pygame.K_2:
+                        key = 2
+                    elif event.key == pygame.K_3:
+                        key = 3
+                    elif event.key == pygame.K_4:
+                        key = 4
+                    elif event.key == pygame.K_5:
+                        key = 5
+                    elif event.key == pygame.K_6:
+                        key = 6
+                    elif event.key == pygame.K_7:
+                        key = 7
+                    elif event.key == pygame.K_8:
+                        key = 8
+                    elif event.key == pygame.K_9:
+                        key = 9
+                    elif event.key == pygame.K_DELETE:
+                        board[selected[0]][selected[1]] = 0
+                        key = None
+                    elif event.key == pygame.K_RETURN:
+                        if is_complete(board):
+                            print("Sudoku Solved!")
+                        else:
+                            print("Not correct yet!")
+
+                    if key:
+                        board[selected[0]][selected[1]] = key
+                        key = None
+
+    pygame.quit()
+
+if __name__ == "__main__":
+    main()
