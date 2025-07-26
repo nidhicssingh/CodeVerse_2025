@@ -1,0 +1,9 @@
+Q1: Which keyword defines a function?
+Your Answer: def
+Correct Answer: def
+
+Q2: What does len() return?
+Your Answer: Adds values
+Correct Answer: Number of elements
+
+Final Score: 1/2

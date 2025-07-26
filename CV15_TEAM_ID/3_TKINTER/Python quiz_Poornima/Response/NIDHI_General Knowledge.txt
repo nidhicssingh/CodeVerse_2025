@@ -1,0 +1,9 @@
+Q1: Who is the Prime Minister of India (2024)?
+Your Answer: Arvind Kejriwal
+Correct Answer: Narendra Modi
+
+Q2: Which is the capital of Australia?
+Your Answer: Perth
+Correct Answer: Canberra
+
+Final Score: 0/2
