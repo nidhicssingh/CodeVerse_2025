@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeVerse - Full Stack Web Development</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background: #f4f8fb;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .event-header {
+      background: #007bff;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      border-bottom: 5px solid #0056b3;
+    }
+    .card {
+      margin-top: 30px;
+    }
+    .note {
+      color: #d63384;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mb-4">
+      <button class="btn btn-secondary" onclick="history.back()">← Back</button>
+    </div>
+  <div class="event-header">
+    <h1>SUMMER SPECIAL PROGRAM 2025</h1>
+    <h2>CodeVerse</h2>
+  </div>
+
+  <div class="container">
+    <div class="card shadow">
+      <div class="card-body">
+        <h3 class="card-title mb-4">Event Details</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>Event Title:</strong> Full Stack Web Development with React
+          </li>
+          <li class="list-group-item">
+            <strong>Venue:</strong> Room No. 14, 15 & 16
+          </li>
+          <li class="list-group-item">
+            <strong>Date:</strong> July 25, 2025 & July 26, 2025
+          </li>
+          <li class="list-group-item">
+            <strong>Timings:</strong> 9.30 a.m. to 3.15 p.m.
+          </li>
+          <li class="list-group-item">
+            <strong>Main Coordinator:</strong> Ms. Banesori Ayekpam
+          </li>
+        </ul>
+
+        <h4 class="mt-5">Responsibilities</h4>
+        <ul>
+          <li>Coordination with External Technical Experts</li>
+          <li>Monitoring and maintaining student involvement</li>
+        </ul>
+
+        <p class="note mt-4">
+          <strong>NOTE:</strong> At least one coordinator must be present in each section at all times.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
+{% endblock %}
