@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">My Projects</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">E-Service Platform</h5>
+                        <p class="card-text">A full-featured e-service website built with Django and React, featuring product management, cart functionality, and payment processing.</p>
+                        <div class="tech-tags mb-3">
+                            <span class="badge bg-primary">Django</span>
+                            <span class="badge bg-primary">React</span>
+                            <span class="badge bg-primary">PostgreSQL</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Task Management App</h5>
+                        <p class="card-text">A collaborative task management application with real-time updates, team features, and analytics dashboard.</p>
+                        <div class="tech-tags mb-3">
+                            <span class="badge bg-primary">Node.js</span>
+                            <span class="badge bg-primary">MongoDB</span>
+                            <span class="badge bg-primary">Socket.io</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">AI-Powered Chatbot</h5>
+                        <p class="card-text">A customer service chatbot that uses natural language processing to understand and respond to user queries effectively.</p>
+                        <div class="tech-tags mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">TensorFlow</span>
+                            <span class="badge bg-primary">NLTK</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% endblock %}

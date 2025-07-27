@@ -1,0 +1,115 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">My Skills</h2>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 class="mb-4">Technical Skills</h4>
+                <div class="skill-item mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>HTML/CSS</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>JavaScript</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Python/Django</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>React</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <h4 class="mb-4">Professional Skills</h4>
+                <div class="skill-item mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Communication</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Teamwork</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Project Management</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Creativity</span>
+                        <span>88%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-5">
+            <h4 class="mb-4">Tools & Technologies</h4>
+            <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-secondary p-2">Git</span>
+                <span class="badge bg-secondary p-2">Docker</span>
+                <span class="badge bg-secondary p-2">VS Code</span>
+                <span class="badge bg-secondary p-2">Postman</span>
+                <span class="badge bg-secondary p-2">Figma</span>
+                <span class="badge bg-secondary p-2">Jira</span>
+                <span class="badge bg-secondary p-2">Trello</span>
+                <span class="badge bg-secondary p-2">Slack</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
