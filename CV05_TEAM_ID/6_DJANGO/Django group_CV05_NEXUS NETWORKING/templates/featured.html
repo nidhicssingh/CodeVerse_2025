@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}CodeVerse 2025 - Featured Event{% endblock %}
+
+{% block content %}
+<div class="container py-5" style="background: url('{% static 'images/event-bg.jpg' %}') no-repeat center center / cover;">
+  <div class="text-center text-white mb-5">
+    <h1 class="display-4 fw-bold">CodeVerse 2025</h1>
+    <p class="lead">Empowering Coders Across Campus!</p>
+  </div>
+
+  <!-- Event Highlights Cards -->
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        <img src="{% static 'images/speaker1.jpg' %}" class="card-img-top" alt="Speaker">
+        <div class="card-body">
+          <h5 class="card-title">Tech Talk: AI & Future</h5>
+          <p class="card-text">By industry experts from Google and Microsoft. Dive into the future of AI.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        <img src="{% static 'images/workshop.jpg' %}" class="card-img-top" alt="Workshop">
+        <div class="card-body">
+          <h5 class="card-title">Hackathon 48-Hour Sprint</h5>
+          <p class="card-text">Code, collaborate, and compete in real-time with top students.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        <img src="{% static 'images/award.jpg' %}" class="card-img-top" alt="Awards">
+        <div class="card-body">
+          <h5 class="card-title">Award Ceremony</h5>
+          <p class="card-text">Celebrating innovation with certifications and cash prizes!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
