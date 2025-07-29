@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Nidhi's Portfolio{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h1 class="mb-4">Welcome to SVYASA Inspired Portfolio</h1>
+      <p class="lead">
+        SVYASA (Swami Vivekananda Yoga Anusandhana Samsthana) is a globally recognized Deemed University based in Bengaluru,
+        committed to merging modern scientific research with the ancient wisdom of Yoga. 
+        It promotes holistic education, wellness, and spiritual growth.
+      </p>
+      <p>
+        This portfolio draws inspiration from SVYASA’s core values — integrating traditional knowledge with innovation,
+        promoting health, and fostering a better world through yoga-based education and research.
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="{% static 'IMG/svyasa_campus.jpg' %}" alt="SVYASA Campus" class="img-fluid rounded shadow">
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <div class="text-center">
+    <h3 class="mb-3">Explore More</h3>
+    <p>Learn about certifications, specializations, and opportunities provided by SVYASA University to enhance your educational journey.</p>
+  </div>
+</div>
+{% endblock %}

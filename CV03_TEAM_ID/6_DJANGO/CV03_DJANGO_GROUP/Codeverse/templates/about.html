@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <header class="mb-4 text-center">
+      <h2 class="display-6 fw-bold">About S‑VYASA University</h2>
+      <p class="text-muted">Swami Vivekananda Yoga Anusandhana Samsthana – A Global Yoga University</p>
+    </header>
+
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <p>
+          <strong>S‑VYASA Deemed to be University</strong>, located in Bengaluru, is India's first Yoga university.
+          It is recognized by the UGC and has been accredited with an 'A+' grade by NAAC. The university blends ancient yogic
+          science with modern research and higher education.
+        </p>
+        <p>
+          Founded in 2002, S‑VYASA has pioneered scientific validation of yoga through over 500+ research publications.
+          It offers programs in Yoga, Health Sciences, Computer Science, Management, and Life Sciences, focusing on
+          holistic well-being and innovation.
+        </p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="{% static 'IMG/svyasa_logo.png' %}" alt="SVYASA Logo" class="img-fluid" style="max-height: 120px;">
+      </div>
+    </div>
+
+    <div class="row text-center gy-4">
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5>Global Recognition</h5>
+          <p class="text-muted">Recognized globally for its research in Yoga and health sciences with partnerships in over 30 countries.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5>Research Excellence</h5>
+          <p class="text-muted">Home to Anvesana – a research center with over 200 completed studies integrating yoga and medicine.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5>Campus & Academics</h5>
+          <p class="text-muted">A 100-acre serene campus offering UG, PG, and Ph.D. programs with a unique blend of modern and Vedic knowledge.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <p class="mb-2">For more details, visit the official site:</p>
+      <a href="https://www.svyasa.edu.in" target="_blank" class="btn btn-outline-primary">svyasa.edu.in</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
