@@ -11,27 +11,44 @@ class QuizApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Quiz App")
-        self.root.geometry("400x300")
+        self.root.geometry("500x400")
+        self.root.configure(bg="#f0f4f7")  # Light background
+
         self.q_index = 0
         self.score = 0
 
-        self.question_label = tk.Label(root, text="", font="Arial 16", wraplength=350)
+        self.question_label = tk.Label(
+            root, text="", font=("Helvetica", 16, "bold"),
+            wraplength=450, bg="#f0f4f7", fg="#333"
+        )
         self.question_label.pack(pady=20)
 
         self.var = tk.StringVar()
-        self.options_frame = tk.Frame(root)
+        self.options_frame = tk.Frame(root, bg="#f0f4f7")
         self.options_frame.pack()
 
         self.radio_buttons = []
         for i in range(4):
-            rb = tk.Radiobutton(self.options_frame, text="", variable=self.var, value="", font="Arial 14", anchor="w")
+            rb = tk.Radiobutton(
+                self.options_frame, text="", variable=self.var, value="",
+                font=("Helvetica", 14), anchor="w", bg="#ffffff",
+                fg="#000", selectcolor="#dff0d8", activebackground="#dff0d8",
+                padx=10, pady=5, relief="groove", indicatoron=1
+            )
             rb.pack(fill="x", padx=20, pady=5)
             self.radio_buttons.append(rb)
 
-        self.submit_btn = tk.Button(root, text="Submit", command=self.check_answer, font="Arial 14")
+        self.submit_btn = tk.Button(
+            root, text="Submit", command=self.check_answer,
+            font=("Helvetica", 14, "bold"), bg="#4CAF50", fg="white",
+            activebackground="#45a049", padx=10, pady=5, relief="raised", bd=3
+        )
         self.submit_btn.pack(pady=20)
 
-        self.feedback_label = tk.Label(root, text="", font="Arial 12")
+        self.feedback_label = tk.Label(
+            root, text="", font=("Helvetica", 12, "italic"),
+            bg="#f0f4f7"
+        )
         self.feedback_label.pack()
 
         self.load_question()
@@ -40,12 +57,17 @@ class QuizApp:
         q = quiz_data[self.q_index]
         self.question_label.config(text=q["question"])
         self.var.set(None)
+        self.submit_btn.config(state="disabled")  # Disable until an option is selected
+
         for i, option in enumerate(q["options"]):
             self.radio_buttons[i].config(text=option, value=option)
+
+        self.var.trace("w", lambda *args: self.submit_btn.config(state="normal"))
 
     def check_answer(self):
         selected = self.var.get()
         correct = quiz_data[self.q_index]["answer"]
+
         if selected == correct:
             self.score += 1
             self.feedback_label.config(text="✅ Correct!", fg="green")
@@ -61,8 +83,29 @@ class QuizApp:
     def show_result(self):
         for widget in self.root.winfo_children():
             widget.destroy()
-        tk.Label(self.root, text=f"Your Score: {self.score}/{len(quiz_data)}", font="Arial 18").pack(pady=50)
 
+        self.root.configure(bg="#f0f4f7")
+        tk.Label(
+            self.root,
+            text=f"Your Score: {self.score}/{len(quiz_data)}",
+            font=("Helvetica", 18, "bold"),
+            bg="#f0f4f7", fg="#333"
+        ).pack(pady=50)
+
+        tk.Button(
+            self.root, text="Play Again", command=self.restart_quiz,
+            font=("Helvetica", 14), bg="#2196F3", fg="white",
+            activebackground="#1976D2", padx=10, pady=5
+        ).pack()
+
+    def restart_quiz(self):
+        self.q_index = 0
+        self.score = 0
+        for widget in self.root.winfo_children():
+            widget.destroy()
+        self.__init__(self.root)
+
+# Run the app
 root = tk.Tk()
 app = QuizApp(root)
 root.mainloop()
